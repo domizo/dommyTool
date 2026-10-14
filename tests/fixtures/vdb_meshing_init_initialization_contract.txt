@@ -1,0 +1,170 @@
+DOpenVDBToMesh
+create vdbInput input geometry null
+vdbInput readable 0
+add vdbInput
+create outMesh om mesh null
+outMesh readable 1
+outMesh writable 0
+outMesh storable 0
+outMesh array 1
+outMesh arrayBuilder 1
+add outMesh
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+create isovalue iso float 0
+isovalue default 0
+isovalue softMin -1
+isovalue softMax 1
+isovalue connectable 0
+add isovalue
+create adaptivity adapt float 0
+adaptivity default 0
+adaptivity min 0
+adaptivity max 1
+adaptivity connectable 0
+add adaptivity
+string.create
+create vdbAllGridNames allgrids string 
+vdbAllGridNames connectable 0
+vdbAllGridNames writable 0
+vdbAllGridNames readable 0
+vdbAllGridNames hidden 1
+add vdbAllGridNames
+create vdbSelectedGridNames selectedgrids string 
+vdbSelectedGridNames connectable 0
+vdbSelectedGridNames writable 0
+vdbSelectedGridNames readable 0
+vdbSelectedGridNames hidden 1
+add vdbSelectedGridNames
+affects vdbInput vdbAllGridNames
+affects vdbInput outMesh
+affects isovalue outMesh
+affects adaptivity outMesh
+affects vdbSelectedGridNames outMesh
+affects vdbInput outDM
+affects isovalue outDM
+affects adaptivity outDM
+affects vdbSelectedGridNames outDM
+DOpenVDBConvert
+create vdbInput input geometry null
+vdbInput readable 0
+add vdbInput
+create isovalue iso float 0
+isovalue default 0
+isovalue softMin -1
+isovalue softMax 1
+isovalue connectable 0
+add isovalue
+create adaptivity adapt float 0
+adaptivity default 0
+adaptivity min 0
+adaptivity max 2
+adaptivity connectable 0
+add adaptivity
+create ComputeNormals cnorm bool 0
+ComputeNormals default 0
+add ComputeNormals
+create IsCheckCorner ichco bool 0
+IsCheckCorner default 0
+add IsCheckCorner
+create ConerAngle coang double 0
+ConerAngle default 0.10000000000000001
+ConerAngle min -1
+ConerAngle max 1
+ConerAngle connectable 0
+add ConerAngle
+create ConcernAllPartsNormal capn bool 0
+ConcernAllPartsNormal default 0
+add ConcernAllPartsNormal
+create IsCheckPartsDistance ichpd bool 0
+IsCheckPartsDistance default 1
+add IsCheckPartsDistance
+create CheckTolerance chtol double 0
+CheckTolerance default 0.01
+CheckTolerance min 0
+CheckTolerance max 1
+CheckTolerance connectable 0
+add CheckTolerance
+create InternalAdaptivity inada double 0
+InternalAdaptivity default 0
+InternalAdaptivity min 0
+InternalAdaptivity max 1
+InternalAdaptivity connectable 0
+add InternalAdaptivity
+create TransferAttributes trattr bool 0
+TransferAttributes default 0
+add TransferAttributes
+create SharpenFeatures shfea bool 0
+SharpenFeatures default 0
+add SharpenFeatures
+create EdgeTolerance edtol float 0
+EdgeTolerance default 0.5
+EdgeTolerance min 0
+EdgeTolerance max 1
+EdgeTolerance connectable 0
+add EdgeTolerance
+create ExportColorSet excols bool 0
+ExportColorSet default 0
+add ExportColorSet
+create ExportMetadata exmeta bool 0
+ExportMetadata default 0
+add ExportMetadata
+string.create
+string.create
+string.create
+string.create
+string.create
+create SurfaceGroupName surfgrp string surface_polygon
+add SurfaceGroupName
+create InteriorGroupName intgrp string interior_polygon
+add InteriorGroupName
+create SeamGroupName segrp string seam_polygon
+add SeamGroupName
+create SeamPointGroupName sepgrp string seam_point
+add SeamPointGroupName
+create vdbAllGridNames allgrids string 
+vdbAllGridNames connectable 0
+vdbAllGridNames writable 0
+vdbAllGridNames readable 0
+vdbAllGridNames hidden 1
+add vdbAllGridNames
+create vdbSelectedGridNames selectedgrids string 
+vdbSelectedGridNames connectable 0
+vdbSelectedGridNames writable 0
+vdbSelectedGridNames readable 0
+vdbSelectedGridNames hidden 1
+add vdbSelectedGridNames
+create ReferenceMesh reme generic
+ReferenceMesh accepts mesh
+ReferenceMesh storable 0
+ReferenceMesh writable 1
+ReferenceMesh readable 0
+add ReferenceMesh
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects vdbInput vdbAllGridNames
+affects vdbInput outDM
+affects ReferenceMesh outDM
+affects isovalue outDM
+affects adaptivity outDM
+affects ComputeNormals outDM
+affects IsCheckCorner outDM
+affects ConerAngle outDM
+affects ConcernAllPartsNormal outDM
+affects IsCheckPartsDistance outDM
+affects CheckTolerance outDM
+affects InternalAdaptivity outDM
+affects TransferAttributes outDM
+affects SharpenFeatures outDM
+affects EdgeTolerance outDM
+affects ExportColorSet outDM
+affects ExportMetadata outDM
+affects SurfaceGroupName outDM
+affects InteriorGroupName outDM
+affects SeamGroupName outDM
+affects SeamPointGroupName outDM
+affects vdbSelectedGridNames outDM

@@ -1,0 +1,247 @@
+DCConvex2D
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+string default piece.*
+create PieceGroupName picgrpnm string default
+PieceGroupName connectable 0
+add PieceGroupName
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects PieceGroupName outDC
+DCPartition
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create Mode md enum 1
+Mode field Convex Partition (legacy Y-Monotone id) 0
+Mode field Convex Partition 1
+Mode field Convex Partition (legacy Greene id) 2
+Mode field Retired Optimal Convex 3
+Mode keyable 1
+Mode storable 1
+add Mode
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects Mode outDC
+DCDelete
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create aDeleteType uvty enum 0
+aDeleteType field Simple Linear Line 0
+aDeleteType keyable 1
+add aDeleteType
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects aDeleteType outDC
+DCExplodeView
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create Enable enbl bool 0
+Enable default 1
+Enable keyable 1
+Enable storable 1
+add Enable
+create Scale scl double 0
+Scale default 1
+Scale softMin 0
+Scale softMax 5
+Scale keyable 1
+Scale storable 1
+add Scale
+create Center ctr 3double 0
+Center default 0 0 0
+Center keyable 1
+Center storable 1
+add Center
+string default center
+create PieceCenterAttributeName pccattrnm string default
+PieceCenterAttributeName connectable 0
+add PieceCenterAttributeName
+create VectorType vty enum 0
+VectorType field Center to piece 0
+VectorType field From attribute 1
+VectorType keyable 1
+add VectorType
+string default 
+create VectorAttributeName vattrnm string default
+VectorAttributeName connectable 0
+add VectorAttributeName
+string default piece.*
+create PieceGroup pcgrp string default
+PieceGroup connectable 0
+add PieceGroup
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects Enable outDC
+affects Scale outDC
+affects Center outDC
+affects PieceCenterAttributeName outDC
+affects VectorType outDC
+affects VectorAttributeName outDC
+affects PieceGroup outDC
+DCWeightMap
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create ParamType pty enum 1
+ParamType field Base Param 0
+ParamType field From Attribute 1
+ParamType keyable 1
+add ParamType
+create BaseParam bprm float 0
+BaseParam default 0.5
+BaseParam softMin 0
+BaseParam softMax 1
+BaseParam keyable 1
+add BaseParam
+string default param
+create ParamAttributeName prmattrn string default
+ParamAttributeName connectable 0
+add ParamAttributeName
+create Distance dst float 0
+Distance default 0.20000000000000001
+Distance min 0
+Distance softMin 0
+Distance softMax 2
+Distance keyable 1
+add Distance
+create Offset off float 0
+Offset default 0
+Offset softMin -5
+Offset softMax 5
+Offset keyable 1
+add Offset
+create WrapMode wmd enum 1
+WrapMode field None 0
+WrapMode field Clamp 1
+WrapMode field Loop 2
+WrapMode keyable 1
+WrapMode storable 1
+add WrapMode
+string default weight
+create WeightAttributeName weiattrn string default
+WeightAttributeName connectable 0
+add WeightAttributeName
+create WeightRamp weir ramp
+add WeightRamp
+create WeightScale wscl float 0
+WeightScale default 1
+WeightScale keyable 1
+add WeightScale
+create RepeatWeight repw bool 0
+RepeatWeight default 0
+RepeatWeight keyable 1
+add RepeatWeight
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects ParamType outDC
+affects BaseParam outDC
+affects ParamAttributeName outDC
+affects Distance outDC
+affects Offset outDC
+affects WrapMode outDC
+affects WeightAttributeName outDC
+affects WeightRamp outDC
+affects WeightScale outDC
+affects RepeatWeight outDC
+DCUVMap
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+string default u
+create UVAttributeName uvattr string default
+UVAttributeName connectable 0
+add UVAttributeName
+create UVType uvty enum 0
+UVType field Length Linear 0
+UVType field From Ramp 1
+UVType keyable 1
+add UVType
+create CalcType calty enum 0
+CalcType field from Point 0
+CalcType field from Param(very slow, accurate) 1
+CalcType keyable 1
+add CalcType
+create UVRamp uvrmp ramp
+add UVRamp
+create UVRange uvrng 2double 0
+UVRange default 0 1
+UVRange keyable 1
+add UVRange
+create Offset off double 0
+Offset default 0
+Offset softMin 0
+Offset softMax 10
+Offset keyable 1
+add Offset
+create Scale scl double 0
+Scale default 1
+Scale softMin 0
+Scale softMax 10
+Scale keyable 1
+add Scale
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects UVAttributeName outDC
+affects UVType outDC
+affects CalcType outDC
+affects UVRange outDC
+affects UVRamp outDC
+affects Offset outDC
+affects Scale outDC
+DCClumping
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create targetDC tdc geometry null
+targetDC readable 0
+targetDC storable 0
+add targetDC
+string default idx
+create IndexAttribute idxattr string default
+IndexAttribute connectable 0
+add IndexAttribute
+create ClumpRamp clprmp ramp
+add ClumpRamp
+create Weight wei float 0
+Weight default 1
+Weight softMin 0
+Weight softMax 1
+add Weight
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects targetDC outDC
+affects IndexAttribute outDC
+affects ClumpRamp outDC
+affects Weight outDC

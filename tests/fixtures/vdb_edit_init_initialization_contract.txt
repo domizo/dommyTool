@@ -1,0 +1,85 @@
+DOpenVDBTransform
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create Translate t point
+Translate default 0 0 0
+add Translate
+create Rotate r point
+Rotate default 0 0 0
+add Rotate
+create Scale s point
+Scale default 1 1 1
+add Scale
+create Pivot p point
+Pivot default 0 0 0
+add Pivot
+create UniformScale us float 0
+UniformScale default 1
+UniformScale min 9.9999999999999995e-08
+UniformScale softMax 10
+add UniformScale
+create invert InvertTransformation bool 0
+invert default 0
+add invert
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects Translate VdbOutput
+affects Rotate VdbOutput
+affects Scale VdbOutput
+affects Pivot VdbOutput
+affects UniformScale VdbOutput
+affects invert VdbOutput
+DOpenVDBVectorSplit
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create RemoveSource rmsrc bool 0
+RemoveSource default 1
+add RemoveSource
+create CopyInactiveValue cpiactval bool 0
+CopyInactiveValue default 0
+add CopyInactiveValue
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects RemoveSource VdbOutput
+affects CopyInactiveValue VdbOutput
+DOpenVDBCopy
+string.create
+create GridsFromA anames string *
+GridsFromA connectable 0
+add GridsFromA
+string.create
+create GridsFromB bnames string *
+GridsFromB connectable 0
+add GridsFromB
+create VdbInputA a geometry null
+VdbInputA connectable 1
+add VdbInputA
+create VdbInputB b geometry null
+VdbInputB connectable 1
+add VdbInputB
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInputA VdbOutput
+affects VdbInputB VdbOutput
+affects GridsFromA VdbOutput
+affects GridsFromB VdbOutput

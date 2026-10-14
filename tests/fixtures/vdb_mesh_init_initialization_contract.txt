@@ -1,0 +1,88 @@
+DOpenVDBFromMesh
+mesh.create
+string.create
+string.create
+string.create
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create MeshInput mesh mesh mesh
+add MeshInput
+create ExportDistanceVDB exportdistance bool 0
+ExportDistanceVDB default 1
+ExportDistanceVDB connectable 0
+add ExportDistanceVDB
+create DistanceGridName distancename string surface
+DistanceGridName connectable 0
+add DistanceGridName
+create ExportDensityVDB exportdensity bool 0
+ExportDensityVDB default 0
+ExportDensityVDB connectable 0
+add ExportDensityVDB
+create DensityGridName densityname string density
+DensityGridName connectable 0
+add DensityGridName
+create VoxelSize voxelsize float 0
+VoxelSize default 1
+VoxelSize min 0.001
+VoxelSize softMin 0.01
+VoxelSize softMax 10
+add VoxelSize
+create ExteriorBandWidth exteriorbandwidth float 0
+ExteriorBandWidth default 3
+ExteriorBandWidth min 1
+ExteriorBandWidth softMin 1
+ExteriorBandWidth softMax 10
+add ExteriorBandWidth
+create InteriorBandWidth interiorbandwidth float 0
+InteriorBandWidth default 3
+InteriorBandWidth min 1
+InteriorBandWidth softMin 1
+InteriorBandWidth softMax 10
+add InteriorBandWidth
+create FillInterior fillinterior bool 0
+FillInterior default 0
+FillInterior connectable 0
+add FillInterior
+create UnsignedDistanceField udf bool 0
+UnsignedDistanceField default 0
+UnsignedDistanceField connectable 0
+add UnsignedDistanceField
+create VdbOutput vdb geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+create EstimatedGridResolution res string 
+EstimatedGridResolution connectable 0
+EstimatedGridResolution writable 0
+add EstimatedGridResolution
+create NodeInfo info string 
+NodeInfo connectable 0
+NodeInfo writable 0
+add NodeInfo
+affects inDM VdbOutput
+affects MeshInput VdbOutput
+affects ExportDistanceVDB VdbOutput
+affects DistanceGridName VdbOutput
+affects ExportDensityVDB VdbOutput
+affects DensityGridName VdbOutput
+affects VoxelSize VdbOutput
+affects ExteriorBandWidth VdbOutput
+affects InteriorBandWidth VdbOutput
+affects FillInterior VdbOutput
+affects UnsignedDistanceField VdbOutput
+affects inDM EstimatedGridResolution
+affects MeshInput EstimatedGridResolution
+affects VoxelSize EstimatedGridResolution
+affects inDM NodeInfo
+affects MeshInput NodeInfo
+affects ExportDistanceVDB NodeInfo
+affects DistanceGridName NodeInfo
+affects ExportDensityVDB NodeInfo
+affects DensityGridName NodeInfo
+affects VoxelSize NodeInfo
+affects ExteriorBandWidth NodeInfo
+affects InteriorBandWidth NodeInfo
+affects FillInterior NodeInfo
+affects UnsignedDistanceField NodeInfo

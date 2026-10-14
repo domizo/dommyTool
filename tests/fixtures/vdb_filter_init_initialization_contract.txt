@@ -1,0 +1,159 @@
+DOpenVDBFilter
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create Filter filter enum 0
+Filter field Mean 0
+Filter field Gauss 1
+Filter field Median 2
+Filter field Offset 3
+Filter connectable 0
+add Filter
+create FilterVoxelRadius r int 0
+FilterVoxelRadius default 1
+FilterVoxelRadius min 1
+FilterVoxelRadius softMin 1
+FilterVoxelRadius softMax 5
+add FilterVoxelRadius
+create Iterations it int 0
+Iterations default 1
+Iterations min 1
+Iterations softMin 1
+Iterations softMax 10
+add Iterations
+create Offset o float 0
+Offset default 0
+Offset softMin -1
+Offset softMax 1
+add Offset
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects Filter VdbOutput
+affects SelectedGridNames VdbOutput
+affects FilterVoxelRadius VdbOutput
+affects Offset VdbOutput
+affects Iterations VdbOutput
+DOpenVDBFilterLevelSet
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create isMask ism bool 0
+isMask default 0
+add isMask
+string.create
+create maskName mna string *
+maskName connectable 0
+add maskName
+create filterType ft enum 0
+filterType field None -1
+filterType field Renormalize 0
+filterType field Mean Value 1
+filterType field Median Value 2
+filterType field Mean Curvature Flow 3
+filterType field Laplacian Flow 4
+filterType field Dilate 5
+filterType field Erode 6
+filterType field Open 7
+filterType field Close 8
+filterType field Track Narrow Band 9
+filterType field Gaussian 10
+filterType field Resize Narrow Band 11
+filterType connectable 0
+add filterType
+create accuracyType act enum 0
+accuracyType field First-order upwinding 0
+accuracyType field Second-order upwinding 1
+accuracyType field Third-order upwinding 2
+accuracyType field Fifth-order WENO 3
+accuracyType field Fifth-order HJ-WENO 4
+accuracyType connectable 0
+add accuracyType
+create iterations itr int 0
+iterations default 1
+iterations min 0
+iterations softMin 0
+iterations softMax 10
+add iterations
+create isWorldSpaceUnits iws bool 0
+isWorldSpaceUnits default 0
+add isWorldSpaceUnits
+create stencilWidth stw int 0
+stencilWidth default 0
+stencilWidth min 0
+stencilWidth softMin 1
+stencilWidth softMax 5
+add stencilWidth
+create stencilWidthWorld stww float 0
+stencilWidthWorld default 0.10000000000000001
+stencilWidthWorld min 1.0000000000000001e-05
+stencilWidthWorld softMin 0.001
+stencilWidthWorld softMax 10
+add stencilWidthWorld
+create halfWidth hw int 0
+halfWidth default 3
+halfWidth min 1
+halfWidth softMin 1
+halfWidth softMax 10
+add halfWidth
+create halfWidthWorld hww float 0
+halfWidthWorld default 0.29999999999999999
+halfWidthWorld min 1.0000000000000001e-05
+halfWidthWorld softMin 1
+halfWidthWorld softMax 10
+add halfWidthWorld
+create voxelOffset vof float 0
+voxelOffset default 0
+voxelOffset min 0
+voxelOffset softMin 0
+voxelOffset softMax 10
+add voxelOffset
+create isInvert inv bool 0
+isInvert default 0
+add isInvert
+create minMask minm float 0
+minMask default 0
+minMask min 0
+minMask softMin 0
+minMask softMax 1
+add minMask
+create maxMask maxm float 0
+maxMask default 1
+maxMask min 0
+maxMask softMin 0
+maxMask softMax 1
+add maxMask
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+create maskVdbInput mvdbinput geometry null
+maskVdbInput connectable 1
+add maskVdbInput
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects maskVdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects isMask VdbOutput
+affects maskName VdbOutput
+affects filterType VdbOutput
+affects iterations VdbOutput
+affects accuracyType VdbOutput
+affects isInvert VdbOutput
+affects minMask VdbOutput
+affects maxMask VdbOutput
+affects isWorldSpaceUnits VdbOutput
+affects stencilWidth VdbOutput
+affects stencilWidthWorld VdbOutput
+affects halfWidth VdbOutput
+affects halfWidthWorld VdbOutput
+affects voxelOffset VdbOutput

@@ -1,0 +1,121 @@
+DPSelfCollision
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create SearchRadius srhrad float 0
+SearchRadius default 1
+SearchRadius min 0
+SearchRadius softMin 0
+SearchRadius softMax 10
+SearchRadius keyable 1
+add SearchRadius
+string.create
+create RadiusAttribute rattr string pscale
+RadiusAttribute connectable 0
+add RadiusAttribute
+create Radius rad float 0
+Radius default 0.01
+Radius min 0
+Radius softMin 0
+Radius softMax 10
+Radius keyable 1
+add Radius
+create UseMass uma bool 0
+UseMass default 0
+UseMass keyable 1
+add UseMass
+string.create
+create MassAttribute mattr string mass
+MassAttribute connectable 0
+add MassAttribute
+create Damping dmp float 0
+Damping default 0.5
+Damping softMin 0
+Damping softMax 1
+Damping keyable 1
+add Damping
+create AvoidPower avdpwr float 0
+AvoidPower default 0
+AvoidPower softMin 0
+AvoidPower softMax 1
+AvoidPower keyable 1
+add AvoidPower
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects SearchRadius outDP
+affects RadiusAttribute outDP
+affects Radius outDP
+affects UseMass outDP
+affects MassAttribute outDP
+affects Damping outDP
+affects AvoidPower outDP
+DPDistance
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+add inDD
+create ComponentType cmpty enum 1
+ComponentType field Primitive 0
+ComponentType field Point 1
+ComponentType keyable 1
+ComponentType storable 1
+add ComponentType
+string.create
+create distAttrName dattrn string dist
+distAttrName connectable 0
+add distAttrName
+create targetType tt enum 0
+targetType field Traget Point 0
+targetType field Input Object 1
+targetType field Target DPoint 2
+targetType keyable 1
+targetType storable 1
+add targetType
+create targetPoint tpt 3double 0
+targetPoint keyable 1
+targetPoint storable 1
+targetPoint default 0 0 0
+add targetPoint
+create inObject ino generic
+inObject accepts mesh
+inObject accepts curve
+inObject accepts surface
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create inTargetDP intdp geometry null
+inTargetDP readable 0
+inTargetDP storable 0
+add inTargetDP
+create AddNearID adnid bool 0
+AddNearID default 0
+AddNearID keyable 1
+add AddNearID
+string.create
+create NearIDAttributeName nrattrnm string nearid
+NearIDAttributeName connectable 0
+add NearIDAttributeName
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects ComponentType outDD
+affects distAttrName outDD
+affects targetType outDD
+affects targetPoint outDD
+affects inObject outDD
+affects inTargetDP outDD
+affects AddNearID outDD
+affects NearIDAttributeName outDD

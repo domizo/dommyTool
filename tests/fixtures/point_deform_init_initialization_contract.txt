@@ -1,0 +1,32 @@
+DPPointDeform
+create inDP idp mesh null
+inDP readable 0
+inDP storable 0
+add inDP
+create inRestMesh irstmsh generic
+inRestMesh accepts mesh
+inRestMesh storable 0
+inRestMesh writable 1
+inRestMesh readable 0
+add inRestMesh
+create inAnimMesh ianmmsh generic
+inAnimMesh accepts mesh
+inAnimMesh storable 0
+inAnimMesh writable 1
+inAnimMesh readable 0
+add inAnimMesh
+create Radius rad float 0
+Radius default 0.10000000000000001
+Radius softMin 0
+Radius softMax 10
+Radius min 9.9999999747524271e-07
+Radius keyable 1
+add Radius
+create outDP odp mesh null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects inRestMesh outDP
+affects inAnimMesh outDP
+affects Radius outDP

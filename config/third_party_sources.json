@@ -1,0 +1,1560 @@
+{
+  "schema_version": 1,
+  "components": {
+    "dynamica": {
+      "license": "Zlib",
+      "notice_file": "third_party/licenses/Dynamica-zlib.txt",
+      "reference": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "notice_sha256": "bee8468c21ad43e7e177ddb01a3176d6ae64c204e204967aa9e5b84e719e30bb"
+    },
+    "jet": {
+      "license": "MIT",
+      "notice_file": "third_party/licenses/Jet-MIT.txt",
+      "reference": "https://github.com/doyubkim/fluid-engine-dev/blob/c667964eb8c86cc5956054f234822e11c0436d99/LICENSE.md",
+      "notice_sha256": "8c138bfca4ad88ebf26c1435a6b118e876d51623ba6d61030d0548425d35c867"
+    },
+    "bullet": {
+      "license": "Zlib",
+      "notice_file": "third_party/licenses/Bullet-zlib.txt",
+      "reference": "https://github.com/bulletphysics/bullet3/tree/126b6762200b1a9ec8df39b8fd53cb2ad62fb146",
+      "notice_sha256": "e304603dc66d34840e9bbdc19d46043104ef1dfd695bf2fdf468c989c8fc68a2"
+    },
+    "alembic": {
+      "license": "BSD-3-Clause",
+      "notice_file": "third_party/licenses/Alembic-BSD-3-Clause.txt",
+      "reference": "https://github.com/alembic/alembic/tree/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93",
+      "notice_sha256": "79de592148dd6c26c82481cf9536ce39ec98ac7270dc7e1e557123666612f455"
+    },
+    "openvdb": {
+      "license": "MPL-2.0",
+      "notice_file": "third_party/licenses/MPL-2.0.txt",
+      "reference": "https://github.com/AcademySoftwareFoundation/openvdb/tree/a79df2f32b8ebb5d15fd73325c46cee845a81e49",
+      "notice_sha256": "3f3d9e0024b1921b067d6f7f88deb4a60cbe7a78e76c64e3f1d7fc3b779b9d04"
+    },
+    "poisson": {
+      "license": "MIT",
+      "notice_file": "third_party/licenses/PoissonGenerator-MIT.txt",
+      "reference": "https://github.com/corporateshark/poisson-disk-generator/tree/cfc4936e860de93428640fddf83eeb2d7e730fbf",
+      "notice_sha256": "8f33b0ec02cd927d3c4b9f5704a8dcf3e6e7de4a7ae21dcff85ed1558bcf2cff"
+    },
+    "nanoflann": {
+      "license": "BSD-2-Clause",
+      "notice_file": "third_party/licenses/Nanoflann-BSD-2-Clause.txt",
+      "reference": "https://github.com/jlblancoc/nanoflann/tree/f2efec0110eb68edf8cae90fce394a5044bf3db8",
+      "notice_sha256": "4f2aca542466f04cffeae062a3da9b3e55e31c8d0cd0d815f6bda69bb0b312d8"
+    },
+    "opensubdiv": {
+      "license": "Modified-Apache-2.0",
+      "notice_file": "third_party/licenses/OpenSubdiv-modified-Apache-2.0.txt",
+      "reference": "https://github.com/PixarAnimationStudios/OpenSubdiv/tree/3b5c3d99d29ba078385013d15f8b2ebeac0daf45",
+      "notice_sha256": "c52718780b46e8c7ea48b9ae0406061d4918761e385b6e024571a37c6d02dd95",
+      "additional_notice_files": [
+        {
+          "path": "third_party/licenses/OpenSubdiv-NOTICE.txt",
+          "sha256": "c9a283f0d3752b74d348a57e1d45e71cf69651ce6cbdce866983e459f6422c7c"
+        }
+      ]
+    }
+  },
+  "files": [
+    {
+      "path": "src/modules/dynamics/DBullet/BaseShape/Box/DB_BoxShape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_box_shape.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/BaseShape/Box/box_shape_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/box_shape_impl.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/BaseShape/Box/dbBox_shape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/box_shape.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/BaseShape/Plane/DB_PlaneShape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_plane_shape.h",
+      "marker": true,
+      "notice_sha256": "0181521d12a2e3cda17c79583a20b079d26a648caf59e565b4fb9b3e5c2081d4"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/BaseShape/Plane/dbPlane_shape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/plane_shape.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/BaseShape/Plane/plane_shape_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/plane_shape_impl.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/BaseShape/Shpere/DB_SphereShape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_sphere_shape.h",
+      "marker": true,
+      "notice_sha256": "0181521d12a2e3cda17c79583a20b079d26a648caf59e565b4fb9b3e5c2081d4"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/BaseShape/Shpere/dbSphere_shape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/sphere_shape.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/BaseShape/Shpere/sphere_shape_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/sphere_shape_impl.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/DBCollisionShapeNode.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/collisionShapeNode.cpp",
+      "marker": true,
+      "notice_sha256": "31d553bdf53f21e69d66138a14e7da6c6c943c32b14f2a27b9ef3b61b0880a0f"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/DBCollisionShapeNode.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/collisionShapeNode.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/DB_CollisionShape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_collision_shape.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/bt_composite_shape.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_composite_shape.h",
+      "marker": true,
+      "notice_sha256": "92be09de523ed8ef1baa5d5c20eda36c88ed1fc89d88141922bb1644d1af53b9"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/bt_convex_hull_shape.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_convex_hull_shape.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/collision_shape_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/collision_shape_impl.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/composite_shape_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/composite_shape_impl.h",
+      "marker": true,
+      "notice_sha256": "f6eedc8ec61b96be36d3be78c7db7c71a7ecb9bdda6be10af7f5d50c6bac4236"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/composite_shape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/composite_shape_t.h",
+      "marker": true,
+      "notice_sha256": "438c6361cfccd2db1c2ae9025f7ce4fec88342839ebb2e07da1fb36e8518cd74"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/convex_decomposition_hacd.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/convex_decomposition_hacd.cpp",
+      "marker": true,
+      "notice_sha256": "1d8e1d7d878a80275347d11ce62bcf40ca7bd6ca1e1c96d86b9888aca83323e2"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/convex_decomposition_hacd.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/convex_decomposition_hacd.h",
+      "marker": true,
+      "notice_sha256": "1d8e1d7d878a80275347d11ce62bcf40ca7bd6ca1e1c96d86b9888aca83323e2"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/convex_hull_shape.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/convex_hull_shape.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/convex_hull_shape_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/convex_hull_shape_impl.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Collision/dbCollisionShape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/collision_shape.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DBHingeConstraintNode.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/hingeConstraintNode.cpp",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DBHingeConstraintNode.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/hingeConstraintNode.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DBNailConstraintNode.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/nailConstraintNode.cpp",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DBNailConstraintNode.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/nailConstraintNode.h",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DBSixdofConstraintNode.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/sixdofConstraintNode.cpp",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DBSixdofConstraintNode.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/sixdofConstraintNode.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DBSliderConstraintNode.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/sliderConstraintNode.cpp",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DBSliderConstraintNode.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/sliderConstraintNode.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DB_Constraint_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/bt_constraint.h",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DB_Hinge_Constraint_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/bt_hinge_constraint.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DB_Nail_Constraint_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/bt_nail_constraint.h",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DB_Sixdof_Constraint_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/bt_sixdof_constraint.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/DB_Slider_Constraint_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/bt_slider_constraint.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/constraint_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/constraint_impl.h",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/dbConstraint_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/constraint.h",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/dbHinge_constraint_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/hinge_constraint.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/dbNail_constraint_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/nail_constraint.h",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/dbSixdof_constraint_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/sixdof_constraint.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/dbSlider_constraint_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/slider_constraint.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/hinge_constraint_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/hinge_constraint_impl.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/nail_constraint_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/nail_constraint_impl.h",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/sixdof_constraint_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/sixdof_constraint_impl.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Constraint/slider_constraint_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/slider_constraint_impl.h",
+      "marker": true,
+      "notice_sha256": "6cedfb0db3c26b00c6fe36ad414c432cc259dfe332f97d1c1a82209003904f54"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/DB_BulletSolver_t.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_solver.cpp",
+      "marker": true,
+      "notice_sha256": "66f99118fd85103e21b8f2ae1c2cc45389c1b4093209bc6275df7ceddfa4bc4c"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/DB_BulletSolver_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_solver.h",
+      "marker": true,
+      "notice_sha256": "c1de47e59f9f44f9b3bc76363f5f5b04c652a8e28fe354a3fc00097da16b92b1"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Draw/drawUtils.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/drawUtils.cpp",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Draw/drawUtils.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/drawUtils.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/File/pdbIO.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/pdbIO.cpp",
+      "marker": false,
+      "notice_sha256": "31d553bdf53f21e69d66138a14e7da6c6c943c32b14f2a27b9ef3b61b0880a0f"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/File/pdbIO.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/pdbIO.h",
+      "marker": false,
+      "notice_sha256": "31d553bdf53f21e69d66138a14e7da6c6c943c32b14f2a27b9ef3b61b0880a0f"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Mesh/DB_HacdShape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_hacd_shape.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Mesh/DB_MeshShape_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_mesh_shape.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Mesh/mesh_shape_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/mesh_shape_impl.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/RigidBody/DBRigidBodyArrayNode.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/rigidBodyArrayNode.cpp",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/RigidBody/DBRigidBodyArrayNode.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/rigidBodyArrayNode.h",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/RigidBody/DBRigidBodyNode.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/rigidBodyNode.cpp",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/RigidBody/DBRigidBodyNode.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/rigidBodyNode.h",
+      "marker": true,
+      "notice_sha256": "5db936d9c8b7cd6b74704483ee6b73f64aeb5bc587dfab3608aff3eade634748"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/RigidBody/DB_RigidBody_t.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_rigid_body.cpp",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/RigidBody/DB_RigidBody_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_rigid_body.h",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/RigidBody/dbRigidBody_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/rigid_body.h",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/RigidBody/rigid_body_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/rigid_body_impl.h",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/SoftBody/DBSoftBodyNode.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/softBodyNode.cpp",
+      "marker": true,
+      "notice_sha256": "a8af20b377ad62b11a2f19ee63049b2f0e908d65fe3b06cc0f7182344518bde5"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/SoftBody/DBSoftBodyNode.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/softBodyNode.h",
+      "marker": true,
+      "notice_sha256": "4caddd9f5cb6b04296524727cd9b3919403c004c956c4bbf4de0d1d0e7d16dc6"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/SoftBody/DB_SoftBody_t.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_soft_body.cpp",
+      "marker": true,
+      "notice_sha256": "15da918b4e6527c313b0ded5fd473083bd10ad6b02cbbf9efbd660cecd59d1dc"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/SoftBody/DB_SoftBody_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_soft_body.h",
+      "marker": true,
+      "notice_sha256": "6217685e8e916a7b77f025a7c8c50adf8dfee07d2da5f18f83b27d559010adcc"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/SoftBody/dbSoftBody_t.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/soft_body_t.cpp",
+      "marker": true,
+      "notice_sha256": "497aafc772ea0479657a27b5a0f85764882db74e1e0ec3550feb775455f5b1fc"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/SoftBody/dbSoftBody_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/soft_body_t.h",
+      "marker": true,
+      "notice_sha256": "b1f595ed5254c011c776fc554e3bfd6eff4b52ecd6e3b93c0ca01a153d1af7ec"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/SoftBody/soft_body_impl_t.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/soft_body_impl_t.cpp",
+      "marker": true,
+      "notice_sha256": "02798659ae9a26faeed342a99670e10173725c545c7a685b983cfe13a3748b8d"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/SoftBody/soft_body_impl_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/soft_body_impl_t.h",
+      "marker": true,
+      "notice_sha256": "02798659ae9a26faeed342a99670e10173725c545c7a685b983cfe13a3748b8d"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Solver/DBSolverNode.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/dSolverNode.cpp",
+      "marker": true,
+      "notice_sha256": "4e2bb458d067c68352faef8aeb0e2a60bd9a3df2121ad4b53208f1688945944e"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/Solver/DBSolverNode.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/dSolverNode.h",
+      "marker": true,
+      "notice_sha256": "be4c2251e1a1fc3bde3f899e2970ec3f4a0fbeca1f0d2ff84c023d958e8262f9"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/dbSolver_t.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/solver.cpp",
+      "marker": true,
+      "notice_sha256": "7f3385e7947f447560af02b7c3f47fc5b25a9b87cb52e14462e2d3a1e0d810a1"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/dbSolver_t.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/solver.h",
+      "marker": true,
+      "notice_sha256": "2638b721eb314d395b1509452eb17ff54277610804285df9026a067876d9a3c0"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/mvl/base.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/mvl/base.h",
+      "marker": false,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/mvl/mat.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/mvl/mat.h",
+      "marker": false,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/mvl/mathUtils.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/mathUtils.h",
+      "marker": false,
+      "notice_sha256": "31d553bdf53f21e69d66138a14e7da6c6c943c32b14f2a27b9ef3b61b0880a0f"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/mvl/quat.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/mvl/quat.h",
+      "marker": false,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/mvl/traits.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/mvl/traits.h",
+      "marker": false,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/mvl/util.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/mvl/util.h",
+      "marker": false,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/mvl/vec.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/mvl/vec.h",
+      "marker": false,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/solver_impl.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/solver_impl.h",
+      "marker": true,
+      "notice_sha256": "024302da6bfb70a1ca2deee9e767f38762742c0cbefd069f1a06503d04167ce1"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/MayaTransformWriter.cpp",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaTransformWriter.cpp",
+      "marker": true,
+      "notice_sha256": "d547a8f666f193936631c9b686a07bf1a9e7ff21beaf03f0c039dcfa2d0640ae"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/MayaTransformWriter.h",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaTransformWriter.h",
+      "marker": true,
+      "notice_sha256": "69d231c2dcaa9b645b48e0c8f6b70e2f9a175ebdfe177fedbc338afec5817e83"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/MayaLocatorWriter.cpp",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaLocatorWriter.cpp",
+      "marker": true,
+      "notice_sha256": "d547a8f666f193936631c9b686a07bf1a9e7ff21beaf03f0c039dcfa2d0640ae"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/MayaLocatorWriter.h",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaLocatorWriter.h",
+      "marker": true,
+      "notice_sha256": "69d231c2dcaa9b645b48e0c8f6b70e2f9a175ebdfe177fedbc338afec5817e83"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/MayaAttributeWriter.cpp",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/AttributesWriter.cpp",
+      "marker": true,
+      "notice_sha256": "aa04479fe88d146588dd31684cc39b7e73578b01923b0af45aafd69094d7d6c4"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/MayaAttributeWriter.h",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/AttributesWriter.h",
+      "marker": true,
+      "notice_sha256": "d547a8f666f193936631c9b686a07bf1a9e7ff21beaf03f0c039dcfa2d0640ae"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/DCAbcWriteJob.cpp",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/AbcWriteJob.cpp",
+      "marker": true,
+      "notice_sha256": "9029e9fb1b36817e9df33e9b30ed8d5a6b23fab2edb4b2b6bde0431be79843d5"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/DCAbcWriteJob.h",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/AbcWriteJob.h",
+      "marker": true,
+      "notice_sha256": "d547a8f666f193936631c9b686a07bf1a9e7ff21beaf03f0c039dcfa2d0640ae"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/DDataExportUtil.cpp",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaUtility.cpp",
+      "marker": true,
+      "notice_sha256": "d547a8f666f193936631c9b686a07bf1a9e7ff21beaf03f0c039dcfa2d0640ae"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/DDataExportUtil.h",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaUtility.h",
+      "marker": true,
+      "notice_sha256": "aa04479fe88d146588dd31684cc39b7e73578b01923b0af45aafd69094d7d6c4"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/DExportAbcCmd.cpp",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/AbcExport.cpp",
+      "marker": true,
+      "notice_sha256": "9029e9fb1b36817e9df33e9b30ed8d5a6b23fab2edb4b2b6bde0431be79843d5"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/DMeshWriter.cpp",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaMeshWriter.cpp",
+      "marker": true,
+      "notice_sha256": "9029e9fb1b36817e9df33e9b30ed8d5a6b23fab2edb4b2b6bde0431be79843d5"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/DPointWriter.cpp",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaPointPrimitiveWriter.cpp",
+      "marker": true,
+      "notice_sha256": "d547a8f666f193936631c9b686a07bf1a9e7ff21beaf03f0c039dcfa2d0640ae"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/DCurveWriter.cpp",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaNurbsCurveWriter.cpp",
+      "marker": true,
+      "notice_sha256": "9029e9fb1b36817e9df33e9b30ed8d5a6b23fab2edb4b2b6bde0431be79843d5"
+    },
+    {
+      "path": "src/modules/volume/VDB/Common/DOpenVDBUtil.h",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb/viewer/RenderModules.h",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Common/DOpenVDBUtil.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb/viewer/RenderModules.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBVectorMerge.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_Vector_Merge.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBVectorSplit.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_Vector_Split.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBRemap.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_Remap.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBPotentialFlowCompat.h",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb/tools/PotentialFlow.h",
+      "marker": false,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/btConvexConvexMprAlgorithm.cpp",
+      "component": "bullet",
+      "upstream": "https://github.com/bulletphysics/bullet3/blob/126b6762200b1a9ec8df39b8fd53cb2ad62fb146/examples/VoronoiFracture/btConvexConvexMprAlgorithm.cpp",
+      "marker": true,
+      "notice_sha256": "dc89887f55655419daa136eaaa28c259155fe91766688428627befb730012181"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/btConvexConvexMprAlgorithm.h",
+      "component": "bullet",
+      "upstream": "https://github.com/bulletphysics/bullet3/blob/126b6762200b1a9ec8df39b8fd53cb2ad62fb146/examples/VoronoiFracture/btConvexConvexMprAlgorithm.h",
+      "marker": true,
+      "notice_sha256": "1d8e1d7d878a80275347d11ce62bcf40ca7bd6ca1e1c96d86b9888aca83323e2"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/DBFractureDynamicsWorld.cpp",
+      "component": "bullet",
+      "upstream": "https://github.com/bulletphysics/bullet3/blob/126b6762200b1a9ec8df39b8fd53cb2ad62fb146/examples/FractureDemo/btFractureDynamicsWorld.cpp",
+      "marker": true,
+      "notice_sha256": "b34a5da97697b467ab92f54c4714e7d10d0b162105b063950cbf78062b8f31e2"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/DBFractureDynamicsWorld.h",
+      "component": "bullet",
+      "upstream": "https://github.com/bulletphysics/bullet3/blob/126b6762200b1a9ec8df39b8fd53cb2ad62fb146/examples/FractureDemo/btFractureDynamicsWorld.h",
+      "marker": true,
+      "notice_sha256": "b34a5da97697b467ab92f54c4714e7d10d0b162105b063950cbf78062b8f31e2"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/dbtFractureBody.cpp",
+      "component": "bullet",
+      "upstream": "https://github.com/bulletphysics/bullet3/blob/126b6762200b1a9ec8df39b8fd53cb2ad62fb146/examples/FractureDemo/btFractureBody.cpp",
+      "marker": true,
+      "notice_sha256": "b34a5da97697b467ab92f54c4714e7d10d0b162105b063950cbf78062b8f31e2"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/dbtFractureBody.h",
+      "component": "bullet",
+      "upstream": "https://github.com/bulletphysics/bullet3/blob/126b6762200b1a9ec8df39b8fd53cb2ad62fb146/examples/FractureDemo/btFractureBody.h",
+      "marker": true,
+      "notice_sha256": "b34a5da97697b467ab92f54c4714e7d10d0b162105b063950cbf78062b8f31e2"
+    },
+    {
+      "path": "src/core/noise/Poisson/PoissonGenerator.h",
+      "component": "poisson",
+      "upstream": "https://github.com/corporateshark/poisson-disk-generator/blob/cfc4936e860de93428640fddf83eeb2d7e730fbf/PoissonGenerator.h",
+      "marker": true,
+      "notice_sha256": "0f784121c2496192c09bb52d374e0addba7a2919d7f3087adc69fb82776fb505"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/DMeshWriter.h",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaMeshWriter.h",
+      "marker": true,
+      "notice_sha256": "9029e9fb1b36817e9df33e9b30ed8d5a6b23fab2edb4b2b6bde0431be79843d5"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/DPointWriter.h",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaPointPrimitiveWriter.h",
+      "marker": true,
+      "notice_sha256": "69d231c2dcaa9b645b48e0c8f6b70e2f9a175ebdfe177fedbc338afec5817e83"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/Abc/DCurveWriter.h",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/MayaNurbsCurveWriter.h",
+      "marker": true,
+      "notice_sha256": "69d231c2dcaa9b645b48e0c8f6b70e2f9a175ebdfe177fedbc338afec5817e83"
+    },
+    {
+      "path": "src/modules/curve/DCurve/Cmd/DExportAbcCmd.h",
+      "component": "alembic",
+      "upstream": "https://github.com/alembic/alembic/blob/895a7c6a8b3396a21c6ba03ddf91ed91514d7b93/maya/AbcExport/AbcExport.h",
+      "marker": true,
+      "notice_sha256": "69d231c2dcaa9b645b48e0c8f6b70e2f9a175ebdfe177fedbc338afec5817e83"
+    },
+    {
+      "path": "src/modules/volume/VDB/Common/DOpenVDBGeoUtil.h",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/GeometryUtil.h",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Common/DOpenVDBCommon.h",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_From_Particles.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Common/DOpenVDBCommon.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_From_Particles.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBCombine.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_Combine.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBFilterLevelSet.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_Filter_Level_Set.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/IO/DWriteOpenVDB.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_Write.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBTransform.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_maya/maya/OpenVDBTransformNode.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Data/DOpenVDBData.h",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_maya/maya/OpenVDBData.h",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Data/DOpenVDBData.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_maya/maya/OpenVDBData.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Convert/DOpenVDBConvert.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_To_Polygons.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Generate/DOpenVDBFromFluid.h",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_maya/maya/OpenVDBFromMayaFluidNode.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Generate/DOpenVDBFromFluid.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_maya/maya/OpenVDBFromMayaFluidNode.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBAdvectPoints.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_Advect_Points.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Generate/DOpenVDBFromMesh.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_maya/maya/OpenVDBFromPolygonsNode.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Generate/DOpenVDBFromMesh.h",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_maya/maya/OpenVDBFromPolygonsNode.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBRemoveDivergence.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_houdini/houdini/SOP_OpenVDB_Remove_Divergence.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/DM/DCBullet2DSolver.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "4e2bb458d067c68352faef8aeb0e2a60bd9a3df2121ad4b53208f1688945944e",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/dSolverNode.cpp"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/DM/DCBullet2DSolver.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "be4c2251e1a1fc3bde3f899e2970ec3f4a0fbeca1f0d2ff84c023d958e8262f9",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/dSolverNode.h"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/DM/DMBulletTest.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "4e2bb458d067c68352faef8aeb0e2a60bd9a3df2121ad4b53208f1688945944e",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/dSolverNode.cpp"
+    },
+    {
+      "path": "src/modules/dynamics/DBullet/DM/DMBulletTest.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "be4c2251e1a1fc3bde3f899e2970ec3f4a0fbeca1f0d2ff84c023d958e8262f9",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/dSolverNode.h"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/DBulletFractureSolver.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "4e2bb458d067c68352faef8aeb0e2a60bd9a3df2121ad4b53208f1688945944e",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/dSolverNode.cpp"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/DBulletFractureSolver.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "be4c2251e1a1fc3bde3f899e2970ec3f4a0fbeca1f0d2ff84c023d958e8262f9",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/dSolverNode.h"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/commonBulletSoftBody.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "705839a7009a133211a6eb05c4df5f4663ff41c1f4c7672e0e30841bfd32b601",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_soft_body.cpp",
+      "additional_archive_members": [
+        "dynamica/trunk/Extras/MayaPlugin/bt_soft_body.h"
+      ]
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/db_collision_shape_base.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "518553800474a7b389e378ce64bf0e463bd0b8c75ed952ba8d9a876840be8406",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_composite_shape.h",
+      "additional_archive_members": [
+        "dynamica/trunk/Extras/MayaPlugin/collision_shape.h"
+      ]
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/db_constraint_base.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "18b844d60c107eb7b2ede8bee7cae562bd3499ca20ec4dc38f726aab8f3b65be",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/constraint/bt_nail_constraint.h",
+      "additional_archive_members": [
+        "dynamica/trunk/Extras/MayaPlugin/constraint/bt_hinge_constraint.h",
+        "dynamica/trunk/Extras/MayaPlugin/constraint/bt_sixdof_constraint.h",
+        "dynamica/trunk/Extras/MayaPlugin/constraint/bt_slider_constraint.h"
+      ]
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/db_collision_mesh_shapes.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "b0acd9f78e0885be4a497cf4662676e173e21640e828fdb1cb4a4cc8b50dad8b",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_mesh_shape.h",
+      "additional_archive_members": [
+        "dynamica/trunk/Extras/MayaPlugin/bt_convex_hull_shape.h"
+      ]
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/commonDBulletCollision.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "31d553bdf53f21e69d66138a14e7da6c6c943c32b14f2a27b9ef3b61b0880a0f",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/collisionShapeNode.cpp"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/db_collision_base_shapes.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "02cbb970e87d45c89bbb694820349f93f88b759a5f3992fa60918a3369a8b096",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_box_shape.h",
+      "additional_archive_members": [
+        "dynamica/trunk/Extras/MayaPlugin/bt_sphere_shape.h",
+        "dynamica/trunk/Extras/MayaPlugin/bt_plane_shape.h"
+      ]
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/commonBulletRigidBody.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "2a509af852f15023bd12f58e94f7791a629494bcb420ac447ee4f0bc70020581",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_rigid_body.h"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Dynamics/Bullet/commonDBullet.h",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "66f99118fd85103e21b8f2ae1c2cc45389c1b4093209bc6275df7ceddfa4bc4c",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/bt_solver.cpp"
+    },
+    {
+      "path": "src/integrations/DJet/DJetSmokeSolver.cpp",
+      "component": "dynamica",
+      "upstream": "https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip",
+      "marker": true,
+      "notice_sha256": "978c92e26f9c03e7269e97989f9159247fa14ace378bfb24ae993a5d45c8d2a0",
+      "archive_member": "dynamica/trunk/Extras/MayaPlugin/dSolverNode.cpp",
+      "additional_sources": [
+        {
+          "component": "jet",
+          "upstream": "https://github.com/doyubkim/fluid-engine-dev/blob/c667964eb8c86cc5956054f234822e11c0436d99/src/examples/smoke_sim/main.cpp",
+          "archive_member": "src/examples/smoke_sim/main.cpp"
+        }
+      ]
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBCopy.cpp",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_maya/maya/OpenVDBCopyNode.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/modules/volume/VDB/Edit/DOpenVDBCopy.h",
+      "component": "openvdb",
+      "upstream": "https://github.com/AcademySoftwareFoundation/openvdb/blob/a79df2f32b8ebb5d15fd73325c46cee845a81e49/openvdb_maya/maya/OpenVDBCopyNode.cc",
+      "marker": true,
+      "notice_sha256": "46dfe018bad57603dae1631ec4dd706d6e5c6cd004598bb13012be37fb4255aa"
+    },
+    {
+      "path": "src/core/common/object/DPointOp.h",
+      "component": "nanoflann",
+      "upstream": "https://github.com/jlblancoc/nanoflann/blob/f2efec0110eb68edf8cae90fce394a5044bf3db8/examples/pointcloud_example.cpp",
+      "marker": true,
+      "notice_sha256": "2d5cd7b9c7e4c475eeff52314c5ddbf569866b3b88dba0198905749b91c0dcde"
+    },
+    {
+      "path": "src/modules/mesh/DMesh/Utility/DMSubDivide.cpp",
+      "component": "opensubdiv",
+      "upstream": "https://github.com/PixarAnimationStudios/OpenSubdiv/blob/3b5c3d99d29ba078385013d15f8b2ebeac0daf45/tutorials/far/tutorial_1/far_tutorial_1.cpp",
+      "marker": true,
+      "notice_sha256": "706bb59edb602e0c28f9ff3f389da0c0a6669d95d7911b05cadbde8d52eebe30"
+    }
+  ],
+  "owned_replacements": [
+    "src/modules/volume/VDB/Common/DVdbGridDispatch.h",
+    "src/modules/mesh/polyModifier/basePolyModifierCmd.h",
+    "src/modules/mesh/polyModifier/basePolyModifierCmd.cpp",
+    "src/modules/mesh/polyModifier/basePolyModifierNode.h",
+    "src/modules/mesh/polyModifier/basePolyModifierNode.cpp",
+    "src/modules/mesh/polyModifier/basePolyModifierFty.h",
+    "src/modules/mesh/polyModifier/basePolyModifierFty.cpp",
+    "src/core/Utility/3d/Math/DVec.h",
+    "src/core/Utility/DUtility.h",
+    "src/core/DDataUtility/Generate/DPointCurveEmit.cpp",
+    "src/core/DDataUtility/Data/DPAttributeData.h",
+    "src/core/DDataUtility/Data/DPData.h",
+    "src/core/Data/DPrimBaseData.h",
+    "src/core/noise/DWoodNoise.h",
+    "src/core/common/object/DNoiseOp.cpp",
+    "src/core/common/utility/DMayaFieldData.h",
+    "src/core/common/utility/DMayaFieldDraw.h",
+    "src/core/geometry/DFieldIconGeometry.h",
+    "src/modules/particles/particle/field/DCurlNoiseField.cpp",
+    "src/modules/volume/VDB/Dynamics/DOpenVDBField.cpp",
+    "src/modules/curve/DCurve/Shape/DCurveShape.cpp",
+    "src/core/common/utility/DViewportBuffer.h"
+  ],
+  "owned_replacement_guards": {
+    "src/core/DDataUtility/Generate/DPointCurveEmit.cpp": [
+      "Pick a random 2d position",
+      "Displace along N and NxT",
+      "Pyroclastic noise is created by"
+    ],
+    "src/core/DDataUtility/Data/DPAttributeData.h": [
+      "Copy the given metadata into this metadata",
+      "Create new metadata of this type",
+      "Static specialized function for the type name"
+    ],
+    "src/core/DDataUtility/Data/DPData.h": [
+      "Return a pointer to the metadata with the given name"
+    ],
+    "src/core/Data/DPrimBaseData.h": [
+      "Return a pointer to the metadata with the given name"
+    ],
+    "src/core/common/object/DNoiseOp.cpp": [
+      "woodGrainNoise",
+      "2.20703125",
+      "Cut the wood texture",
+      "translatedWood"
+    ],
+    "src/modules/particles/particle/field/DCurlNoiseField.cpp": [
+      "hCompond",
+      "ERROR in hInputArray = block.outputArrayValue",
+      "kCurlTorus",
+      "glRotatef"
+    ],
+    "src/modules/volume/VDB/Dynamics/DOpenVDBField.cpp": [
+      "hCompond",
+      "ERROR in hInputArray = block.outputArrayValue",
+      "kTorus",
+      "glRotatef"
+    ],
+    "src/modules/curve/DCurve/Shape/DCurveShape.cpp": [
+      "The postConstructor solves this problem",
+      "assigns them to the fGeometry"
+    ],
+    "src/core/common/utility/DViewportBuffer.h": [
+      "numberOfVertexRequirments",
+      "requirmentNumber",
+      "footPrint"
+    ]
+  },
+  "vendored_notice_headers": {
+    "libnoise": {
+      "reference": "https://prdownloads.sourceforge.net/libnoise/libnoisesrc-1.0.0.zip?download=",
+      "license_file": "third_party/licenses/LGPL-2.1.txt",
+      "license_sha256": "20e50fe7aae3e56378ebf0417d9de904f55a0e61e4df315333e632a4d3555d95",
+      "modified_files": [
+        {
+          "path": "third_party/libnoise/source/billow.cpp",
+          "header_sha256": "45e3db5c55bd861e60c3d44cfae39e3a8690da4ce0909ca81070f9489e7ecf0c"
+        },
+        {
+          "path": "third_party/libnoise/source/blend.cpp",
+          "header_sha256": "1c1a19ac6c6894b6664ed71e5147d51122408e7ca3b0a6c44ee2d1efdaaf2bfb"
+        },
+        {
+          "path": "third_party/libnoise/source/checkerboard.cpp",
+          "header_sha256": "ee1e98fd8b710b869853c8bfe301e25385edc240fcf3c222c80e6d3461aa5d5b"
+        },
+        {
+          "path": "third_party/libnoise/source/curve.cpp",
+          "header_sha256": "2d0dded5b197836d37c0e9416757d3fa1ed0e5351e841163d6b3eb346e6cebd3"
+        },
+        {
+          "path": "third_party/libnoise/source/cylinders.cpp",
+          "header_sha256": "db2130a6bf2f7cfaed8d75890649d317733317358e127cb1ebc84f13de0c7926"
+        },
+        {
+          "path": "third_party/libnoise/source/max.cpp",
+          "header_sha256": "e795a3ead3349827fef81c824b5a0c14046b10ca53f9f8fd187cf239e57d2356"
+        },
+        {
+          "path": "third_party/libnoise/source/min.cpp",
+          "header_sha256": "8e71edd3063bb3b497f8eec451c6c1618c39c271912734fe5a49c7838f29e618"
+        },
+        {
+          "path": "third_party/libnoise/source/modulebase.h",
+          "header_sha256": "a7ecc8f547ab9e128a7983ca922898370bb96137022c4d90a5f5273c3d14b95a"
+        },
+        {
+          "path": "third_party/libnoise/source/noisegen.cpp",
+          "header_sha256": "15beb8af6231625c7638b1345d91856330ef2a599edd34c10521634136f080a8"
+        },
+        {
+          "path": "third_party/libnoise/source/noisegen.h",
+          "header_sha256": "a88aef947cafc18376da37ce0cc63cff8742296eb0aada54013a08ddb30b2113"
+        },
+        {
+          "path": "third_party/libnoise/source/perlin.cpp",
+          "header_sha256": "344f4290983a4559ceead3c180457e8ad9442daccf5d455d3da06a871ad0b239"
+        },
+        {
+          "path": "third_party/libnoise/source/ridgedmulti.cpp",
+          "header_sha256": "5b9d20af449cc8bcfdd4cb6d0b067fa493335526f84adf3f957c36815778f6eb"
+        },
+        {
+          "path": "third_party/libnoise/source/rotatepoint.cpp",
+          "header_sha256": "26d256ac3931896b5c775fb3e73f23056ffd53e250b2ee0acdd3abcc18b8a4c5"
+        },
+        {
+          "path": "third_party/libnoise/source/select.cpp",
+          "header_sha256": "6a4394b24f7b91e86a6aa164c0de2e6deb92de6ce2febaed4fcef9c4b7f232e1"
+        },
+        {
+          "path": "third_party/libnoise/source/spheres.cpp",
+          "header_sha256": "d33ee847b3fb6ac73ab2d9f2cf8622aaff29838811792cd3237fb1e2129bb563"
+        },
+        {
+          "path": "third_party/libnoise/source/terrace.cpp",
+          "header_sha256": "7ff02758dab960d0c83a83e13c4e36aa29fee5b7ecc9b7b0324f9a8bf9b52747"
+        },
+        {
+          "path": "third_party/libnoise/source/turbulence.cpp",
+          "header_sha256": "968593797d54e59598f020b9c832121d893735196aae2074531cad9d17480f69"
+        },
+        {
+          "path": "third_party/libnoise/source/voronoi.cpp",
+          "header_sha256": "0f19f7f3ed9982dc78c2152e1bb1b25c5a4a143a3dd06843e8788f732759f9ed"
+        }
+      ]
+    }
+  },
+  "embedded_notice_groups": {
+    "fastnoise_simd": {
+      "reference": "https://github.com/Auburn/FastNoiseSIMD/tree/b8b984fa18a9f0387fbefbf53bbc7d28db97042a",
+      "notice_format": "line_comment",
+      "required_phrases": [
+        "Copyright(c) 2017 Jordan Peck",
+        "The above copyright notice and this permission notice",
+        "THE SOFTWARE IS PROVIDED \"AS IS\""
+      ],
+      "files": [
+        {
+          "path": "third_party/fastnoise_simd/source/FastNoiseSIMD.cpp",
+          "notice_sha256": "93f1cd05fd5688a3ff078b2f18df1f2bac2cebbb9a3d379edc88958e6e438d99"
+        },
+        {
+          "path": "third_party/fastnoise_simd/source/FastNoiseSIMD.h",
+          "notice_sha256": "872acd3598d79d8e25a9cd860ee103af9d51a963e58af31b1a4948271752919c"
+        },
+        {
+          "path": "third_party/fastnoise_simd/source/FastNoiseSIMD_avx2.cpp",
+          "notice_sha256": "ea3d2887012c537af02dac52ac26c79ae09997cf6b1533d84b5130f44ec4c85c"
+        },
+        {
+          "path": "third_party/fastnoise_simd/source/FastNoiseSIMD_avx512.cpp",
+          "notice_sha256": "ffe18208206a76df453877120a216c1288ef26f65a9192040bd57e6f07ce7c1e"
+        },
+        {
+          "path": "third_party/fastnoise_simd/source/FastNoiseSIMD_internal.cpp",
+          "notice_sha256": "59709018445eb003077d7bd8d2184bdcc390c2b4dfcf07c39f07e8a37fa13aec"
+        },
+        {
+          "path": "third_party/fastnoise_simd/source/FastNoiseSIMD_internal.h",
+          "notice_sha256": "92abd1ca0bb6e66d804c5eb965145ea8365d291cf49ca985ea7005f5e8b83c22"
+        },
+        {
+          "path": "third_party/fastnoise_simd/source/FastNoiseSIMD_neon.cpp",
+          "notice_sha256": "e0fdab9ef88779ff55d7950383df3fda57d540fa61feb8d760ba8ba05069f3b3"
+        },
+        {
+          "path": "third_party/fastnoise_simd/source/FastNoiseSIMD_sse2.cpp",
+          "notice_sha256": "3094bea61ae16dbc15aab9cabe6918b1e704c66a481b42a2964a3ec8ba6d1475"
+        },
+        {
+          "path": "third_party/fastnoise_simd/source/FastNoiseSIMD_sse41.cpp",
+          "notice_sha256": "ad8e40ee92a4c2c51dd9d53d9362612874fa5fc2afb4df861c991b7089bdd8bf"
+        }
+      ]
+    },
+    "android_cpu_features": {
+      "reference": "https://github.com/Auburn/FastNoiseSIMD/tree/b8b984fa18a9f0387fbefbf53bbc7d28db97042a/FastNoiseSIMD/ARM",
+      "notice_format": "block_comment",
+      "required_phrases": [
+        "Copyright (C) 2010 The Android Open Source Project",
+        "Redistributions of source code",
+        "THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS"
+      ],
+      "files": [
+        {
+          "path": "third_party/fastnoise_simd/source/ARM/cpu-features.c",
+          "notice_sha256": "6b78feaa023a9371c733a935210d5e48719285f8d7f87174d182a2172f4cf4be"
+        },
+        {
+          "path": "third_party/fastnoise_simd/source/ARM/cpu-features.h",
+          "notice_sha256": "6b78feaa023a9371c733a935210d5e48719285f8d7f87174d182a2172f4cf4be"
+        }
+      ]
+    },
+    "voro++": {
+      "reference": "https://math.lbl.gov/voro%2B%2B/download/dir/voro%2B%2B-0.4.6.tar.gz",
+      "notice_format": "line_comment",
+      "required_phrases": [
+        "Voro++, a 3D cell-based Voronoi library",
+        "Author   : Chris H. Rycroft (LBL / UC Berkeley)"
+      ],
+      "files": [
+        {
+          "path": "third_party/voro++/c_loops.cc",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/c_loops.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/cell.cc",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/cell.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/common.cc",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/common.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/config.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/container.cc",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/container.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/container_prd.cc",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/container_prd.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/pre_container.cc",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/pre_container.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/rad_option.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/unitcell.cc",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/unitcell.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/v_base.cc",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/v_base.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/v_compute.cc",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/v_compute.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/voro++.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/wall.cc",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/wall.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        },
+        {
+          "path": "third_party/voro++/worklist.hh",
+          "notice_sha256": "1ab0764f071251a9e773252f8315688f6e0abdff00cabf80c5f468b00e84865f"
+        }
+      ],
+      "license_file": "third_party/licenses/Voro++-modified-BSD.txt",
+      "license_sha256": "48830a8a187c5b4c702d958fb71551c04de7fd8672b8b954127473353e0e7a77"
+    },
+    "jc_voronoi": {
+      "reference": "https://github.com/JCash/voronoi",
+      "notice_format": "jc_license",
+      "required_phrases": [
+        "Copyright (c) 2015 Mathias Westerdahl",
+        "The above copyright notice and this permission notice",
+        "THE SOFTWARE IS PROVIDED \"AS IS\""
+      ],
+      "files": [
+        {
+          "path": "src/modules/point/DPoint/mesh/voro/jc_voronoi.h",
+          "notice_sha256": "e75c758b47124c0f12f04dd33ac9d2039a29c22ecc32a44781b212eeb92b3d40"
+        }
+      ]
+    }
+  }
+}

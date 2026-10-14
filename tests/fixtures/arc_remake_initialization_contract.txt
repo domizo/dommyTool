@@ -1,0 +1,63 @@
+DArcCurveNode
+create divide dv int 10
+divide min 0
+divide max 1000000
+divide storable 1
+divide keyable 1
+create radius r float 5
+radius min 0
+radius storable 1
+radius keyable 1
+create width w float 1
+width min 0
+width storable 1
+width keyable 1
+create startAngle sa float 0
+startAngle storable 1
+startAngle keyable 1
+create endAngle ea float 45
+endAngle storable 1
+endAngle keyable 1
+create offsetAngle oa float 0
+offsetAngle storable 1
+offsetAngle keyable 1
+create outputMesh opm generic
+outputMesh accepts mesh
+outputMesh storable 0
+add divide
+add radius
+add width
+add startAngle
+add endAngle
+add offsetAngle
+add outputMesh
+affects divide outputMesh
+affects radius outputMesh
+affects width outputMesh
+affects startAngle outputMesh
+affects endAngle outputMesh
+affects offsetAngle outputMesh
+remakeCurveNode
+create inputCurve in generic
+inputCurve accepts curve
+inputCurve readable 0
+inputCurve writable 1
+inputCurve storable 0
+add inputCurve
+create sampling s int 10
+sampling min 4
+add sampling
+create curveLength cl float 1
+curveLength min 0
+add curveLength
+create offset o float 0
+add offset
+create outputCurve out curve null
+outputCurve readable 1
+outputCurve writable 0
+outputCurve storable 0
+add outputCurve
+affects inputCurve outputCurve
+affects sampling outputCurve
+affects curveLength outputCurve
+affects offset outputCurve

@@ -1,0 +1,152 @@
+DPVectorArrayGen
+create generateType gt enum 0
+generateType field Single Value 0
+generateType field Random 1
+generateType field Animation 2
+generateType keyable 1
+generateType storable 1
+add generateType
+create ValueType vt enum 0
+ValueType field Point 0
+ValueType field Vector 1
+ValueType keyable 1
+ValueType storable 1
+add ValueType
+create value val 3float 0
+value default 0 0 0
+add value
+create valueSize vs int 1
+valueSize min 0
+valueSize keyable 1
+valueSize storable 1
+add valueSize
+create isNormalize inm bool 0
+add isNormalize
+create seed s int 1
+add seed
+create minRange mnr 3float 0
+minRange default 0 0 0
+add minRange
+create maxRange mxr 3float 0
+maxRange default 0 0 0
+add maxRange
+create GlobalOffset gof float 0
+add GlobalOffset
+create InOffsetArray inoff generic
+InOffsetArray accepts doubleArray
+InOffsetArray accepts floatArray
+InOffsetArray storable 0
+InOffsetArray writable 1
+InOffsetArray readable 0
+add InOffsetArray
+create InStretchArray instr generic
+InStretchArray accepts doubleArray
+InStretchArray accepts floatArray
+InStretchArray storable 0
+InStretchArray writable 1
+InStretchArray readable 0
+add InStretchArray
+create outDataArray out generic
+outDataArray accepts pointArray
+outDataArray accepts vectorArray
+outDataArray writable 0
+outDataArray storable 0
+add outDataArray
+affects generateType outDataArray
+affects ValueType outDataArray
+affects value outDataArray
+affects valueSize outDataArray
+affects isNormalize outDataArray
+affects seed outDataArray
+affects minRange outDataArray
+affects maxRange outDataArray
+affects GlobalOffset outDataArray
+affects InOffsetArray outDataArray
+affects InStretchArray outDataArray
+DPMatrix
+create inMatrix ima matrix double
+inMatrix storable 1
+inMatrix keyable 1
+inMatrix readable 1
+inMatrix writable 1
+inMatrix cached 0
+add inMatrix
+create dataSize ds int 1
+dataSize min 0
+dataSize max 1000000
+add dataSize
+create seed se int 1
+seed min 1
+add seed
+create translateNoise tn 3double 0
+translateNoise keyable 1
+translateNoise storable 1
+translateNoise default 0 0 0
+add translateNoise
+create rotateNoise rn 3double 0
+rotateNoise keyable 1
+rotateNoise storable 1
+rotateNoise default 0 0 0
+add rotateNoise
+create scaleNoise sn 3double 0
+scaleNoise keyable 1
+scaleNoise storable 1
+scaleNoise default 0 0 0
+add scaleNoise
+create outMatrixArray omat generic
+outMatrixArray accepts matrixArray
+outMatrixArray writable 0
+outMatrixArray storable 0
+add outMatrixArray
+affects inMatrix outMatrixArray
+affects dataSize outMatrixArray
+affects seed outMatrixArray
+affects translateNoise outMatrixArray
+affects rotateNoise outMatrixArray
+affects scaleNoise outMatrixArray
+DPEditDouble
+create inputDataArray ida generic
+inputDataArray accepts doubleArray
+inputDataArray accepts floatArray
+inputDataArray storable 0
+inputDataArray writable 1
+inputDataArray readable 0
+add inputDataArray
+create isUseExpression iue bool 0
+isUseExpression keyable 1
+isUseExpression storable 1
+add isUseExpression
+string.create 
+create expression exp string defaultString
+expression storable 1
+expression filename 0
+add expression
+create exValue exv double 0
+exValue keyable 1
+exValue storable 1
+add exValue
+create dataIndex din int 0
+dataIndex min 0
+dataIndex keyable 1
+dataIndex storable 1
+add dataIndex
+create dataValue dval double 0
+dataValue keyable 1
+dataValue storable 1
+add dataValue
+create editDataArray eda compound
+editDataArray child dataIndex
+editDataArray child dataValue
+editDataArray array 1
+add editDataArray
+create outDataArray out floatArray null
+outDataArray writable 0
+outDataArray storable 1
+add outDataArray
+affects inputDataArray outDataArray
+affects isUseExpression outDataArray
+affects expression outDataArray
+affects exValue outDataArray
+affects dataIndex outDataArray
+affects dataValue outDataArray
+affects editDataArray outDataArray

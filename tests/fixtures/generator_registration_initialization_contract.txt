@@ -1,0 +1,421 @@
+DHEyeGen
+create divideU divu int 0
+divideU default 9
+divideU min 1
+divideU softMin 1
+divideU softMax 60
+divideU keyable 1
+add divideU
+create divideV divv int 0
+divideV default 9
+divideV min 1
+divideV softMin 1
+divideV softMax 60
+divideV keyable 1
+add divideV
+create radius rad double 0
+radius default 4
+radius min 0
+radius softMin 0
+radius softMax 20
+radius keyable 1
+add radius
+create radiusRamp radrmp ramp
+add radiusRamp
+create innerRadius inrad double 0
+innerRadius default 0
+innerRadius min 0
+innerRadius max 180
+innerRadius keyable 1
+add innerRadius
+create lenzGap leg double 0
+lenzGap default 0.01
+lenzGap min 0
+lenzGap max 1
+lenzGap keyable 1
+add lenzGap
+create lenzRamp lera ramp
+add lenzRamp
+create lenzsOffset leof double 0
+lenzsOffset default 0.097000000000000003
+lenzsOffset softMin 0
+lenzsOffset softMax 1
+lenzsOffset keyable 1
+add lenzsOffset
+create irisSize irs double 0
+irisSize default 0.25
+irisSize min 0
+irisSize max 1
+irisSize keyable 1
+add irisSize
+create irisDivide ird int 0
+irisDivide default 4
+irisDivide min 0
+irisDivide softMin 0
+irisDivide softMax 20
+irisDivide keyable 1
+add irisDivide
+create irisRamp irra ramp
+add irisRamp
+create irisOffset irom double 0
+irisOffset default -0.02
+irisOffset softMin -1
+irisOffset softMax 1
+irisOffset keyable 1
+add irisOffset
+create pupilSize pus double 0
+pupilSize default 0.10000000000000001
+pupilSize min 0
+pupilSize max 1
+pupilSize keyable 1
+add pupilSize
+create pupilDepth pupd double 0
+pupilDepth default 0.40000000000000002
+pupilDepth min 0
+pupilDepth max 1
+pupilDepth keyable 1
+add pupilDepth
+create pupilMotion pupm double 0
+pupilMotion default 1
+pupilMotion softMin 0
+pupilMotion softMax 1
+pupilMotion keyable 1
+add pupilMotion
+create isCapPupil isp bool 0
+isCapPupil default 1
+isCapPupil keyable 1
+add isCapPupil
+create uvPadding uvpad double 0
+uvPadding default 0.01
+uvPadding min 0
+uvPadding softMin 0
+uvPadding softMax 1
+uvPadding keyable 1
+add uvPadding
+create outLenzMesh olm mesh null
+outLenzMesh readable 1
+outLenzMesh writable 0
+outLenzMesh storable 0
+add outLenzMesh
+create outIrisMesh oim mesh null
+outIrisMesh readable 1
+outIrisMesh writable 0
+outIrisMesh storable 0
+add outIrisMesh
+affects divideU outLenzMesh
+affects divideV outLenzMesh
+affects radius outLenzMesh
+affects radiusRamp outLenzMesh
+affects innerRadius outLenzMesh
+affects lenzGap outLenzMesh
+affects lenzRamp outLenzMesh
+affects lenzsOffset outLenzMesh
+affects uvPadding outLenzMesh
+affects irisSize outLenzMesh
+affects divideU outIrisMesh
+affects divideV outIrisMesh
+affects radius outIrisMesh
+affects radiusRamp outIrisMesh
+affects innerRadius outIrisMesh
+affects lenzGap outIrisMesh
+affects irisSize outIrisMesh
+affects irisDivide outIrisMesh
+affects irisRamp outIrisMesh
+affects irisOffset outIrisMesh
+affects pupilSize outIrisMesh
+affects pupilDepth outIrisMesh
+affects pupilMotion outIrisMesh
+affects isCapPupil outIrisMesh
+affects uvPadding outIrisMesh
+DCurveDuplicator
+create inObjects ino generic
+inObjects accepts mesh
+inObjects storable 0
+inObjects readable 0
+inObjects array 1
+add inObjects
+create inCurve inc generic
+inCurve accepts curve
+inCurve storable 0
+inCurve writable 1
+inCurve readable 0
+add inCurve
+create inTangentCurve intc generic
+inTangentCurve accepts curve
+inTangentCurve storable 0
+inTangentCurve writable 1
+inTangentCurve readable 0
+add inTangentCurve
+create duplicateMode dpm enum 0
+duplicateMode field Samplin 0
+duplicateMode field Step 1
+duplicateMode keyable 1
+add duplicateMode
+create count co int 0
+count default 10
+count min 0
+count keyable 1
+add count
+create curveLength cl double 0
+curveLength default 1
+curveLength min 0
+curveLength softMax 1
+curveLength keyable 1
+add curveLength
+create curveOffset off double 0
+curveOffset default 0
+curveOffset keyable 1
+add curveOffset
+create curveStep cst double 0
+curveStep default 1
+curveStep keyable 1
+add curveStep
+create tangentMode tam enum 0
+tangentMode field From Curve 0
+tangentMode field Simple Vector 1
+tangentMode field input Curve 2
+tangentMode keyable 1
+add tangentMode
+create tangentVector tanvec 3double 0
+tangentVector default 0 1 0
+add tangentVector
+create offsetTranslate offtrans 3double 0
+offsetTranslate default 0 0 0
+add offsetTranslate
+create globalRotate grot 3double 0
+globalRotate default 0 0 0
+add globalRotate
+create globalScale gscal 3double 0
+globalScale default 1 1 1
+add globalScale
+create outMesh om mesh null
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects inObjects outMesh
+affects inCurve outMesh
+affects inTangentCurve outMesh
+affects duplicateMode outMesh
+affects count outMesh
+affects curveLength outMesh
+affects curveOffset outMesh
+affects curveStep outMesh
+affects tangentMode outMesh
+affects tangentVector outMesh
+affects offsetTranslate outMesh
+affects globalRotate outMesh
+affects globalScale outMesh
+DBubbleCrystal
+create side si int 4
+side min 3
+side max 10000000
+side keyable 1
+side hidden 0
+create radius r double 3
+radius min 0
+radius keyable 1
+radius hidden 0
+create divide d int 1
+divide min 0
+divide max 10000000
+divide keyable 1
+divide hidden 0
+create midDivide md int 0
+midDivide min 0
+midDivide max 10000000
+midDivide keyable 1
+midDivide hidden 0
+create growth g double 1
+growth min 0
+growth max 1
+growth keyable 1
+growth hidden 0
+create seed se int 1
+seed min 0
+seed max 2147483646
+seed keyable 1
+seed hidden 0
+create arcNoiseAmplitude ana double 0
+arcNoiseAmplitude keyable 1
+arcNoiseAmplitude hidden 0
+create arcNoiseFrequency anf int 1
+arcNoiseFrequency min 0
+arcNoiseFrequency max 1000000
+arcNoiseFrequency keyable 1
+arcNoiseFrequency hidden 0
+create arcNoiseSmooth anm double 2
+arcNoiseSmooth keyable 0
+arcNoiseSmooth hidden 1
+create arcNoiseSpace anp double 2
+arcNoiseSpace keyable 0
+arcNoiseSpace hidden 1
+create heightNoiseAmplitude hna double 0
+heightNoiseAmplitude keyable 1
+heightNoiseAmplitude hidden 0
+create heightNoiseFrequency hnf int 1
+heightNoiseFrequency min 0
+heightNoiseFrequency max 1000000
+heightNoiseFrequency keyable 1
+heightNoiseFrequency hidden 0
+create heightNoiseSmooth hnm double 2
+heightNoiseSmooth keyable 0
+heightNoiseSmooth hidden 1
+create heightNoiseSpace hnp double 2
+heightNoiseSpace keyable 0
+heightNoiseSpace hidden 1
+create heightNoisePower hnw double 1
+heightNoisePower min 0
+heightNoisePower keyable 1
+heightNoisePower hidden 0
+add side
+add radius
+add divide
+add midDivide
+add growth
+add seed
+add arcNoiseAmplitude
+add arcNoiseFrequency
+add arcNoiseSmooth
+add arcNoiseSpace
+add heightNoiseAmplitude
+add heightNoiseFrequency
+add heightNoiseSmooth
+add heightNoiseSpace
+add heightNoisePower
+create outPutMesh opm generic
+outPutMesh accepts mesh
+outPutMesh hidden 1
+outPutMesh storable 0
+outPutMesh writable 0
+add outPutMesh
+affects side outPutMesh
+affects radius outPutMesh
+affects divide outPutMesh
+affects midDivide outPutMesh
+affects growth outPutMesh
+affects seed outPutMesh
+affects arcNoiseAmplitude outPutMesh
+affects arcNoiseFrequency outPutMesh
+affects heightNoiseAmplitude outPutMesh
+affects heightNoiseFrequency outPutMesh
+affects heightNoisePower outPutMesh
+LeafGen
+create LeafLength llen double 0
+LeafLength default 10
+LeafLength softMin 0.10000000000000001
+LeafLength softMax 50
+LeafLength min 0.01
+LeafLength keyable 1
+add LeafLength
+create LeafWidth lw double 0
+LeafWidth default 6
+LeafWidth softMin 0.10000000000000001
+LeafWidth softMax 50
+LeafWidth min 0.01
+LeafWidth keyable 1
+add LeafWidth
+create LeafDepth ld double 0
+LeafDepth default 0.5
+LeafDepth softMin 0
+LeafDepth softMax 5
+LeafDepth keyable 1
+add LeafDepth
+create LengthSampling lensmp int 0
+LengthSampling default 8
+LengthSampling min 3
+LengthSampling keyable 1
+add LengthSampling
+create WidthSampling wsmp int 0
+WidthSampling default 3
+WidthSampling min 2
+WidthSampling keyable 1
+add WidthSampling
+create UseWidthBias uswbs bool 0
+UseWidthBias default 1
+UseWidthBias keyable 1
+add UseWidthBias
+create LeftRamp lrmp ramp
+add LeftRamp
+create IsSymmetry issym bool 0
+IsSymmetry default 1
+IsSymmetry keyable 1
+add IsSymmetry
+create RightRamp rrmp ramp
+add RightRamp
+create DepthWidthRamp dwrmp ramp
+add DepthWidthRamp
+create DepthLengthRamp dlrmp ramp
+add DepthLengthRamp
+create IsNoiseEdge isno bool 0
+IsNoiseEdge default 0
+IsNoiseEdge keyable 1
+add IsNoiseEdge
+create Seed se int 0
+Seed min 0
+Seed default 0
+add Seed
+create NoiseAmplitude namp double 0
+NoiseAmplitude default 0.5
+NoiseAmplitude softMin 0
+NoiseAmplitude softMax 5
+NoiseAmplitude keyable 1
+add NoiseAmplitude
+create NoiseFrequency nfreq double 0
+NoiseFrequency min 0
+NoiseFrequency default 2
+add NoiseFrequency
+create NoiseWidthRamp nwramp ramp
+add NoiseWidthRamp
+create NoiseLengthRamp nlramp ramp
+add NoiseLengthRamp
+create Bend b double 0
+Bend default 0
+Bend softMin -180
+Bend softMax 180
+Bend keyable 1
+add Bend
+create BendRamp bndramp ramp
+add BendRamp
+create outMesh om mesh null
+outMesh readable 1
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects LeafLength outMesh
+affects LeafWidth outMesh
+affects LeafDepth outMesh
+affects LengthSampling outMesh
+affects WidthSampling outMesh
+affects UseWidthBias outMesh
+affects LeftRamp outMesh
+affects IsSymmetry outMesh
+affects RightRamp outMesh
+affects DepthWidthRamp outMesh
+affects DepthLengthRamp outMesh
+affects IsNoiseEdge outMesh
+affects Seed outMesh
+affects NoiseAmplitude outMesh
+affects NoiseFrequency outMesh
+affects NoiseWidthRamp outMesh
+affects NoiseLengthRamp outMesh
+affects Bend outMesh
+affects BendRamp outMesh
+icosahedronNode
+create frequency fq int 1
+frequency min 1
+frequency max 10
+frequency storable 1
+frequency keyable 1
+create radius r float 1
+radius min 9.9999997473787516e-05
+radius storable 1
+radius keyable 1
+create outPutMesh opm generic
+outPutMesh accepts mesh
+outPutMesh hidden 1
+outPutMesh storable 0
+add frequency
+add radius
+add outPutMesh
+affects frequency outPutMesh
+affects radius outPutMesh

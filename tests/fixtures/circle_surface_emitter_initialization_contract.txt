@@ -1,0 +1,73 @@
+DPointCircleEmit
+create emitType emt enum 0
+emitType field Radial 0
+emitType field Fill 1
+emitType keyable 1
+emitType storable 1
+add emitType
+create radius rad float 5
+radius min 0
+add radius
+create sampling sa int 10
+sampling min 0
+sampling max 10000000
+add sampling
+create startAngle san float 0
+add startAngle
+create endAngle ean float 360
+add endAngle
+create offsetAngle oan float 0
+add offsetAngle
+create Seed se int 0
+Seed min 0
+add Seed
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects emitType outDP
+affects radius outDP
+affects sampling outDP
+affects startAngle outDP
+affects endAngle outDP
+affects offsetAngle outDP
+affects Seed outDP
+DPointSurfaceEmit
+create inSurfaceObject iso surface null
+inSurfaceObject storable 0
+add inSurfaceObject
+create samplingType sat enum 0
+samplingType field All 0
+samplingType field Range 1
+samplingType field CVs 2
+samplingType keyable 1
+samplingType storable 1
+add samplingType
+create samplingU sau int 10
+samplingU min 0
+samplingU max 10000000
+add samplingU
+create samplingV sav int 10
+samplingV min 0
+samplingV max 10000000
+add samplingV
+create uLength ul float 1
+add uLength
+create vLength vl float 1
+add vLength
+create uOffset uof float 0
+add uOffset
+create vOffset vof float 0
+add vOffset
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inSurfaceObject outDP
+affects samplingType outDP
+affects samplingU outDP
+affects samplingV outDP
+affects uLength outDP
+affects vLength outDP
+affects uOffset outDP
+affects vOffset outDP

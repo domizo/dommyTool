@@ -1,0 +1,187 @@
+DBSMirrorMesh
+create inBaseMesh inbm generic
+inBaseMesh accepts mesh
+inBaseMesh storable 0
+inBaseMesh writable 1
+inBaseMesh readable 0
+add inBaseMesh
+create inTargetMesh intm generic
+inTargetMesh accepts mesh
+inTargetMesh storable 0
+inTargetMesh writable 1
+inTargetMesh readable 0
+add inTargetMesh
+create Distance dst double 0
+Distance default 1
+Distance min 0
+Distance softMax 20
+Distance keyable 1
+add Distance
+create BlendRamp bldrmp ramp
+add BlendRamp
+create outLeftMesh olm mesh null
+outLeftMesh writable 0
+outLeftMesh storable 0
+add outLeftMesh
+create outRightMesh orm mesh null
+outRightMesh writable 0
+outRightMesh storable 0
+add outRightMesh
+affects inBaseMesh outLeftMesh
+affects inTargetMesh outLeftMesh
+affects Distance outLeftMesh
+affects BlendRamp outLeftMesh
+affects inBaseMesh outRightMesh
+affects inTargetMesh outRightMesh
+affects Distance outRightMesh
+affects BlendRamp outRightMesh
+DBSFlipMesh
+create inBaseMesh inbm generic
+inBaseMesh accepts mesh
+inBaseMesh storable 0
+inBaseMesh writable 1
+inBaseMesh readable 0
+add inBaseMesh
+create inTargetMesh intm generic
+inTargetMesh accepts mesh
+inTargetMesh storable 0
+inTargetMesh writable 1
+inTargetMesh readable 0
+add inTargetMesh
+create aUseMask umsk bool 0
+aUseMask default 0
+aUseMask keyable 1
+add aUseMask
+create Invert inv bool 0
+Invert default 0
+Invert keyable 1
+add Invert
+create inMaskMesh inmsk generic
+inMaskMesh accepts mesh
+inMaskMesh storable 0
+inMaskMesh writable 1
+inMaskMesh readable 0
+add inMaskMesh
+create Tolerance tol double 0
+Tolerance default 0.10000000000000001
+Tolerance min 0
+Tolerance softMax 1
+Tolerance keyable 1
+add Tolerance
+create outMesh om mesh null
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects inBaseMesh outMesh
+affects inTargetMesh outMesh
+affects aUseMask outMesh
+affects Invert outMesh
+affects inMaskMesh outMesh
+affects Tolerance outMesh
+DBSUpDownMesh
+create inBaseMesh inbm generic
+inBaseMesh accepts mesh
+inBaseMesh storable 0
+inBaseMesh writable 1
+inBaseMesh readable 0
+add inBaseMesh
+create inTargetMesh intm generic
+inTargetMesh accepts mesh
+inTargetMesh storable 0
+inTargetMesh writable 1
+inTargetMesh readable 0
+add inTargetMesh
+create Space spc enum 0
+Space field Object 0
+Space field World 1
+Space keyable 1
+Space storable 1
+add Space
+create Invert inv bool 0
+Invert default 0
+Invert keyable 1
+add Invert
+create outUpMesh oum mesh null
+outUpMesh writable 0
+outUpMesh storable 0
+add outUpMesh
+create outDownMesh odm mesh null
+outDownMesh writable 0
+outDownMesh storable 0
+add outDownMesh
+affects inBaseMesh outUpMesh
+affects inTargetMesh outUpMesh
+affects Space outUpMesh
+affects Invert outUpMesh
+affects inBaseMesh outDownMesh
+affects inTargetMesh outDownMesh
+affects Space outDownMesh
+affects Invert outDownMesh
+DPolySymmetry
+create inBaseMesh inbm generic
+inBaseMesh accepts mesh
+inBaseMesh storable 0
+inBaseMesh writable 1
+inBaseMesh readable 0
+add inBaseMesh
+create inTargetMesh intm generic
+inTargetMesh accepts mesh
+inTargetMesh storable 0
+inTargetMesh writable 1
+inTargetMesh readable 0
+add inTargetMesh
+create Type ty enum 0
+Type field Left to Right 0
+Type field Right to Left 1
+Type keyable 1
+add Type
+create Tolerance tol double 0.10000000000000001
+Tolerance min 0
+Tolerance softMax 1
+Tolerance keyable 1
+add Tolerance
+create UseColor ucol bool 1
+UseColor keyable 1
+add UseColor
+create outMesh om mesh null
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects inBaseMesh outMesh
+affects inTargetMesh outMesh
+affects Type outMesh
+affects Tolerance outMesh
+affects UseColor outMesh
+DPolyResetVtx
+create inBaseMesh inbm generic
+inBaseMesh accepts mesh
+inBaseMesh storable 0
+inBaseMesh writable 1
+inBaseMesh readable 0
+add inBaseMesh
+create inTargetMesh intm generic
+inTargetMesh accepts mesh
+inTargetMesh storable 0
+inTargetMesh writable 1
+inTargetMesh readable 0
+add inTargetMesh
+create inMaskMesh inmm generic
+inMaskMesh accepts mesh
+inMaskMesh storable 0
+inMaskMesh writable 1
+inMaskMesh readable 0
+add inMaskMesh
+create Weight w double 0
+Weight default 1
+Weight softMin 0
+Weight softMax 1
+Weight keyable 1
+add Weight
+create outMesh om mesh null
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects inBaseMesh outMesh
+affects inTargetMesh outMesh
+affects inMaskMesh outMesh
+affects Weight outMesh

@@ -1,0 +1,114 @@
+DOpenVDBPlatonic
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create solidType slt enum 0
+solidType field Sphere 0
+solidType connectable 0
+add solidType
+create gridclass gcls enum 0
+gridclass field level set 0
+gridclass field Level Set 1
+gridclass field sdf 2
+gridclass field Signed Distance Field 3
+gridclass connectable 0
+add gridclass
+create scalarRadius srad float 0
+scalarRadius default 1
+scalarRadius min 0
+scalarRadius softMin 0
+scalarRadius softMax 10
+add scalarRadius
+create center cen 3float 0
+center default 0 0 0
+add center
+create voxelSize vs float 0
+voxelSize default 0.10000000149011612
+voxelSize min 9.9999997473787516e-05
+voxelSize softMin 0.0099999997764825821
+voxelSize softMax 10
+add voxelSize
+create halfWidth hw float 0
+halfWidth default 3
+halfWidth min 1
+halfWidth softMin 1
+halfWidth softMax 10
+add halfWidth
+create fogVolume fv bool 0
+fogVolume default 0
+add fogVolume
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects SelectedGridNames VdbOutput
+affects VdbInput VdbOutput
+affects solidType VdbOutput
+affects gridclass VdbOutput
+affects scalarRadius VdbOutput
+affects center VdbOutput
+affects voxelSize VdbOutput
+affects halfWidth VdbOutput
+affects fogVolume VdbOutput
+DOpenVDBFracture
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create InObject ino generic
+InObject accepts mesh
+InObject storable 0
+InObject writable 1
+InObject readable 0
+add InObject
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create SeparateCutters sepcu bool 0
+SeparateCutters default 0
+SeparateCutters hidden 1
+add SeparateCutters
+create CutterOverlap cuov bool 0
+CutterOverlap default 0
+add CutterOverlap
+create CenterCutter cencu bool 0
+CenterCutter default 0
+add CenterCutter
+create RandomizeRotation ranrot bool 0
+RandomizeRotation default 0
+add RandomizeRotation
+create Seed se int 0
+Seed default 1
+Seed min 0
+add Seed
+create SegmentFragments segfra bool 0
+SegmentFragments default 0
+add SegmentFragments
+string.create
+create Fragmentgroup fragrp string 
+Fragmentgroup connectable 0
+Fragmentgroup hidden 1
+add Fragmentgroup
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects InObject VdbOutput
+affects inDP VdbOutput
+affects SeparateCutters VdbOutput
+affects CutterOverlap VdbOutput
+affects CenterCutter VdbOutput
+affects RandomizeRotation VdbOutput
+affects Seed VdbOutput
+affects SegmentFragments VdbOutput
+affects Fragmentgroup VdbOutput

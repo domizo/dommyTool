@@ -1,0 +1,182 @@
+DPDirection
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+inDD keyable 1
+add inDD
+string.create
+create dirAttrName datn string N
+dirAttrName connectable 0
+add dirAttrName
+create DirectionType dirt enum 0
+DirectionType field Attach Base Vector 0
+DirectionType field Look Base Vector 1
+DirectionType field Source Object 2
+DirectionType field Target DP 3
+DirectionType keyable 1
+DirectionType storable 1
+add DirectionType
+create baseVector bvec 3double 0
+baseVector keyable 1
+baseVector storable 1
+baseVector default 0 1 0
+add baseVector
+create targetVector tvec 3double 0
+targetVector keyable 1
+targetVector storable 1
+targetVector default 0 0 0
+add targetVector
+create inObject ino generic
+inObject accepts mesh
+inObject accepts curve
+inObject accepts surface
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create inTargetDP intdp geometry null
+inTargetDP readable 0
+inTargetDP storable 0
+add inTargetDP
+create CalcType calt enum 0
+CalcType field Nearest Point 0
+CalcType field Nearest Normal 1
+CalcType keyable 1
+CalcType storable 1
+add CalcType
+create UseDistance usd bool 0
+UseDistance default 0
+add UseDistance
+create Distance dist double 0
+Distance softMin 0
+Distance softMax 20
+Distance default 5
+Distance keyable 1
+Distance storable 1
+add Distance
+create CurveNormalType crvnt enum 0
+CurveNormalType field Normal 0
+CurveNormalType field Tangent 1
+CurveNormalType keyable 1
+CurveNormalType storable 1
+add CurveNormalType
+create SurfaceNormalType srfnt enum 0
+SurfaceNormalType field Normal 0
+SurfaceNormalType field TangentU 1
+SurfaceNormalType field TangentV 2
+SurfaceNormalType keyable 1
+SurfaceNormalType storable 1
+add SurfaceNormalType
+create TargetDPCalcType tcalt enum 0
+TargetDPCalcType field Nearest Point 0
+TargetDPCalcType field Nearest Normal 1
+TargetDPCalcType field Match ID 2
+TargetDPCalcType keyable 1
+TargetDPCalcType storable 1
+add TargetDPCalcType
+string.create
+create TargetDPAttrName tdpan string N
+TargetDPAttrName connectable 0
+add TargetDPAttrName
+create Invert inv bool 0
+Invert default 0
+Invert keyable 1
+Invert storable 1
+add Invert
+create Normalize norm bool 0
+Normalize default 0
+Normalize keyable 1
+Normalize storable 1
+add Normalize
+create Scale sca double 0
+Scale softMin -10
+Scale softMax 10
+Scale default 1
+Scale keyable 1
+Scale storable 1
+add Scale
+create AttributeClass attrcls enum 0
+AttributeClass field Point 0
+AttributeClass field Primitive 1
+AttributeClass keyable 1
+add AttributeClass
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects dirAttrName outDD
+affects DirectionType outDD
+affects baseVector outDD
+affects targetVector outDD
+affects inObject outDD
+affects inTargetDP outDD
+affects CalcType outDD
+affects UseDistance outDD
+affects Distance outDD
+affects CurveNormalType outDD
+affects SurfaceNormalType outDD
+affects TargetDPCalcType outDD
+affects TargetDPAttrName outDD
+affects Invert outDD
+affects Normalize outDD
+affects Scale outDD
+affects AttributeClass outDD
+manip.connectTable
+DPSearchPoint
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+add inDD
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+string.create
+create PrimAttributeNames prmattrn string prim
+PrimAttributeNames connectable 0
+add PrimAttributeNames
+string.create
+create IndexAttributeNames idxattrn string idx
+IndexAttributeNames connectable 0
+add IndexAttributeNames
+create Radius rad float 1
+Radius min 1.1920928955078125e-07
+Radius softMax 5
+Radius keyable 1
+Radius storable 1
+add Radius
+create MaxCount mxcnt int 5
+MaxCount min 1
+MaxCount max 1000000
+MaxCount softMax 20
+MaxCount keyable 1
+MaxCount storable 1
+add MaxCount
+create DetectNearestPoint dtnrpt bool 0
+DetectNearestPoint keyable 1
+DetectNearestPoint storable 1
+add DetectNearestPoint
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects TargetDP outDD
+affects PrimAttributeNames outDD
+affects IndexAttributeNames outDD
+affects Radius outDD
+affects MaxCount outDD
+affects DetectNearestPoint outDD

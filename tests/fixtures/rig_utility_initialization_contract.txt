@@ -1,0 +1,197 @@
+DRigController
+create shapeType st enum 0
+shapeType field Square 0
+shapeType field Circle 1
+shapeType field Cube 2
+shapeType field Sphere 3
+shapeType field Pyramid 4
+shapeType field Simple Arrow 5
+shapeType field Slide Arrow 6
+shapeType field Cross Arrow 7
+shapeType field Pin 8
+shapeType keyable 1
+shapeType storable 1
+add shapeType
+create localScale lsc double 1
+localScale storable 1
+localScale keyable 1
+add localScale
+create division div int 8
+division min 3
+division max 100000
+division storable 1
+division keyable 1
+add division
+create offsetX ofx double 0
+offsetX keyable 1
+offsetX storable 1
+create offsetY ofy double 0
+offsetY keyable 1
+offsetY storable 1
+create offsetZ ofz double 0
+offsetZ keyable 1
+offsetZ storable 1
+create offset of compound offsetX offsetY offsetZ
+offset storable 1
+offset default 0 0 0
+add offset
+create localRotateX lrx double 0
+localRotateX keyable 1
+localRotateX storable 1
+create localRotateY lry double 0
+localRotateY keyable 1
+localRotateY storable 1
+create localRotateZ lrz double 0
+localRotateZ keyable 1
+localRotateZ storable 1
+create localRotate lr compound localRotateX localRotateY localRotateZ
+localRotate storable 1
+localRotate default 0 0 0
+add localRotate
+create keepCenter kc bool 0
+keepCenter storable 1
+keepCenter keyable 1
+add keepCenter
+create ratio ra double 1
+ratio max 2
+ratio min 0
+ratio storable 1
+ratio keyable 1
+add ratio
+create dirAxis dax enum 1
+dirAxis field +X 0
+dirAxis field +Y 1
+dirAxis field +Z 2
+dirAxis field -X 3
+dirAxis field -Y 4
+dirAxis field -Z 5
+dirAxis keyable 1
+dirAxis storable 1
+add dirAxis
+create taperAmount tam double 0
+taperAmount softMin -10
+taperAmount softMax 10
+taperAmount storable 1
+taperAmount keyable 1
+add taperAmount
+create taperAxis tax enum 0
+taperAxis field +X 0
+taperAxis field +Y 1
+taperAxis field +Z 2
+taperAxis field -X 3
+taperAxis field -Y 4
+taperAxis field -Z 5
+taperAxis keyable 1
+taperAxis storable 1
+add taperAxis
+create bendAmount bamt double 0
+bendAmount softMax 180
+bendAmount softMin -180
+bendAmount storable 1
+bendAmount keyable 1
+add bendAmount
+create bendAxis baxs enum 0
+bendAxis field X 0
+bendAxis field Z 1
+bendAxis keyable 1
+bendAxis storable 1
+add bendAxis
+create arrowReverse arev bool 0
+arrowReverse storable 1
+arrowReverse keyable 1
+add arrowReverse
+create arrowRatio arra double 0.75
+arrowRatio max 1
+arrowRatio min 0
+arrowRatio storable 1
+arrowRatio keyable 1
+add arrowRatio
+create arrowWidth arwi double 0.25
+arrowWidth max 1
+arrowWidth min 0
+arrowWidth storable 1
+arrowWidth keyable 1
+add arrowWidth
+create outputCurve out curve null
+outputCurve storable 0
+add outputCurve
+affects shapeType outputCurve
+affects localScale outputCurve
+affects division outputCurve
+affects offset outputCurve
+affects localRotate outputCurve
+affects keepCenter outputCurve
+affects ratio outputCurve
+affects dirAxis outputCurve
+affects taperAxis outputCurve
+affects taperAmount outputCurve
+affects bendAmount outputCurve
+affects bendAxis outputCurve
+affects arrowReverse outputCurve
+affects arrowRatio outputCurve
+affects arrowWidth outputCurve
+DMatToVec
+create inMatrix ima matrix double
+inMatrix storable 1
+inMatrix keyable 1
+inMatrix readable 1
+inMatrix writable 1
+inMatrix cached 0
+add inMatrix
+create Type ty enum 0
+Type field Translate 0
+Type field Rotate 1
+Type field Scale 2
+Type connectable 0
+add Type
+create Space sp enum 0
+Space field World 0
+Space field Object 1
+Space connectable 0
+add Space
+create outVector ov 3double 0
+outVector default 0 0 0
+outVector readable 1
+outVector writable 0
+outVector storable 0
+add outVector
+affects inMatrix outVector
+affects Type outVector
+affects Space outVector
+DNumericToFloatArray
+create inputData ind generic
+inputData accepts intArray
+inputData accepts vectorArray
+inputData accepts pointArray
+inputData accepts floatArray
+inputData accepts doubleArray
+inputData accepts matrixArray
+inputData accepts numeric
+inputData accepts numeric bool
+inputData accepts numeric byte
+inputData accepts numeric char
+inputData accepts numeric short
+inputData accepts numeric 2short
+inputData accepts numeric 3short
+inputData accepts numeric int
+inputData accepts numeric 2int
+inputData accepts numeric 3int
+inputData accepts numeric int64
+inputData accepts numeric float
+inputData accepts numeric 2float
+inputData accepts numeric 3float
+inputData accepts numeric double
+inputData accepts numeric 2double
+inputData accepts numeric 3double
+inputData accepts numeric 4double
+inputData accepts matrix
+inputData storable 0
+inputData writable 1
+inputData readable 0
+add inputData
+create outDataArray out generic
+outDataArray accepts floatArray
+outDataArray writable 0
+outDataArray storable 0
+add outDataArray
+affects inputData outDataArray

@@ -1,0 +1,236 @@
+DCurveFromCurve
+create inputCurve inc generic
+inputCurve accepts curve
+inputCurve storable 0
+inputCurve writable 1
+inputCurve readable 0
+add inputCurve
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create ProfileDP prdp geometry null
+ProfileDP readable 0
+ProfileDP storable 0
+add ProfileDP
+create InTangentCurve intc generic
+InTangentCurve accepts curve
+InTangentCurve storable 0
+InTangentCurve writable 1
+InTangentCurve readable 0
+add InTangentCurve
+create SamplingType smpty enum 0
+SamplingType field Sampling 0
+SamplingType field InputCurve Divide 1
+SamplingType keyable 1
+add SamplingType
+create curveLength cl double 1
+curveLength min 1.0000000000000001e-09
+curveLength max 1
+curveLength keyable 1
+add curveLength
+create sampling sa int 8
+sampling min 2
+sampling softMax 100
+sampling keyable 1
+add sampling
+create CurveDivide crvdiv int 1
+CurveDivide min 0
+CurveDivide softMax 10
+CurveDivide keyable 1
+add CurveDivide
+create offset off double 0
+offset keyable 1
+add offset
+create Degree deg enum 1
+Degree field Linear 0
+Degree field Cubic 1
+Degree keyable 1
+add Degree
+create IsMultiEndKnot imuedkt bool 1
+IsMultiEndKnot keyable 1
+add IsMultiEndKnot
+create twist tw ramp
+add twist
+create tubeWidth tuw ramp
+add tubeWidth
+create TwistScale twscl double 360
+TwistScale keyable 1
+add TwistScale
+create TubeScale tbscl double 1
+TubeScale keyable 1
+add TubeScale
+create UseRandomRotation userndrot bool 0
+UseRandomRotation keyable 1
+add UseRandomRotation
+create UseRandomRadius userndrad bool 0
+UseRandomRadius keyable 1
+add UseRandomRadius
+create Seed se int 1
+Seed min 1
+Seed softMax 100
+Seed keyable 1
+add Seed
+create RandRotation rndrot double 360
+RandRotation softMin 0
+RandRotation softMax 360
+RandRotation keyable 1
+add RandRotation
+create RandRadius rndrad double 1
+RandRadius softMin 0
+RandRadius softMax 10
+RandRadius keyable 1
+add RandRadius
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+create UseCachedParam uscah bool 0
+add UseCachedParam
+affects inputCurve outDC
+affects inDC outDC
+affects ProfileDP outDC
+affects InTangentCurve outDC
+affects SamplingType outDC
+affects curveLength outDC
+affects sampling outDC
+affects CurveDivide outDC
+affects offset outDC
+affects Degree outDC
+affects IsMultiEndKnot outDC
+affects twist outDC
+affects tubeWidth outDC
+affects TwistScale outDC
+affects TubeScale outDC
+affects Seed outDC
+affects UseRandomRotation outDC
+affects RandRotation outDC
+affects UseRandomRadius outDC
+affects RandRadius outDC
+affects UseCachedParam outDC
+DCurveFromSurface
+create inSurface ins generic
+inSurface accepts surface
+inSurface storable 0
+inSurface writable 1
+inSurface readable 0
+inSurface keyable 1
+add inSurface
+create numU nuu int 0
+numU default 4
+numU min 0
+numU keyable 1
+add numU
+create numV nuv int 0
+numV default 4
+numV min 0
+numV keyable 1
+add numV
+create sampling smp int 0
+sampling default 8
+sampling min 2
+sampling keyable 1
+add sampling
+create offsetU ofu float 0
+offsetU default 0
+offsetU keyable 1
+add offsetU
+create offsetV ofv float 0
+offsetV default 0
+offsetV keyable 1
+add offsetV
+create lengthU lenu float 0
+lengthU default 1
+lengthU softMin 0
+lengthU softMax 1
+lengthU keyable 1
+add lengthU
+create lengthV lenv float 0
+lengthV default 1
+lengthV softMin 0
+lengthV softMax 1
+lengthV keyable 1
+add lengthV
+create isClampU iscu bool 0
+isClampU default 1
+isClampU keyable 1
+add isClampU
+create isClampV iscv bool 0
+isClampV default 1
+isClampV keyable 1
+add isClampV
+create IsOpenU isopu enum 1
+IsOpenU field Close 0
+IsOpenU field Open 1
+IsOpenU keyable 1
+add IsOpenU
+create IsOpenV isopv enum 1
+IsOpenV field Close 0
+IsOpenV field Open 1
+IsOpenV keyable 1
+add IsOpenV
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inSurface outDC
+affects numU outDC
+affects numV outDC
+affects sampling outDC
+affects offsetU outDC
+affects offsetV outDC
+affects lengthU outDC
+affects lengthV outDC
+affects isClampU outDC
+affects isClampV outDC
+affects IsOpenU outDC
+affects IsOpenV outDC
+DCurveClothFromSurface
+create inSurface ins generic
+inSurface accepts surface
+inSurface storable 0
+inSurface writable 1
+inSurface readable 0
+add inSurface
+create samplingU su int 4
+samplingU min 1
+samplingU max 9999998
+samplingU keyable 1
+add samplingU
+create samplingV sv int 4
+samplingV min 1
+samplingV max 9999998
+samplingV keyable 1
+add samplingV
+create waveHeight wh float 0.019999999552965164
+waveHeight softMin 0
+waveHeight softMax 1
+waveHeight keyable 1
+add waveHeight
+create AddBiasPoint adbapt bool 0
+AddBiasPoint keyable 1
+add AddBiasPoint
+create WaveWidthBias wvb float 0.5
+WaveWidthBias min 0
+WaveWidthBias max 1
+WaveWidthBias keyable 1
+add WaveWidthBias
+create AddNormalAttribute adnattr bool 0
+AddNormalAttribute keyable 1
+add AddNormalAttribute
+string default N
+create NormalAttributeName nattr string default
+NormalAttributeName connectable 0
+add NormalAttributeName
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inSurface outDC
+affects samplingU outDC
+affects samplingV outDC
+affects waveHeight outDC
+affects AddBiasPoint outDC
+affects WaveWidthBias outDC
+affects AddNormalAttribute outDC
+affects NormalAttributeName outDC

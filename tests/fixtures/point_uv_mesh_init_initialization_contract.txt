@@ -1,0 +1,30 @@
+DPUVGen
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+add inDD
+create inObject ino generic
+inObject accepts curve
+inObject accepts surface
+inObject accepts mesh
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+string data uv
+create uvName uvn string uv
+uvName connectable 0
+add uvName
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects uvName outDD
+affects inObject outDD

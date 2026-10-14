@@ -1,0 +1,238 @@
+DPMotionCreate
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create AnimationMatrix amat matrix double
+AnimationMatrix writable 1
+AnimationMatrix readable 0
+add AnimationMatrix
+create GlobalOffset gof double 0
+add GlobalOffset
+create OffsetType offt enum 0
+OffsetType field None 0
+OffsetType field From Attribute 1
+OffsetType field Input Data 2
+OffsetType keyable 1
+add OffsetType
+string default offset
+create OffsetAttribute offattr string default
+OffsetAttribute connectable 0
+add OffsetAttribute
+create InOffsetArray inoff generic
+InOffsetArray accepts doubleArray
+InOffsetArray accepts floatArray
+InOffsetArray storable 0
+InOffsetArray writable 1
+InOffsetArray readable 0
+add InOffsetArray
+create StretchType strt enum 0
+StretchType field None 0
+StretchType field From Attribute 1
+StretchType field Input Data 2
+StretchType keyable 1
+add StretchType
+string default stretch
+create StretchAttribute strattr string default
+StretchAttribute connectable 0
+add StretchAttribute
+create InStretchArray instr generic
+InStretchArray accepts doubleArray
+InStretchArray accepts floatArray
+InStretchArray storable 0
+InStretchArray writable 1
+InStretchArray readable 0
+add InStretchArray
+create IsAxisAlign iaa bool 0
+add IsAxisAlign
+create TargetType tart enum 0
+TargetType field Target Vector 0
+TargetType field From Attribute 1
+TargetType connectable 0
+add TargetType
+create TargetAxis tarax 3double 0
+TargetAxis default 0 1 0
+add TargetAxis
+create TargetVec tarvec 3double 0
+TargetVec default 0 0 1
+add TargetVec
+string default 
+create TargetAtttribute tattr string default
+TargetAtttribute connectable 0
+add TargetAtttribute
+create IsUseUpVector iuuv bool 0
+add IsUseUpVector
+create UpType upt enum 0
+UpType field Up Vector 0
+UpType field From Attribute 1
+UpType connectable 0
+add UpType
+create UpAxis upax 3double 0
+UpAxis default 1 0 0
+add UpAxis
+create UpVec upvec 3double 0
+UpVec default 0 1 0
+add UpVec
+create UpAtttribute uattr string default
+UpAtttribute connectable 0
+add UpAtttribute
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects AnimationMatrix outDP
+affects GlobalOffset outDP
+affects OffsetType outDP
+affects OffsetAttribute outDP
+affects InOffsetArray outDP
+affects StretchType outDP
+affects StretchAttribute outDP
+affects InStretchArray outDP
+affects IsAxisAlign outDP
+affects TargetType outDP
+affects TargetAxis outDP
+affects TargetVec outDP
+affects TargetAtttribute outDP
+affects IsUseUpVector outDP
+affects UpType outDP
+affects UpAxis outDP
+affects UpVec outDP
+affects UpAtttribute outDP
+DPRotation
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create RotateType rvt enum 0
+RotateType field Euler 0
+RotateType field Input Matrix 1
+RotateType keyable 1
+add RotateType
+create ForwardVector fvec 3double 0
+ForwardVector default 0 0 1
+add ForwardVector
+create UpVector uvec 3double 0
+UpVector default 0 1 0
+add UpVector
+string default 
+create ForwardVectorAttribute fvat string default
+ForwardVectorAttribute connectable 0
+add ForwardVectorAttribute
+create UpVectorAttribute uvat string default
+UpVectorAttribute connectable 0
+add UpVectorAttribute
+create IsUseUpVector iuuv bool 0
+add IsUseUpVector
+create RotationMatrix rmat matrix double
+RotationMatrix writable 1
+RotationMatrix readable 0
+add RotationMatrix
+create SpaceForwardAxis wfax 3double 0
+SpaceForwardAxis default 0 1 0
+add SpaceForwardAxis
+create SpaceUpAxis wuax 3double 0
+SpaceUpAxis default 1 0 0
+add SpaceUpAxis
+create RotateSpace rs enum 0
+RotateSpace field World Space 0
+RotateSpace field Object Space 1
+add RotateSpace
+create RotateOrder ro enum 0
+RotateOrder field xyz 0
+RotateOrder field yzx 1
+RotateOrder field zxy 2
+RotateOrder field xzy 3
+RotateOrder field yxz 4
+RotateOrder field zyx 5
+add RotateOrder
+create Rotate rot 3double 0
+Rotate default 0 0 0
+add Rotate
+string default 
+create RotateAttribute rattr string default
+RotateAttribute connectable 0
+add RotateAttribute
+create OutputType outt enum 1
+OutputType field Forward Only 0
+OutputType field Forward and Up 1
+OutputType field Matrix 2
+OutputType keyable 1
+add OutputType
+string default fwvec
+create OutFowardAttribute ofattr string default
+OutFowardAttribute connectable 0
+add OutFowardAttribute
+string default upvec
+create OutUpAttribute oupattr string default
+OutUpAttribute connectable 0
+add OutUpAttribute
+string default rotmat
+create OutMatrixAttribute omattr string default
+OutMatrixAttribute connectable 0
+add OutMatrixAttribute
+create GlobalOffset gof double 0
+add GlobalOffset
+create OffsetType offt enum 0
+OffsetType field None 0
+OffsetType field From Attribute 1
+OffsetType field Input Data 2
+OffsetType keyable 1
+add OffsetType
+string default offset
+create OffsetAttribute offattr string default
+OffsetAttribute connectable 0
+add OffsetAttribute
+create InOffsetArray inoff generic
+InOffsetArray accepts doubleArray
+InOffsetArray accepts floatArray
+InOffsetArray storable 0
+InOffsetArray writable 1
+InOffsetArray readable 0
+add InOffsetArray
+create StretchType strt enum 0
+StretchType field None 0
+StretchType field From Attribute 1
+StretchType field Input Data 2
+StretchType keyable 1
+add StretchType
+string default stretch
+create StretchAttribute strattr string default
+StretchAttribute connectable 0
+add StretchAttribute
+create InStretchArray instr generic
+InStretchArray accepts doubleArray
+InStretchArray accepts floatArray
+InStretchArray storable 0
+InStretchArray writable 1
+InStretchArray readable 0
+add InStretchArray
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects RotateType outDP
+affects ForwardVector outDP
+affects UpVector outDP
+affects ForwardVectorAttribute outDP
+affects UpVectorAttribute outDP
+affects IsUseUpVector outDP
+affects RotationMatrix outDP
+affects SpaceForwardAxis outDP
+affects SpaceUpAxis outDP
+affects RotateSpace outDP
+affects RotateOrder outDP
+affects Rotate outDP
+affects RotateAttribute outDP
+affects OutputType outDP
+affects OutFowardAttribute outDP
+affects OutUpAttribute outDP
+affects OutMatrixAttribute outDP
+affects GlobalOffset outDP
+affects OffsetType outDP
+affects OffsetAttribute outDP
+affects InOffsetArray outDP
+affects StretchType outDP
+affects StretchAttribute outDP
+affects InStretchArray outDP

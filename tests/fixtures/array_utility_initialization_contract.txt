@@ -1,0 +1,129 @@
+DPStringArrayGen
+string default 
+create value val string default
+value connectable 0
+add value
+create valueSize vs int 1
+valueSize min 1
+valueSize max 1000000
+valueSize keyable 1
+valueSize storable 1
+add valueSize
+create outDataArray out generic
+outDataArray accepts stringArray
+outDataArray writable 0
+outDataArray storable 0
+add outDataArray
+affects value outDataArray
+affects valueSize outDataArray
+DPArraySize
+create inDD idd generic
+inDD accepts id 6291467
+inDD accepts id 4206603
+inDD accepts id 7340043
+inDD readable 0
+inDD storable 0
+add inDD
+create inObject ino generic
+inObject accepts mesh
+inObject accepts curve
+inObject accepts surface
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create inputPointArray ipa generic
+inputPointArray accepts pointArray
+inputPointArray accepts vectorArray
+inputPointArray storable 0
+inputPointArray writable 1
+inputPointArray readable 0
+add inputPointArray
+create CountType cnttyp enum 0
+CountType field Point 0
+CountType field Primitive 1
+CountType keyable 1
+CountType storable 1
+add CountType
+create resultCount rc int64 0
+resultCount keyable 0
+resultCount storable 0
+resultCount writable 0
+add resultCount
+affects inDD resultCount
+affects inputPointArray resultCount
+affects inObject resultCount
+affects CountType resultCount
+DPVecCompare
+create inputArray1 in1 generic
+inputArray1 accepts pointArray
+inputArray1 accepts vectorArray
+inputArray1 storable 0
+inputArray1 writable 1
+inputArray1 readable 0
+add inputArray1
+create inputArray2 in2 generic
+inputArray2 accepts pointArray
+inputArray2 accepts vectorArray
+inputArray2 storable 0
+inputArray2 writable 1
+inputArray2 readable 0
+add inputArray2
+create compareType ct enum 0
+compareType field No_Operation 0
+compareType field Magnitude Min 1
+compareType field Magnitude Max 2
+compareType field Luminance Min 3
+compareType field Luminance Max 4
+compareType keyable 1
+compareType storable 1
+add compareType
+create valueX valx double 0
+valueX default 0
+valueX keyable 1
+valueX storable 1
+create valueY valy double 0
+valueY default 0
+valueY keyable 1
+valueY storable 1
+create valueZ valz double 0
+valueZ default 0
+valueZ keyable 1
+valueZ storable 1
+create value val compound valueX valueY valueZ
+value storable 1
+value default 0 0 0
+add value
+create resultArray ra generic
+resultArray accepts pointArray
+resultArray accepts vectorArray
+resultArray writable 0
+resultArray storable 0
+add resultArray
+affects inputArray1 resultArray
+affects inputArray2 resultArray
+affects compareType resultArray
+affects value resultArray
+affects valueX resultArray
+affects valueY resultArray
+affects valueZ resultArray
+DPPointToFloat
+create inputPointArray ipa generic
+inputPointArray accepts pointArray
+inputPointArray accepts vectorArray
+inputPointArray storable 0
+inputPointArray writable 1
+inputPointArray readable 0
+add inputPointArray
+create convertType cvt enum 0
+convertType field magunitude 0
+convertType field luminance 1
+convertType keyable 1
+convertType storable 1
+add convertType
+create outDataArray out floatArray null
+outDataArray writable 0
+outDataArray storable 1
+add outDataArray
+affects inputPointArray outDataArray
+affects convertType outDataArray

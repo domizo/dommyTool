@@ -1,0 +1,158 @@
+// DOMMY_THIRD_PARTY_NOTICE_BEGIN
+/*
+Bullet Continuous Collision Detection and Physics Library Maya Plugin
+Copyright (c) 2008 Herbert Law
+ 
+This software is provided 'as-is', without any express or implied warranty.
+In no event will the authors be held liable for any damages arising
+from the use of this software.
+Permission is granted to anyone to use this software for any purpose,
+including commercial applications, and to alter it and redistribute it freely,
+subject to the following restrictions:
+ 
+1. The origin of this software must not be misrepresented; you must
+not claim that you wrote the original software. If you use this
+software in a product, an acknowledgment in the product documentation
+would be appreciated but is not required.
+2. Altered source versions must be plainly marked as such, and must
+not be misrepresented as being the original software.
+3. This notice may not be removed or altered from any source distribution.
+ 
+Written by: Herbert Law <Herbert.Law@gmail.com>
+
+Modified by Roman Ponomarev <rponom@gmail.com>
+01/22/2010 : Constraints reworked
+*/
+// DOMMY_THIRD_PARTY_NOTICE_END
+// Modified for dommyTool; not the original upstream version.
+// Source comparison reference: https://storage.googleapis.com/google-code-archive-source/v2/code.google.com/dynamica/source-archive.zip
+// Archive member: dynamica/trunk/Extras/MayaPlugin/constraint/sixdof_constraint.h
+
+//
+//  dbSixdof_constraint.h
+//  dommyTool
+//
+//  Created by yuzo on 2017/09/28.
+//
+
+#pragma once
+
+
+#include "shared_ptr.h"
+#include "dbRigidBody_t.h"
+#include "mathUtils.h"
+
+#include "dbConstraint_t.h"
+#include "sixdof_constraint_impl.h"
+
+
+class dbSixdof_constraint_t: public dbConstraint_t
+{
+public:
+    //typedefs
+    typedef shared_ptr<dbSixdof_constraint_t> pointer;
+    
+    //
+    void set_damping(float d) {
+        sixdof_constraint_impl_t* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t*>(impl());
+        sixdof_impl->set_damping(d);
+    }
+    
+    float damping() const {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        return sixdof_impl->damping();
+    }
+    
+    void set_breakThreshold(float d) {
+        sixdof_constraint_impl_t* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t*>(impl());
+        sixdof_impl->set_breakThreshold(d);
+    }
+    
+    void set_enabled(bool e) {
+        sixdof_constraint_impl_t* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t*>(impl());
+        sixdof_impl->set_enabled(e);
+    }
+    
+    void set_LinLimit(vec3f& lower, vec3f& upper) {
+        sixdof_constraint_impl_t* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t*>(impl());
+        sixdof_impl->set_LinLimit(lower, upper);
+    }
+    
+    void set_AngLimit(vec3f& lower, vec3f& upper) {
+        sixdof_constraint_impl_t* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t*>(impl());
+        sixdof_impl->set_AngLimit(lower, upper);
+    }
+    
+    void get_local_frameA(vec3f& p, quatf& r) const
+    {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        sixdof_impl ->get_local_frameA(p,r);
+    }
+    
+    void get_local_frameB(vec3f& p, quatf& r) const
+    {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        sixdof_impl ->get_local_frameB(p,r);
+    }
+    
+    void get_frameA(vec3f& p, quatf& r) const {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        sixdof_impl->get_frameA(p, r);
+    }
+    void get_frameB(vec3f& p, quatf& r) const {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        sixdof_impl->get_frameB(p, r);
+    }
+    void get_invFrameA(vec3f& p, quatf& r) const {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        sixdof_impl->get_invFrameA(p, r);
+    }
+    void get_invFrameB(vec3f& p, quatf& r) const {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        sixdof_impl->get_invFrameB(p, r);
+    }
+    void worldToA(vec3f& w, vec3f& p) const {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        sixdof_impl->worldToA(w, p);
+    }
+    void worldFromB(vec3f& p, vec3f& w) const {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        sixdof_impl->worldFromB(p, w);
+    }
+    bool set_world(vec3f const& p, quatf const& r)
+    {
+        sixdof_constraint_impl_t* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t*>(impl());
+        return sixdof_impl->set_world(p, r);
+    }
+    
+    //local space pivot
+    void get_world(vec3f& p, quatf& r) const  {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        sixdof_impl->get_world(p, r);
+    }
+    
+    
+    
+    
+    
+public:
+    virtual ~dbSixdof_constraint_t() {};
+    
+    virtual void register_name(solver_impl_t* solver, const char* objectName)
+    {
+        sixdof_constraint_impl_t const* sixdof_impl = dynamic_cast<sixdof_constraint_impl_t const*>(impl());
+        sixdof_impl->register_name(solver,objectName);
+    }
+    
+    
+protected:
+    friend class dbSolver_t;
+    dbSixdof_constraint_t(const shared_ptr<sixdof_constraint_impl_t>& impl, dbRigidBody_t::pointer& rigid_body):
+    dbConstraint_t(impl, rigid_body)
+    {
+    }
+    dbSixdof_constraint_t(const shared_ptr<sixdof_constraint_impl_t>& impl, dbRigidBody_t::pointer& rigid_bodyA, dbRigidBody_t::pointer& rigid_bodyB):
+    dbConstraint_t(impl, rigid_bodyA, rigid_bodyB)
+    {
+    }
+};

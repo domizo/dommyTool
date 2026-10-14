@@ -1,0 +1,103 @@
+DOpenVDBNoise
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+string.create
+create maskName refn string *
+maskName connectable 0
+add maskName
+create amplitude amp float 0
+amplitude default 1
+amplitude softMin 0
+amplitude softMax 10
+add amplitude
+create frequency freq float 0
+frequency default 2
+frequency min 0
+frequency softMin 0
+frequency softMax 5
+add frequency
+create octaves oct int 0
+octaves default 1
+octaves min 1
+octaves softMin 1
+octaves softMax 10
+add octaves
+create lacunarity lac float 0
+lacunarity default 2
+lacunarity min 0
+lacunarity softMin 0
+lacunarity softMax 10
+add lacunarity
+create gain ga float 0
+gain default 1
+gain softMin 0
+gain softMax 1
+add gain
+create roughness rough float 0
+roughness default 1
+roughness min 0
+roughness softMin 0
+roughness softMax 10
+add roughness
+create surfaceOffset soff float 0
+surfaceOffset default 0
+add surfaceOffset
+create noiseOffset noff 3float 0
+noiseOffset default 0 0 0
+add noiseOffset
+create noiseMode nmd enum 0
+noiseMode field Straight 0
+noiseMode field Absolute 1
+noiseMode field Inverse Absolute 2
+noiseMode connectable 0
+add noiseMode
+create maskMode mmd enum 0
+maskMode field No noise if mask < threshold 0
+maskMode field No noise if mask > threshold 1
+maskMode field No noise if mask > threshold & normals align 2
+maskMode field Use mask as frequency multiplier 3
+maskMode connectable 0
+add maskMode
+create maskThreshold thres float 0
+maskThreshold default 0
+maskThreshold min 0
+maskThreshold softMin 0
+maskThreshold softMax 1
+add maskThreshold
+create maskFallOff fall float 0
+maskFallOff default 0
+maskFallOff min 0
+maskFallOff softMin 0
+maskFallOff softMax 10
+add maskFallOff
+create CurrentTime time time 0
+add CurrentTime
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+create maskVdbInput maskvdb geometry null
+maskVdbInput connectable 1
+add maskVdbInput
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects maskVdbInput VdbOutput
+affects maskName VdbOutput
+affects maskMode VdbOutput
+affects maskFallOff VdbOutput
+affects maskThreshold VdbOutput
+affects SelectedGridNames VdbOutput
+affects VdbInput VdbOutput
+affects amplitude VdbOutput
+affects frequency VdbOutput
+affects octaves VdbOutput
+affects lacunarity VdbOutput
+affects gain VdbOutput
+affects roughness VdbOutput
+affects surfaceOffset VdbOutput
+affects noiseMode VdbOutput
+affects noiseOffset VdbOutput
+affects CurrentTime VdbOutput

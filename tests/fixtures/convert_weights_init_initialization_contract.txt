@@ -1,0 +1,25 @@
+DPConvertWeights
+create inputDataArray ida generic
+inputDataArray accepts floatArray
+inputDataArray accepts doubleArray
+inputDataArray storable 0
+inputDataArray writable 1
+inputDataArray readable 0
+add inputDataArray
+create weights w float -1000
+weights keyable 1
+weights array 1
+weights readable 1
+weights writable 0
+weights storable 0
+weights arrayBuilder 1
+add weights
+create weightsList wl compound
+weightsList array 1
+weightsList child weights
+weightsList readable 1
+weightsList writable 0
+weightsList storable 0
+weightsList arrayBuilder 1
+add weightsList
+affects inputDataArray weightsList

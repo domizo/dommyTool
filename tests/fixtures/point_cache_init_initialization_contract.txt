@@ -1,0 +1,34 @@
+DPCache
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create EnableCache ebch bool 0
+EnableCache default 0
+EnableCache keyable 1
+add EnableCache
+create CreateMissingCache cmc bool 0
+CreateMissingCache keyable 0
+CreateMissingCache storable 0
+CreateMissingCache connectable 0
+add CreateMissingCache
+string.create
+create CachePath chf string dpoint.vdb
+CachePath connectable 0
+add CachePath
+string.create
+create AttributeNames attrnms string 
+AttributeNames connectable 0
+add AttributeNames
+create CurrentTime ctm time 0
+add CurrentTime
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects CachePath outDP
+affects EnableCache outDP
+affects CreateMissingCache outDP
+affects AttributeNames outDP
+affects CurrentTime outDP

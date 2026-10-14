@@ -1,0 +1,272 @@
+DMNoise
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create NoiseType noty enum 0
+NoiseType field Random 0
+NoiseType field Perlin 1
+NoiseType field Billow 2
+NoiseType field Voronoi 3
+NoiseType field Turblance 4
+NoiseType field RidgedMulti 5
+NoiseType field Wood 6
+NoiseType keyable 1
+NoiseType storable 1
+add NoiseType
+create IsNoiseAttribute isnattr bool 0
+IsNoiseAttribute default 0
+add IsNoiseAttribute
+create UseSeedOffset unoff bool 0
+UseSeedOffset default 0
+add UseSeedOffset
+string default noiseval
+create NoiseAttributeName nattrn string default
+NoiseAttributeName connectable 0
+add NoiseAttributeName
+create DeformType defty enum 1
+DeformType field None 0
+DeformType field Vector 1
+DeformType field Attribute 2
+DeformType field Mesh Normal 4
+DeformType keyable 1
+DeformType storable 1
+add DeformType
+create DeformVector defvec 3float 0
+DeformVector default 0 1 0
+add DeformVector
+string default N
+create VectorAttributeName vecattrn string default
+VectorAttributeName connectable 0
+add VectorAttributeName
+create Seed se int 0
+Seed min 0
+Seed default 0
+add Seed
+create Amplitube amp float 0
+Amplitube default 1
+add Amplitube
+create Octave oct int 0
+Octave min 1
+Octave max 30
+Octave default 6
+add Octave
+create Frequency freq float 0
+Frequency min 0
+Frequency default 2
+add Frequency
+create Lacunarity lac float 0
+Lacunarity default 2
+add Lacunarity
+create Persistence per float 0
+Persistence default 0.5
+add Persistence
+create IsVoronoiDistance isvd bool 0
+IsVoronoiDistance default 1
+add IsVoronoiDistance
+create VoronoiDisplacement vordisp float 0
+VoronoiDisplacement default 1
+add VoronoiDisplacement
+create TurbulencePower tpow float 0
+TurbulencePower default 1
+add TurbulencePower
+create TurbulenceRoughnesss trough int 0
+TurbulenceRoughnesss min 1
+TurbulenceRoughnesss max 30
+TurbulenceRoughnesss default 1
+add TurbulenceRoughnesss
+create WooodFrequency wfreq float 0
+WooodFrequency default 16
+add WooodFrequency
+create WooodScale wsc float 0
+WooodScale default 0.25
+add WooodScale
+create WooodBias wbi float 0
+WooodBias default 0.125
+add WooodBias
+create WooodGrain wgra float 0
+WooodGrain default 0.25
+add WooodGrain
+create WooodAngle wang 3float 0
+WooodAngle default 84 0 0
+add WooodAngle
+create Scale sc 3float 0
+Scale default 1 1 1
+add Scale
+create UniformScale uscl float 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 10
+add UniformScale
+create Offset of 3float 0
+Offset default 0 0 0
+add Offset
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects NoiseType outDM
+affects Seed outDM
+affects UseSeedOffset outDM
+affects IsNoiseAttribute outDM
+affects NoiseAttributeName outDM
+affects DeformType outDM
+affects DeformVector outDM
+affects VectorAttributeName outDM
+affects Amplitube outDM
+affects Octave outDM
+affects Frequency outDM
+affects Lacunarity outDM
+affects Persistence outDM
+affects IsVoronoiDistance outDM
+affects VoronoiDisplacement outDM
+affects TurbulencePower outDM
+affects TurbulenceRoughnesss outDM
+affects WooodFrequency outDM
+affects WooodScale outDM
+affects WooodBias outDM
+affects WooodGrain outDM
+affects WooodAngle outDM
+affects Scale outDM
+affects UniformScale outDM
+affects Offset outDM
+DMFastNoise
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create NoiseType noty enum 4
+NoiseType field Value 0
+NoiseType field Value Fractal 1
+NoiseType field Gradient 2
+NoiseType field Gradient Fractal 3
+NoiseType field Simplex 4
+NoiseType field Simplex Fractal 5
+NoiseType field Cellular 6
+NoiseType field White Noise 7
+NoiseType field Cubic 8
+NoiseType field Cubic Fractal 9
+NoiseType keyable 1
+NoiseType storable 1
+add NoiseType
+create InterpType itpty enum 1
+InterpType field Linear 0
+InterpType field Hermite 1
+InterpType field Quintic 2
+InterpType keyable 1
+InterpType storable 1
+add InterpType
+create IsNoiseAttribute isnattr bool 0
+IsNoiseAttribute default 0
+add IsNoiseAttribute
+create UseSeedOffset unoff bool 0
+UseSeedOffset default 0
+add UseSeedOffset
+string default noiseval
+create NoiseAttributeName nattrn string default
+NoiseAttributeName connectable 0
+add NoiseAttributeName
+create DeformType defty enum 1
+DeformType field None 0
+DeformType field Vector 1
+DeformType field Attribute 2
+DeformType field Mesh Normal 4
+DeformType keyable 1
+DeformType storable 1
+add DeformType
+create DeformVector defvec 3float 0
+DeformVector default 0 1 0
+add DeformVector
+string default N
+create VectorAttributeName vecattrn string default
+VectorAttributeName connectable 0
+add VectorAttributeName
+create Seed se int 0
+Seed min 0
+Seed default 1337
+add Seed
+create Amplitube amp float 0
+Amplitube default 1
+add Amplitube
+create Octave oct int 0
+Octave min 1
+Octave max 30
+Octave default 3
+add Octave
+create Frequency freq float 0
+Frequency min 0
+Frequency default 2
+add Frequency
+create Lacunarity lac float 0
+Lacunarity default 2
+add Lacunarity
+create Gain gn float 0
+Gain default 0.5
+add Gain
+create FractalType frcty enum 0
+FractalType field FBM 0
+FractalType field Billow 1
+FractalType field RigidMulti 2
+FractalType keyable 1
+FractalType storable 1
+add FractalType
+create CellularDistanceFunction celdistty enum 0
+CellularDistanceFunction field Euclidean 0
+CellularDistanceFunction field Manhattan 1
+CellularDistanceFunction field Natural 2
+CellularDistanceFunction keyable 1
+CellularDistanceFunction storable 1
+add CellularDistanceFunction
+create CellularReturnType celrtnty enum 0
+CellularReturnType field CellValue 0
+CellularReturnType field NoiseLookup 1
+CellularReturnType field Distance 2
+CellularReturnType field Distance2 3
+CellularReturnType field Distance2Add 4
+CellularReturnType field Distance2Sub 5
+CellularReturnType field Distance2Mul 6
+CellularReturnType field Distance2Div 7
+CellularReturnType keyable 1
+CellularReturnType storable 1
+add CellularReturnType
+create PositionWarpAmp poswpamp float 0
+PositionWarpAmp default 1
+add PositionWarpAmp
+create Scale sc 3float 0
+Scale default 1 1 1
+add Scale
+create UniformScale uscl float 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 10
+add UniformScale
+create Offset of 3float 0
+Offset default 0 0 0
+add Offset
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects NoiseType outDM
+affects InterpType outDM
+affects Seed outDM
+affects UseSeedOffset outDM
+affects IsNoiseAttribute outDM
+affects NoiseAttributeName outDM
+affects DeformType outDM
+affects DeformVector outDM
+affects VectorAttributeName outDM
+affects Amplitube outDM
+affects Octave outDM
+affects Frequency outDM
+affects Lacunarity outDM
+affects Gain outDM
+affects FractalType outDM
+affects CellularDistanceFunction outDM
+affects CellularReturnType outDM
+affects PositionWarpAmp outDM
+affects Scale outDM
+affects UniformScale outDM
+affects Offset outDM

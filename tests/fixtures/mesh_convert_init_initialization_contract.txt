@@ -1,0 +1,41 @@
+DMConvertFromMeshes
+create inMeshes inms generic
+inMeshes accepts mesh
+inMeshes storable 0
+inMeshes writable 1
+inMeshes readable 0
+inMeshes array 1
+inMeshes arrayBuilder 1
+add inMeshes
+create inMatrices inmats matrix double
+inMatrices storable 0
+inMatrices writable 1
+inMatrices readable 0
+inMatrices array 1
+inMatrices arrayBuilder 1
+add inMatrices
+create ConvertType cnvty enum 0
+ConvertType field Full Mesh 0
+ConvertType field Full Mesh with Transform 1
+ConvertType field Per Polygon 3
+ConvertType keyable 1
+add ConvertType
+create AddFaceNormalAttribute afnattr bool 0
+AddFaceNormalAttribute keyable 1
+add AddFaceNormalAttribute
+string.create N
+create NormalAttributeName nattrnm string N
+NormalAttributeName connectable 0
+add NormalAttributeName
+create CurrentTime time time 0
+add CurrentTime
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inMeshes outDM
+affects inMatrices outDM
+affects ConvertType outDM
+affects AddFaceNormalAttribute outDM
+affects NormalAttributeName outDM
+affects CurrentTime outDM

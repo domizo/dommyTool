@@ -1,0 +1,47 @@
+DOpenVDBAnalysis
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create Operator op enum 0
+Operator field Gradient       (Scalar->Vector) 0
+Operator field Curvature     (Scalar->Scalar) 1
+Operator field Laplacian      (Scalar->Scalar) 2
+Operator field Closest Point (Scalar->Vector) 3
+Operator field Divergence    (Vector->Scalar) 4
+Operator field Curl             (Vector->Vector) 5
+Operator field Length         (Vector->Scalar) 6
+Operator field Normalize     (Vector->Vector) 7
+Operator connectable 0
+add Operator
+create MaskVdbInput maskvdb geometry null
+MaskVdbInput connectable 1
+add MaskVdbInput
+string.create
+create MaskGridNames mgrids string 
+MaskGridNames connectable 0
+add MaskGridNames
+create OutputName onm enum 0
+OutputName field Keep Incoming VDB Names 0
+OutputName field Append Operation Name 1
+OutputName field Custom Name 2
+OutputName connectable 0
+add OutputName
+string.create
+create CustomName cnm string 
+CustomName connectable 0
+add CustomName
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects Operator VdbOutput
+affects MaskVdbInput VdbOutput
+affects MaskGridNames VdbOutput
+affects OutputName VdbOutput
+affects CustomName VdbOutput

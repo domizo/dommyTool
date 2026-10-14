@@ -1,0 +1,90 @@
+DVDBPotentialFlow
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+string.create
+create VelocityGridName velgrd string vel
+VelocityGridName connectable 0
+add VelocityGridName
+create VelocityVdb velvdb geometry null
+VelocityVdb connectable 1
+add VelocityVdb
+string.create
+create MaskGridName mskgrd string mask
+MaskGridName connectable 0
+add MaskGridName
+create MaskVdb mskvdb geometry null
+MaskVdb connectable 1
+add MaskVdb
+create MaskType mskty enum 0
+MaskType field Intersection 0
+MaskType field Difference 1
+MaskType connectable 0
+add MaskType
+create UseIterations useitr bool 0
+UseIterations default 1
+add UseIterations
+create Iterations itr int 0
+Iterations min 1
+Iterations softMax 2000
+Iterations default 1000
+add Iterations
+create UseTolerance usetol bool 0
+UseTolerance default 1
+add UseTolerance
+create Tolerance tol float 0
+Tolerance min 0
+Tolerance softMax 0.01
+Tolerance default 9.9999997473787516e-06
+add Tolerance
+create UseWorldSpace usews bool 0
+UseWorldSpace default 0
+add UseWorldSpace
+create DilationVoxels dltvxl int 0
+DilationVoxels min 1
+DilationVoxels softMax 100
+DilationVoxels default 10
+add DilationVoxels
+create Dilation dlt float 0
+Dilation min 1.0000000000000001e-05
+Dilation softMax 100
+Dilation default 1
+add Dilation
+create UseBackgroundVelocity usebgvel bool 0
+UseBackgroundVelocity default 1
+add UseBackgroundVelocity
+create BackgroundVelocity bgvel 3float 0
+BackgroundVelocity default 1 0 0
+add BackgroundVelocity
+create ApplyBackgroundVelocity aplybgvel bool 0
+ApplyBackgroundVelocity default 1
+add ApplyBackgroundVelocity
+create OutputPotential outptn bool 0
+OutputPotential default 1
+add OutputPotential
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects VelocityGridName VdbOutput
+affects VelocityVdb VdbOutput
+affects MaskGridName VdbOutput
+affects MaskVdb VdbOutput
+affects MaskType VdbOutput
+affects UseIterations VdbOutput
+affects Iterations VdbOutput
+affects UseTolerance VdbOutput
+affects Tolerance VdbOutput
+affects UseWorldSpace VdbOutput
+affects DilationVoxels VdbOutput
+affects Dilation VdbOutput
+affects UseBackgroundVelocity VdbOutput
+affects BackgroundVelocity VdbOutput
+affects ApplyBackgroundVelocity VdbOutput
+affects OutputPotential VdbOutput

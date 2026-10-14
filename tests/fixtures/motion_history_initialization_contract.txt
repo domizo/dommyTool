@@ -1,0 +1,113 @@
+DMotionDeformer
+create timeRange tmr double 5
+timeRange min 0
+timeRange keyable 1
+add timeRange
+create sampling sa int 4
+sampling min 1
+sampling keyable 1
+add sampling
+create amplitude amp double 1
+amplitude keyable 1
+add amplitude
+create amplitudeRamp aramp ramp
+add amplitudeRamp
+affects timeRange outputGeom
+affects sampling outputGeom
+affects amplitude outputGeom
+affects amplitudeRamp outputGeom
+DMMotionDeform
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create TimeRange tmr double 0
+TimeRange default 5
+TimeRange min 0
+TimeRange keyable 1
+add TimeRange
+create Sampling sa int 0
+Sampling default 4
+Sampling min 0
+Sampling max 4096
+Sampling keyable 1
+add Sampling
+create Amplitude amp double 0
+Amplitude default 1
+Amplitude keyable 1
+add Amplitude
+create AmplitudeRamp aramp ramp
+add AmplitudeRamp
+string default weight
+create WeightAttributeName weiattrn string default
+WeightAttributeName connectable 0
+add WeightAttributeName
+create Weight wei double 0
+Weight default 1
+Weight min 0
+Weight softMin 0
+Weight softMax 1
+Weight keyable 1
+add Weight
+create IsExportMotionPower exmp bool 0
+IsExportMotionPower default 0
+add IsExportMotionPower
+string default motionpower
+create MotionPowerName mpattr string default
+MotionPowerName connectable 0
+add MotionPowerName
+create IsExportMotionVector exmv bool 0
+IsExportMotionVector default 0
+add IsExportMotionVector
+string default vel
+create MotionVectorName mvattr string default
+MotionVectorName connectable 0
+add MotionVectorName
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects TimeRange outDM
+affects Sampling outDM
+affects Amplitude outDM
+affects AmplitudeRamp outDM
+affects WeightAttributeName outDM
+affects Weight outDM
+affects IsExportMotionPower outDM
+affects MotionPowerName outDM
+affects IsExportMotionVector outDM
+affects MotionVectorName outDM
+DMTimeShapeGen
+create inMesh im generic
+inMesh accepts mesh
+inMesh storable 0
+inMesh writable 1
+inMesh readable 0
+add inMesh
+create StartFrame sf float 0
+StartFrame default 1
+StartFrame softMin 0
+StartFrame softMax 120
+StartFrame keyable 1
+add StartFrame
+create EndFrame ef float 0
+EndFrame default 60
+EndFrame softMin 0
+EndFrame softMax 240
+EndFrame keyable 1
+add EndFrame
+create TimeSample tsa int 0
+TimeSample default 60
+TimeSample min 2
+TimeSample max 1000000
+TimeSample keyable 1
+add TimeSample
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inMesh outDM
+affects StartFrame outDM
+affects EndFrame outDM
+affects TimeSample outDM

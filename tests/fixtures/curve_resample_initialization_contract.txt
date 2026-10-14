@@ -1,0 +1,51 @@
+DResampleCurve
+create inCurve inc generic
+inCurve accepts curve
+inCurve storable 0
+inCurve writable 1
+inCurve readable 0
+add inCurve
+create Sampling smp int 12
+Sampling min 8
+Sampling max 1000000
+Sampling softMax 50
+Sampling keyable 1
+add Sampling
+create outCurve oc curve null
+outCurve writable 0
+outCurve storable 0
+add outCurve
+affects inCurve outCurve
+affects Sampling outCurve
+DBSCurve
+create inBaseCurve inbc generic
+inBaseCurve accepts curve
+inBaseCurve storable 0
+inBaseCurve writable 1
+inBaseCurve readable 0
+add inBaseCurve
+create inTargetCurve intc generic
+inTargetCurve accepts curve
+inTargetCurve storable 0
+inTargetCurve writable 1
+inTargetCurve readable 0
+add inTargetCurve
+create Blend bld double 0
+Blend softMin 0
+Blend softMax 1
+Blend keyable 1
+add Blend
+create Sampling smp int 12
+Sampling min 8
+Sampling max 1000000
+Sampling softMax 50
+Sampling keyable 1
+add Sampling
+create outCurve oc curve null
+outCurve writable 0
+outCurve storable 0
+add outCurve
+affects inBaseCurve outCurve
+affects inTargetCurve outCurve
+affects Blend outCurve
+affects Sampling outCurve

@@ -1,0 +1,278 @@
+DTMotionDuplicator
+create inputObject io geometry null
+inputObject hidden 1
+inputObject readable 0
+inputObject writable 1
+create count c int 0
+count default 5
+count min 0
+count keyable 1
+create delay d float 0
+delay default 5
+delay keyable 1
+create seed see float 0
+seed default 1
+seed keyable 1
+create transformMatrix tm matrix double
+transformMatrix storable 1
+transformMatrix keyable 0
+transformMatrix readable 1
+transformMatrix writable 1
+transformMatrix cached 0
+create transformMatrixTimeRandom tmr float 0
+transformMatrixTimeRandom default 0
+transformMatrixTimeRandom keyable 1
+create translateX tx double 0
+translateX default 0
+translateX keyable 1
+translateX storable 1
+create translateY ty double 0
+translateY default 0
+translateY keyable 1
+translateY storable 1
+create translateZ tz double 0
+translateZ default 0
+translateZ keyable 1
+translateZ storable 1
+create translate t compound translateX translateY translateZ
+translate storable 1
+translate default 0 0 0
+create translateTimeType ttt enum 0
+translateTimeType field Global Delay 0
+translateTimeType field Local Delay 1
+translateTimeType field Eval Time 2
+translateTimeType keyable 1
+create translateDelay td float 0
+translateDelay default 0
+translateDelay keyable 1
+translateDelay storable 1
+create translateXEvalTime tex float 0
+translateXEvalTime default 0
+translateXEvalTime keyable 1
+translateXEvalTime storable 1
+create translateYEvalTime tey float 0
+translateYEvalTime default 0
+translateYEvalTime keyable 1
+translateYEvalTime storable 1
+create translateZEvalTime tez float 0
+translateZEvalTime default 0
+translateZEvalTime keyable 1
+translateZEvalTime storable 1
+create translateEvalTime tet compound translateXEvalTime translateYEvalTime translateZEvalTime
+translateEvalTime storable 1
+translateEvalTime default 0 0 0
+create translateTimeRandom ttr float 0
+translateTimeRandom default 0
+translateTimeRandom min 0
+translateTimeRandom keyable 1
+translateTimeRandom storable 1
+create rotateX rx float 0
+rotateX default 0
+rotateX keyable 1
+rotateX storable 1
+create rotateY ry float 0
+rotateY default 0
+rotateY keyable 1
+rotateY storable 1
+create rotateZ rz float 0
+rotateZ default 0
+rotateZ keyable 1
+rotateZ storable 1
+create rotate r compound rotateX rotateY rotateZ
+rotate storable 1
+rotate default 0 0 0
+create rotateTimeType rtt enum 0
+rotateTimeType field Global Delay 0
+rotateTimeType field Local Delay 1
+rotateTimeType field Eval Time 2
+rotateTimeType keyable 1
+create rotateDelay rd float 0
+rotateDelay default 0
+rotateDelay keyable 1
+rotateDelay storable 1
+create rotateXEvalTime rex float 0
+rotateXEvalTime default 0
+rotateXEvalTime keyable 1
+rotateXEvalTime storable 1
+create rotateYEvalTime rey float 0
+rotateYEvalTime default 0
+rotateYEvalTime keyable 1
+rotateYEvalTime storable 1
+create rotateZEvalTime rez float 0
+rotateZEvalTime default 0
+rotateZEvalTime keyable 1
+rotateZEvalTime storable 1
+create rotateEvalTime ret compound rotateXEvalTime rotateYEvalTime rotateZEvalTime
+rotateEvalTime storable 1
+rotateEvalTime default 0 0 0
+create rotateTimeRandom rtr float 0
+rotateTimeRandom default 0
+rotateTimeRandom min 0
+rotateTimeRandom keyable 1
+rotateTimeRandom storable 1
+create rotateCenterX rcx float 0
+rotateCenterX default 0
+rotateCenterX keyable 1
+rotateCenterX storable 1
+create rotateCenterY rcy float 0
+rotateCenterY default 0
+rotateCenterY keyable 1
+rotateCenterY storable 1
+create rotateCenterZ rcz float 0
+rotateCenterZ default 0
+rotateCenterZ keyable 1
+rotateCenterZ storable 1
+create rotateCenter rc compound rotateCenterX rotateCenterY rotateCenterZ
+rotateCenter storable 1
+rotateCenter default 0 0 0
+create scaleX sx float 0
+scaleX default 1
+scaleX keyable 1
+scaleX storable 1
+create scaleY sy float 0
+scaleY default 1
+scaleY keyable 1
+scaleY storable 1
+create scaleZ sz float 0
+scaleZ default 1
+scaleZ keyable 1
+scaleZ storable 1
+create scale s compound scaleX scaleY scaleZ
+scale storable 1
+scale default 1 1 1
+create scaleTimeType stt enum 0
+scaleTimeType field Global Delay 0
+scaleTimeType field Local Delay 1
+scaleTimeType field Eval Time 2
+scaleTimeType keyable 1
+create scaleDelay sd float 0
+scaleDelay default 0
+scaleDelay keyable 1
+scaleDelay storable 1
+create scaleXEvalTime sex float 0
+scaleXEvalTime default 0
+scaleXEvalTime keyable 1
+scaleXEvalTime storable 1
+create scaleYEvalTime sey float 0
+scaleYEvalTime default 0
+scaleYEvalTime keyable 1
+scaleYEvalTime storable 1
+create scaleZEvalTime sez float 0
+scaleZEvalTime default 0
+scaleZEvalTime keyable 1
+scaleZEvalTime storable 1
+create scaleEvalTime set compound scaleXEvalTime scaleYEvalTime scaleZEvalTime
+scaleEvalTime storable 1
+scaleEvalTime default 0 0 0
+create scaleTimeRandom str float 0
+scaleTimeRandom default 0
+scaleTimeRandom min 0
+scaleTimeRandom keyable 1
+scaleTimeRandom storable 1
+create scaleCenterX scx float 0
+scaleCenterX default 0
+scaleCenterX keyable 1
+scaleCenterX storable 1
+create scaleCenterY scy float 0
+scaleCenterY default 0
+scaleCenterY keyable 1
+scaleCenterY storable 1
+create scaleCenterZ scz float 0
+scaleCenterZ default 0
+scaleCenterZ keyable 1
+scaleCenterZ storable 1
+create scaleCenter sc compound scaleCenterX scaleCenterY scaleCenterZ
+scaleCenter storable 1
+scaleCenter default 0 0 0
+create offsetX ox double 0
+offsetX default 0
+offsetX keyable 1
+offsetX storable 1
+create offsetY oy double 0
+offsetY default 0
+offsetY keyable 1
+offsetY storable 1
+create offsetZ oz double 0
+offsetZ default 0
+offsetZ keyable 1
+offsetZ storable 1
+create offset o compound offsetX offsetY offsetZ
+offset storable 1
+offset default 0 0 0
+create offsetXEvalTime oxe float 0
+offsetXEvalTime default 0
+offsetXEvalTime keyable 1
+offsetXEvalTime storable 1
+create offsetYEvalTime oye float 0
+offsetYEvalTime default 0
+offsetYEvalTime keyable 1
+offsetYEvalTime storable 1
+create offsetZEvalTime oze float 0
+offsetZEvalTime default 0
+offsetZEvalTime keyable 1
+offsetZEvalTime storable 1
+create offsetEvalTime oet compound offsetXEvalTime offsetYEvalTime offsetZEvalTime
+offsetEvalTime storable 1
+offsetEvalTime default 0 0 0
+create outputObjects oos geometry null
+outputObjects array 1
+outputObjects readable 1
+outputObjects writable 0
+outputObjects storable 0
+outputObjects arrayBuilder 1
+create time ti time 0
+time storable 0
+time keyable 1
+add inputObject
+add count
+add delay
+add seed
+add transformMatrix
+add transformMatrixTimeRandom
+add translate
+add translateTimeType
+add translateDelay
+add translateEvalTime
+add translateTimeRandom
+add rotate
+add rotateTimeType
+add rotateDelay
+add rotateEvalTime
+add rotateTimeRandom
+add rotateCenter
+add scale
+add scaleTimeType
+add scaleDelay
+add scaleEvalTime
+add scaleTimeRandom
+add scaleCenter
+add offset
+add offsetEvalTime
+add outputObjects
+add time
+affects inputObject outputObjects
+affects count outputObjects
+affects delay outputObjects
+affects seed outputObjects
+affects transformMatrix outputObjects
+affects transformMatrixTimeRandom outputObjects
+affects translate outputObjects
+affects translateTimeType outputObjects
+affects translateDelay outputObjects
+affects translateEvalTime outputObjects
+affects translateTimeRandom outputObjects
+affects rotate outputObjects
+affects rotateCenter outputObjects
+affects rotateTimeType outputObjects
+affects rotateDelay outputObjects
+affects rotateEvalTime outputObjects
+affects rotateTimeRandom outputObjects
+affects scale outputObjects
+affects scaleCenter outputObjects
+affects scaleTimeType outputObjects
+affects scaleDelay outputObjects
+affects scaleEvalTime outputObjects
+affects scaleTimeRandom outputObjects
+affects offset outputObjects
+affects offsetEvalTime outputObjects
+affects time outputObjects

@@ -1,0 +1,51 @@
+DPointPlaneEmit
+aRadiusBiasRamp curve values 0 1 positions 0 1
+aPackingGradientBiasRamp curve values 0 1 positions 0 1
+DPointCurveEmit
+aRadiusRamp curve values 0 1 positions 0 1
+DStretchData
+aStretchMap ramp values 1,0,0,1 0,1,0,1 0,0,1,1 positions 1 0.5 0 interpolation 3 3 3
+aCompressMap ramp values 1,0,0,1 0,1,0,1 0,0,1,1 positions 1 0.5 0 interpolation 3 3 3
+DBSMirrorMesh
+aBlendRamp curve values 0 1 positions 0.5 1
+DPolyWire
+twistRamp curve values 0 0 positions 0 0
+widthRamp ramp values 1 positions 0 interpolation 1
+DCollisionDeformer
+falloffRamp ramp values 1 0 positions 1 0 interpolation 3 3
+DMotionDeformer
+amplitudeRamp ramp values 0 1 positions 0 1 interpolation 1 1
+DPRemap
+aRamp1D curve values 0 1 positions 0 1
+aRamp2D curve values 0 1 positions 0 1
+aRamp3D curve values 0 1 positions 0 1
+DCurveFromCurve
+twist ramp values 1 1 positions 0 1 interpolation 1 1
+tubeWidth ramp values 1 positions 0 interpolation 1
+DCAhoGen
+aStruggleRamp curve values 0 1 positions 0 1
+DCUVMap
+aUVRamp curve values 0 1 positions 0 1
+DCClumping
+aClumpRamp curve values 0 1 positions 0 1
+DCWeightMap
+aWeightRamp curve values 0 1 positions 1 0
+DCurveField
+aRadiusRamp curve values 0 positions 1
+aForwardRamp curve values 0 positions 1
+aToCurveRamp curve values 0 positions 1
+aBlendRamp curve values 0 positions 1
+LeafGen
+aLeftRamp ramp values 0 1 0 positions 0 0.30000001192092896 1 interpolation 3 3 3
+aRightRamp ramp values 0 1 0 positions 0 0.30000001192092896 1 interpolation 3 3 3
+aDepthWidthRamp ramp values 0 1 0 positions 0 0.5 1 interpolation 3 3 3
+aDepthLengthRamp ramp values 0 1 0 positions 0.10000000149011612 0.5 0.89999997615814209 interpolation 3 3 3
+aNoiseWidthRamp ramp values 0 1 positions 0 1 interpolation 3 3
+aNoiseLengthRamp ramp values 0 1 0 positions 0.10000000149011612 0.5 0.89999997615814209 interpolation 3 3 3
+aBendRamp ramp values 1 positions 0 interpolation 3
+DHEyeGen
+irisRamp ramp values 0 1 positions 0 1 interpolation 3 3
+lenzRamp ramp values 0 0.18000000715255737 0.63999998569488525 0.77999997138977051 positions 0 0.24300000071525574 0.5910000205039978 1 interpolation 3 3 3 3
+radiusRamp ramp values 1 positions 0 interpolation 1
+DOpenVDBRemap
+aTransferFunction curve values 0 1 positions 0 1

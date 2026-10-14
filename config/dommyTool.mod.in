@@ -1,0 +1,3 @@
++ dommyTool 2019 ./dommyTool
+MAYA_PLUG_IN_PATH +:= plug-ins
+PYTHONPATH +:= python

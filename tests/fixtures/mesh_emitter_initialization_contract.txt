@@ -1,0 +1,255 @@
+DPointCurveEmit
+create inCurve ic curve null
+inCurve storable 0
+add inCurve
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create samplingType sat enum 0
+samplingType field All 0
+samplingType field Range 1
+samplingType field Step 2
+samplingType field CVs 3
+samplingType field Fill Length 4
+samplingType field Tube Fill 5
+samplingType field Tube Outer 6
+samplingType field Pyro 7
+samplingType keyable 1
+samplingType storable 1
+add samplingType
+create sampling sa int 10
+sampling min 0
+add sampling
+create curveLength crl float 1
+curveLength min 0
+curveLength softMax 1
+add curveLength
+create stepSize stp float 1
+add stepSize
+create offset of float 0
+add offset
+create FillLength fllen float 0
+FillLength default 1
+FillLength min 0.001
+FillLength softMin 0.10000000000000001
+FillLength softMax 5
+add FillLength
+create TangentMode tanm enum 0
+TangentMode field Vecor 0
+TangentMode field From Curve 1
+TangentMode field Input Curve 2
+TangentMode keyable 1
+TangentMode storable 1
+add TangentMode
+create TangentVector tanvec 3float 0
+TangentVector default 0 1 0
+add TangentVector
+create InTangentCurve intancrv curve null
+InTangentCurve storable 0
+add InTangentCurve
+create FillSampling fsa int 10
+FillSampling min 0
+add FillSampling
+create Radius rad float 2
+Radius softMin 0
+Radius softMax 10
+Radius min 0
+add Radius
+create RadiusRamp radrmp ramp
+add RadiusRamp
+create OuterType outt enum 0
+OuterType field Order Circle 0
+OuterType field Random Sample 1
+OuterType keyable 1
+OuterType storable 1
+add OuterType
+create OuterCircleSampling ocsmp int 8
+OuterCircleSampling min 0
+OuterCircleSampling softMin 0
+OuterCircleSampling softMax 100
+add OuterCircleSampling
+create OuterRandomSampling orsmp int 100
+OuterRandomSampling min 0
+OuterRandomSampling softMin 0
+OuterRandomSampling softMax 1000
+add OuterRandomSampling
+create DisplaceAmplitude diamp float 1
+DisplaceAmplitude softMin 0
+DisplaceAmplitude softMax 10
+add DisplaceAmplitude
+create Seed se int 0
+Seed min 0
+Seed default 0
+add Seed
+create Amplitube amp float 0
+Amplitube default 1
+add Amplitube
+create Octave oct int 0
+Octave min 1
+Octave max 30
+Octave default 6
+add Octave
+create Frequency freq float 0
+Frequency min 0
+Frequency default 2
+add Frequency
+create Lacunarity lac float 0
+Lacunarity default 2
+add Lacunarity
+create Persistence per float 0
+Persistence default 0.5
+add Persistence
+create NoiseScale nsc float 0
+NoiseScale default 1
+add NoiseScale
+create NoiseOffset nof 3float 0
+NoiseOffset default 0 0 0
+add NoiseOffset
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inCurve outDP
+affects inDC outDP
+affects samplingType outDP
+affects sampling outDP
+affects curveLength outDP
+affects stepSize outDP
+affects offset outDP
+affects FillLength outDP
+affects TangentMode outDP
+affects TangentVector outDP
+affects InTangentCurve outDP
+affects FillSampling outDP
+affects Radius outDP
+affects RadiusRamp outDP
+affects OuterType outDP
+affects OuterCircleSampling outDP
+affects OuterRandomSampling outDP
+affects DisplaceAmplitude outDP
+affects Seed outDP
+affects Amplitube outDP
+affects Frequency outDP
+affects Octave outDP
+affects Lacunarity outDP
+affects Persistence outDP
+affects NoiseScale outDP
+affects NoiseOffset outDP
+DPointMeshEmit
+create inMesh im mesh null
+inMesh storable 0
+add inMesh
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create isVertexEmit iv bool 1
+isVertexEmit keyable 1
+isVertexEmit storable 1
+add isVertexEmit
+create isEdgeEmit ie bool 0
+isEdgeEmit keyable 1
+isEdgeEmit storable 1
+add isEdgeEmit
+create edgeEmitType eemt enum 0
+edgeEmitType field Sampling 0
+edgeEmitType field Step Sampling 1
+edgeEmitType keyable 1
+add edgeEmitType
+create edgeSampling es int 1
+edgeSampling min 1
+edgeSampling keyable 1
+add edgeSampling
+create stepWidth sw float 0.10000000000000001
+stepWidth min 0
+stepWidth keyable 1
+add stepWidth
+create isFinishEdgeLength isfinedg bool 0
+isFinishEdgeLength keyable 1
+isFinishEdgeLength storable 1
+add isFinishEdgeLength
+create isFaceEmit if bool 0
+isFaceEmit keyable 1
+isFaceEmit storable 1
+add isFaceEmit
+create faceEmitType femt enum 0
+faceEmitType field Polygon 0
+faceEmitType field Triangle Sample 1
+faceEmitType keyable 1
+add faceEmitType
+create faceSampling fs int 1
+faceSampling min 0
+faceSampling softMax 5
+faceSampling keyable 1
+faceSampling storable 1
+add faceSampling
+create IsFromUV isuv bool 0
+IsFromUV keyable 1
+IsFromUV storable 1
+add IsFromUV
+create UVSamplingType uvsmpty enum 0
+UVSamplingType field Uniform 0
+UVSamplingType field Random 1
+UVSamplingType keyable 1
+add UVSamplingType
+create UVUniformCount uvunicnt int 0
+UVUniformCount default 10
+UVUniformCount min 0
+UVUniformCount softMax 100
+add UVUniformCount
+create UVRandomCount uvrndcnt int 0
+UVRandomCount default 500
+UVRandomCount min 0
+UVRandomCount softMax 2000
+add UVRandomCount
+create URange urng 2float 0
+URange default 0 1
+add URange
+create VRange vrng 2float 0
+VRange default 0 1
+add VRange
+create UVIsRelax uvisrlx bool 0
+UVIsRelax keyable 1
+UVIsRelax storable 1
+add UVIsRelax
+create UVRelaxIteration uvrlxit int 0
+UVRelaxIteration default 1
+UVRelaxIteration min 1
+UVRelaxIteration softMax 20
+add UVRelaxIteration
+create Seed se int 0
+Seed default 1
+Seed min 1
+Seed softMax 100
+add Seed
+create UVTolerance uvtol float 0
+UVTolerance default 0.001
+UVTolerance min 0
+UVTolerance softMax 1
+add UVTolerance
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inMesh outDP
+affects inDM outDP
+affects isVertexEmit outDP
+affects isEdgeEmit outDP
+affects edgeEmitType outDP
+affects edgeSampling outDP
+affects stepWidth outDP
+affects isFinishEdgeLength outDP
+affects isFaceEmit outDP
+affects faceEmitType outDP
+affects faceSampling outDP
+affects IsFromUV outDP
+affects UVSamplingType outDP
+affects UVUniformCount outDP
+affects UVRandomCount outDP
+affects URange outDP
+affects VRange outDP
+affects UVIsRelax outDP
+affects UVRelaxIteration outDP
+affects Seed outDP
+affects UVTolerance outDP

@@ -1,0 +1,119 @@
+DCFitCopy
+create inCopyObject ico generic
+inCopyObject accepts curve
+inCopyObject storable 0
+inCopyObject writable 1
+inCopyObject readable 0
+add inCopyObject
+create inObject ino generic
+inObject accepts curve
+inObject accepts surface
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create referenceObject refo generic
+referenceObject accepts curve
+referenceObject accepts surface
+referenceObject storable 0
+referenceObject writable 1
+referenceObject readable 0
+add referenceObject
+create CountU cntu int 0
+CountU default 4
+CountU min 0
+CountU softMin 0
+CountU softMax 100
+CountU keyable 1
+add CountU
+create CountV cntv int 0
+CountV default 4
+CountV min 0
+CountV softMin 0
+CountV softMax 100
+CountV keyable 1
+add CountV
+create Padding pad 2float 0
+Padding default 0 0
+Padding min 0
+Padding softMax 1
+Padding keyable 1
+add Padding
+create RandomPadding rndpad 2float 0
+RandomPadding default 0 0
+RandomPadding keyable 1
+add RandomPadding
+create ConnectType cnctty enum 0
+ConnectType field Split 0
+ConnectType field Connect 1
+ConnectType keyable 1
+add ConnectType
+create ConnectUVSwitch cuvsw bool 0
+ConnectUVSwitch default 0
+add ConnectUVSwitch
+create TangentMode tam enum 0
+TangentMode field From Source Object 0
+TangentMode field Use Tangent Vector 1
+TangentMode field From Reference Object 2
+TangentMode keyable 1
+add TangentMode
+create tangentVector tanvec 3float 0
+tangentVector default 0 1 0
+add tangentVector
+create UniformScale uscl float 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 10
+UniformScale keyable 1
+add UniformScale
+create Scale scl 3float 0
+Scale default 0 1 0
+Scale softMin 0
+Scale softMax 10
+Scale keyable 1
+add Scale
+create Seed se int 0
+Seed default 1
+Seed min 1
+Seed keyable 1
+add Seed
+create RandomScale rndscl 3float 0
+RandomScale default 0 0 0
+RandomScale softMin 0
+RandomScale softMax 10
+RandomScale keyable 1
+add RandomScale
+create RandomRotate rndrt 3float 0
+RandomRotate default 0 0 0
+RandomRotate softMin 0
+RandomRotate softMax 360
+RandomRotate keyable 1
+add RandomRotate
+create IsRandScaleAbsolute irsabs bool 0
+IsRandScaleAbsolute default 0
+add IsRandScaleAbsolute
+create IsRandRotateabsolute irrabs bool 0
+IsRandRotateabsolute default 0
+add IsRandRotateabsolute
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inCopyObject outDC
+affects inObject outDC
+affects referenceObject outDC
+affects CountU outDC
+affects CountV outDC
+affects Padding outDC
+affects RandomPadding outDC
+affects ConnectType outDC
+affects ConnectUVSwitch outDC
+affects TangentMode outDC
+affects tangentVector outDC
+affects UniformScale outDC
+affects Scale outDC
+affects Seed outDC
+affects RandomScale outDC
+affects RandomRotate outDC
+affects IsRandScaleAbsolute outDC
+affects IsRandRotateabsolute outDC

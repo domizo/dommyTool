@@ -1,0 +1,25 @@
+DTDelayTransformMatrix
+create transformMatrix tm matrix double
+transformMatrix storable 1
+transformMatrix keyable 0
+transformMatrix readable 1
+transformMatrix writable 1
+create delay de double 0
+delay default 5
+delay keyable 1
+create time ti time 0
+time storable 0
+time keyable 1
+create outputTransformMatrix otm matrix double
+outputTransformMatrix array 1
+outputTransformMatrix readable 1
+outputTransformMatrix writable 0
+outputTransformMatrix storable 0
+outputTransformMatrix arrayBuilder 1
+add transformMatrix
+add delay
+add time
+add outputTransformMatrix
+affects transformMatrix outputTransformMatrix
+affects delay outputTransformMatrix
+affects time outputTransformMatrix

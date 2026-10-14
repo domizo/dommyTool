@@ -1,0 +1,151 @@
+DPIntArrayGen
+create generateType gt enum 0
+generateType field Single Value 0
+generateType field Random Range 1
+generateType field ID Shift 2
+generateType field Ramp Map 3
+generateType field Animation 4
+generateType keyable 1
+generateType storable 1
+add generateType
+create value val int 0
+value keyable 1
+value storable 1
+add value
+create valueSize vs int 1
+valueSize min 0
+valueSize keyable 1
+valueSize storable 1
+add valueSize
+create Seed s int 1
+Seed keyable 1
+Seed storable 1
+add Seed
+create minRange mnr int 0
+minRange keyable 1
+minRange storable 1
+add minRange
+create maxRange mxr int 10
+maxRange keyable 1
+maxRange storable 1
+add maxRange
+create ShiftRange shr 2int 0
+ShiftRange default 0 10
+ShiftRange keyable 1
+ShiftRange storable 1
+add ShiftRange
+create ValueRamp vramp ramp
+add ValueRamp
+create RampRange rar 2float 0
+RampRange default 0 1
+RampRange keyable 1
+RampRange storable 1
+add RampRange
+create GlobalOffset gof float 0
+add GlobalOffset
+create InOffsetArray inoff generic
+InOffsetArray accepts doubleArray
+InOffsetArray accepts floatArray
+InOffsetArray storable 0
+InOffsetArray writable 1
+InOffsetArray readable 0
+add InOffsetArray
+create InStretchArray instr generic
+InStretchArray accepts doubleArray
+InStretchArray accepts floatArray
+InStretchArray storable 0
+InStretchArray writable 1
+InStretchArray readable 0
+add InStretchArray
+create outDataArray out intArray null
+outDataArray writable 0
+outDataArray storable 0
+add outDataArray
+affects generateType outDataArray
+affects value outDataArray
+affects valueSize outDataArray
+affects Seed outDataArray
+affects minRange outDataArray
+affects maxRange outDataArray
+affects ShiftRange outDataArray
+affects ValueRamp outDataArray
+affects RampRange outDataArray
+affects GlobalOffset outDataArray
+affects InOffsetArray outDataArray
+affects InStretchArray outDataArray
+DPDoubleArrayGen
+create generateType gt enum 0
+generateType field Single Value 0
+generateType field Random Range 1
+generateType field ID Shift 2
+generateType field Ramp Map 3
+generateType field Animation 4
+generateType keyable 1
+generateType storable 1
+add generateType
+create value val float 0
+value keyable 1
+value storable 1
+add value
+create valueSize vs int 1
+valueSize min 0
+valueSize keyable 1
+valueSize storable 1
+add valueSize
+create Seed s int 1
+Seed keyable 1
+Seed storable 1
+add Seed
+create minRange mnr float 0
+minRange keyable 1
+minRange storable 1
+add minRange
+create maxRange mxr float 1
+maxRange keyable 1
+maxRange storable 1
+add maxRange
+create ShiftRange shr 2float 0
+ShiftRange default 0 1
+ShiftRange keyable 1
+ShiftRange storable 1
+add ShiftRange
+create ValueRamp vramp ramp
+add ValueRamp
+create RampRange rar 2float 0
+RampRange default 0 1
+RampRange keyable 1
+RampRange storable 1
+add RampRange
+create GlobalOffset gof float 0
+add GlobalOffset
+create InOffsetArray inoff generic
+InOffsetArray accepts doubleArray
+InOffsetArray accepts floatArray
+InOffsetArray storable 0
+InOffsetArray writable 1
+InOffsetArray readable 0
+add InOffsetArray
+create InStretchArray instr generic
+InStretchArray accepts doubleArray
+InStretchArray accepts floatArray
+InStretchArray storable 0
+InStretchArray writable 1
+InStretchArray readable 0
+add InStretchArray
+create outDataArray out floatArray null
+outDataArray writable 0
+outDataArray storable 0
+outDataArray cached 1
+add outDataArray
+affects generateType outDataArray
+affects value outDataArray
+affects valueSize outDataArray
+affects Seed outDataArray
+affects minRange outDataArray
+affects maxRange outDataArray
+affects ShiftRange outDataArray
+affects ValueRamp outDataArray
+affects RampRange outDataArray
+affects GlobalOffset outDataArray
+affects InOffsetArray outDataArray
+affects InStretchArray outDataArray

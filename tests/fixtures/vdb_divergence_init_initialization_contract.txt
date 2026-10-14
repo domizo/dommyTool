@@ -1,0 +1,62 @@
+DOpenVDBRemoveDivergence
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create Useiterations useitr bool 0
+Useiterations default 1
+add Useiterations
+create Iterations itr int 0
+Iterations min 1
+Iterations softMax 2000
+Iterations default 50
+add Iterations
+create Usetolerance usetol bool 0
+Usetolerance default 1
+add Usetolerance
+create Tolerance tol float 0
+Tolerance min 0
+Tolerance softMax 0.01
+Tolerance default 9.9999997473787516e-06
+add Tolerance
+create Usecollider usecol bool 0
+Usecollider default 0
+add Usecollider
+create Collidertype colty enum 0
+Collidertype field Bounding Box 0
+Collidertype field Static VDB 1
+Collidertype field Dynamic VDB 2
+Collidertype connectable 0
+add Collidertype
+create CollideVdb colvdb geometry null
+CollideVdb connectable 1
+add CollideVdb
+string.create
+create CollideVdbName colvdbnm string *
+CollideVdbName connectable 0
+add CollideVdbName
+create InvertCollider invcol bool 0
+InvertCollider default 0
+add InvertCollider
+create Pressure prs bool 0
+Pressure default 0
+add Pressure
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects Useiterations VdbOutput
+affects Iterations VdbOutput
+affects Usetolerance VdbOutput
+affects Tolerance VdbOutput
+affects Usecollider VdbOutput
+affects Collidertype VdbOutput
+affects CollideVdb VdbOutput
+affects CollideVdbName VdbOutput
+affects InvertCollider VdbOutput
+affects Pressure VdbOutput

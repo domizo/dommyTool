@@ -1,0 +1,17 @@
+DMRest
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create Type ty enum 0
+Type field Rest Position 0
+Type field Freeze Position 1
+Type keyable 1
+Type storable 1
+add Type
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects Type outDM

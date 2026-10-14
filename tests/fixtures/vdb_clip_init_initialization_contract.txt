@@ -1,0 +1,57 @@
+DOpenVDBClip
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string 
+SelectedGridNames connectable 0
+add SelectedGridNames
+string.create
+create MaskName mname string 
+MaskName connectable 0
+add MaskName
+create MaskVdbInput maskvdb geometry null
+MaskVdbInput connectable 1
+add MaskVdbInput
+create ClipType clt enum 1
+ClipType field Axis Clip 0
+ClipType field Axis Slice 1
+ClipType field Object BBox 2
+ClipType field Mask VDB 3
+ClipType connectable 0
+add ClipType
+create InObject ino generic
+InObject accepts mesh
+InObject storable 0
+InObject writable 1
+InObject readable 0
+add InObject
+create ClipAxis clax enum 1
+ClipAxis field X-Axis 0
+ClipAxis field Y-Axis 1
+ClipAxis field Z-Axis 2
+ClipAxis connectable 0
+add ClipAxis
+create ClipPosition clpos float 0.5
+ClipPosition min 0
+ClipPosition max 1
+add ClipPosition
+create ClipWidth clw float 1
+ClipWidth min 0.10000000000000001
+add ClipWidth
+create KeepInside kin bool 1
+add KeepInside
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects MaskName VdbOutput
+affects MaskVdbInput VdbOutput
+affects KeepInside VdbOutput
+affects ClipType VdbOutput
+affects InObject VdbOutput
+affects ClipAxis VdbOutput
+affects ClipPosition VdbOutput
+affects ClipWidth VdbOutput

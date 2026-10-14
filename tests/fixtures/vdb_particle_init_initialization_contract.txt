@@ -1,0 +1,304 @@
+DOpenVDBFromParticle
+create inputPointArray ipa generic
+inputPointArray accepts pointArray
+inputPointArray accepts vectorArray
+inputPointArray storable 0
+inputPointArray writable 1
+inputPointArray readable 0
+add inputPointArray
+create radiusArray rar generic
+radiusArray accepts doubleArray
+radiusArray accepts floatArray
+radiusArray storable 0
+radiusArray writable 1
+radiusArray readable 0
+add radiusArray
+create velocityArray var generic
+velocityArray accepts pointArray
+velocityArray accepts vectorArray
+velocityArray storable 0
+velocityArray writable 1
+velocityArray readable 0
+add velocityArray
+create levelSet ls bool 0
+levelSet default 1
+add levelSet
+string.create
+create gridName gn string surface
+gridName connectable 0
+add gridName
+create fogVolume fg bool 0
+fogVolume default 0
+add fogVolume
+string.create
+create fogVolumeGridName fgn string density
+fogVolumeGridName connectable 0
+add fogVolumeGridName
+create maskVolume mv bool 0
+maskVolume default 0
+add maskVolume
+string.create
+create maskVolumeName mvn string mask
+maskVolumeName connectable 0
+add maskVolumeName
+create voxelSize vs float 0
+voxelSize default 0.10000000000000001
+voxelSize min 0.001
+voxelSize softMin 0.01
+voxelSize softMax 5
+add voxelSize
+create ParticleRadiusScale prs float 0
+ParticleRadiusScale default 1
+ParticleRadiusScale min 1.0000000000000001e-05
+ParticleRadiusScale softMin 0
+ParticleRadiusScale softMax 2
+add ParticleRadiusScale
+create MinimumRadius mr float 0
+MinimumRadius default 1.5
+MinimumRadius min 1.0000000000000001e-05
+MinimumRadius softMin 0
+MinimumRadius softMax 2
+add MinimumRadius
+create UseWorldSpace uws bool 0
+UseWorldSpace default 0
+add UseWorldSpace
+create HalfBand hb float 0
+HalfBand default 3
+HalfBand min 1
+HalfBand softMin 1
+HalfBand softMax 10
+add HalfBand
+create bandWidthWS hbsw float 0
+bandWidthWS default 0.29999999999999999
+bandWidthWS min 1.0000000000000001e-05
+bandWidthWS softMin 1
+bandWidthWS softMax 10
+add bandWidthWS
+create prune pru bool 0
+prune default 0
+add prune
+create maskWidth mw float 0
+maskWidth default 0.25
+maskWidth min 0
+maskWidth softMin 0
+maskWidth softMax 1
+add maskWidth
+create footprint fp enum 0
+footprint field Spherical 0
+footprint field Velocity Trail 1
+footprint keyable 1
+footprint storable 1
+add footprint
+create VelocityMultiplier vmul float 0
+VelocityMultiplier default 1
+VelocityMultiplier softMin 0
+VelocityMultiplier softMax 2
+add VelocityMultiplier
+create velocitySpacing vsp float 0
+velocitySpacing default 1
+velocitySpacing softMin 0.20000000000000001
+velocitySpacing softMax 2
+add velocitySpacing
+create VdbOutput vdb geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects message VdbOutput
+affects inputPointArray VdbOutput
+affects radiusArray VdbOutput
+affects velocityArray VdbOutput
+affects levelSet VdbOutput
+affects gridName VdbOutput
+affects fogVolume VdbOutput
+affects fogVolumeGridName VdbOutput
+affects maskVolume VdbOutput
+affects maskVolumeName VdbOutput
+affects voxelSize VdbOutput
+affects UseWorldSpace VdbOutput
+affects HalfBand VdbOutput
+affects bandWidthWS VdbOutput
+affects ParticleRadiusScale VdbOutput
+affects MinimumRadius VdbOutput
+affects prune VdbOutput
+affects maskWidth VdbOutput
+affects footprint VdbOutput
+affects VelocityMultiplier VdbOutput
+affects velocitySpacing VdbOutput
+DOpenVDBFromDP
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create IsLevelSet ils bool 0
+IsLevelSet default 1
+add IsLevelSet
+string.create
+create GridName gn string surface
+GridName connectable 0
+add GridName
+create IsFogVolume fg bool 0
+IsFogVolume default 0
+add IsFogVolume
+string.create
+create FogVolumeGridName fvgn string density
+FogVolumeGridName connectable 0
+add FogVolumeGridName
+create IsMaskVolume imv bool 0
+IsMaskVolume default 0
+add IsMaskVolume
+string.create
+create MaskVolumeName mvn string mask
+MaskVolumeName connectable 0
+add MaskVolumeName
+create VoxelSize vs float 0
+VoxelSize default 0.10000000000000001
+VoxelSize min 0.001
+VoxelSize softMin 0.02
+VoxelSize softMax 5
+add VoxelSize
+create WorldSpaceUnits wsu bool 0
+WorldSpaceUnits default 0
+add WorldSpaceUnits
+create BandWidth bw float 0
+BandWidth default 3
+BandWidth min 1
+BandWidth softMin 1
+BandWidth softMax 10
+add BandWidth
+create BandWidthWS bwws float 0
+BandWidthWS default 0.29999999999999999
+BandWidthWS min 1.0000000000000001e-05
+BandWidthWS softMin 1
+BandWidthWS softMax 10
+add BandWidthWS
+create Radius rad float 0
+Radius default 1
+Radius min 1.0000000000000001e-05
+Radius softMin 0
+Radius softMax 2
+add Radius
+create RadiusMin radm float 0
+RadiusMin default 1.5
+RadiusMin min 1.0000000000000001e-05
+RadiusMin softMin 0
+RadiusMin softMax 2
+add RadiusMin
+string.create
+create RadiusAttribute radattr string pscale
+RadiusAttribute connectable 0
+add RadiusAttribute
+create Prune pru bool 0
+Prune default 0
+add Prune
+create MaskWidth mw float 0
+MaskWidth default 0.25
+MaskWidth min 0
+MaskWidth softMin 0
+MaskWidth softMax 1
+add MaskWidth
+create TrailType tt enum 0
+TrailType field Spherical 0
+TrailType field Velocity Trail 1
+TrailType keyable 1
+TrailType storable 1
+add TrailType
+string.create
+create VelocityAttribute velattr string vel
+VelocityAttribute connectable 0
+add VelocityAttribute
+create VelocityMultiplier vmul float 0
+VelocityMultiplier default 1
+VelocityMultiplier softMin 0
+VelocityMultiplier softMax 2
+add VelocityMultiplier
+create VelocitySpacing velsp float 0
+VelocitySpacing default 1
+VelocitySpacing softMin 0.20000000000000001
+VelocitySpacing softMax 2
+add VelocitySpacing
+string.create
+create AttributeName atrnm string 
+AttributeName connectable 0
+add AttributeName
+string.create
+create NewGridName ngrnm string 
+NewGridName connectable 0
+add NewGridName
+create VectorType vecty enum 0
+VectorType field enum_0 0
+VectorType field enum_1 1
+VectorType field enum_2 2
+VectorType field enum_3 3
+VectorType field enum_4 4
+VectorType connectable 0
+add VectorType
+create PointAttributes ptattrs compound
+PointAttributes child AttributeName
+PointAttributes child NewGridName
+PointAttributes child VectorType
+PointAttributes array 1
+PointAttributes arrayBuilder 1
+PointAttributes writable 1
+add PointAttributes
+create VdbOutput vdb geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects message VdbOutput
+affects inDP VdbOutput
+affects IsLevelSet VdbOutput
+affects GridName VdbOutput
+affects IsFogVolume VdbOutput
+affects FogVolumeGridName VdbOutput
+affects IsMaskVolume VdbOutput
+affects MaskVolumeName VdbOutput
+affects VoxelSize VdbOutput
+affects WorldSpaceUnits VdbOutput
+affects BandWidth VdbOutput
+affects BandWidthWS VdbOutput
+affects Radius VdbOutput
+affects RadiusMin VdbOutput
+affects RadiusAttribute VdbOutput
+affects Prune VdbOutput
+affects MaskWidth VdbOutput
+affects TrailType VdbOutput
+affects VelocityAttribute VdbOutput
+affects VelocityMultiplier VdbOutput
+affects VelocitySpacing VdbOutput
+affects PointAttributes VdbOutput
+affects AttributeName VdbOutput
+affects NewGridName VdbOutput
+affects VectorType VdbOutput
+DVDBFoamGen
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create Radius rad float 0
+Radius min 0
+Radius default 1
+add Radius
+create RadiusOffset roff float 0
+RadiusOffset default 0
+add RadiusOffset
+create VoxelSize vs float 0
+VoxelSize default 0.10000000000000001
+VoxelSize min 0.001
+VoxelSize softMin 0.02
+VoxelSize softMax 5
+add VoxelSize
+create BandWidth bw float 0
+BandWidth default 3
+BandWidth min 0
+BandWidth softMin 0
+BandWidth softMax 10
+add BandWidth
+create VdbOutput vdb geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects inDP VdbOutput
+affects Radius VdbOutput
+affects RadiusOffset VdbOutput
+affects VoxelSize VdbOutput
+affects BandWidth VdbOutput

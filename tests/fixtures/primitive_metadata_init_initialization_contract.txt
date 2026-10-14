@@ -1,0 +1,97 @@
+DCGroupFromDP
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+string default piece
+create GroupName grpn string default
+GroupName connectable 0
+add GroupName
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+create UseDistance usedist bool 0
+UseDistance keyable 0
+UseDistance storable 1
+add UseDistance
+create Distance dist double 1
+Distance min 0
+Distance softMax 10
+Distance keyable 0
+Distance storable 1
+add Distance
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects GroupName outDC
+affects TargetDP outDC
+affects UseDistance outDC
+affects Distance outDC
+DCGroupDelete
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create IsEnable isen bool 0
+IsEnable keyable 1
+IsEnable storable 1
+add IsEnable
+string default 
+create PrimitiveGroupName pgrpnm string default
+PrimitiveGroupName connectable 0
+add PrimitiveGroupName
+string default 
+create PointGroupName ptgrpnm string default
+PointGroupName connectable 0
+add PointGroupName
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects IsEnable outDC
+affects PrimitiveGroupName outDC
+affects PointGroupName outDC
+DMAttributeCopy
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+string default 
+create AttributeNames attrnms string default
+AttributeNames connectable 0
+add AttributeNames
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects TargetDP outDM
+affects AttributeNames outDM
+DCAttributeCopy
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+string default 
+create AttributeNames attrnms string default
+AttributeNames connectable 0
+add AttributeNames
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects TargetDP outDC
+affects AttributeNames outDC

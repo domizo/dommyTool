@@ -1,0 +1,53 @@
+DOpenVDBFill
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create Bounds bnd enum 0
+Bounds field Min and Max in Index Space 0
+Bounds field Min and Max in World Space 1
+Bounds field Reference Geometry 2
+Bounds connectable 0
+add Bounds
+create MinCoord mincrd 3int 0
+MinCoord default -1 -1 -1
+add MinCoord
+create MaxCoord maxcrd 3int 0
+MaxCoord default 1 1 1
+add MaxCoord
+create MinWorldCoord minwldcrd 3float 0
+MinWorldCoord default -1 -1 -1
+add MinWorldCoord
+create MaxWorldCoord maxwldcrd 3float 0
+MaxWorldCoord default 1 1 1
+add MaxWorldCoord
+create Value val 3float 0
+Value default 0 0 0
+add Value
+create Active act bool 0
+Active default 1
+add Active
+create Sparse sprs bool 0
+Sparse default 1
+add Sparse
+mesh.create
+create InMesh inmsh mesh mesh
+add InMesh
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects Bounds VdbOutput
+affects MinCoord VdbOutput
+affects MaxCoord VdbOutput
+affects MinWorldCoord VdbOutput
+affects MaxWorldCoord VdbOutput
+affects Value VdbOutput
+affects Active VdbOutput
+affects Sparse VdbOutput
+affects InMesh VdbOutput

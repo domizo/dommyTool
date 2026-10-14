@@ -1,0 +1,8 @@
+# Unresolved no-status connection-query inventory.
+# These are not approved exceptions. Callback, emitter, translator and Bullet
+# paths need their own failure policy and runtime/host boundary audit.
+# Counts cover project-owned src/ including default-disabled paths and debug
+# expressions, after comments and string literals have been removed.
+# Audited sources not listed here must contain zero no-status queries.
+# No unresolved no-status isConnected calls remain in project-owned src/.
+# This guards one API-query class, not every Maya API call or runtime behavior.

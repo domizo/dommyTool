@@ -1,0 +1,94 @@
+DPRay
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+add inDD
+create inObject ino generic
+inObject accepts mesh
+inObject accepts curve
+inObject accepts surface
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create Method met enum 0
+Method field Ray Projection 0
+Method field Minimum Distance 1
+Method keyable 1
+Method storable 1
+add Method
+create aRayDirection rdir 3float 0
+aRayDirection default 1
+add aRayDirection
+create IsTransform istran bool 0
+IsTransform default 1
+add IsTransform
+create IsFarthest isfar bool 0
+IsFarthest default 0
+add IsFarthest
+create IsReverseRay isrev bool 0
+IsReverseRay default 0
+add IsReverseRay
+create RayTolerance rtol double 0
+RayTolerance min 0
+RayTolerance default 0.01
+add RayTolerance
+create Scale sc float 0
+Scale softMin 0
+Scale softMax 1
+Scale default 1
+add Scale
+create Lift lif float 0
+Lift softMin 0
+Lift softMax 1
+Lift default 0
+add Lift
+create IsMaxDistance isma bool 0
+IsMaxDistance default 0
+add IsMaxDistance
+create MaxDistance mdist float 0
+MaxDistance softMin 0
+MaxDistance softMax 1
+MaxDistance default 0
+add MaxDistance
+create IsCreateRayGroup isgrp bool 0
+IsCreateRayGroup default 0
+add IsCreateRayGroup
+string.create
+create RayGroupName rgrpattr string rayHitGroup
+RayGroupName connectable 0
+add RayGroupName
+string.create
+create VectorAttribute vecattr string 
+VectorAttribute connectable 0
+add VectorAttribute
+string.create
+create FaceGroup fcattr string 
+FaceGroup connectable 0
+add FaceGroup
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects inObject outDD
+affects Method outDD
+affects aRayDirection outDD
+affects IsTransform outDD
+affects IsFarthest outDD
+affects IsReverseRay outDD
+affects RayTolerance outDD
+affects Scale outDD
+affects Lift outDD
+affects IsMaxDistance outDD
+affects MaxDistance outDD
+affects IsCreateRayGroup outDD
+affects RayGroupName outDD
+affects VectorAttribute outDD
+affects FaceGroup outDD

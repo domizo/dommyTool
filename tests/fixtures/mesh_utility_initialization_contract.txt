@@ -1,0 +1,125 @@
+DMNormal
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create IsAddAttribute isad bool 0
+IsAddAttribute default 0
+add IsAddAttribute
+string default N
+create AttributeName attr string default
+AttributeName connectable 0
+add AttributeName
+create NormalType nrmty enum 0
+NormalType field Point Normal 0
+NormalType field Per Vertex Normal 1
+NormalType field Face Normal 2
+NormalType keyable 1
+add NormalType
+create IsConcernCorner isconcor bool 0
+IsConcernCorner default 0
+add IsConcernCorner
+create IsGroupEdgeOnly isgrpedg bool 0
+IsGroupEdgeOnly default 0
+add IsGroupEdgeOnly
+string default outer
+create FaceGroup fgrp string default
+FaceGroup connectable 0
+add FaceGroup
+create Reverse rev bool 0
+Reverse default 0
+add Reverse
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects IsAddAttribute outDM
+affects AttributeName outDM
+affects NormalType outDM
+affects FaceGroup outDM
+affects IsConcernCorner outDM
+affects IsGroupEdgeOnly outDM
+affects Reverse outDM
+DMExtrude
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create ThickNess thk float 0
+ThickNess default 1
+ThickNess softMin 0
+ThickNess softMax 10
+add ThickNess
+create Offset off float 0
+Offset default 0
+Offset softMin 0
+Offset softMax 10
+add Offset
+create ExtrudeTogether exto bool 0
+ExtrudeTogether default 0
+add ExtrudeTogether
+create ExtrusionCount excnt int 0
+ExtrusionCount default 1
+ExtrusionCount min 1
+ExtrusionCount softMax 10
+add ExtrusionCount
+string default outer
+create FaceGroup fcattr string default
+FaceGroup connectable 0
+add FaceGroup
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects ThickNess outDM
+affects Offset outDM
+affects ExtrudeTogether outDM
+affects ExtrusionCount outDM
+affects FaceGroup outDM
+DMEdgeDisplaceDir
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create inObject ino generic
+inObject accepts mesh
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+string default dir
+create AttributeName attrnm string default
+AttributeName connectable 0
+add AttributeName
+create MinRatio minrto double 0
+MinRatio default 0.20000000000000001
+MinRatio min 0
+MinRatio max 1
+add MinRatio
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects inObject outDM
+affects AttributeName outDM
+affects MinRatio outDM
+DMCopyUV
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create inObject ino generic
+inObject accepts mesh
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects inObject outDM

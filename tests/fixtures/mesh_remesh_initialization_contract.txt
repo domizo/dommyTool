@@ -1,0 +1,105 @@
+DMSlicer
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create PlanePosition ppos 3float 0
+PlanePosition default 0 0 0
+PlanePosition keyable 1
+PlanePosition storable 1
+add PlanePosition
+create PlaneNormal pnorm 3float 0
+PlaneNormal default 0 1 0
+PlaneNormal keyable 1
+PlaneNormal storable 1
+add PlaneNormal
+create CutCount ccnt int 0
+CutCount default 1
+CutCount min 1
+CutCount softMin 1
+CutCount softMax 20
+CutCount keyable 1
+CutCount storable 1
+add CutCount
+create Step stp float 0
+Step default 1
+Step softMin 0
+Step softMax 10
+Step keyable 1
+Step storable 1
+add Step
+create Degree deg enum 1
+Degree field Linear 0
+Degree field Cubic 1
+Degree keyable 1
+add Degree
+create IsOpen isop enum 0
+IsOpen field Close 0
+IsOpen field Open 1
+IsOpen keyable 1
+add IsOpen
+create IsMultiEndKnot imek bool 0
+IsMultiEndKnot default 0
+IsMultiEndKnot keyable 1
+IsMultiEndKnot storable 1
+add IsMultiEndKnot
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDM outDC
+affects PlanePosition outDC
+affects PlaneNormal outDC
+affects CutCount outDC
+affects Step outDC
+affects Degree outDC
+affects IsOpen outDC
+affects IsMultiEndKnot outDC
+DMVectorDeform
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create VectorType vty enum 0
+VectorType field Mesh Normal 0
+VectorType field Base Vector 1
+VectorType field From Attribute 2
+VectorType keyable 1
+add VectorType
+create BaseVector bprm 3double 0
+BaseVector default 0 1 0
+BaseVector keyable 1
+add BaseVector
+string default N
+create VectorAttributeName vattrn string default
+VectorAttributeName connectable 0
+add VectorAttributeName
+create Magnitude mg double 0
+Magnitude default 1
+Magnitude softMin 0
+Magnitude softMax 10
+Magnitude keyable 1
+add Magnitude
+string default weight
+create WeightAttributeName weiattrn string default
+WeightAttributeName connectable 0
+add WeightAttributeName
+create Weight wei double 0
+Weight default 1
+Weight min 0
+Weight max 1
+Weight softMin 0
+Weight softMax 1
+Weight keyable 1
+add Weight
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects VectorType outDM
+affects BaseVector outDM
+affects VectorAttributeName outDM
+affects Magnitude outDM
+affects WeightAttributeName outDM
+affects Weight outDM

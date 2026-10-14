@@ -1,0 +1,64 @@
+DComponentListGen
+create ComponentType compty enum 0
+ComponentType field Point 0
+ComponentType field Edge 1
+ComponentType field Face 2
+ComponentType field Map 3
+add ComponentType
+create Mode md enum 0
+Mode field Size 0
+Mode field Pattern 1
+Mode field Input Data 2
+add Mode
+create Size sz int 0
+Size min 0
+Size softMax 50
+Size keyable 1
+Size storable 1
+add Size
+string.create
+create Pattern patt string string.create
+Pattern connectable 0
+add Pattern
+create inputDataArray indataarray generic
+inputDataArray accepts intArray
+inputDataArray storable 0
+inputDataArray writable 1
+inputDataArray readable 0
+add inputDataArray
+componentList.create
+create outComponentList outcompdata componentList componentList.create
+outComponentList readable 1
+outComponentList writable 0
+outComponentList storable 0
+add outComponentList
+affects ComponentType outComponentList
+affects Size outComponentList
+affects Mode outComponentList
+affects Pattern outComponentList
+affects inputDataArray outComponentList
+DShapeSequencer
+create inputObjects iobj generic
+inputObjects accepts mesh
+inputObjects accepts curve
+inputObjects accepts surface
+inputObjects storable 0
+inputObjects writable 1
+inputObjects readable 0
+inputObjects array 1
+add inputObjects
+create seaquence seq double 0
+seaquence default 0
+seaquence min 0
+seaquence max 1
+seaquence keyable 1
+add seaquence
+create outputObject oobj generic
+outputObject accepts mesh
+outputObject accepts curve
+outputObject accepts surface
+outputObject writable 0
+outputObject storable 0
+add outputObject
+affects inputObjects outputObject
+affects seaquence outputObject

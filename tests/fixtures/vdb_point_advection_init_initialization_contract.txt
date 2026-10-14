@@ -1,0 +1,85 @@
+DOpenVDBAdvectPoints
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+string.create
+create PointGroup pgrp string *
+PointGroup connectable 0
+add PointGroup
+create VdbVelocityInput vdbvelinput geometry null
+VdbVelocityInput connectable 1
+add VdbVelocityInput
+string.create
+create VelocityGridNames vgrids string 
+VelocityGridNames connectable 0
+add VelocityGridNames
+create VdbClosestPointInput vdbclptinput geometry null
+VdbClosestPointInput connectable 1
+add VdbClosestPointInput
+string.create
+create ClosestPointGridNames clgrids string 
+ClosestPointGridNames connectable 0
+add ClosestPointGridNames
+create Operation op enum 0
+Operation field Advection 0
+Operation field Projection 1
+Operation field Constrained Advection 2
+Operation connectable 0
+add Operation
+create Integration inte enum 0
+Integration field Forward Euler 0
+Integration field Second-Order Runge-Kutta 1
+Integration field Third-Order Runge-Kutta 2
+Integration field Fourth-Order Runge-Kutta 3
+Integration connectable 0
+add Integration
+create Iterations iter int 1
+Iterations min 1
+Iterations softMin 1
+Iterations softMax 10
+add Iterations
+create Timestep ts double 0.5
+Timestep softMin 0
+Timestep softMax 1
+add Timestep
+create Substeps sst int 1
+Substeps min 1
+Substeps softMin 1
+Substeps softMax 10
+add Substeps
+create OutputStreamlines outsl bool 1
+OutputStreamlines default 1
+add OutputStreamlines
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDP outDP
+affects PointGroup outDP
+affects VdbVelocityInput outDP
+affects VelocityGridNames outDP
+affects VdbClosestPointInput outDP
+affects ClosestPointGridNames outDP
+affects Operation outDP
+affects Integration outDP
+affects Iterations outDP
+affects Timestep outDP
+affects Substeps outDP
+affects OutputStreamlines outDP
+affects inDP outDC
+affects PointGroup outDC
+affects VdbVelocityInput outDC
+affects VelocityGridNames outDC
+affects VdbClosestPointInput outDC
+affects ClosestPointGridNames outDC
+affects Operation outDC
+affects Integration outDC
+affects Iterations outDC
+affects Timestep outDC
+affects Substeps outDC
+affects OutputStreamlines outDC

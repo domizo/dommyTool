@@ -1,0 +1,228 @@
+DMColor
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create AssigneType asgnty enum 0
+AssigneType field Primitive 0
+AssigneType field Point 1
+AssigneType keyable 1
+AssigneType storable 1
+add AssigneType
+create ColorType colt enum 0
+ColorType field Solid Color 0
+ColorType field Random Color 1
+ColorType field Ramp Color 2
+ColorType field Texture Color 3
+ColorType field Bounding Box 4
+ColorType field Expression 5
+ColorType field Palette Color 6
+ColorType keyable 1
+ColorType storable 1
+add ColorType
+string default Cd
+create ColorName coln string default
+ColorName connectable 0
+add ColorName
+string default uv
+create UVAttrName uvn string default
+UVAttrName connectable 0
+add UVAttrName
+create SolidColor scol color
+SolidColor connectable 0
+SolidColor default 1 1 1
+add SolidColor
+create RampColor rcol colorRamp
+add RampColor
+create TexColor tcol color
+TexColor default 1 1 1 1
+add TexColor
+create Seed se int 0
+Seed default 1
+Seed min 0
+Seed keyable 1
+Seed storable 1
+add Seed
+create MinRange mnr 3float 0
+MinRange keyable 1
+MinRange storable 1
+MinRange default 0 0 0
+add MinRange
+create MaxRange mxr 3float 0
+MaxRange keyable 1
+MaxRange storable 1
+MaxRange default 1 1 1
+add MaxRange
+create Is3DCalc i3d bool 0
+Is3DCalc default 0
+add Is3DCalc
+string default 
+create Expression expn string default
+Expression connectable 0
+add Expression
+create PaletteType plt enum 0
+PaletteType field Order 0
+PaletteType field Random 1
+PaletteType keyable 1
+PaletteType storable 1
+add PaletteType
+create PaletteColor plcol color
+PaletteColor connectable 0
+PaletteColor array 1
+PaletteColor default 1 1 1
+add PaletteColor
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects AssigneType outDM
+affects ColorType outDM
+affects ColorName outDM
+affects UVAttrName outDM
+affects SolidColor outDM
+affects TexColor outDM
+affects RampColor outDM
+affects Seed outDM
+affects MinRange outDM
+affects MaxRange outDM
+affects Is3DCalc outDM
+affects Expression outDM
+affects PaletteType outDM
+affects PaletteColor outDM
+DMConnetedPieces
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create Type typ enum 1
+Type field Primitive Point 0
+Type field Primitive Center 1
+Type field All Point 2
+Type keyable 1
+Type storable 1
+add Type
+create SearchRadius srad float 1
+SearchRadius min 1.1920928955078125e-07
+SearchRadius softMin 0.01
+SearchRadius softMax 10
+add SearchRadius
+create MaxSampleCount mxsmpcnt int 100
+MaxSampleCount min 1
+MaxSampleCount max 1000000
+MaxSampleCount softMax 100
+add MaxSampleCount
+create MaxConnections mxcnn int 1
+MaxConnections min 1
+MaxConnections max 1000000
+MaxConnections softMax 16
+add MaxConnections
+create OffsetFromCentroid offrmct float 0
+OffsetFromCentroid min 0
+OffsetFromCentroid max 1
+add OffsetFromCentroid
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDM outDC
+affects Type outDC
+affects SearchRadius outDC
+affects MaxSampleCount outDC
+affects MaxConnections outDC
+affects OffsetFromCentroid outDC
+DMConnectTargets
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+create TargetDC tdc geometry null
+TargetDC readable 0
+TargetDC storable 0
+add TargetDC
+create TargetDM tdm geometry null
+TargetDM readable 0
+TargetDM storable 0
+add TargetDM
+create Type typ enum 0
+Type field DPoint 0
+Type field DCurve 1
+Type field DMesh 2
+Type keyable 1
+Type storable 1
+add Type
+create SearchRadius srad double 1
+SearchRadius min 2.2204460492503131e-16
+SearchRadius softMin 0.01
+SearchRadius softMax 10
+add SearchRadius
+create SourceComponentType srctyp enum 3
+SourceComponentType field Primitive 3
+SourceComponentType field Point 0
+SourceComponentType keyable 1
+SourceComponentType storable 1
+add SourceComponentType
+create TargetComponentType tartyp enum 3
+TargetComponentType field Primitive 3
+TargetComponentType field Point 0
+TargetComponentType keyable 1
+TargetComponentType storable 1
+add TargetComponentType
+create MaxSampleCount mxsmpcnt int 100
+MaxSampleCount min 1
+MaxSampleCount max 1000000
+MaxSampleCount softMax 100
+add MaxSampleCount
+create MaxConnections mxcnn int 1
+MaxConnections min 1
+MaxConnections max 1000000
+MaxConnections softMax 16
+add MaxConnections
+create OffsetFromCentroid offrmct double 0
+OffsetFromCentroid min 0
+OffsetFromCentroid max 1
+add OffsetFromCentroid
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDM outDC
+affects Type outDC
+affects TargetDP outDC
+affects TargetDC outDC
+affects TargetDM outDC
+affects SourceComponentType outDC
+affects TargetComponentType outDC
+affects SearchRadius outDC
+affects MaxSampleCount outDC
+affects MaxConnections outDC
+affects OffsetFromCentroid outDC
+DMInfo
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create targetDM tdm geometry null
+targetDM readable 0
+targetDM storable 0
+add targetDM
+create VectorScale vscl double 0
+VectorScale default 1
+VectorScale softMin 0
+VectorScale softMax 5
+add VectorScale
+create Normalize nrm bool 0
+Normalize default 1
+add Normalize
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects targetDM outDM
+affects VectorScale outDM
+affects Normalize outDM

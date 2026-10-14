@@ -1,0 +1,103 @@
+applyVtxColorFromFileNode
+create inputMesh imo mesh null
+inputMesh storable 0
+string.default 
+create filePath fp string emptyString
+filePath storable 1
+filePath filename 1
+create frame fra int 1
+frame keyable 1
+frame storable 1
+create offset off int 0
+offset keyable 1
+offset storable 1
+create padding pad int 4
+padding min 0
+padding max 10
+padding keyable 1
+padding storable 1
+create outputMesh opm mesh null
+outputMesh hidden 1
+outputMesh storable 0
+add inputMesh
+add filePath
+add frame
+add offset
+add padding
+add outputMesh
+affects inputMesh outputMesh
+affects filePath outputMesh
+affects frame outputMesh
+affects offset outputMesh
+affects padding outputMesh
+ReadDPointDataNode
+string.default 
+create filePath fp string emptyString
+filePath storable 1
+filePath filename 1
+create outputPointArray opa pointArray null
+outputPointArray readable 1
+outputPointArray writable 0
+outputPointArray storable 1
+points.clear
+points.default
+outputPointArray default emptyPoints
+add filePath
+add outputPointArray
+affects filePath outputPointArray
+foamGenerateNode
+create inPosition ip generic
+inPosition accepts vectorArray
+inPosition hidden 1
+create radiusArray ra generic
+radiusArray accepts floatArray
+radiusArray hidden 1
+create frequency fq int 1
+frequency min 1
+frequency max 10
+frequency storable 1
+frequency keyable 1
+create radiusOffset ro double 0
+radiusOffset storable 1
+radiusOffset keyable 1
+create radiusResultOffset rro double 0
+radiusResultOffset storable 1
+radiusResultOffset keyable 1
+create selfDeform sd bool 1
+selfDeform keyable 1
+create outPutMesh opm generic
+outPutMesh accepts mesh
+outPutMesh hidden 1
+outPutMesh storable 0
+add inPosition
+add radiusArray
+add frequency
+add radiusOffset
+add radiusResultOffset
+add selfDeform
+add outPutMesh
+affects inPosition outPutMesh
+affects radiusArray outPutMesh
+affects frequency outPutMesh
+affects radiusOffset outPutMesh
+affects radiusResultOffset outPutMesh
+affects selfDeform outPutMesh
+DSkinInfo
+create inBaseMesh inbm generic
+inBaseMesh accepts mesh
+inBaseMesh storable 0
+inBaseMesh writable 1
+inBaseMesh readable 0
+add inBaseMesh
+create inTargetMesh intm generic
+inTargetMesh accepts mesh
+inTargetMesh storable 0
+inTargetMesh writable 1
+inTargetMesh readable 0
+add inTargetMesh
+create outMesh om mesh null
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects inBaseMesh outMesh
+affects inTargetMesh outMesh

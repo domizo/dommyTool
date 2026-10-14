@@ -1,0 +1,55 @@
+DCurvatureData
+create inMesh im mesh null
+inMesh storable 0
+inMesh readable 0
+inMesh writable 1
+add inMesh
+create CalcType caty enum 0
+CalcType field Legacy Normal-Face Alignment 0
+CalcType connectable 0
+add CalcType
+create curvatureMap cm colorRamp
+add curvatureMap
+create smIterate sit int 0
+smIterate min 0
+smIterate softMax 5
+add smIterate
+create IsAdjustRange iar bool 0
+add IsAdjustRange
+create outMesh om mesh null
+outMesh readable 1
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects inMesh outMesh
+affects CalcType outMesh
+affects curvatureMap outMesh
+affects smIterate outMesh
+affects IsAdjustRange outMesh
+DPolyFaceInfo
+create inMesh im mesh null
+inMesh storable 0
+inMesh readable 0
+inMesh writable 1
+add inMesh
+create faceIndex fidx int 0
+faceIndex min 0
+faceIndex storable 1
+faceIndex keyable 1
+add faceIndex
+create outTranslate otrans 3double 0
+outTranslate default 0 0 0
+outTranslate readable 1
+outTranslate writable 0
+outTranslate storable 0
+add outTranslate
+create outRotate orot 3double 0
+outRotate default 0 0 0
+outRotate readable 1
+outRotate writable 0
+outRotate storable 0
+add outRotate
+affects inMesh outTranslate
+affects faceIndex outTranslate
+affects inMesh outRotate
+affects faceIndex outRotate

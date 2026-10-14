@@ -1,0 +1,417 @@
+DPnParticle
+create inDP idp pointArray null
+inDP readable 0
+inDP storable 0
+add inDP
+create prevDP prdp pointArray null
+prevDP writable 0
+prevDP storable 0
+add prevDP
+create nextDP nxdp pointArray null
+nextDP readable 0
+nextDP storable 0
+add nextDP
+create StartTime stm time 1
+add StartTime
+create CurrentTime ctm time 0
+add CurrentTime
+string vel
+create VelocityAttribute vattr string vel
+VelocityAttribute connectable 0
+add VelocityAttribute
+create Thickness thick float 0
+Thickness default 0.05000000074505806
+add Thickness
+string pscale
+create ThickAttribute tattr string pscale
+ThickAttribute connectable 0
+add ThickAttribute
+create InverseMass invm float 0
+InverseMass default 1
+add InverseMass
+string mass
+create MassAttribute msattr string mass
+MassAttribute connectable 0
+add MassAttribute
+create Bounce bnc float 0
+Bounce default 0
+add Bounce
+create Friction frc float 0
+Friction default 0.10000000000000001
+add Friction
+create Damping dmp float 0
+Damping default 0.10000000000000001
+add Damping
+create DisableGravity disg bool 0
+DisableGravity default 0
+add DisableGravity
+create LiquidSimulation liqsims bool 0
+LiquidSimulation default 0
+add LiquidSimulation
+create Incompressibility incmpb float 0
+Incompressibility default 1
+add Incompressibility
+create RestDensity resden float 0
+RestDensity default 2
+add RestDensity
+create LiquidRadiusScale liqradscl float 0
+LiquidRadiusScale default 1
+add LiquidRadiusScale
+create Viscosity visco float 0
+Viscosity default 0.10000000000000001
+add Viscosity
+create SurfaceTension srften float 0
+SurfaceTension default 0
+add SurfaceTension
+create Collide coll bool 0
+Collide default 1
+add Collide
+create SelfCollide slfcoll bool 0
+SelfCollide default 0
+add SelfCollide
+create SelfCollideWidth slfcollw float 0
+SelfCollideWidth default 1
+add SelfCollideWidth
+create MaxIterations maxiter int 0
+MaxIterations default 4
+add MaxIterations
+create MaxSelfCollisionIterations maxslfiter int 0
+MaxSelfCollisionIterations default 4
+add MaxSelfCollisionIterations
+create SelfCollisionSoftness slfcollsft float 0
+SelfCollisionSoftness default 1
+add SelfCollisionSoftness
+create DragAndLift drgalft float 0
+DragAndLift default 0.01
+add DragAndLift
+create Gravity grvy float 0
+Gravity default 9.8000001907348633
+add Gravity
+create GravityDirection grvydir 3float 0
+GravityDirection default 0 -1 0
+add GravityDirection
+create AirDensity adsy float 0
+AirDensity default 1
+add AirDensity
+create WindSpeed wspd float 0
+WindSpeed default 0
+add WindSpeed
+create WindDirection wdspd 3float 0
+WindDirection default 0 1 0
+add WindDirection
+create WindNoiseIntensity wit float 0
+WindNoiseIntensity default 0
+add WindNoiseIntensity
+create Enable ebl bool 0
+Enable default 1
+add Enable
+create Substeps sbstp int 0
+Substeps default 3
+add Substeps
+create SolverIterations slvmxiter int 0
+SolverIterations default 4
+add SolverIterations
+create IsEmit isemt bool 0
+IsEmit default 1
+add IsEmit
+create EmitDP emtdp pointArray null
+EmitDP readable 0
+EmitDP storable 0
+add EmitDP
+string 1
+create ActiveEmit actemt string 1
+ActiveEmit connectable 0
+add ActiveEmit
+create EmitterList emtlst compound
+EmitterList child ActiveEmit
+EmitterList child EmitDP
+EmitterList array 1
+add EmitterList
+create EnableForce eblfrc bool 0
+EnableForce default 1
+add EnableForce
+string force
+create ForceAttribute frcattr string force
+ForceAttribute connectable 0
+add ForceAttribute
+create ForceEnvelope frcenv float 0
+ForceEnvelope default 1
+ForceEnvelope softMin 0
+ForceEnvelope softMax 1
+add ForceEnvelope
+create IsRealForce isrlfrc bool 0
+IsRealForce default 0
+add IsRealForce
+create InCollideObject incolobj nObject null
+InCollideObject writable 1
+InCollideObject storable 1
+InCollideObject array 1
+add InCollideObject
+create InCollideDM incoldm mesh null
+InCollideDM readable 0
+InCollideDM storable 1
+add InCollideDM
+create outDP odp pointArray null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP prevDP
+affects inDP outDP
+affects StartTime prevDP
+affects StartTime outDP
+affects CurrentTime prevDP
+affects CurrentTime outDP
+affects VelocityAttribute prevDP
+affects VelocityAttribute outDP
+affects Thickness prevDP
+affects Thickness outDP
+affects ThickAttribute prevDP
+affects ThickAttribute outDP
+affects InverseMass prevDP
+affects InverseMass outDP
+affects MassAttribute prevDP
+affects MassAttribute outDP
+affects Bounce prevDP
+affects Bounce outDP
+affects Friction prevDP
+affects Friction outDP
+affects Damping prevDP
+affects Damping outDP
+affects DisableGravity prevDP
+affects DisableGravity outDP
+affects LiquidSimulation prevDP
+affects LiquidSimulation outDP
+affects Incompressibility prevDP
+affects Incompressibility outDP
+affects RestDensity prevDP
+affects RestDensity outDP
+affects LiquidRadiusScale prevDP
+affects LiquidRadiusScale outDP
+affects Viscosity prevDP
+affects Viscosity outDP
+affects SurfaceTension prevDP
+affects SurfaceTension outDP
+affects MaxIterations prevDP
+affects MaxIterations outDP
+affects MaxSelfCollisionIterations prevDP
+affects MaxSelfCollisionIterations outDP
+affects SelfCollisionSoftness prevDP
+affects SelfCollisionSoftness outDP
+affects DragAndLift prevDP
+affects DragAndLift outDP
+affects Collide prevDP
+affects Collide outDP
+affects SelfCollide prevDP
+affects SelfCollide outDP
+affects SelfCollideWidth prevDP
+affects SelfCollideWidth outDP
+affects Gravity prevDP
+affects Gravity outDP
+affects GravityDirection prevDP
+affects GravityDirection outDP
+affects AirDensity prevDP
+affects AirDensity outDP
+affects WindSpeed prevDP
+affects WindSpeed outDP
+affects WindDirection prevDP
+affects WindDirection outDP
+affects WindNoiseIntensity prevDP
+affects WindNoiseIntensity outDP
+affects Enable prevDP
+affects Enable outDP
+affects Substeps prevDP
+affects Substeps outDP
+affects SolverIterations prevDP
+affects SolverIterations outDP
+affects IsEmit prevDP
+affects IsEmit outDP
+affects EmitterList prevDP
+affects EmitterList outDP
+affects EmitDP prevDP
+affects EmitDP outDP
+affects ActiveEmit prevDP
+affects ActiveEmit outDP
+affects EnableForce prevDP
+affects EnableForce outDP
+affects ForceAttribute prevDP
+affects ForceAttribute outDP
+affects ForceEnvelope prevDP
+affects ForceEnvelope outDP
+affects IsRealForce prevDP
+affects IsRealForce outDP
+affects InCollideObject prevDP
+affects InCollideObject outDP
+affects nextDP outDP
+DPnPopSolver
+create inDP idp pointArray null
+inDP readable 0
+inDP storable 0
+add inDP
+create StartTime stm time 1
+add StartTime
+create CurrentTime ctm time 0
+add CurrentTime
+string vel
+create VelocityAttribute vattr string vel
+VelocityAttribute connectable 0
+add VelocityAttribute
+create Radius rad float 0
+Radius default 0.05000000074505806
+add Radius
+string pscale
+create RadiusAttribute radattr string pscale
+RadiusAttribute connectable 0
+add RadiusAttribute
+create InverseMass invm float 0
+InverseMass default 1
+add InverseMass
+string mass
+create MassAttribute msattr string mass
+MassAttribute connectable 0
+add MassAttribute
+create Bounce bnc float 0
+Bounce default 0
+add Bounce
+create Friction frc float 0
+Friction default 0.10000000000000001
+add Friction
+create Damping dmp float 0
+Damping default 0.10000000000000001
+add Damping
+create LiquidSimulation liqsims bool 0
+LiquidSimulation default 0
+add LiquidSimulation
+create Incompressibility incmpb float 0
+Incompressibility default 1
+add Incompressibility
+create RestDensity resden float 0
+RestDensity default 2
+add RestDensity
+create LiquidRadiusScale liqradscl float 0
+LiquidRadiusScale default 1
+add LiquidRadiusScale
+create Viscosity visco float 0
+Viscosity default 0.10000000000000001
+add Viscosity
+create SurfaceTension srften float 0
+SurfaceTension default 0
+add SurfaceTension
+create Enable ebl bool 0
+Enable default 1
+add Enable
+create Substeps sbstp int 0
+Substeps default 3
+Substeps min 1
+add Substeps
+create SolverIterations slvmxiter int 0
+SolverIterations default 4
+add SolverIterations
+create DisableGravity disg bool 0
+DisableGravity default 0
+add DisableGravity
+create Gravity grvy float 0
+Gravity default 9.8000001907348633
+add Gravity
+create GravityDirection grvydir 3float 0
+GravityDirection default 0 -1 0
+add GravityDirection
+create AirDensity adsy float 0
+AirDensity default 1
+add AirDensity
+create WindSpeed wspd float 0
+WindSpeed default 0
+add WindSpeed
+create WindDirection wdspd 3float 0
+WindDirection default 0 1 0
+add WindDirection
+create WindNoiseIntensity wit float 0
+WindNoiseIntensity default 0
+add WindNoiseIntensity
+create EnableForce eblfrc bool 0
+EnableForce default 1
+add EnableForce
+string force
+create ForceAttribute frcattr string force
+ForceAttribute connectable 0
+add ForceAttribute
+create ForceEnvelope frcenv float 0
+ForceEnvelope default 1
+ForceEnvelope softMin 0
+ForceEnvelope softMax 1
+add ForceEnvelope
+create IsRealForce isrlfrc bool 0
+IsRealForce default 0
+add IsRealForce
+create Collide coll bool 0
+Collide default 1
+add Collide
+create SelfCollide slfcoll bool 0
+SelfCollide default 0
+add SelfCollide
+create SelfCollideWidth slfcollw float 0
+SelfCollideWidth default 1
+add SelfCollideWidth
+create MaxIterations maxiter int 0
+MaxIterations default 4
+add MaxIterations
+create MaxSelfCollisionIterations maxslfiter int 0
+MaxSelfCollisionIterations default 4
+add MaxSelfCollisionIterations
+create SelfCollisionSoftness slfcollsft float 0
+SelfCollisionSoftness default 1
+add SelfCollisionSoftness
+create DragAndLift drgalft float 0
+DragAndLift default 0.01
+add DragAndLift
+create InCollideObject incolobj nObject null
+InCollideObject writable 1
+InCollideObject storable 1
+InCollideObject array 1
+add InCollideObject
+create inPOP inpop message
+inPOP readable 0
+inPOP storable 0
+add inPOP
+create outDP odp pointArray null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects StartTime outDP
+affects CurrentTime outDP
+affects VelocityAttribute outDP
+affects Radius outDP
+affects RadiusAttribute outDP
+affects InverseMass outDP
+affects MassAttribute outDP
+affects Bounce outDP
+affects Friction outDP
+affects Damping outDP
+affects LiquidSimulation outDP
+affects Incompressibility outDP
+affects RestDensity outDP
+affects LiquidRadiusScale outDP
+affects Viscosity outDP
+affects SurfaceTension outDP
+affects MaxIterations outDP
+affects MaxSelfCollisionIterations outDP
+affects SelfCollisionSoftness outDP
+affects DragAndLift outDP
+affects Collide outDP
+affects SelfCollide outDP
+affects SelfCollideWidth outDP
+affects Enable outDP
+affects Substeps outDP
+affects SolverIterations outDP
+affects DisableGravity outDP
+affects Gravity outDP
+affects GravityDirection outDP
+affects AirDensity outDP
+affects WindSpeed outDP
+affects WindDirection outDP
+affects WindNoiseIntensity outDP
+affects EnableForce outDP
+affects ForceAttribute outDP
+affects ForceEnvelope outDP
+affects IsRealForce outDP
+affects InCollideObject outDP

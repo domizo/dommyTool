@@ -1,0 +1,63 @@
+DMotionTrailCurveNode
+create inputObject io geometry null
+inputObject hidden 1
+inputObject readable 0
+inputObject writable 1
+create transformMatrix tm matrix double
+transformMatrix storable 1
+transformMatrix keyable 0
+transformMatrix readable 1
+transformMatrix writable 1
+transformMatrix cached 0
+create trailType tt enum 0
+trailType field Object 0
+trailType field Point 1
+trailType field Point Random 2
+trailType keyable 1
+create seed se int 0
+seed default 1
+seed min 1
+seed keyable 1
+create randomCount rc int 10
+randomCount min 1
+randomCount storable 1
+randomCount keyable 1
+create timeSampling ts int 10
+timeSampling min 4
+timeSampling storable 1
+timeSampling keyable 1
+create trailLength tl double 5
+trailLength min 0
+trailLength storable 1
+trailLength keyable 1
+create trailLengthRandom tlr double 0
+trailLengthRandom storable 1
+trailLengthRandom keyable 1
+create time ti time 0
+time storable 0
+time keyable 1
+create outputObjects oos geometry null
+outputObjects array 1
+outputObjects readable 1
+outputObjects writable 0
+outputObjects storable 0
+outputObjects arrayBuilder 1
+add inputObject
+add transformMatrix
+add trailType
+add seed
+add randomCount
+add timeSampling
+add trailLength
+add trailLengthRandom
+add time
+add outputObjects
+affects inputObject outputObjects
+affects transformMatrix outputObjects
+affects trailType outputObjects
+affects seed outputObjects
+affects randomCount outputObjects
+affects timeSampling outputObjects
+affects trailLength outputObjects
+affects trailLengthRandom outputObjects
+affects time outputObjects

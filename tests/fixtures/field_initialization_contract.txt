@@ -1,0 +1,157 @@
+DCurlNoiseField
+create curlSpeed cs double 0
+curlSpeed default 0.80000000000000004
+curlSpeed min 9.9999999999999995e-07
+curlSpeed keyable 1
+create curlAmplitude ca double 0
+curlAmplitude default 5
+curlAmplitude keyable 1
+create curlAgeSpeed cas double 0
+curlAgeSpeed default 1
+curlAgeSpeed keyable 1
+create noiseFrequencyX nfx double 0
+noiseFrequencyX keyable 1
+noiseFrequencyX storable 1
+create noiseFrequencyY nfy double 0
+noiseFrequencyY keyable 1
+noiseFrequencyY storable 1
+create noiseFrequencyZ nfz double 0
+noiseFrequencyZ keyable 1
+noiseFrequencyZ storable 1
+create noiseFrequency nf compound noiseFrequencyX noiseFrequencyY noiseFrequencyZ
+noiseFrequency storable 1
+noiseFrequency default 0.40000000000000002 0.40000000000000002 0.40000000000000002
+create phaseRateX prx double 0
+phaseRateX keyable 1
+phaseRateX storable 1
+create phaseRateY pry double 0
+phaseRateY keyable 1
+phaseRateY storable 1
+create phaseRateZ prz double 0
+phaseRateZ keyable 1
+phaseRateZ storable 1
+create phaseRate pr compound phaseRateX phaseRateY phaseRateZ
+phaseRate storable 1
+phaseRate default 0.40000000000000002 0.40000000000000002 0.40000000000000002
+create phaseOffsetX pox double 0
+phaseOffsetX keyable 1
+phaseOffsetX storable 1
+create phaseOffsetY poy double 0
+phaseOffsetY keyable 1
+phaseOffsetY storable 1
+create phaseOffsetZ poz double 0
+phaseOffsetZ keyable 1
+phaseOffsetZ storable 1
+create phaseOffset po compound phaseOffsetX phaseOffsetY phaseOffsetZ
+phaseOffset storable 1
+phaseOffset default 0 0 0
+create positionNoiseFrequency pnf int 0
+positionNoiseFrequency default 2
+positionNoiseFrequency min 1
+positionNoiseFrequency max 32
+positionNoiseFrequency keyable 1
+create positionNoiseScaleX pnx double 0
+positionNoiseScaleX keyable 1
+positionNoiseScaleX storable 1
+create positionNoiseScaleY pny double 0
+positionNoiseScaleY keyable 1
+positionNoiseScaleY storable 1
+create positionNoiseScaleZ pnz double 0
+positionNoiseScaleZ keyable 1
+positionNoiseScaleZ storable 1
+create positionNoiseScale pns compound positionNoiseScaleX positionNoiseScaleY positionNoiseScaleZ
+positionNoiseScale storable 1
+positionNoiseScale default 0.5 0.5 0.5
+add curlSpeed
+add curlAmplitude
+add curlAgeSpeed
+add noiseFrequency
+add phaseRate
+add phaseOffset
+add positionNoiseFrequency
+add positionNoiseScale
+affects curlSpeed mOutputForce
+affects curlAmplitude mOutputForce
+affects curlAgeSpeed mOutputForce
+affects noiseFrequency mOutputForce
+affects noiseFrequencyX mOutputForce
+affects noiseFrequencyY mOutputForce
+affects noiseFrequencyZ mOutputForce
+affects phaseRate mOutputForce
+affects phaseRateX mOutputForce
+affects phaseRateY mOutputForce
+affects phaseRateZ mOutputForce
+affects phaseOffset mOutputForce
+affects phaseOffsetX mOutputForce
+affects phaseOffsetY mOutputForce
+affects phaseOffsetZ mOutputForce
+affects positionNoiseFrequency mOutputForce
+affects positionNoiseScale mOutputForce
+affects positionNoiseScaleX mOutputForce
+affects positionNoiseScaleY mOutputForce
+affects positionNoiseScaleZ mOutputForce
+DCurveField
+create inputTargetCurve itc curve null
+inputTargetCurve storable 0
+inputTargetCurve hidden 1
+add inputTargetCurve
+create tangentAffectDistance tad double 3
+tangentAffectDistance min 0
+tangentAffectDistance keyable 1
+tangentAffectDistance storable 1
+add tangentAffectDistance
+create areaRadius ard double 0
+areaRadius default 0
+areaRadius min 0
+areaRadius keyable 1
+areaRadius storable 1
+add areaRadius
+create Damping dmp double 0.5
+Damping softMin 0
+Damping softMax 1
+add Damping
+create Attraction atrct double 0.5
+Attraction softMin 0
+Attraction softMax 10
+add Attraction
+create RadiusRamp radrmp ramp
+add RadiusRamp
+create IsAffectTip iat bool 0
+IsAffectTip keyable 1
+IsAffectTip storable 1
+add IsAffectTip
+create ForwardScale fwscl double 0
+ForwardScale default 1
+add ForwardScale
+create ToCurveScale tcrvscl double 0
+ToCurveScale default 1
+add ToCurveScale
+create ForwardRamp fwrmp ramp
+add ForwardRamp
+create ToCurveRamp tcrmp ramp
+add ToCurveRamp
+create InnerMethod inmt enum 0
+InnerMethod field Liner 0
+InnerMethod field Ramp Blend 1
+InnerMethod keyable 1
+add InnerMethod
+create Blend bld double 0
+Blend softMin 0
+Blend softMax 1
+Blend default 0.5
+add Blend
+create BlendRamp blrmp ramp
+add BlendRamp
+affects inputTargetCurve mOutputForce
+affects tangentAffectDistance mOutputForce
+affects RadiusRamp mOutputForce
+affects Damping mOutputForce
+affects Attraction mOutputForce
+affects ForwardScale mOutputForce
+affects ToCurveScale mOutputForce
+affects ForwardRamp mOutputForce
+affects ToCurveRamp mOutputForce
+affects IsAffectTip mOutputForce
+affects InnerMethod mOutputForce
+affects Blend mOutputForce
+affects BlendRamp mOutputForce

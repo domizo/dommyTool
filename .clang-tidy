@@ -1,0 +1,11 @@
+Checks: >
+  -*,
+  bugprone-*,-bugprone-easily-swappable-parameters,
+  performance-*,
+  portability-*,
+  modernize-use-nullptr,
+  readability-avoid-const-params-in-decls,
+  readability-container-size-empty
+WarningsAsErrors: ''
+HeaderFilterRegex: '^(?!.*(otherlib|backup|/old/)).*$'
+FormatStyle: file

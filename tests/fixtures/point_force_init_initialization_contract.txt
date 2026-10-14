@@ -1,0 +1,221 @@
+DPAvoid
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+add inDD
+create Radius rad float 0
+Radius default 1
+Radius keyable 1
+add Radius
+string.create
+create RadiusAtribute radattr string rad
+RadiusAtribute connectable 0
+add RadiusAtribute
+create Iterate itr int 0
+Iterate min 1
+Iterate max 10000
+Iterate softMin 1
+Iterate softMax 10
+Iterate default 4
+Iterate keyable 1
+add Iterate
+create AvoidType avgty enum 0
+AvoidType field Traget Point 0
+AvoidType field Input Object 1
+AvoidType field Target DPoint 2
+AvoidType field Target DCurve 3
+AvoidType keyable 1
+AvoidType storable 1
+add AvoidType
+create TargetPoint tpt 3float 0
+TargetPoint keyable 1
+TargetPoint storable 1
+TargetPoint default 0 0 0
+add TargetPoint
+create inTargetObject ino generic
+inTargetObject accepts mesh
+inTargetObject accepts curve
+inTargetObject accepts surface
+inTargetObject storable 0
+inTargetObject writable 1
+inTargetObject readable 0
+add inTargetObject
+create inTargetDP intdp geometry null
+inTargetDP readable 0
+inTargetDP storable 0
+add inTargetDP
+create inTargetDC intdc geometry null
+inTargetDC readable 0
+inTargetDC storable 0
+add inTargetDC
+string.create
+create WeightAttributeName weiattrn string weight
+WeightAttributeName connectable 0
+add WeightAttributeName
+create Weight wei float 0
+Weight default 1
+Weight softMin 0
+Weight softMax 1
+Weight keyable 1
+add Weight
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects Radius outDD
+affects RadiusAtribute outDD
+affects Iterate outDD
+affects AvoidType outDD
+affects TargetPoint outDD
+affects inTargetObject outDD
+affects inTargetDP outDD
+affects inTargetDC outDD
+affects WeightAttributeName outDD
+affects Weight outDD
+DPMagnet
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+add inDD
+create Magnitude mag float 0
+Magnitude default 1
+Magnitude keyable 1
+add Magnitude
+create IsClamp isclp bool 0
+IsClamp default 0
+IsClamp keyable 1
+add IsClamp
+create ClampRange clrng 2float 0
+ClampRange default 0 1
+ClampRange keyable 1
+add ClampRange
+create MagnetType mgty enum 0
+MagnetType field Traget Point 0
+MagnetType field Input Object 1
+MagnetType field Target DPoint 2
+MagnetType field Target DCurve 3
+MagnetType keyable 1
+MagnetType storable 1
+add MagnetType
+create TargetPoint tpt 3float 0
+TargetPoint keyable 1
+TargetPoint storable 1
+TargetPoint default 0 0 0
+add TargetPoint
+create inTargetObject ino generic
+inTargetObject accepts mesh
+inTargetObject accepts curve
+inTargetObject accepts surface
+inTargetObject storable 0
+inTargetObject writable 1
+inTargetObject readable 0
+add inTargetObject
+create inTargetDP intdp geometry null
+inTargetDP readable 0
+inTargetDP storable 0
+add inTargetDP
+create inTargetDC intdc geometry null
+inTargetDC readable 0
+inTargetDC storable 0
+add inTargetDC
+string.create
+create WeightAttributeName weiattrn string weight
+WeightAttributeName connectable 0
+add WeightAttributeName
+create Weight wei float 0
+Weight default 1
+Weight softMin 0
+Weight softMax 1
+Weight keyable 1
+add Weight
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects MagnetType outDD
+affects Magnitude outDD
+affects IsClamp outDD
+affects ClampRange outDD
+affects TargetPoint outDD
+affects inTargetObject outDD
+affects inTargetDP outDD
+affects inTargetDC outDD
+affects WeightAttributeName outDD
+affects Weight outDD
+DPGoal
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+string.create
+create VelocityAttribute vattr string vel
+VelocityAttribute connectable 0
+add VelocityAttribute
+create GoalType gt enum 0
+GoalType field Position 0
+GoalType field Target DP 1
+GoalType keyable 1
+GoalType storable 1
+add GoalType
+create Position pos 3float 0
+Position default 0 0 0
+Position keyable 1
+add Position
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+create Magnitude mag float 0
+Magnitude default 1
+Magnitude softMin 0
+Magnitude softMax 10
+Magnitude keyable 1
+add Magnitude
+create SpringConstant spcnst float 0
+SpringConstant default 1
+SpringConstant softMin 0
+SpringConstant softMax 10
+SpringConstant keyable 1
+add SpringConstant
+create Damping dmp float 0
+Damping default 0.5
+Damping softMin 0
+Damping softMax 1
+Damping keyable 1
+add Damping
+create UseMass uma bool 0
+UseMass default 0
+UseMass keyable 1
+add UseMass
+string.create
+create MassAttribute mattr string mass
+MassAttribute connectable 0
+add MassAttribute
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects VelocityAttribute outDP
+affects GoalType outDP
+affects Position outDP
+affects TargetDP outDP
+affects Magnitude outDP
+affects Damping outDP
+affects SpringConstant outDP
+affects UseMass outDP
+affects MassAttribute outDP

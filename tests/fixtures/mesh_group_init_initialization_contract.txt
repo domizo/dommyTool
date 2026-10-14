@@ -1,0 +1,107 @@
+DMToMesh
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create ConvertType cnvty enum 0
+ConvertType field One Mesh 0
+ConvertType field Primitive 1
+ConvertType field Group 2
+ConvertType keyable 1
+add ConvertType
+string default 
+create Group grp string default
+Group connectable 0
+add Group
+create outMesh omh mesh null
+outMesh readable 1
+outMesh writable 0
+outMesh storable 0
+outMesh array 1
+outMesh arrayBuilder 1
+add outMesh
+affects inDM outMesh
+affects ConvertType outMesh
+affects Group outMesh
+DMGroupToIndex
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+string default 
+create GroupName grpn string default
+GroupName connectable 0
+add GroupName
+create outDataArray out intArray null
+outDataArray writable 0
+outDataArray storable 0
+add outDataArray
+affects inDM outDataArray
+affects GroupName outDataArray
+DMGroupFromDP
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+string default piece
+create GroupName grpn string default
+GroupName connectable 0
+add GroupName
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+create UseDistance usedist bool 0
+UseDistance keyable 0
+UseDistance storable 1
+add UseDistance
+create Distance dist double 1
+Distance min 0
+Distance softMax 10
+Distance keyable 0
+Distance storable 1
+add Distance
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects GroupName outDM
+affects TargetDP outDM
+affects UseDistance outDM
+affects Distance outDM
+DMGroupDelete
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create IsEnable isen bool 0
+IsEnable keyable 1
+IsEnable storable 1
+add IsEnable
+string default 
+create PrimitiveGroupName pgrpnm string default
+PrimitiveGroupName connectable 0
+add PrimitiveGroupName
+string default 
+create PointGroupName ptgrpnm string default
+PointGroupName connectable 0
+add PointGroupName
+string default 
+create FaceGroupName fgrpnm string default
+FaceGroupName connectable 0
+add FaceGroupName
+string default 
+create EdgeGroupName egrpnm string default
+EdgeGroupName connectable 0
+add EdgeGroupName
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects IsEnable outDM
+affects PrimitiveGroupName outDM
+affects PointGroupName outDM
+affects FaceGroupName outDM
+affects EdgeGroupName outDM

@@ -1,0 +1,199 @@
+DCFurGen
+create inDP idp plugin 6291467 null
+inDP readable 0
+inDP storable 0
+add inDP
+create Seed se int 0
+Seed default 1
+Seed min 1
+Seed softMax 100
+Seed keyable 1
+add Seed
+create Thinning thin float 0
+Thinning default 0
+Thinning min 0
+Thinning max 1
+Thinning keyable 1
+add Thinning
+create Segment seg int 0
+Segment default 4
+Segment min 2
+Segment softMax 20
+Segment keyable 1
+add Segment
+create Length len float 0
+Length default 5
+Length min 0
+Length softMax 50
+Length keyable 1
+add Length
+create LengthRandom lenrnd float 0
+LengthRandom default 0
+LengthRandom min 0
+LengthRandom softMax 5
+LengthRandom keyable 1
+add LengthRandom
+string.create
+create LengthAttribute lenattr string default
+LengthAttribute connectable 0
+add LengthAttribute
+string.create
+create NormalAttribute nrmattr string default
+NormalAttribute connectable 0
+add NormalAttribute
+create Bend be float 0
+Bend default 0
+add Bend
+create IsStruggle isstr bool 0
+IsStruggle default 0
+IsStruggle keyable 1
+IsStruggle storable 1
+add IsStruggle
+create StruggleRange strrng 3float 0
+StruggleRange keyable 1
+StruggleRange storable 1
+StruggleRange default 0 0 0
+StruggleRange min 0 0 0
+add StruggleRange
+create StruggleStrength strstr float 0
+StruggleStrength keyable 1
+StruggleStrength storable 1
+StruggleStrength min 0
+StruggleStrength default 1
+add StruggleStrength
+create StruggleRamp strrmp ramp
+add StruggleRamp
+create Offset off float 0
+Offset default 0
+Offset softMin 0
+Offset softMax 5
+Offset keyable 1
+add Offset
+create Scale scl float 0
+Scale default 1
+Scale softMin 0
+Scale softMax 5
+Scale keyable 1
+add Scale
+string.create
+create TransferAttribute transattr string default
+TransferAttribute connectable 0
+add TransferAttribute
+create outDC odc plugin 4206603 null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDP outDC
+affects Seed outDC
+affects Thinning outDC
+affects Segment outDC
+affects Length outDC
+affects LengthRandom outDC
+affects LengthAttribute outDC
+affects NormalAttribute outDC
+affects Bend outDC
+affects IsStruggle outDC
+affects StruggleRange outDC
+affects StruggleStrength outDC
+affects StruggleRamp outDC
+affects Offset outDC
+affects Scale outDC
+affects TransferAttribute outDC
+DCAhoGen
+create inDC idc plugin 4206603 null
+inDC readable 0
+inDC storable 0
+add inDC
+create DistributeType dity enum 0
+DistributeType field Use Length 0
+DistributeType field Use Parametric 1
+DistributeType keyable 1
+DistributeType storable 1
+add DistributeType
+create Count cnt int 0
+Count default 20
+Count min 0
+Count keyable 1
+Count storable 1
+add Count
+create Length len double 0
+Length default 1
+Length min 0
+Length keyable 1
+Length storable 1
+add Length
+create Segment seg int 0
+Segment default 4
+Segment min 2
+Segment keyable 1
+Segment storable 1
+add Segment
+create AngleType angty enum 0
+AngleType field Curve Direction 0
+AngleType field Normal Base 1
+AngleType field RotedNormal 2
+AngleType keyable 1
+AngleType storable 1
+add AngleType
+create AngleSpread angspr float 0
+AngleSpread default 0.20000000000000001
+AngleSpread min 0
+AngleSpread softMax 2
+AngleSpread keyable 1
+AngleSpread storable 1
+add AngleSpread
+create Normal n 3float 0
+Normal keyable 1
+Normal storable 1
+Normal default 0 1 0
+add Normal
+create Seed se int 0
+Seed default 1
+Seed min 1
+Seed keyable 1
+Seed storable 1
+add Seed
+create LengthRandom lenrnd double 0
+LengthRandom default 0
+LengthRandom min 0
+LengthRandom softMax 5
+LengthRandom keyable 1
+LengthRandom storable 1
+add LengthRandom
+create IsStruggle isstr bool 0
+IsStruggle default 0
+IsStruggle keyable 1
+IsStruggle storable 1
+add IsStruggle
+create StruggleRange strrng 3float 0
+StruggleRange keyable 1
+StruggleRange storable 1
+StruggleRange default 0 0 0
+StruggleRange min 0 0 0
+add StruggleRange
+create StruggleStrength strstr float 0
+StruggleStrength keyable 1
+StruggleStrength storable 1
+StruggleStrength min 0
+StruggleStrength default 1
+add StruggleStrength
+create StruggleRamp strrmp ramp
+add StruggleRamp
+create outDC odc plugin 4206603 null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects DistributeType outDC
+affects Count outDC
+affects Segment outDC
+affects Length outDC
+affects AngleType outDC
+affects AngleSpread outDC
+affects Normal outDC
+affects Seed outDC
+affects LengthRandom outDC
+affects IsStruggle outDC
+affects StruggleRange outDC
+affects StruggleStrength outDC
+affects StruggleRamp outDC

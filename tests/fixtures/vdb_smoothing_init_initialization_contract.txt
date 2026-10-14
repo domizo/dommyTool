@@ -1,0 +1,74 @@
+DPAttrSmooth
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+add inDD
+string.create
+create SmoothAttribute smatr string 
+SmoothAttribute connectable 0
+add SmoothAttribute
+create PointRadius prad double 0
+PointRadius softMin 0
+PointRadius min 0
+PointRadius softMax 50
+PointRadius default 0.001
+add PointRadius
+create SearchRadius srhrad double 0
+SearchRadius softMin 0
+SearchRadius min 0
+SearchRadius softMax 10
+SearchRadius default 1
+add SearchRadius
+create SearchGridSize srchgrsz double 0
+SearchGridSize softMin 0.01
+SearchGridSize min 0.001
+SearchGridSize softMax 5
+SearchGridSize default 0.10000000000000001
+add SearchGridSize
+create Iterate itr int 0
+Iterate softMin 0
+Iterate min 0
+Iterate softMax 10
+Iterate default 1
+add Iterate
+create MaxSampleCount mxsmpcnt int 0
+MaxSampleCount softMin 1
+MaxSampleCount min 1
+MaxSampleCount softMax 50
+MaxSampleCount default 10
+add MaxSampleCount
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects SmoothAttribute outDD
+affects PointRadius outDD
+affects SearchRadius outDD
+affects SearchGridSize outDD
+affects Iterate outDD
+affects MaxSampleCount outDD
+DOpenVDBSamplingDP
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create VoxelSize vs double 0
+VoxelSize default 0.10000000000000001
+VoxelSize min 0.001
+VoxelSize softMin 0.01
+VoxelSize softMax 5
+add VoxelSize
+create VdbOutput vdb geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects message VdbOutput
+affects inDP VdbOutput
+affects VoxelSize VdbOutput

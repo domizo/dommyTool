@@ -1,0 +1,350 @@
+DCurveFromCurve
+create inputCurve inc generic
+inputCurve accepts curve
+inputCurve storable 0
+inputCurve writable 1
+inputCurve readable 0
+add inputCurve
+create inDC idc plugin 2 null
+inDC readable 0
+inDC storable 0
+add inDC
+create ProfileDP prdp plugin 1 null
+ProfileDP readable 0
+ProfileDP storable 0
+add ProfileDP
+create InTangentCurve intc generic
+InTangentCurve accepts curve
+InTangentCurve storable 0
+InTangentCurve writable 1
+InTangentCurve readable 0
+add InTangentCurve
+create SamplingType smpty enum 0
+SamplingType field Sampling 0
+SamplingType field InputCurve Divide 1
+SamplingType keyable 1
+add SamplingType
+create curveLength cl double 1
+curveLength min 1.0000000000000001e-09
+curveLength max 1
+curveLength keyable 1
+add curveLength
+create sampling sa int 8
+sampling min 2
+sampling softMax 100
+sampling keyable 1
+add sampling
+create CurveDivide crvdiv int 1
+CurveDivide min 0
+CurveDivide softMax 10
+CurveDivide keyable 1
+add CurveDivide
+create offset off double 0
+offset keyable 1
+add offset
+create Degree deg enum 1
+Degree field Linear 0
+Degree field Cubic 1
+Degree keyable 1
+add Degree
+create IsMultiEndKnot imuedkt bool 1
+IsMultiEndKnot keyable 1
+add IsMultiEndKnot
+create twist tw ramp
+add twist
+create tubeWidth tuw ramp
+add tubeWidth
+create TwistScale twscl double 360
+TwistScale keyable 1
+add TwistScale
+create TubeScale tbscl double 1
+TubeScale keyable 1
+add TubeScale
+create UseRandomRotation userndrot bool 0
+UseRandomRotation keyable 1
+add UseRandomRotation
+create UseRandomRadius userndrad bool 0
+UseRandomRadius keyable 1
+add UseRandomRadius
+create Seed se int 1
+Seed min 1
+Seed softMax 100
+Seed keyable 1
+add Seed
+create RandRotation rndrot double 360
+RandRotation softMin 0
+RandRotation softMax 360
+RandRotation keyable 1
+add RandRotation
+create RandRadius rndrad double 1
+RandRadius softMin 0
+RandRadius softMax 10
+RandRadius keyable 1
+add RandRadius
+create outDC odc plugin 2 null
+outDC writable 0
+outDC storable 0
+add outDC
+create UseCachedParam uscah bool 0
+add UseCachedParam
+affects inputCurve outDC
+affects inDC outDC
+affects ProfileDP outDC
+affects InTangentCurve outDC
+affects SamplingType outDC
+affects curveLength outDC
+affects sampling outDC
+affects CurveDivide outDC
+affects offset outDC
+affects Degree outDC
+affects IsMultiEndKnot outDC
+affects twist outDC
+affects tubeWidth outDC
+affects TwistScale outDC
+affects TubeScale outDC
+affects Seed outDC
+affects UseRandomRotation outDC
+affects RandRotation outDC
+affects UseRandomRadius outDC
+affects RandRadius outDC
+affects UseCachedParam outDC
+DCurveLinkGen
+create Count cnt int 0
+Count default 10
+Count min 1
+Count softMin 1
+Count softMax 100
+Count keyable 1
+add Count
+create Segment seg int 0
+Segment default 2
+Segment min 0
+Segment softMin 0
+Segment softMax 10
+Segment keyable 1
+add Segment
+create Degree deg enum 0
+Degree field Linear 0
+Degree field Cubic 1
+Degree keyable 1
+add Degree
+create InObject inobj generic
+InObject accepts curve
+InObject accepts surface
+InObject storable 0
+InObject writable 1
+InObject readable 0
+add InObject
+create Mode md enum 0
+Mode field Divide 0
+Mode field Step 1
+Mode keyable 1
+add Mode
+create WrapMode wrmd enum 0
+WrapMode field None 0
+WrapMode field Clamp 1
+WrapMode field Loop 2
+WrapMode keyable 1
+add WrapMode
+create ColumnNum clmnum int 0
+ColumnNum default 1
+ColumnNum softMin 1
+ColumnNum softMax 50
+add ColumnNum
+create StepSizeU stszu float 0
+StepSizeU default 1
+StepSizeU softMin 0
+StepSizeU softMax 50
+add StepSizeU
+create StepSizeV stszv float 0
+StepSizeV default 1
+StepSizeV softMin 0
+StepSizeV softMax 50
+add StepSizeV
+create RangeU rngu float 0
+RangeU default 1
+RangeU softMin 0
+RangeU softMax 1
+add RangeU
+create RangeV rngv float 0
+RangeV default 1
+RangeV softMin 0
+RangeV softMax 1
+add RangeV
+create OffsetU ofu float 0
+OffsetU default 0
+OffsetU softMin -1
+OffsetU softMax 1
+add OffsetU
+create OffsetV ofv float 0
+OffsetV default 0
+OffsetV softMin -1
+OffsetV softMax 1
+add OffsetV
+create Seed se int 0
+Seed default 1
+Seed softMin 1
+Seed softMax 100
+Seed min 1
+add Seed
+create IsRandom isrnd bool 0
+IsRandom default 0
+add IsRandom
+create Random rnd float 0
+Random default 2
+Random softMin 0
+Random softMax 5
+add Random
+create LinkList llst compound
+LinkList child InObject
+LinkList child Mode
+LinkList child WrapMode
+LinkList child ColumnNum
+LinkList child StepSizeU
+LinkList child StepSizeV
+LinkList child RangeU
+LinkList child RangeV
+LinkList child OffsetU
+LinkList child OffsetV
+LinkList child Seed
+LinkList child IsRandom
+LinkList child Random
+LinkList array 1
+LinkList arrayBuilder 1
+LinkList writable 1
+add LinkList
+create outDC odc plugin 2 null
+outDC writable 0
+outDC storable 0
+add outDC
+affects Count outDC
+affects Segment outDC
+affects Degree outDC
+affects InObject outDC
+affects Mode outDC
+affects WrapMode outDC
+affects ColumnNum outDC
+affects StepSizeU outDC
+affects StepSizeV outDC
+affects RangeU outDC
+affects RangeV outDC
+affects OffsetU outDC
+affects OffsetV outDC
+affects Seed outDC
+affects IsRandom outDC
+affects Random outDC
+affects LinkList outDC
+DCurveFromMesh
+create inMesh inm generic
+inMesh accepts mesh
+inMesh storable 0
+inMesh writable 1
+inMesh readable 0
+add inMesh
+create outDC odc plugin 2 null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inMesh outDC
+DCurveFromPfx
+create inPfx inpf message
+inPfx readable 0
+inPfx storable 0
+add inPfx
+create EvaluationTime evtime time 0
+add EvaluationTime
+create Degree deg enum 1
+Degree field Linear 0
+Degree field Cubic 1
+Degree keyable 1
+add Degree
+create IsMainLines mlines bool 1
+IsMainLines keyable 1
+add IsMainLines
+create IsLeafLines llines bool 1
+IsLeafLines keyable 1
+add IsLeafLines
+create IsFlowerLines flines bool 1
+IsFlowerLines keyable 1
+add IsFlowerLines
+create IsExportWidth width bool 0
+IsExportWidth keyable 1
+add IsExportWidth
+create IsExportTwist twist bool 0
+IsExportTwist keyable 1
+add IsExportTwist
+create IsExportFlat flat bool 0
+IsExportFlat keyable 1
+add IsExportFlat
+create IsExportParameter param bool 0
+IsExportParameter keyable 1
+add IsExportParameter
+create IsExportColor color bool 0
+IsExportColor keyable 1
+add IsExportColor
+create IsExportIncandence incan bool 0
+IsExportIncandence keyable 1
+add IsExportIncandence
+create IsExportTransparency trans bool 0
+IsExportTransparency keyable 1
+add IsExportTransparency
+create outDC odc plugin 2 null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inPfx outDC
+affects EvaluationTime outDC
+affects Degree outDC
+affects IsMainLines outDC
+affects IsLeafLines outDC
+affects IsFlowerLines outDC
+affects IsExportTwist outDC
+affects IsExportWidth outDC
+affects IsExportFlat outDC
+affects IsExportParameter outDC
+affects IsExportColor outDC
+affects IsExportIncandence outDC
+affects IsExportTransparency outDC
+DCText
+string.create Text
+create Text txt string Text
+Text connectable 0
+add Text
+string.create 
+create FontName fntnm string 
+FontName connectable 0
+add FontName
+create Size sz float 1
+Size min 1.1920928955078125e-07
+Size max 10000
+Size softMax 10
+Size keyable 1
+add Size
+create Sampling smp int 4
+Sampling min 1
+Sampling max 4096
+Sampling softMax 10
+Sampling keyable 1
+add Sampling
+create Tracking trk 2float 0
+Tracking default 0 0
+Tracking keyable 1
+add Tracking
+create GroupCharPiece grpcp bool 0
+GroupCharPiece keyable 1
+add GroupCharPiece
+string.create piece
+create GroupName grpn string piece
+GroupName connectable 0
+add GroupName
+create outDC odc plugin 2 null
+outDC writable 0
+outDC storable 0
+add outDC
+affects Text outDC
+affects FontName outDC
+affects Size outDC
+affects Sampling outDC
+affects Tracking outDC
+affects GroupCharPiece outDC
+affects GroupName outDC

@@ -1,0 +1,77 @@
+DOpenVDBResample
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+string.create
+create referenceName refn string *
+referenceName connectable 0
+add referenceName
+create referenceMatrix refmat matrix double
+referenceMatrix storable 0
+referenceMatrix writable 1
+referenceMatrix readable 0
+add referenceMatrix
+create interpolationMode inpm enum 1
+interpolationMode field Nearest 0
+interpolationMode field Linear 1
+interpolationMode field Quadratic 2
+interpolationMode connectable 0
+add interpolationMode
+create defineMode dfm enum 1
+defineMode field Explicitly 0
+defineMode field To Match Reference VDB 1
+defineMode field Using Voxel Size Only 2
+defineMode field Using Voxel Scale Only 3
+defineMode connectable 0
+add defineMode
+create voxelSize vsi float 0
+voxelSize default 1
+voxelSize min 9.9999999747524271e-07
+voxelSize softMin 0.0099999997764825821
+voxelSize softMax 5
+add voxelSize
+create voxelScale vsc float 0
+voxelScale default 1
+voxelScale min 9.9999999747524271e-07
+voxelScale softMin 0.0099999997764825821
+voxelScale softMax 5
+add voxelScale
+create transformVec tvec bool 0
+transformVec default 0
+add transformVec
+create isRebuild isr bool 0
+isRebuild default 1
+add isRebuild
+create isPrune ipr bool 0
+isPrune default 1
+add isPrune
+create tolerance tor float 0
+tolerance default 0
+tolerance min 0
+tolerance softMin 0
+tolerance softMax 1
+add tolerance
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+create referenceVdbInput refvdb geometry null
+referenceVdbInput connectable 1
+add referenceVdbInput
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects referenceVdbInput VdbOutput
+affects referenceName VdbOutput
+affects referenceMatrix VdbOutput
+affects SelectedGridNames VdbOutput
+affects interpolationMode VdbOutput
+affects defineMode VdbOutput
+affects voxelSize VdbOutput
+affects voxelScale VdbOutput
+affects transformVec VdbOutput
+affects isRebuild VdbOutput
+affects isPrune VdbOutput
+affects tolerance VdbOutput

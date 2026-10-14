@@ -1,0 +1,137 @@
+noiseDeformer
+create seed se int 0
+seed default 1
+seed min 1
+seed keyable 1
+create amplitude am double 0
+amplitude default 1
+amplitude keyable 1
+amplitude storable 1
+create ampOffset aof double 0
+ampOffset default 0
+ampOffset keyable 1
+ampOffset storable 1
+create absOn aon bool 0
+absOn default 0
+absOn keyable 1
+absOn storable 1
+create frequency fr int 0
+frequency default 1
+frequency min 1
+frequency max 32
+frequency keyable 1
+frequency storable 1
+create smooth sm double 0
+smooth default 0.5
+smooth keyable 1
+smooth storable 1
+create space sp double 0
+space default 2
+space keyable 1
+space storable 1
+create enableTrasform et bool 0
+enableTrasform default 1
+enableTrasform keyable 1
+enableTrasform storable 1
+create centerX cx double 0
+centerX default 0
+centerX keyable 1
+centerX storable 1
+create centerY cy double 0
+centerY default 0
+centerY keyable 1
+centerY storable 1
+create centerZ cz double 0
+centerZ default 0
+centerZ keyable 1
+centerZ storable 1
+create center c compound centerX centerY centerZ
+center storable 1
+center default 0 0 0
+create offsetX ox double 0
+offsetX default 0
+offsetX keyable 1
+offsetX storable 1
+create offsetY oy double 0
+offsetY default 0
+offsetY keyable 1
+offsetY storable 1
+create offsetZ oz double 0
+offsetZ default 0
+offsetZ keyable 1
+offsetZ storable 1
+create offset o compound offsetX offsetY offsetZ
+offset storable 1
+offset default 0 0 0
+create scaleX sx double 0
+scaleX default 1
+scaleX keyable 1
+scaleX storable 1
+create scaleY sy double 0
+scaleY default 1
+scaleY keyable 1
+scaleY storable 1
+create scaleZ sz double 0
+scaleZ default 1
+scaleZ keyable 1
+scaleZ storable 1
+create scale s compound scaleX scaleY scaleZ
+scale storable 1
+scale default 1 1 1
+create isDropoff ido bool 0
+isDropoff default 0
+isDropoff keyable 1
+isDropoff storable 1
+create dropoffType dot enum 0
+dropoffType field Constant 0
+dropoffType field Linear 1
+dropoffType field Quadratic 2
+dropoffType keyable 1
+dropoffType storable 1
+create dropoffRadius dor double 0
+dropoffRadius default 5
+dropoffRadius keyable 1
+dropoffRadius storable 1
+create attenuation a double 0
+attenuation default 1
+attenuation keyable 1
+attenuation storable 1
+add seed
+add amplitude
+add ampOffset
+add absOn
+add frequency
+add smooth
+add space
+add enableTrasform
+add center
+add offset
+add scale
+add isDropoff
+add dropoffType
+add dropoffRadius
+add attenuation
+affects seed outputGeom
+affects amplitude outputGeom
+affects ampOffset outputGeom
+affects absOn outputGeom
+affects frequency outputGeom
+affects smooth outputGeom
+affects space outputGeom
+affects enableTrasform outputGeom
+affects centerX outputGeom
+affects centerY outputGeom
+affects centerZ outputGeom
+affects center outputGeom
+affects offsetX outputGeom
+affects offsetY outputGeom
+affects offsetZ outputGeom
+affects offset outputGeom
+affects scaleX outputGeom
+affects scaleY outputGeom
+affects scaleZ outputGeom
+affects scale outputGeom
+affects isDropoff outputGeom
+affects dropoffRadius outputGeom
+affects attenuation outputGeom
+affects dropoffType outputGeom

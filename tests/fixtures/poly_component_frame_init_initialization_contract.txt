@@ -1,0 +1,69 @@
+DPolyFaceToMat
+create inMesh inm generic
+inMesh accepts mesh
+inMesh storable 0
+inMesh writable 1
+inMesh readable 0
+add inMesh
+create FaceNumber fnum int 0
+FaceNumber min 0
+FaceNumber keyable 1
+add FaceNumber
+create outMatrix omat generic
+outMatrix accepts matrix
+outMatrix writable 0
+outMatrix storable 0
+add outMatrix
+create outTranslate ot generic
+outTranslate accepts numeric 3double
+outTranslate accepts numeric 3float
+outTranslate writable 0
+outTranslate storable 0
+add outTranslate
+create outRotate or generic
+outRotate accepts numeric 3double
+outRotate accepts numeric 3float
+outRotate writable 0
+outRotate storable 0
+add outRotate
+affects inMesh outMatrix
+affects FaceNumber outMatrix
+affects inMesh outTranslate
+affects FaceNumber outTranslate
+affects inMesh outRotate
+affects FaceNumber outRotate
+DPolyEdgeToMat
+create inMesh inm generic
+inMesh accepts mesh
+inMesh storable 0
+inMesh writable 1
+inMesh readable 0
+add inMesh
+create EdgeNumber enum int 0
+EdgeNumber default 0
+EdgeNumber min 0
+EdgeNumber keyable 1
+add EdgeNumber
+create outMatrix omat generic
+outMatrix accepts matrix
+outMatrix writable 0
+outMatrix storable 0
+add outMatrix
+create outTranslate ot generic
+outTranslate accepts numeric 3double
+outTranslate accepts numeric 3float
+outTranslate writable 0
+outTranslate storable 0
+add outTranslate
+create outRotate or generic
+outRotate accepts numeric 3double
+outRotate accepts numeric 3float
+outRotate writable 0
+outRotate storable 0
+add outRotate
+affects inMesh outMatrix
+affects EdgeNumber outMatrix
+affects inMesh outTranslate
+affects EdgeNumber outTranslate
+affects inMesh outRotate
+affects EdgeNumber outRotate

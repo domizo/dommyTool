@@ -1,0 +1,918 @@
+DPColor
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create ColorType colt enum 0
+ColorType field Solid Color 0
+ColorType field Random Color 1
+ColorType field Ramp Color 2
+ColorType field Texture Color 3
+ColorType field Bounding Box 4
+ColorType field Expression 5
+ColorType field Palette Color 6
+ColorType keyable 1
+ColorType storable 1
+add ColorType
+string.create
+create ColorName coln string Cd
+ColorName connectable 0
+add ColorName
+string.create
+create UVAttrName uvn string uv
+UVAttrName connectable 0
+add UVAttrName
+create SolidColor scol color
+SolidColor connectable 0
+SolidColor default 1 1 1
+add SolidColor
+create RampColor rcol colorRamp
+add RampColor
+create TexColor tcol color
+TexColor default 1 1 1 1
+add TexColor
+create Seed se int 0
+Seed default 1
+Seed min 0
+Seed keyable 1
+Seed storable 1
+add Seed
+create MinRange mnr 3float 0
+MinRange keyable 1
+MinRange storable 1
+MinRange default 0 0 0
+add MinRange
+create MaxRange mxr 3float 0
+MaxRange keyable 1
+MaxRange storable 1
+MaxRange default 1 1 1
+add MaxRange
+create Is3DCalc i3d bool 0
+Is3DCalc default 0
+add Is3DCalc
+string.create
+create Expression expn string 
+Expression connectable 0
+add Expression
+create PaletteType plt enum 0
+PaletteType field Order 0
+PaletteType field Random 1
+PaletteType keyable 1
+PaletteType storable 1
+add PaletteType
+create PaletteColor plcol color
+PaletteColor default 1 1 1
+PaletteColor storable 1
+PaletteColor connectable 0
+PaletteColor array 1
+add PaletteColor
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects ColorType outDP
+affects ColorName outDP
+affects UVAttrName outDP
+affects SolidColor outDP
+affects TexColor outDP
+affects RampColor outDP
+affects Seed outDP
+affects MinRange outDP
+affects MaxRange outDP
+affects Is3DCalc outDP
+affects Expression outDP
+affects PaletteType outDP
+affects PaletteColor outDP
+DPNoise
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create NoiseType noty enum 0
+NoiseType field Random 0
+NoiseType field Perlin 1
+NoiseType field Billow 2
+NoiseType field Voronoi 3
+NoiseType field Turblance 4
+NoiseType field RidgedMulti 5
+NoiseType field Wood 6
+NoiseType keyable 1
+NoiseType storable 1
+add NoiseType
+create IsNoiseAttribute isnattr bool 0
+IsNoiseAttribute default 0
+add IsNoiseAttribute
+string.create
+create NoiseAttributeName nattrn string noiseval
+NoiseAttributeName connectable 0
+add NoiseAttributeName
+create DeformType defty enum 1
+DeformType field None 0
+DeformType field Vector 1
+DeformType field Attribute 2
+DeformType keyable 1
+DeformType storable 1
+add DeformType
+create DeformVector defvec 3float 0
+DeformVector default 0 1 0
+add DeformVector
+string.create
+create VectorAttributeName vecattrn string N
+VectorAttributeName connectable 0
+add VectorAttributeName
+create Seed se int 0
+Seed min 0
+Seed default 0
+add Seed
+create Amplitude amp float 0
+Amplitude default 1
+add Amplitude
+create Octave oct int 0
+Octave min 1
+Octave max 30
+Octave default 6
+add Octave
+create Frequency freq float 0
+Frequency min 0
+Frequency default 2
+add Frequency
+create Lacunarity lac float 0
+Lacunarity default 2
+add Lacunarity
+create Persistence per float 0
+Persistence default 0.5
+add Persistence
+create IsVoronoiDistance isvd bool 0
+IsVoronoiDistance default 1
+add IsVoronoiDistance
+create VoronoiDisplacement vordisp float 0
+VoronoiDisplacement default 1
+add VoronoiDisplacement
+create TurbulencePower tpow float 0
+TurbulencePower default 1
+add TurbulencePower
+create TurbulenceRoughnesss trough int 0
+TurbulenceRoughnesss min 1
+TurbulenceRoughnesss max 30
+TurbulenceRoughnesss default 1
+add TurbulenceRoughnesss
+create WooodFrequency wfreq float 0
+WooodFrequency default 1
+add WooodFrequency
+create WooodScale wsc float 0
+WooodScale default 0.25
+add WooodScale
+create WooodBias wbi float 0
+WooodBias default 0.125
+add WooodBias
+create WooodGrain wgra float 0
+WooodGrain default 0.25
+add WooodGrain
+create WooodAngle wang 3float 0
+WooodAngle default 84 0 0
+add WooodAngle
+create Scale sc 3float 0
+Scale default 1 1 1
+add Scale
+create UniformScale uscl float 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 5
+add UniformScale
+create Offset of 3float 0
+Offset default 0 0 0
+add Offset
+create IsAbsolute isabs bool 0
+IsAbsolute default 0
+add IsAbsolute
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects NoiseType outDP
+affects Seed outDP
+affects IsNoiseAttribute outDP
+affects NoiseAttributeName outDP
+affects DeformType outDP
+affects DeformVector outDP
+affects VectorAttributeName outDP
+affects Amplitude outDP
+affects Octave outDP
+affects Frequency outDP
+affects Lacunarity outDP
+affects Persistence outDP
+affects IsVoronoiDistance outDP
+affects VoronoiDisplacement outDP
+affects TurbulencePower outDP
+affects TurbulenceRoughnesss outDP
+affects WooodFrequency outDP
+affects WooodScale outDP
+affects WooodBias outDP
+affects WooodGrain outDP
+affects WooodAngle outDP
+affects Scale outDP
+affects UniformScale outDP
+affects Offset outDP
+affects IsAbsolute outDP
+DPDFNoise
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+add inDD
+create NoiseType noty enum 1
+NoiseType field Perlin 1
+NoiseType field Billow 2
+NoiseType field Voronoi 3
+NoiseType field Turblance 4
+NoiseType field RidgedMulti 5
+NoiseType field Wood 6
+NoiseType keyable 1
+NoiseType storable 1
+add NoiseType
+create IsNoiseAttribute isnattr bool 0
+IsNoiseAttribute default 1
+add IsNoiseAttribute
+string.create
+create NoiseAttributeName nattrn string noiseval
+NoiseAttributeName connectable 0
+add NoiseAttributeName
+create Precision prec enum 0
+Precision field float 0
+Precision field double 1
+add Precision
+create Epsilon eps double 0
+Epsilon softMin 0
+Epsilon softMax 1
+Epsilon min 0
+Epsilon default 0.0001
+add Epsilon
+create NormalVectorType normty enum 0
+NormalVectorType field From Space 0
+NormalVectorType field Use Normal Vector 1
+NormalVectorType field Use Reference Object 2
+NormalVectorType keyable 1
+NormalVectorType storable 1
+add NormalVectorType
+create NormalVector nvec 3float 0
+NormalVector default 0 1 0
+add NormalVector
+create ReferenceObject refobj generic
+ReferenceObject accepts mesh
+ReferenceObject accepts curve
+ReferenceObject accepts surface
+ReferenceObject storable 0
+ReferenceObject writable 1
+ReferenceObject readable 0
+add ReferenceObject
+create IsDeform isdef bool 0
+IsDeform default 0
+add IsDeform
+create Seed se int 0
+Seed min 0
+Seed default 0
+add Seed
+create UseSeedOffset unoff bool 0
+UseSeedOffset default 0
+add UseSeedOffset
+create Amplitube amp float 0
+Amplitube default 1
+add Amplitube
+create Octave oct int 0
+Octave min 1
+Octave max 30
+Octave default 1
+add Octave
+create Frequency freq float 0
+Frequency min 0
+Frequency default 2
+add Frequency
+create Lacunarity lac float 0
+Lacunarity default 2
+add Lacunarity
+create Persistence per float 0
+Persistence default 0.5
+add Persistence
+create IsVoronoiDistance isvd bool 0
+IsVoronoiDistance default 1
+add IsVoronoiDistance
+create VoronoiDisplacement vordisp float 0
+VoronoiDisplacement default 1
+add VoronoiDisplacement
+create TurbulencePower tpow float 0
+TurbulencePower default 1
+add TurbulencePower
+create TurbulenceRoughnesss trough int 0
+TurbulenceRoughnesss min 1
+TurbulenceRoughnesss max 30
+TurbulenceRoughnesss default 1
+add TurbulenceRoughnesss
+create WooodFrequency wfreq float 0
+WooodFrequency default 16
+add WooodFrequency
+create WooodScale wsc float 0
+WooodScale default 0.25
+add WooodScale
+create WooodBias wbi float 0
+WooodBias default 0.125
+add WooodBias
+create WooodGrain wgra float 0
+WooodGrain default 0.25
+add WooodGrain
+create WooodAngle wang 3float 0
+WooodAngle default 84 0 0
+add WooodAngle
+create Scale sc 3float 0
+Scale default 1 1 1
+add Scale
+create Offset of 3float 0
+Offset default 0 0 0
+add Offset
+create UniformScale uscl float 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 5
+add UniformScale
+create Invert inv bool 0
+Invert default 0
+add Invert
+create Normalize norm bool 0
+Normalize default 1
+add Normalize
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects IsNoiseAttribute outDD
+affects NoiseAttributeName outDD
+affects Precision outDD
+affects Epsilon outDD
+affects NormalVectorType outDD
+affects NormalVector outDD
+affects ReferenceObject outDD
+affects IsDeform outDD
+affects NoiseType outDD
+affects Seed outDD
+affects UseSeedOffset outDD
+affects Amplitube outDD
+affects Octave outDD
+affects Frequency outDD
+affects Lacunarity outDD
+affects Persistence outDD
+affects IsVoronoiDistance outDD
+affects VoronoiDisplacement outDD
+affects TurbulencePower outDD
+affects TurbulenceRoughnesss outDD
+affects WooodFrequency outDD
+affects WooodScale outDD
+affects WooodBias outDD
+affects WooodGrain outDD
+affects WooodAngle outDD
+affects Scale outDD
+affects Offset outDD
+affects UniformScale outDD
+affects Invert outDD
+affects Normalize outDD
+DPPyroNoise
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+string.create
+create OutAttribute outattr string density
+OutAttribute connectable 0
+add OutAttribute
+create PyroType pyty enum 0
+PyroType field Point 0
+PyroType field Object 1
+PyroType keyable 1
+PyroType storable 1
+add PyroType
+create Radius rad float 0
+Radius default 5
+add Radius
+string.create
+create RadiusAttribute radattr string 
+RadiusAttribute connectable 0
+add RadiusAttribute
+create TopRatio tprto float 0
+TopRatio default 0
+add TopRatio
+create UnderRatio unrto float 0
+UnderRatio default 0
+add UnderRatio
+create SideRatio sdrto float 0
+SideRatio default 0
+add SideRatio
+create Position ppos 3float 0
+Position default 0 0 0
+add Position
+create inObject ino generic
+inObject accepts mesh
+inObject accepts curve
+inObject accepts surface
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create inTargetDP intdp geometry null
+inTargetDP readable 0
+inTargetDP storable 0
+add inTargetDP
+create NoiseType noty enum 1
+NoiseType field Perlin 1
+NoiseType field Billow 2
+NoiseType field Voronoi 3
+NoiseType field Turblance 4
+NoiseType field RidgedMulti 5
+NoiseType field Wood 6
+NoiseType keyable 1
+NoiseType storable 1
+add NoiseType
+create Seed se int 0
+Seed min 0
+Seed default 0
+add Seed
+create Amplitube amp float 0
+Amplitube default 1
+add Amplitube
+create Octave oct int 0
+Octave min 1
+Octave max 30
+Octave default 6
+add Octave
+create Frequency freq float 0
+Frequency min 0
+Frequency default 2
+add Frequency
+create Lacunarity lac float 0
+Lacunarity default 2
+add Lacunarity
+create Persistence per float 0
+Persistence default 0.5
+add Persistence
+create IsVoronoiDistance isvd bool 0
+IsVoronoiDistance default 1
+add IsVoronoiDistance
+create VoronoiDisplacement vordisp float 0
+VoronoiDisplacement default 1
+add VoronoiDisplacement
+create TurbulencePower tpow float 0
+TurbulencePower default 1
+add TurbulencePower
+create TurbulenceRoughnesss trough int 0
+TurbulenceRoughnesss min 1
+TurbulenceRoughnesss max 30
+TurbulenceRoughnesss default 1
+add TurbulenceRoughnesss
+create WooodFrequency wfreq float 0
+WooodFrequency default 16
+add WooodFrequency
+create WooodScale wsc float 0
+WooodScale default 0.25
+add WooodScale
+create WooodBias wbi float 0
+WooodBias default 0.125
+add WooodBias
+create WooodGrain wgra float 0
+WooodGrain default 0.25
+add WooodGrain
+create WooodAngle wang 3float 0
+WooodAngle default 84 0 0
+add WooodAngle
+create Scale sc 3float 0
+Scale default 1 1 1
+add Scale
+create UniformScale uscl float 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 10
+add UniformScale
+create Offset of 3float 0
+Offset default 0 0 0
+add Offset
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects OutAttribute outDP
+affects PyroType outDP
+affects Radius outDP
+affects RadiusAttribute outDP
+affects TopRatio outDP
+affects UnderRatio outDP
+affects SideRatio outDP
+affects Position outDP
+affects inObject outDP
+affects inTargetDP outDP
+affects NoiseType outDP
+affects Seed outDP
+affects Amplitube outDP
+affects Frequency outDP
+affects Octave outDP
+affects Lacunarity outDP
+affects Persistence outDP
+affects IsVoronoiDistance outDP
+affects VoronoiDisplacement outDP
+affects TurbulencePower outDP
+affects TurbulenceRoughnesss outDP
+affects WooodFrequency outDP
+affects WooodScale outDP
+affects WooodBias outDP
+affects WooodGrain outDP
+affects WooodAngle outDP
+affects Scale outDP
+affects UniformScale outDP
+affects Offset outDP
+DPFastNoise
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+add inDD
+create NoiseType noty enum 4
+NoiseType field Value 0
+NoiseType field Value Fractal 1
+NoiseType field Gradient 2
+NoiseType field Gradient Fractal 3
+NoiseType field Simplex 4
+NoiseType field Simplex Fractal 5
+NoiseType field Cellular 6
+NoiseType field White Noise 7
+NoiseType field Cubic 8
+NoiseType field Cubic Fractal 9
+NoiseType keyable 1
+NoiseType storable 1
+add NoiseType
+create InterpType itpty enum 1
+InterpType field Linear 0
+InterpType field Hermite 1
+InterpType field Quintic 2
+InterpType keyable 1
+InterpType storable 1
+add InterpType
+create IsNoiseAttribute isnattr bool 0
+IsNoiseAttribute default 0
+add IsNoiseAttribute
+create UseSeedOffset unoff bool 0
+UseSeedOffset default 0
+add UseSeedOffset
+string.create
+create NoiseAttributeName nattrn string noiseval
+NoiseAttributeName connectable 0
+add NoiseAttributeName
+create DeformType defty enum 1
+DeformType field None 0
+DeformType field Vector 1
+DeformType field Attribute 2
+DeformType field Curve Normal 3
+DeformType field Mesh Normal 4
+DeformType keyable 1
+DeformType storable 1
+add DeformType
+create DeformVector defvec 3float 0
+DeformVector default 0 1 0
+add DeformVector
+string.create
+create VectorAttributeName vecattrn string N
+VectorAttributeName connectable 0
+add VectorAttributeName
+create Seed se int 0
+Seed min 0
+Seed default 1337
+add Seed
+create Amplitube amp float 0
+Amplitube default 1
+add Amplitube
+create Octave oct int 0
+Octave min 1
+Octave max 30
+Octave default 3
+add Octave
+create Frequency freq float 0
+Frequency min 0
+Frequency default 2
+add Frequency
+create Lacunarity lac float 0
+Lacunarity default 2
+add Lacunarity
+create Gain gn float 0
+Gain default 0.5
+add Gain
+create FractalType frcty enum 0
+FractalType field FBM 0
+FractalType field Billow 1
+FractalType field RigidMulti 2
+FractalType keyable 1
+FractalType storable 1
+add FractalType
+create CellularDistanceFunction celdistty enum 0
+CellularDistanceFunction field Euclidean 0
+CellularDistanceFunction field Manhattan 1
+CellularDistanceFunction field Natural 2
+CellularDistanceFunction keyable 1
+CellularDistanceFunction storable 1
+add CellularDistanceFunction
+create CellularReturnType celrtnty enum 0
+CellularReturnType field CellValue 0
+CellularReturnType field NoiseLookup 1
+CellularReturnType field Distance 2
+CellularReturnType field Distance2 3
+CellularReturnType field Distance2Add 4
+CellularReturnType field Distance2Sub 5
+CellularReturnType field Distance2Mul 6
+CellularReturnType field Distance2Div 7
+CellularReturnType keyable 1
+CellularReturnType storable 1
+add CellularReturnType
+create PositionWarpAmp poswpamp float 0
+PositionWarpAmp default 1
+add PositionWarpAmp
+create Scale sc 3float 0
+Scale default 1 1 1
+add Scale
+create UniformScale uscl float 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 10
+add UniformScale
+create Offset of 3float 0
+Offset default 0 0 0
+add Offset
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects NoiseType outDD
+affects InterpType outDD
+affects Seed outDD
+affects UseSeedOffset outDD
+affects IsNoiseAttribute outDD
+affects NoiseAttributeName outDD
+affects DeformType outDD
+affects DeformVector outDD
+affects VectorAttributeName outDD
+affects Amplitube outDD
+affects Octave outDD
+affects Frequency outDD
+affects Lacunarity outDD
+affects Gain outDD
+affects FractalType outDD
+affects CellularDistanceFunction outDD
+affects CellularReturnType outDD
+affects PositionWarpAmp outDD
+affects Scale outDD
+affects UniformScale outDD
+affects Offset outDD
+DCColor
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create AssigneType asgnty enum 0
+AssigneType field Primitive 0
+AssigneType field Point 1
+AssigneType keyable 1
+AssigneType storable 1
+add AssigneType
+create ColorType colt enum 0
+ColorType field Solid Color 0
+ColorType field Random Color 1
+ColorType field Ramp Color 2
+ColorType field Texture Color 3
+ColorType field Bounding Box 4
+ColorType field Expression 5
+ColorType field Palette Color 6
+ColorType keyable 1
+ColorType storable 1
+add ColorType
+string.create
+create ColorName coln string Cd
+ColorName connectable 0
+add ColorName
+string.create
+create UVAttrName uvn string uv
+UVAttrName connectable 0
+add UVAttrName
+create SolidColor scol color
+SolidColor connectable 0
+SolidColor default 1 1 1
+add SolidColor
+create RampColor rcol colorRamp
+add RampColor
+create TexColor tcol color
+TexColor default 1 1 1 1
+add TexColor
+create Seed se int 0
+Seed default 1
+Seed min 0
+Seed keyable 1
+Seed storable 1
+add Seed
+create MinRange mnr 3float 0
+MinRange keyable 1
+MinRange storable 1
+MinRange default 0 0 0
+add MinRange
+create MaxRange mxr 3float 0
+MaxRange keyable 1
+MaxRange storable 1
+MaxRange default 1 1 1
+add MaxRange
+create Is3DCalc i3d bool 0
+Is3DCalc default 0
+add Is3DCalc
+string.create
+create Expression expn string 
+Expression connectable 0
+add Expression
+create PaletteType plt enum 0
+PaletteType field Order 0
+PaletteType field Random 1
+PaletteType keyable 1
+PaletteType storable 1
+add PaletteType
+create PaletteColor plcol color
+PaletteColor connectable 0
+PaletteColor array 1
+PaletteColor default 1 1 1
+add PaletteColor
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects AssigneType outDC
+affects ColorType outDC
+affects ColorName outDC
+affects UVAttrName outDC
+affects SolidColor outDC
+affects TexColor outDC
+affects RampColor outDC
+affects Seed outDC
+affects MinRange outDC
+affects MaxRange outDC
+affects Is3DCalc outDC
+affects Expression outDC
+affects PaletteType outDC
+affects PaletteColor outDC
+DCNoise
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create NoiseType noty enum 0
+NoiseType field Random 0
+NoiseType field Perlin 1
+NoiseType field Billow 2
+NoiseType field Voronoi 3
+NoiseType field Turblance 4
+NoiseType field RidgedMulti 5
+NoiseType field Wood 6
+NoiseType keyable 1
+NoiseType storable 1
+add NoiseType
+create IsNoiseAttribute isnattr bool 0
+IsNoiseAttribute default 0
+add IsNoiseAttribute
+create UseSeedOffset unoff bool 0
+UseSeedOffset default 0
+add UseSeedOffset
+string.create
+create NoiseAttributeName nattrn string noiseval
+NoiseAttributeName connectable 0
+add NoiseAttributeName
+create DeformType defty enum 1
+DeformType field None 0
+DeformType field Vector 1
+DeformType field Attribute 2
+DeformType field Curve Normal 3
+DeformType keyable 1
+DeformType storable 1
+add DeformType
+create DeformVector defvec 3float 0
+DeformVector default 0 1 0
+add DeformVector
+string.create
+create VectorAttributeName vecattrn string N
+VectorAttributeName connectable 0
+add VectorAttributeName
+create NoiseCalcPosition ncalp enum 0
+NoiseCalcPosition field Point Position 0
+NoiseCalcPosition field Attribute Param 1
+NoiseCalcPosition keyable 1
+NoiseCalcPosition storable 1
+add NoiseCalcPosition
+string.create
+create PositionAttribute posattrn string param
+PositionAttribute connectable 0
+add PositionAttribute
+create Seed se int 0
+Seed min 0
+Seed default 0
+add Seed
+create Amplitube amp float 0
+Amplitube default 1
+add Amplitube
+create Octave oct int 0
+Octave min 1
+Octave max 30
+Octave default 6
+add Octave
+create Frequency freq float 0
+Frequency min 0
+Frequency default 2
+add Frequency
+create Lacunarity lac float 0
+Lacunarity default 2
+add Lacunarity
+create Persistence per float 0
+Persistence default 0.5
+add Persistence
+create IsVoronoiDistance isvd bool 0
+IsVoronoiDistance default 1
+add IsVoronoiDistance
+create VoronoiDisplacement vordisp float 0
+VoronoiDisplacement default 1
+add VoronoiDisplacement
+create TurbulencePower tpow float 0
+TurbulencePower default 1
+add TurbulencePower
+create TurbulenceRoughnesss trough int 0
+TurbulenceRoughnesss min 1
+TurbulenceRoughnesss max 30
+TurbulenceRoughnesss default 1
+add TurbulenceRoughnesss
+create WooodFrequency wfreq float 0
+WooodFrequency default 16
+add WooodFrequency
+create WooodScale wsc float 0
+WooodScale default 0.25
+add WooodScale
+create WooodBias wbi float 0
+WooodBias default 0.125
+add WooodBias
+create WooodGrain wgra float 0
+WooodGrain default 0.25
+add WooodGrain
+create WooodAngle wang 3float 0
+WooodAngle default 84 0 0
+add WooodAngle
+create Scale sc 3float 0
+Scale default 1 1 1
+add Scale
+create UniformScale uscl float 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 10
+add UniformScale
+create Offset of 3float 0
+Offset default 0 0 0
+add Offset
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects NoiseType outDC
+affects Seed outDC
+affects UseSeedOffset outDC
+affects IsNoiseAttribute outDC
+affects NoiseAttributeName outDC
+affects DeformType outDC
+affects DeformVector outDC
+affects VectorAttributeName outDC
+affects NoiseCalcPosition outDC
+affects PositionAttribute outDC
+affects Amplitube outDC
+affects Octave outDC
+affects Frequency outDC
+affects Lacunarity outDC
+affects Persistence outDC
+affects IsVoronoiDistance outDC
+affects VoronoiDisplacement outDC
+affects TurbulencePower outDC
+affects TurbulenceRoughnesss outDC
+affects WooodFrequency outDC
+affects WooodScale outDC
+affects WooodBias outDC
+affects WooodGrain outDC
+affects WooodAngle outDC
+affects Scale outDC
+affects UniformScale outDC
+affects Offset outDC

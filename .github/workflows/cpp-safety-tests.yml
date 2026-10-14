@@ -1,0 +1,53 @@
+name: Safety and publication tests
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  python-publication:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          # lib2to3 is used to validate the archived Maya 2019 / Python 2
+          # sources, so keep this source-only gate on a known-compatible host.
+          python-version: '3.12'
+      - name: Run Python and publication source checks
+        run: ./tests/check_publication_readiness.sh
+
+  sanitizers:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          # CTest also runs the archived Python source checks.
+          python-version: '3.12'
+      - name: Configure safety tests
+        env:
+          CXX: clang++
+        run: cmake -S . -B build -DCMAKE_BUILD_TYPE=Debug -DDOMMY_BUILD_TESTS=ON -DDOMMY_ENABLE_SANITIZERS=ON -DDOMMY_BUILD_PLUGIN=OFF
+      - name: Build safety tests
+        run: cmake --build build --parallel 2
+      - name: Run safety tests
+        working-directory: build
+        run: ctest --output-on-failure --parallel 2
+      - name: Run Clang static analysis
+        run: ./tests/run_clang_static_analysis.sh
+
+  legacy-dependency-api:
+    runs-on: macos-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+      - name: Fetch pinned legacy source releases
+        run: ./tools/fetch_legacy_dependency_sources.sh
+      - name: Check headers and representative APIs
+        run: ./tests/check_legacy_dependency_headers.sh

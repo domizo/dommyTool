@@ -1,0 +1,267 @@
+DMCopyTransform
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create Count cnt int 0
+Count default 10
+Count min 0
+Count softMax 50
+Count keyable 1
+Count storable 1
+add Count
+create Translate t 3double 0
+Translate default 0 0 0
+Translate keyable 1
+Translate storable 1
+add Translate
+create Rotate rot 3double 0
+Rotate default 0 0 0
+Rotate keyable 1
+Rotate storable 1
+add Rotate
+create Scale scl 3double 0
+Scale default 1 1 1
+Scale keyable 1
+Scale storable 1
+add Scale
+create Pivot pvt 3double 0
+Pivot default 0 0 0
+Pivot keyable 1
+Pivot storable 1
+add Pivot
+create UniformScale uscl double 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 10
+UniformScale keyable 1
+UniformScale storable 1
+add UniformScale
+create RotateOrder ro enum 0
+RotateOrder field xyz 0
+RotateOrder field yzx 1
+RotateOrder field zxy 2
+RotateOrder field xzy 3
+RotateOrder field yxz 4
+RotateOrder field zyx 5
+add RotateOrder
+create FreezeTransform frztrans bool 0
+FreezeTransform default 0
+FreezeTransform keyable 1
+FreezeTransform storable 1
+add FreezeTransform
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects Count outDM
+affects Translate outDM
+affects Rotate outDM
+affects Scale outDM
+affects UniformScale outDM
+affects RotateOrder outDM
+affects FreezeTransform outDM
+affects Pivot outDM
+DMWireGen
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create inTangentCurve intc generic
+inTangentCurve accepts curve
+inTangentCurve storable 0
+inTangentCurve writable 1
+inTangentCurve readable 0
+add inTangentCurve
+create ProfileMode prfm enum 0
+ProfileMode field Simple Circle 0
+ProfileMode field Input Profile 1
+ProfileMode keyable 1
+add ProfileMode
+create ProfileCurve pcrv generic
+ProfileCurve accepts curve
+ProfileCurve storable 0
+ProfileCurve writable 1
+ProfileCurve readable 0
+add ProfileCurve
+create CircleRadius cr double 0
+CircleRadius default 1
+CircleRadius min 0
+CircleRadius keyable 1
+add CircleRadius
+create CircleSampling cs int 0
+CircleSampling default 8
+CircleSampling min 3
+CircleSampling max 10000000
+CircleSampling keyable 1
+add CircleSampling
+create Sampling sa int 0
+Sampling default 8
+Sampling min 2
+Sampling max 10000000
+Sampling keyable 1
+add Sampling
+create CurveLength cl double 0
+CurveLength default 1
+CurveLength min 0
+CurveLength max 1
+CurveLength keyable 1
+add CurveLength
+create CurveOffset off double 0
+CurveOffset default 0
+CurveOffset keyable 1
+add CurveOffset
+create TangentMode tam enum 0
+TangentMode field From Curve 0
+TangentMode field Simple Vector 1
+TangentMode field input Curve 2
+TangentMode keyable 1
+add TangentMode
+create tangentVector tanvec 3double 0
+tangentVector default 0 1 0
+add tangentVector
+create TwistRamp twr ramp
+add TwistRamp
+create WidthRamp wir ramp
+add WidthRamp
+create GlobalRotate grot double 0
+GlobalRotate default 0
+add GlobalRotate
+create GlobalScale gscal double 0
+GlobalScale default 1
+add GlobalScale
+string default 
+create Expression expr string default
+Expression connectable 0
+add Expression
+create UVTranslate uvt 2double 0
+UVTranslate default 0 0
+add UVTranslate
+create UVScale uvs 2double 0
+UVScale default 1 1
+add UVScale
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDC outDM
+affects inTangentCurve outDM
+affects ProfileMode outDM
+affects ProfileCurve outDM
+affects CircleRadius outDM
+affects CircleSampling outDM
+affects Sampling outDM
+affects CurveLength outDM
+affects CurveOffset outDM
+affects TangentMode outDM
+affects tangentVector outDM
+affects TwistRamp outDM
+affects WidthRamp outDM
+affects GlobalScale outDM
+affects GlobalRotate outDM
+affects Expression outDM
+affects UVTranslate outDM
+affects UVScale outDM
+DPolyWire
+create inCurve inc generic
+inCurve accepts curve
+inCurve storable 0
+inCurve writable 1
+inCurve readable 0
+add inCurve
+create inTangentCurve intc generic
+inTangentCurve accepts curve
+inTangentCurve storable 0
+inTangentCurve writable 1
+inTangentCurve readable 0
+add inTangentCurve
+create profileMode prfm enum 0
+profileMode field Simple Circle 0
+profileMode field Input Profile 1
+profileMode keyable 1
+add profileMode
+create profileCurve pcrv generic
+profileCurve accepts curve
+profileCurve storable 0
+profileCurve writable 1
+profileCurve readable 0
+add profileCurve
+create circleRadius cr double 0
+circleRadius default 1
+circleRadius min 0
+circleRadius keyable 1
+add circleRadius
+create circleSampling cs int 0
+circleSampling default 8
+circleSampling min 3
+circleSampling max 10000000
+circleSampling keyable 1
+add circleSampling
+create sampling sa int 0
+sampling default 8
+sampling min 2
+sampling max 10000000
+sampling keyable 1
+add sampling
+create curveLength cl double 0
+curveLength default 1
+curveLength min 0
+curveLength max 1
+curveLength keyable 1
+add curveLength
+create curveOffset off double 0
+curveOffset default 0
+curveOffset keyable 1
+add curveOffset
+create tangentMode tam enum 0
+tangentMode field From Curve 0
+tangentMode field Simple Vector 1
+tangentMode field input Curve 2
+tangentMode keyable 1
+add tangentMode
+create tangentVector tanvec 3double 0
+tangentVector default 0 1 0
+add tangentVector
+create twistRamp twr ramp
+add twistRamp
+create widthRamp wir ramp
+add widthRamp
+create globalRotate grot double 0
+globalRotate default 0
+add globalRotate
+create globalScale gscal double 0
+globalScale default 1
+add globalScale
+string default 
+create Expression expr string default
+Expression connectable 0
+add Expression
+create UVTranslate uvt 2double 0
+UVTranslate default 0 0
+add UVTranslate
+create UVScale uvs 2double 0
+UVScale default 1 1
+add UVScale
+create outMesh om mesh null
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects inCurve outMesh
+affects inTangentCurve outMesh
+affects sampling outMesh
+affects profileMode outMesh
+affects profileCurve outMesh
+affects circleRadius outMesh
+affects circleSampling outMesh
+affects curveLength outMesh
+affects curveOffset outMesh
+affects tangentMode outMesh
+affects tangentVector outMesh
+affects twistRamp outMesh
+affects widthRamp outMesh
+affects globalRotate outMesh
+affects globalScale outMesh
+affects Expression outMesh
+affects UVTranslate outMesh
+affects UVScale outMesh

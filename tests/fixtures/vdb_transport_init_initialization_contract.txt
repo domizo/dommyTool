@@ -1,0 +1,172 @@
+DOpenVDBAdvect
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create VdbVelocityInput vdbvelinput geometry null
+VdbVelocityInput connectable 1
+add VdbVelocityInput
+string.create
+create VelocityGridNames vgrids string 
+VelocityGridNames connectable 0
+add VelocityGridNames
+create RespectGridClass regrcl bool 0
+RespectGridClass default 1
+add RespectGridClass
+create Timestep ts double 0.5
+Timestep softMin 0
+Timestep softMax 1
+add Timestep
+create Substeps sst int 1
+Substeps min 1
+Substeps softMin 1
+Substeps softMax 10
+add Substeps
+create AdvectionScheme adsc enum 0
+AdvectionScheme field Semi-Lagrangian 0
+AdvectionScheme field Mid-Point 1
+AdvectionScheme field 3rd order Runge-Kutta 2
+AdvectionScheme field 4th order Runge-Kutta 3
+AdvectionScheme field MacCormack 4
+AdvectionScheme field BFECC 5
+AdvectionScheme connectable 0
+add AdvectionScheme
+create LimiterScheme lisc enum 0
+LimiterScheme field No limiter 0
+LimiterScheme field Clamp to extrema 1
+LimiterScheme field Revert to 1st order 2
+LimiterScheme connectable 0
+add LimiterScheme
+create SpatialScheme spsc enum 1
+SpatialScheme field 1st-order biased gradient 0
+SpatialScheme field 5th-order HJ-WENO biased gradient 1
+SpatialScheme connectable 0
+add SpatialScheme
+create TemporalScheme tmpsc enum 1
+TemporalScheme field Forward Euler 0
+TemporalScheme field 2nd-order Runge-Kutta 1
+TemporalScheme field 3rd-order Runge-Kutta 2
+TemporalScheme connectable 0
+add TemporalScheme
+create RenormalizationSteps renost int 3
+RenormalizationSteps min 1
+RenormalizationSteps softMin 1
+RenormalizationSteps softMax 10
+add RenormalizationSteps
+create SpatialRenormalization sprenorm enum 1
+SpatialRenormalization field 1st-order biased gradient 0
+SpatialRenormalization field 5th-order HJ-WENO biased gradient 1
+SpatialRenormalization connectable 0
+add SpatialRenormalization
+create TemporalRenormalization rmprenorm enum 1
+TemporalRenormalization field Forward Euler 0
+TemporalRenormalization field 2nd-order Runge-Kutta 1
+TemporalRenormalization field 3rd-order Runge-Kutta 2
+TemporalRenormalization connectable 0
+add TemporalRenormalization
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects VdbVelocityInput VdbOutput
+affects VelocityGridNames VdbOutput
+affects RespectGridClass VdbOutput
+affects Timestep VdbOutput
+affects Substeps VdbOutput
+affects AdvectionScheme VdbOutput
+affects LimiterScheme VdbOutput
+affects SpatialScheme VdbOutput
+affects TemporalScheme VdbOutput
+affects RenormalizationSteps VdbOutput
+affects SpatialRenormalization VdbOutput
+affects TemporalRenormalization VdbOutput
+DOpenVDBMorphLevelSet
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create TargetVdbInput tvdbinput geometry null
+TargetVdbInput connectable 1
+add TargetVdbInput
+string.create
+create TargetVdbSelectedGridNames tgrids string *
+TargetVdbSelectedGridNames connectable 0
+add TargetVdbSelectedGridNames
+string.create
+create MaskName mname string *
+MaskName connectable 0
+add MaskName
+create InvertMask im bool 0
+InvertMask default 0
+add InvertMask
+create MinMask minmsk double 0
+MinMask softMin 0
+MinMask softMax 1
+add MinMask
+create MaxMask maxmsk double 1
+MaxMask softMin 0
+MaxMask softMax 1
+MaxMask default 1
+add MaxMask
+create MaskVdbInput maskvdb geometry null
+MaskVdbInput connectable 1
+add MaskVdbInput
+create Timestep ts double 0.5
+Timestep softMin 0
+Timestep softMax 1
+add Timestep
+create AdvectSpatial advspt enum 1
+AdvectSpatial field 1st-order biased gradient 0
+AdvectSpatial field 5th-order HJ-WENO biased gradient 1
+AdvectSpatial connectable 0
+add AdvectSpatial
+create AdvectTemporal advtmp enum 1
+AdvectTemporal field Forward Euler 0
+AdvectTemporal field 2nd-order Runge-Kutta 1
+AdvectTemporal field 3rd-order Runge-Kutta 2
+AdvectTemporal connectable 0
+add AdvectTemporal
+create Steps stp int 0
+Steps default 3
+Steps min 1
+Steps softMin 1
+Steps softMax 10
+add Steps
+create RenormSpatial renospt enum 1
+RenormSpatial field 1st-order biased gradient 0
+RenormSpatial field 5th-order HJ-WENO biased gradient 1
+RenormSpatial connectable 0
+add RenormSpatial
+create RenormTemporal renotmp enum 1
+RenormTemporal field Forward Euler 0
+RenormTemporal field 2nd-order Runge-Kutta 1
+RenormTemporal field 3rd-order Runge-Kutta 2
+RenormTemporal connectable 0
+add RenormTemporal
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects TargetVdbInput VdbOutput
+affects TargetVdbSelectedGridNames VdbOutput
+affects MaskName VdbOutput
+affects InvertMask VdbOutput
+affects MinMask VdbOutput
+affects MaxMask VdbOutput
+affects MaskVdbInput VdbOutput
+affects Timestep VdbOutput
+affects AdvectSpatial VdbOutput
+affects AdvectTemporal VdbOutput
+affects Steps VdbOutput
+affects RenormSpatial VdbOutput
+affects RenormTemporal VdbOutput

@@ -1,0 +1,195 @@
+DCStitch
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create Sampling smp int 0
+Sampling default 4
+Sampling min 0
+Sampling softMax 50
+Sampling keyable 1
+add Sampling
+create Range rng 2double 0
+Range default 0 1
+Range min 0
+Range max 1
+Range keyable 1
+add Range
+create Offset off double 0
+Offset default 0
+Offset softMin 0
+Offset softMax 10
+Offset keyable 1
+add Offset
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects Sampling outDC
+affects Range outDC
+affects Offset outDC
+DCExtend
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create DirectionType dirt enum 0
+DirectionType field Tangent 0
+DirectionType field Normal 1
+DirectionType keyable 1
+add DirectionType
+create StartLength slen double 0
+StartLength default 0
+StartLength min 0
+StartLength softMax 10
+StartLength keyable 1
+add StartLength
+create EndLength elen double 0
+EndLength default 0
+EndLength min 0
+EndLength softMax 10
+EndLength keyable 1
+add EndLength
+create StartInvert sinv bool 0
+StartInvert default 1
+StartInvert keyable 1
+add StartInvert
+create EndInvert einv bool 0
+EndInvert default 0
+EndInvert keyable 1
+add EndInvert
+create AnotherCurve acrv bool 0
+AnotherCurve default 0
+AnotherCurve keyable 1
+add AnotherCurve
+create IsDeleteOriginal isdelorg bool 0
+IsDeleteOriginal default 0
+IsDeleteOriginal keyable 1
+add IsDeleteOriginal
+create StartOffset soff double 0
+StartOffset default 0
+StartOffset softMin -10
+StartOffset softMax 10
+StartOffset keyable 1
+add StartOffset
+create EndOffset eoff double 0
+EndOffset default 0
+EndOffset softMin -10
+EndOffset softMax 10
+EndOffset keyable 1
+add EndOffset
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects DirectionType outDC
+affects StartLength outDC
+affects EndLength outDC
+affects StartInvert outDC
+affects EndInvert outDC
+affects AnotherCurve outDC
+affects IsDeleteOriginal outDC
+affects StartOffset outDC
+affects EndOffset outDC
+DCFillBetween
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create CurveCount crvcnt int 0
+CurveCount default 10
+CurveCount min 0
+CurveCount softMin 0
+CurveCount softMax 50
+CurveCount keyable 1
+add CurveCount
+create Sampling smp int 0
+Sampling default 10
+Sampling min 2
+Sampling softMin 2
+Sampling softMax 50
+Sampling keyable 1
+add Sampling
+string default 
+create ExportPrimitiveAttribute exprm string default
+ExportPrimitiveAttribute connectable 0
+add ExportPrimitiveAttribute
+string default 
+create ExportPointAttribute expt string default
+ExportPointAttribute connectable 0
+add ExportPointAttribute
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects CurveCount outDC
+affects Sampling outDC
+affects ExportPrimitiveAttribute outDC
+affects ExportPointAttribute outDC
+DCConnect
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create Distance dist double 0
+Distance default 0.001
+Distance keyable 1
+add Distance
+create IsAngleCheck isang bool 0
+IsAngleCheck default 0
+IsAngleCheck keyable 1
+add IsAngleCheck
+create Angle ang double 0
+Angle default 90
+Angle softMin 0
+Angle softMax 6.2830000000000004
+Angle keyable 1
+add Angle
+create Degree deg enum 1
+Degree field Linear 0
+Degree field Cubic 1
+Degree keyable 1
+add Degree
+create IsOpen isop enum 1
+IsOpen field Close 0
+IsOpen field Open 1
+IsOpen keyable 1
+add IsOpen
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects Distance outDC
+affects IsAngleCheck outDC
+affects Angle outDC
+affects Degree outDC
+affects IsOpen outDC
+DCReplace
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create TargetDC tdc geometry null
+TargetDC readable 0
+TargetDC storable 0
+add TargetDC
+string default src_path
+create Source srcnm string default
+Source connectable 0
+add Source
+string default restmat
+create RestMatrix rstmat string default
+RestMatrix connectable 0
+add RestMatrix
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects TargetDC outDC
+affects Source outDC
+affects RestMatrix outDC

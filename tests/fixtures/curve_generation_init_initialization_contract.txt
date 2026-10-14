@@ -1,0 +1,256 @@
+DCurveFromDP
+create inDP idp plugin 6291467 null
+inDP readable 0
+inDP storable 0
+add inDP
+string.create
+create aGroup grp string default
+aGroup connectable 0
+add aGroup
+create TargetDP tdp plugin 6291467 null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+create CreateType crt enum 0
+CreateType field All 0
+CreateType field Step 1
+CreateType field Ditance 2
+CreateType field Random 3
+CreateType field Target Object 4
+CreateType keyable 1
+CreateType storable 1
+add CreateType
+create IsClose icl bool 0
+IsClose default 0
+IsClose keyable 1
+IsClose storable 1
+add IsClose
+create DegreeType det enum 0
+DegreeType field Linear 0
+DegreeType field Cubic 1
+DegreeType keyable 1
+DegreeType storable 1
+add DegreeType
+create StepCount stc int 2
+StepCount min 2
+StepCount keyable 1
+StepCount storable 1
+add StepCount
+create SearchDistance sdi double 5
+SearchDistance min 0
+SearchDistance keyable 1
+SearchDistance storable 1
+add SearchDistance
+create SearchMaxCount sma int 0
+SearchMaxCount min 0
+SearchMaxCount keyable 1
+SearchMaxCount storable 1
+add SearchMaxCount
+create DistanceMethod dim enum 0
+DistanceMethod field All 0
+DistanceMethod field One 1
+DistanceMethod keyable 1
+DistanceMethod storable 1
+add DistanceMethod
+create Seed se int 1
+Seed min 1
+Seed keyable 1
+Seed storable 1
+add Seed
+create RandomMethod ram enum 0
+RandomMethod field All 0
+RandomMethod field Pair 1
+RandomMethod keyable 1
+RandomMethod storable 1
+add RandomMethod
+create outDC odc plugin 4206603 null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDP outDC
+affects aGroup outDC
+affects TargetDP outDC
+affects CreateType outDC
+affects DegreeType outDC
+affects IsClose outDC
+affects Seed outDC
+affects StepCount outDC
+affects SearchDistance outDC
+affects SearchMaxCount outDC
+affects DistanceMethod outDC
+affects RandomMethod outDC
+DCurveCircleGen
+create Radius rad double 5
+Radius softMin 0
+Radius softMax 10
+Radius keyable 1
+add Radius
+create Sampling smp int 8
+Sampling min 0
+Sampling softMax 60
+Sampling keyable 1
+add Sampling
+create StartAngle sang double 0
+StartAngle softMin -360
+StartAngle softMax 360
+StartAngle keyable 1
+add StartAngle
+create EndAngle eang double 360
+EndAngle softMin -360
+EndAngle softMax 360
+EndAngle keyable 1
+add EndAngle
+create OffsetAngle eoang double 0
+OffsetAngle softMin -360
+OffsetAngle softMax 360
+OffsetAngle keyable 1
+add OffsetAngle
+create IsOpen isopn bool 0
+IsOpen keyable 1
+add IsOpen
+create Degree deg enum 1
+Degree field Linear 0
+Degree field Cubic 1
+Degree keyable 1
+add Degree
+create IsMultiEndKnot ismltkt bool 1
+IsMultiEndKnot keyable 1
+add IsMultiEndKnot
+create outDC odc plugin 4206603 null
+outDC writable 0
+outDC storable 0
+add outDC
+affects Radius outDC
+affects Sampling outDC
+affects StartAngle outDC
+affects EndAngle outDC
+affects OffsetAngle outDC
+affects IsOpen outDC
+affects Degree outDC
+affects IsMultiEndKnot outDC
+DCurveFromSurface
+create inSurface ins generic
+inSurface accepts surface
+inSurface storable 0
+inSurface writable 1
+inSurface readable 0
+inSurface keyable 1
+add inSurface
+create numU nuu int 0
+numU default 4
+numU min 0
+numU keyable 1
+add numU
+create numV nuv int 0
+numV default 4
+numV min 0
+numV keyable 1
+add numV
+create sampling smp int 0
+sampling default 8
+sampling min 2
+sampling keyable 1
+add sampling
+create offsetU ofu float 0
+offsetU default 0
+offsetU keyable 1
+add offsetU
+create offsetV ofv float 0
+offsetV default 0
+offsetV keyable 1
+add offsetV
+create lengthU lenu float 0
+lengthU default 1
+lengthU softMin 0
+lengthU softMax 1
+lengthU keyable 1
+add lengthU
+create lengthV lenv float 0
+lengthV default 1
+lengthV softMin 0
+lengthV softMax 1
+lengthV keyable 1
+add lengthV
+create isClampU iscu bool 0
+isClampU default 1
+isClampU keyable 1
+add isClampU
+create isClampV iscv bool 0
+isClampV default 1
+isClampV keyable 1
+add isClampV
+create IsOpenU isopu enum 1
+IsOpenU field Close 0
+IsOpenU field Open 1
+IsOpenU keyable 1
+add IsOpenU
+create IsOpenV isopv enum 1
+IsOpenV field Close 0
+IsOpenV field Open 1
+IsOpenV keyable 1
+add IsOpenV
+create outDC odc plugin 4206603 null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inSurface outDC
+affects numU outDC
+affects numV outDC
+affects sampling outDC
+affects offsetU outDC
+affects offsetV outDC
+affects lengthU outDC
+affects lengthV outDC
+affects isClampU outDC
+affects isClampV outDC
+affects IsOpenU outDC
+affects IsOpenV outDC
+DCurveClothFromSurface
+create inSurface ins generic
+inSurface accepts surface
+inSurface storable 0
+inSurface writable 1
+inSurface readable 0
+add inSurface
+create samplingU su int 4
+samplingU min 1
+samplingU max 9999998
+samplingU keyable 1
+add samplingU
+create samplingV sv int 4
+samplingV min 1
+samplingV max 9999998
+samplingV keyable 1
+add samplingV
+create waveHeight wh float 0.019999999552965164
+waveHeight softMin 0
+waveHeight softMax 1
+waveHeight keyable 1
+add waveHeight
+create AddBiasPoint adbapt bool 0
+AddBiasPoint keyable 1
+add AddBiasPoint
+create WaveWidthBias wvb float 0.5
+WaveWidthBias min 0
+WaveWidthBias max 1
+WaveWidthBias keyable 1
+add WaveWidthBias
+create AddNormalAttribute adnattr bool 0
+AddNormalAttribute keyable 1
+add AddNormalAttribute
+string.create
+create NormalAttributeName nattr string default
+NormalAttributeName connectable 0
+add NormalAttributeName
+create outDC odc plugin 4206603 null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inSurface outDC
+affects samplingU outDC
+affects samplingV outDC
+affects waveHeight outDC
+affects AddBiasPoint outDC
+affects WaveWidthBias outDC
+affects AddNormalAttribute outDC
+affects NormalAttributeName outDC

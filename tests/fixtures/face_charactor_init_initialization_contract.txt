@@ -1,0 +1,69 @@
+DPolyFaceInfo
+create inMesh im mesh null
+inMesh storable 0
+inMesh readable 0
+inMesh writable 1
+add inMesh
+create faceIndex fidx int 0
+faceIndex min 0
+faceIndex storable 1
+faceIndex keyable 1
+add faceIndex
+create outTranslate otrans 3double 0
+outTranslate default 0 0 0
+outTranslate readable 1
+outTranslate writable 0
+outTranslate storable 0
+add outTranslate
+create outRotate orot 3double 0
+outRotate default 0 0 0
+outRotate readable 1
+outRotate writable 0
+outRotate storable 0
+add outRotate
+affects inMesh outTranslate
+affects faceIndex outTranslate
+affects inMesh outRotate
+affects faceIndex outRotate
+DMCharactor
+create inDM idm mesh null
+inDM readable 0
+inDM storable 0
+add inDM
+create AddCenter adcntattr bool 0
+AddCenter keyable 1
+add AddCenter
+string.default center
+create CenterAttributeName antattrnm string center
+CenterAttributeName connectable 0
+add CenterAttributeName
+create AddCurvature adcrvattr bool 0
+AddCurvature keyable 1
+add AddCurvature
+string.default curvature
+create CurvatureAttributeName crvattrnm string curvature
+CurvatureAttributeName connectable 0
+add CurvatureAttributeName
+create ColorMap cm colorRamp
+add ColorMap
+create SmoothIterate sit int 0
+SmoothIterate min 0
+SmoothIterate softMax 5
+add SmoothIterate
+create CurvatureOutputType crvot enum 0
+CurvatureOutputType field Color Map 0
+CurvatureOutputType field Raw Value 1
+CurvatureOutputType keyable 1
+add CurvatureOutputType
+create outDM odm mesh null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects AddCenter outDM
+affects CenterAttributeName outDM
+affects AddCurvature outDM
+affects CurvatureAttributeName outDM
+affects ColorMap outDM
+affects SmoothIterate outDM
+affects CurvatureOutputType outDM

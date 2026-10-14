@@ -1,0 +1,400 @@
+DPAnimMatrix
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+string default amat
+create AnimAttributeName aniattr string default
+AnimAttributeName connectable 0
+add AnimAttributeName
+create animationMatrix amat matrix double
+animationMatrix writable 1
+animationMatrix readable 0
+add animationMatrix
+create globalOffset gof double 0
+globalOffset keyable 1
+globalOffset storable 1
+add globalOffset
+create OffsetType offt enum 0
+OffsetType field None 0
+OffsetType field From Attribute 1
+OffsetType field Input Data 2
+OffsetType keyable 1
+add OffsetType
+string default offset
+create OffsetAttribute offattr string default
+OffsetAttribute connectable 0
+add OffsetAttribute
+create InOffsetArray inoff generic
+InOffsetArray accepts floatArray
+InOffsetArray storable 0
+InOffsetArray writable 1
+InOffsetArray readable 0
+add InOffsetArray
+create StretchType strt enum 0
+StretchType field None 0
+StretchType field From Attribute 1
+StretchType field Input Data 2
+StretchType keyable 1
+add StretchType
+string default stretch
+create StretchAttribute strattr string default
+StretchAttribute connectable 0
+add StretchAttribute
+create InStretchArray instr generic
+InStretchArray accepts floatArray
+InStretchArray storable 0
+InStretchArray writable 1
+InStretchArray readable 0
+add InStretchArray
+create CurrentTime ctm time 0
+add CurrentTime
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects AnimAttributeName outDP
+affects animationMatrix outDP
+affects globalOffset outDP
+affects OffsetType outDP
+affects OffsetAttribute outDP
+affects InOffsetArray outDP
+affects StretchType outDP
+affects StretchAttribute outDP
+affects InStretchArray outDP
+affects CurrentTime outDP
+DPSignal
+create DefaultValue dval double 0
+DefaultValue default 0
+DefaultValue softMin -10
+DefaultValue softMax 10
+DefaultValue keyable 1
+DefaultValue storable 1
+add DefaultValue
+create ValueRamp vramp ramp
+add ValueRamp
+create RampValueRange ravr 2double 0
+RampValueRange keyable 1
+RampValueRange storable 1
+RampValueRange default 0 1
+add RampValueRange
+create TimeRange tr 2double 0
+TimeRange keyable 1
+TimeRange storable 1
+TimeRange default 0 24
+add TimeRange
+create Strength strng double 0
+Strength default 1
+Strength softMin 0
+Strength softMax 10
+Strength keyable 1
+Strength storable 1
+add Strength
+create PlayMode plm enum 1
+PlayMode field Onece 0
+PlayMode field Loop 1
+PlayMode keyable 1
+PlayMode storable 1
+add PlayMode
+create LoopValueMode lvm enum 0
+LoopValueMode field Reset 0
+LoopValueMode field Add 1
+LoopValueMode keyable 1
+LoopValueMode storable 1
+add LoopValueMode
+create TimeScale tms double 0
+TimeScale default 1
+TimeScale keyable 1
+TimeScale storable 1
+add TimeScale
+create CurrentTime ctm time 0
+add CurrentTime
+create UseNoise usno bool 0
+UseNoise default 0
+UseNoise keyable 1
+UseNoise storable 1
+add UseNoise
+create MethodNoise mtno enum 0
+MethodNoise field Add 0
+MethodNoise field Multiply 1
+MethodNoise keyable 1
+MethodNoise storable 1
+add MethodNoise
+create Seed se int 0
+Seed min 0
+Seed default 0
+add Seed
+create Amplitude amp double 0
+Amplitude default 1
+add Amplitude
+create Octave oct int 0
+Octave min 1
+Octave max 30
+Octave default 6
+add Octave
+create Frequency freq double 0
+Frequency min 0
+Frequency default 2
+add Frequency
+create Lacunarity lac double 0
+Lacunarity default 2
+add Lacunarity
+create Persistence per double 0
+Persistence default 0.5
+add Persistence
+create IsAbsolute isabs bool 0
+IsAbsolute default 0
+add IsAbsolute
+create UseTrigonometry ustrig bool 0
+UseTrigonometry default 0
+add UseTrigonometry
+create TrigonometryFunction trifunc enum 0
+TrigonometryFunction field Sine 0
+TrigonometryFunction field Cosine 1
+TrigonometryFunction field Tangent 2
+TrigonometryFunction keyable 1
+TrigonometryFunction storable 1
+add TrigonometryFunction
+create TrigonometryMethod trimth enum 0
+TrigonometryMethod field Add 0
+TrigonometryMethod field Multiply 1
+TrigonometryMethod keyable 1
+TrigonometryMethod storable 1
+add TrigonometryMethod
+create TrigonometryAmplitude triamp double 0
+TrigonometryAmplitude default 1
+add TrigonometryAmplitude
+create TrigonometryFrequency trifreq double 0
+TrigonometryFrequency default 1
+add TrigonometryFrequency
+create TrigonometryOffset trioff double 0
+TrigonometryOffset default 0
+add TrigonometryOffset
+create TrigonometryAbsolute triabs bool 0
+TrigonometryAbsolute default 0
+add TrigonometryAbsolute
+create OutValue oval double 0
+OutValue writable 0
+OutValue storable 0
+add OutValue
+affects DefaultValue OutValue
+affects ValueRamp OutValue
+affects RampValueRange OutValue
+affects TimeRange OutValue
+affects Strength OutValue
+affects PlayMode OutValue
+affects LoopValueMode OutValue
+affects TimeScale OutValue
+affects CurrentTime OutValue
+affects UseNoise OutValue
+affects MethodNoise OutValue
+affects Seed OutValue
+affects Amplitude OutValue
+affects Frequency OutValue
+affects Octave OutValue
+affects Lacunarity OutValue
+affects Persistence OutValue
+affects UseTrigonometry OutValue
+affects TrigonometryFunction OutValue
+affects TrigonometryMethod OutValue
+affects TrigonometryAmplitude OutValue
+affects TrigonometryFrequency OutValue
+affects TrigonometryOffset OutValue
+affects TrigonometryAbsolute OutValue
+affects IsAbsolute OutValue
+DPSignal3D
+create DefaultValue dval 3double 0
+DefaultValue default 0 0 0
+DefaultValue keyable 1
+DefaultValue storable 1
+add DefaultValue
+create ValueRampX vrampx ramp
+add ValueRampX
+create ValueRampY vrampy ramp
+add ValueRampY
+create ValueRampZ vrampz ramp
+add ValueRampZ
+create RampValueRange ravr 2double 0
+RampValueRange keyable 1
+RampValueRange storable 1
+RampValueRange default 0 1
+add RampValueRange
+create TimeRange tr 2double 0
+TimeRange keyable 1
+TimeRange storable 1
+TimeRange default 0 24
+add TimeRange
+create Strength strng 3double 0
+Strength default 1 1 1
+Strength keyable 1
+Strength storable 1
+add Strength
+create UniformStrength unistrng double 0
+UniformStrength default 1
+UniformStrength softMin 0
+UniformStrength softMax 10
+UniformStrength keyable 1
+UniformStrength storable 1
+add UniformStrength
+create PlayMode plm enum 1
+PlayMode field Onece 0
+PlayMode field Loop 1
+PlayMode keyable 1
+PlayMode storable 1
+add PlayMode
+create LoopValueMode lvm enum 0
+LoopValueMode field Reset 0
+LoopValueMode field Add 1
+LoopValueMode keyable 1
+LoopValueMode storable 1
+add LoopValueMode
+create TimeScale tms double 0
+TimeScale default 1
+TimeScale keyable 1
+TimeScale storable 1
+add TimeScale
+create CurrentTime ctm time 0
+add CurrentTime
+create UseNoise usno bool 0
+UseNoise default 0
+UseNoise keyable 1
+UseNoise storable 1
+add UseNoise
+create MethodNoise mtno enum 0
+MethodNoise field Add 0
+MethodNoise field Multiply 1
+MethodNoise keyable 1
+MethodNoise storable 1
+add MethodNoise
+create Seed se int 0
+Seed min 0
+Seed default 0
+add Seed
+create Amplitude amp 3double 0
+Amplitude default 1 1 1
+add Amplitude
+create Octave oct int 0
+Octave min 1
+Octave max 30
+Octave default 6
+add Octave
+create Frequency freq double 0
+Frequency min 0
+Frequency default 2
+add Frequency
+create Lacunarity lac double 0
+Lacunarity default 2
+add Lacunarity
+create Persistence per double 0
+Persistence default 0.5
+add Persistence
+create IsAbsoluteX isabsx bool 0
+IsAbsoluteX default 0
+add IsAbsoluteX
+create IsAbsoluteY isabsy bool 0
+IsAbsoluteY default 0
+add IsAbsoluteY
+create IsAbsoluteZ isabsz bool 0
+IsAbsoluteZ default 0
+add IsAbsoluteZ
+create UseTrigonometry ustrig bool 0
+UseTrigonometry default 0
+add UseTrigonometry
+create TrigonometryFunctionX trifuncx enum 0
+TrigonometryFunctionX field Sine 0
+TrigonometryFunctionX field Cosine 1
+TrigonometryFunctionX field Tangent 2
+TrigonometryFunctionX keyable 1
+TrigonometryFunctionX storable 1
+add TrigonometryFunctionX
+create TrigonometryFunctionY trifuncy enum 0
+TrigonometryFunctionY field Sine 0
+TrigonometryFunctionY field Cosine 1
+TrigonometryFunctionY field Tangent 2
+TrigonometryFunctionY keyable 1
+TrigonometryFunctionY storable 1
+add TrigonometryFunctionY
+create TrigonometryFunctionZ trifuncz enum 0
+TrigonometryFunctionZ field Sine 0
+TrigonometryFunctionZ field Cosine 1
+TrigonometryFunctionZ field Tangent 2
+TrigonometryFunctionZ keyable 1
+TrigonometryFunctionZ storable 1
+add TrigonometryFunctionZ
+create TrigonometryMethodX trimthx enum 0
+TrigonometryMethodX field Add 0
+TrigonometryMethodX field Multiply 1
+TrigonometryMethodX keyable 1
+TrigonometryMethodX storable 1
+add TrigonometryMethodX
+create TrigonometryMethodY trimthy enum 0
+TrigonometryMethodY field Add 0
+TrigonometryMethodY field Multiply 1
+TrigonometryMethodY keyable 1
+TrigonometryMethodY storable 1
+add TrigonometryMethodY
+create TrigonometryMethodZ trimthz enum 0
+TrigonometryMethodZ field Add 0
+TrigonometryMethodZ field Multiply 1
+TrigonometryMethodZ keyable 1
+TrigonometryMethodZ storable 1
+add TrigonometryMethodZ
+create TrigonometryAmplitude triamp 3double 0
+TrigonometryAmplitude default 1 1 1
+add TrigonometryAmplitude
+create TrigonometryFrequency trifreq 3double 0
+TrigonometryFrequency default 1 1 1
+add TrigonometryFrequency
+create TrigonometryOffset trioff 3double 0
+TrigonometryOffset default 0 0 0
+add TrigonometryOffset
+create TrigonometryAbsoluteX triabsx bool 0
+TrigonometryAbsoluteX default 0
+add TrigonometryAbsoluteX
+create TrigonometryAbsoluteY triabsy bool 0
+TrigonometryAbsoluteY default 0
+add TrigonometryAbsoluteY
+create TrigonometryAbsoluteZ triabsz bool 0
+TrigonometryAbsoluteZ default 0
+add TrigonometryAbsoluteZ
+create OutValue oval 3double 0
+OutValue writable 0
+OutValue storable 0
+add OutValue
+affects DefaultValue OutValue
+affects ValueRampX OutValue
+affects ValueRampY OutValue
+affects ValueRampZ OutValue
+affects RampValueRange OutValue
+affects TimeRange OutValue
+affects Strength OutValue
+affects UniformStrength OutValue
+affects PlayMode OutValue
+affects LoopValueMode OutValue
+affects TimeScale OutValue
+affects CurrentTime OutValue
+affects UseNoise OutValue
+affects MethodNoise OutValue
+affects Seed OutValue
+affects Amplitude OutValue
+affects Frequency OutValue
+affects Octave OutValue
+affects Lacunarity OutValue
+affects Persistence OutValue
+affects IsAbsoluteX OutValue
+affects IsAbsoluteY OutValue
+affects IsAbsoluteZ OutValue
+affects UseTrigonometry OutValue
+affects TrigonometryFunctionX OutValue
+affects TrigonometryFunctionY OutValue
+affects TrigonometryFunctionZ OutValue
+affects TrigonometryMethodX OutValue
+affects TrigonometryMethodY OutValue
+affects TrigonometryMethodZ OutValue
+affects TrigonometryAmplitude OutValue
+affects TrigonometryFrequency OutValue
+affects TrigonometryOffset OutValue
+affects TrigonometryAbsoluteX OutValue
+affects TrigonometryAbsoluteY OutValue
+affects TrigonometryAbsoluteZ OutValue

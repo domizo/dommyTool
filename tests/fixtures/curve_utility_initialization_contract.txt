@@ -1,0 +1,227 @@
+DCReform
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create Length len float 0
+Length default 1
+Length min 0
+Length softMin 0
+Length softMax 1
+Length keyable 1
+add Length
+create Sampling smp int 0
+Sampling default 8
+Sampling min 4
+Sampling max 1000000
+Sampling keyable 1
+add Sampling
+create Offset off float 0
+Offset default 0
+Offset keyable 1
+add Offset
+create isClamp iscmp bool 0
+isClamp default 0
+isClamp keyable 1
+add isClamp
+string default 
+create LengthAttributeName lenattr string default
+LengthAttributeName connectable 0
+add LengthAttributeName
+string default 
+create OffsetAttributeName offattr string default
+OffsetAttributeName connectable 0
+add OffsetAttributeName
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects Length outDC
+affects Sampling outDC
+affects Offset outDC
+affects isClamp outDC
+affects LengthAttributeName outDC
+affects OffsetAttributeName outDC
+DCResample
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create SampleType sty enum 1
+SampleType field Length (Maya Internal) 0
+SampleType field Num Span (Maya Internal) 1
+SampleType field Step Length(Point to Point) 2
+SampleType keyable 1
+add SampleType
+create Length len double 0
+Length default 1
+Length min 0.01
+Length softMin 0.01
+Length softMax 20
+Length keyable 1
+add Length
+create NumSpan nums int 0
+NumSpan default 10
+NumSpan min 0
+NumSpan max 1000000
+NumSpan softMin 0
+NumSpan softMax 50
+NumSpan keyable 1
+add NumSpan
+create Degree deg enum 1
+Degree field Linear 0
+Degree field Cubic 1
+Degree keyable 1
+add Degree
+create KeepRange kprng enum 1
+KeepRange field 0 to 1 0
+KeepRange field keep 1
+KeepRange field 0 to span 2
+KeepRange keyable 1
+add KeepRange
+create EndKnots ek enum 0
+EndKnots field uniform end knots 0
+EndKnots field multiple end knots 1
+EndKnots keyable 1
+add EndKnots
+create KeepEndPoints kep bool 0
+KeepEndPoints default 1
+KeepEndPoints keyable 1
+add KeepEndPoints
+create KeepTangents ket bool 0
+KeepTangents default 1
+KeepTangents keyable 1
+add KeepTangents
+create KeepCV kecv bool 0
+KeepCV default 0
+KeepCV keyable 1
+add KeepCV
+create Tolerance tol double 0
+Tolerance default 0.0099999997764825821
+Tolerance keyable 1
+add Tolerance
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects SampleType outDC
+affects Length outDC
+affects NumSpan outDC
+affects Degree outDC
+affects KeepRange outDC
+affects EndKnots outDC
+affects KeepEndPoints outDC
+affects KeepTangents outDC
+affects KeepCV outDC
+affects Tolerance outDC
+DCCharactor
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create AddLengthAttribute adlenattr bool 0
+AddLengthAttribute default 0
+AddLengthAttribute keyable 1
+add AddLengthAttribute
+string default len
+create LengthAttributeName lenattrnm string default
+LengthAttributeName connectable 0
+add LengthAttributeName
+create AddWidthAttribute adwattr bool 0
+AddWidthAttribute default 0
+AddWidthAttribute keyable 1
+add AddWidthAttribute
+string default width
+create WidthAttributeName wattrnm string default
+WidthAttributeName connectable 0
+add WidthAttributeName
+create WidthType wty enum 0
+WidthType field Base and Tip 0
+WidthType field Ramp 1
+WidthType keyable 1
+add WidthType
+create BaseWidth bw double 0
+BaseWidth default 0.050000000000000003
+BaseWidth min 0
+BaseWidth softMin 0
+BaseWidth softMax 1
+BaseWidth keyable 1
+add BaseWidth
+create TipWidth tw double 0
+TipWidth default 0.01
+TipWidth min 0
+TipWidth softMin 0
+TipWidth softMax 1
+TipWidth keyable 1
+add TipWidth
+create WidthRamp wrmp ramp
+add WidthRamp
+create IsRandom isrnd bool 0
+IsRandom default 0
+IsRandom keyable 1
+add IsRandom
+create Seed se int 0
+Seed default 1
+Seed min 1
+Seed softMin 1
+Seed softMax 100
+Seed keyable 1
+add Seed
+create WidthRange wrng 2double 0
+WidthRange default 0 0.10000000000000001
+WidthRange min 0
+WidthRange softMin 0
+WidthRange softMax 1
+WidthRange keyable 1
+add WidthRange
+create WidthScale wscl double 0
+WidthScale default 1
+WidthScale softMin 0
+WidthScale softMax 5
+WidthScale keyable 1
+add WidthScale
+create AddParamAttribute adprmattr bool 0
+AddParamAttribute default 0
+AddParamAttribute keyable 1
+add AddParamAttribute
+string default param
+create ParamAttributeName prattrnm string default
+ParamAttributeName connectable 0
+add ParamAttributeName
+create IsNormalizedParam isnrp bool 0
+IsNormalizedParam default 1
+IsNormalizedParam keyable 1
+add IsNormalizedParam
+create IsChangeKnot ischk bool 0
+IsChangeKnot default 0
+IsChangeKnot keyable 1
+add IsChangeKnot
+create KnotType knty enum 0
+KnotType field Linear Step 0
+KnotType field Multi End Knot 1
+KnotType keyable 1
+add KnotType
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects AddLengthAttribute outDC
+affects LengthAttributeName outDC
+affects AddWidthAttribute outDC
+affects WidthAttributeName outDC
+affects WidthType outDC
+affects BaseWidth outDC
+affects TipWidth outDC
+affects WidthRamp outDC
+affects IsRandom outDC
+affects Seed outDC
+affects WidthRange outDC
+affects WidthScale outDC
+affects AddParamAttribute outDC
+affects ParamAttributeName outDC
+affects IsNormalizedParam outDC
+affects IsChangeKnot outDC
+affects KnotType outDC

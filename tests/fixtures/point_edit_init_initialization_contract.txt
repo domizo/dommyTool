@@ -1,0 +1,120 @@
+DPDelete
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+string.create
+create DeleteGroups delgrpn string 
+DeleteGroups connectable 0
+add DeleteGroups
+string.create
+create DeleteNumber delnum string 
+DeleteNumber connectable 0
+add DeleteNumber
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects DeleteGroups outDP
+affects DeleteNumber outDP
+DPSort
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create SortType sot enum 0
+SortType field No Change 0
+SortType field By X 1
+SortType field By Y 2
+SortType field By Z 3
+SortType field Reverse 4
+SortType field Random 5
+SortType field Shift 6
+SortType field Proximity to Point 7
+SortType field Along Vector 8
+SortType field By Attribute 9
+SortType keyable 1
+SortType storable 1
+add SortType
+create IsReverse rev bool 0
+IsReverse default 0
+add IsReverse
+create Seed se int 0
+Seed default 0
+Seed min 0
+Seed keyable 1
+Seed storable 1
+add Seed
+create Offset off int 0
+Offset keyable 1
+Offset storable 1
+Offset default 0
+add Offset
+create TargetPoint tp 3double 0
+TargetPoint keyable 1
+TargetPoint storable 1
+TargetPoint default 0 0 0
+add TargetPoint
+create AlongVector av 3double 0
+AlongVector keyable 1
+AlongVector storable 1
+AlongVector default 0 0 0
+add AlongVector
+string.create
+create AttributeName attrn string 
+AttributeName connectable 0
+add AttributeName
+create AttrComponent acm int 0
+AttrComponent default 0
+AttrComponent max 2
+AttrComponent min 0
+AttrComponent keyable 1
+AttrComponent storable 1
+AttrComponent default 0
+add AttrComponent
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects SortType outDP
+affects IsReverse outDP
+affects Seed outDP
+affects Offset outDP
+affects TargetPoint outDP
+affects AlongVector outDP
+affects AttributeName outDP
+affects AttrComponent outDP
+DPSmooth
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create Radius rad float 1.5
+Radius min 0
+Radius keyable 1
+add Radius
+create MaxEffectiveRadius mer float 0.5
+MaxEffectiveRadius min 0.10000000000000001
+MaxEffectiveRadius keyable 1
+add MaxEffectiveRadius
+create Iteration itr int 0
+Iteration softMin 0
+Iteration min 0
+Iteration softMax 10
+Iteration default 4
+add Iteration
+create ExpandBound exbnd float 0.5
+ExpandBound min 0
+ExpandBound keyable 1
+add ExpandBound
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects Radius outDP
+affects MaxEffectiveRadius outDP
+affects Iteration outDP
+affects ExpandBound outDP

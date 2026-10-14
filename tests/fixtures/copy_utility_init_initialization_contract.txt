@@ -1,0 +1,126 @@
+DPDuplicator
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects TargetDP outDP
+DPCopyTransform
+create inDD idd generic
+inDD accepts geometry
+inDD accepts geometry
+inDD accepts geometry
+inDD readable 0
+inDD storable 0
+add inDD
+create Count cnt int 0
+Count default 10
+Count min 0
+Count softMax 50
+Count keyable 1
+Count storable 1
+add Count
+create Translate t 3double 0
+Translate default 0 0 0
+Translate keyable 1
+Translate storable 1
+add Translate
+create Rotate rot 3double 0
+Rotate default 0 0 0
+Rotate keyable 1
+Rotate storable 1
+add Rotate
+create Scale scl 3double 0
+Scale default 1 1 1
+Scale keyable 1
+Scale storable 1
+add Scale
+create Pivot pvt 3double 0
+Pivot default 0 0 0
+Pivot keyable 1
+Pivot storable 1
+add Pivot
+create UniformScale uscl double 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 10
+UniformScale keyable 1
+UniformScale storable 1
+add UniformScale
+create RotateOrder ro enum 0
+RotateOrder field xyz 0
+RotateOrder field yzx 1
+RotateOrder field zxy 2
+RotateOrder field xzy 3
+RotateOrder field yxz 4
+RotateOrder field zyx 5
+add RotateOrder
+create FreezeTransform frztrans bool 0
+FreezeTransform default 0
+FreezeTransform keyable 1
+FreezeTransform storable 1
+add FreezeTransform
+create outDD odd generic
+outDD accepts geometry
+outDD accepts geometry
+outDD accepts geometry
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects Count outDD
+affects Translate outDD
+affects Rotate outDD
+affects Scale outDD
+affects UniformScale outDD
+affects RotateOrder outDD
+affects FreezeTransform outDD
+affects Pivot outDD
+DPBlend
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+create Blend bl float 0
+Blend softMin 0
+Blend softMax 1
+Blend default 0
+add Blend
+string.create
+create BlendAttribute wattr string weight
+BlendAttribute connectable 0
+add BlendAttribute
+create BlendArray blar compound
+BlendArray child TargetDP
+BlendArray child Blend
+BlendArray child BlendAttribute
+BlendArray array 1
+BlendArray arrayBuilder 1
+BlendArray writable 1
+add BlendArray
+create Weight w float 0
+Weight softMin 0
+Weight softMax 1
+Weight default 1
+add Weight
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects Blend outDP
+affects TargetDP outDP
+affects BlendArray outDP
+affects Weight outDP

@@ -1,0 +1,50 @@
+DOpenVDBVectorMerge
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create XGroup xgrp string @name=*.x
+XGroup connectable 1
+add XGroup
+string.create
+create YGroup ygrp string @name=*.y
+YGroup connectable 1
+add YGroup
+string.create
+create ZGroup zgrp string @name=*.z
+ZGroup connectable 1
+add ZGroup
+create UseXName uxnm bool 0
+UseXName default 1
+add UseXName
+string.create
+create MergedName mrgnm string merged#
+MergedName connectable 1
+add MergedName
+create VectorType vecty enum 0
+VectorType field enum_0 0
+VectorType field enum_1 1
+VectorType field enum_2 2
+VectorType field enum_3 3
+VectorType field enum_4 4
+VectorType connectable 0
+add VectorType
+create RemoveSource rmsrc bool 0
+RemoveSource default 1
+add RemoveSource
+create CopyInactiveValue cpiactval bool 0
+CopyInactiveValue default 0
+add CopyInactiveValue
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects XGroup VdbOutput
+affects YGroup VdbOutput
+affects ZGroup VdbOutput
+affects UseXName VdbOutput
+affects MergedName VdbOutput
+affects VectorType VdbOutput
+affects RemoveSource VdbOutput
+affects CopyInactiveValue VdbOutput

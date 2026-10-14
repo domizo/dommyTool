@@ -1,0 +1,70 @@
+DOpenVDBPrune
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create Mode md enum 0
+Mode field Value 0
+Mode field Inactive 1
+Mode field Level Set 2
+Mode connectable 0
+add Mode
+create Tolerance tol double 0
+Tolerance min 0
+Tolerance max 1
+Tolerance default 0
+add Tolerance
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects Mode VdbOutput
+affects Tolerance VdbOutput
+DOpenVDBRemap
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create BelowMinimum blwmin enum 0
+BelowMinimum field Clamp 0
+BelowMinimum field Preserve 1
+BelowMinimum field Extrapolate 2
+BelowMinimum connectable 0
+add BelowMinimum
+create AboveMaximum abvmax enum 0
+AboveMaximum field Clamp 0
+AboveMaximum field Preserve 1
+AboveMaximum field Extrapolate 2
+AboveMaximum connectable 0
+add AboveMaximum
+create InputRange inrng 2float 0
+InputRange default 0 1
+add InputRange
+create OutputRange outrng 2float 0
+OutputRange default 0 1
+add OutputRange
+create TransferFunction trfnc ramp
+add TransferFunction
+create DeactivateBackgroundVoxels dactbfvx bool 0
+DeactivateBackgroundVoxels default 0
+add DeactivateBackgroundVoxels
+create VdbOutput vdboutput geometry null
+VdbOutput writable 0
+VdbOutput storable 0
+add VdbOutput
+affects VdbInput VdbOutput
+affects SelectedGridNames VdbOutput
+affects BelowMinimum VdbOutput
+affects AboveMaximum VdbOutput
+affects InputRange VdbOutput
+affects OutputRange VdbOutput
+affects TransferFunction VdbOutput
+affects DeactivateBackgroundVoxels VdbOutput

@@ -1,0 +1,378 @@
+DMEdgeDisplace
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create Displace dsp float 0
+Displace default 1
+Displace softMin 0
+Displace softMax 5
+add Displace
+string default disp
+create DisplaceAttribute dspattr string default
+DisplaceAttribute connectable 0
+add DisplaceAttribute
+string default vel
+create VectorAttribute vattr string default
+VectorAttribute connectable 0
+add VectorAttribute
+string default outer
+create FaceGroup fcattr string default
+FaceGroup connectable 0
+add FaceGroup
+create IsConcernCorner isconcor bool 0
+IsConcernCorner default 0
+add IsConcernCorner
+create CheckMinLength chkminlen bool 0
+CheckMinLength default 0
+add CheckMinLength
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects Displace outDM
+affects DisplaceAttribute outDM
+affects VectorAttribute outDM
+affects FaceGroup outDM
+affects IsConcernCorner outDM
+affects CheckMinLength outDM
+DMSubDivide
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create SubdivClassType sbdvclty enum 2
+SubdivClassType field Face 2
+SubdivClassType field Edge 1
+SubdivClassType keyable 1
+add SubdivClassType
+create Iteration iter int 0
+Iteration default 1
+Iteration min 0
+Iteration max 8
+Iteration softMax 5
+Iteration keyable 1
+Iteration storable 1
+add Iteration
+create Weight wei float 0
+Weight default 0
+Weight min 0
+Weight softMax 1
+Weight keyable 1
+Weight storable 1
+add Weight
+create SchemeType shmty enum 1
+SchemeType field OpenSubdiv Bilinear 0
+SchemeType field OpenSubdiv Catmull-Clark 1
+SchemeType field OpenSubdiv Loop 2
+SchemeType keyable 1
+add SchemeType
+create InterpolationType itpty enum 0
+InterpolationType field None 0
+InterpolationType field Edge Only 1
+InterpolationType field Edge And Corner 2
+InterpolationType keyable 1
+add InterpolationType
+create FVarLinearInterpolationType fvitpty enum 0
+FVarLinearInterpolationType field None 0
+FVarLinearInterpolationType field Corners Only 1
+FVarLinearInterpolationType field Corners Plus1 3
+FVarLinearInterpolationType field Corners Plus2 4
+FVarLinearInterpolationType field Boundaries 5
+FVarLinearInterpolationType field All 6
+FVarLinearInterpolationType keyable 1
+add FVarLinearInterpolationType
+create CreasingMethod crmt enum 0
+CreasingMethod field Uniform 0
+CreasingMethod field Chaikin 1
+CreasingMethod keyable 1
+add CreasingMethod
+create TriangleSubdivision trsbd enum 0
+TriangleSubdivision field Catmark 0
+TriangleSubdivision field Smooth 1
+TriangleSubdivision keyable 1
+add TriangleSubdivision
+create EdgeSamplingType edgsmpty enum 0
+EdgeSamplingType field Simple 0
+EdgeSamplingType field Min Length Cutting 1
+EdgeSamplingType keyable 1
+add EdgeSamplingType
+create EdgeMaxIteration emaxitr int 0
+EdgeMaxIteration default 4
+EdgeMaxIteration min 1
+EdgeMaxIteration max 8
+EdgeMaxIteration softMax 10
+EdgeMaxIteration keyable 1
+EdgeMaxIteration storable 1
+add EdgeMaxIteration
+create EdgeMinLength eminlen double 0
+EdgeMinLength default 0.5
+EdgeMinLength min 0.001
+EdgeMinLength softMin 0.10000000000000001
+EdgeMinLength softMax 10
+EdgeMinLength keyable 1
+EdgeMinLength storable 1
+add EdgeMinLength
+string default 
+create FaceGroup fcattr string default
+FaceGroup connectable 0
+add FaceGroup
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects SubdivClassType outDM
+affects Iteration outDM
+affects Weight outDM
+affects SchemeType outDM
+affects InterpolationType outDM
+affects FVarLinearInterpolationType outDM
+affects CreasingMethod outDM
+affects TriangleSubdivision outDM
+affects EdgeSamplingType outDM
+affects EdgeMaxIteration outDM
+affects EdgeMinLength outDM
+affects FaceGroup outDM
+DMFaceInOut
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create inObject ino generic
+inObject accepts mesh
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+string default inner
+create InnerName innm string default
+InnerName connectable 0
+add InnerName
+string default outer
+create OuterName outnm string default
+OuterName connectable 0
+add OuterName
+create Tolerance tol double 0
+Tolerance default 0.0001
+Tolerance min 0
+Tolerance softMax 1
+Tolerance keyable 1
+Tolerance storable 1
+add Tolerance
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects inObject outDM
+affects InnerName outDM
+affects OuterName outDM
+affects Tolerance outDM
+DMExplodeView
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create Enable enbl bool 0
+Enable default 1
+Enable keyable 1
+Enable storable 1
+add Enable
+create Scale scl float 0
+Scale default 1
+Scale softMin 0
+Scale softMax 5
+Scale keyable 1
+Scale storable 1
+add Scale
+create Center ctr 3float 0
+Center default 0 0 0
+Center keyable 1
+Center storable 1
+add Center
+string default center
+create PieceCenterAttributeName pccattrnm string default
+PieceCenterAttributeName connectable 0
+add PieceCenterAttributeName
+create VectorType vty enum 0
+VectorType field Center to piece 0
+VectorType field From attribute 1
+VectorType keyable 1
+add VectorType
+string default 
+create VectorAttributeName vattrnm string default
+VectorAttributeName connectable 0
+add VectorAttributeName
+string default piece.*
+create PieceGroup pcgrp string default
+PieceGroup connectable 0
+add PieceGroup
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects Enable outDM
+affects Scale outDM
+affects Center outDM
+affects PieceCenterAttributeName outDM
+affects VectorType outDM
+affects VectorAttributeName outDM
+affects PieceGroup outDM
+DMTransform
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create AxisType axty enum 0
+AxisType field World 0
+AxisType field Vector Attribute 1
+AxisType keyable 1
+add AxisType
+string default 
+create AxisVectorAttribute axvecattr string default
+AxisVectorAttribute connectable 0
+add AxisVectorAttribute
+create Translate t 3double 0
+Translate default 0 0 0
+Translate keyable 1
+Translate storable 1
+add Translate
+create Rotate rot 3double 0
+Rotate default 0 0 0
+Rotate keyable 1
+Rotate storable 1
+add Rotate
+create Scale scl 3double 0
+Scale default 1 1 1
+Scale keyable 1
+Scale storable 1
+add Scale
+create UniformScale uscl double 0
+UniformScale default 1
+UniformScale softMin 0
+UniformScale softMax 10
+UniformScale keyable 1
+UniformScale storable 1
+add UniformScale
+create TranslateWeight twgt double 0
+TranslateWeight default 1
+TranslateWeight softMin 0
+TranslateWeight softMax 10
+TranslateWeight keyable 1
+TranslateWeight storable 1
+add TranslateWeight
+string default tw
+create TranslateWeightAttribute twgtattr string default
+TranslateWeightAttribute connectable 0
+add TranslateWeightAttribute
+create RotateWeight rwgt double 0
+RotateWeight default 1
+RotateWeight softMin 0
+RotateWeight softMax 10
+RotateWeight keyable 1
+RotateWeight storable 1
+add RotateWeight
+string default rw
+create RotateWeightAttribute rwgtattr string default
+RotateWeightAttribute connectable 0
+add RotateWeightAttribute
+create ScaleWeight swgt double 0
+ScaleWeight default 1
+ScaleWeight softMin 0
+ScaleWeight softMax 10
+ScaleWeight keyable 1
+ScaleWeight storable 1
+add ScaleWeight
+string default sw
+create ScaleWeightAttribute swgtattr string default
+ScaleWeightAttribute connectable 0
+add ScaleWeightAttribute
+create Weight wgt double 0
+Weight default 1
+Weight softMin 0
+Weight softMax 10
+Weight keyable 1
+Weight storable 1
+add Weight
+string default weight
+create WeightAttribute wgtattr string default
+WeightAttribute connectable 0
+add WeightAttribute
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects AxisType outDM
+affects AxisVectorAttribute outDM
+affects Translate outDM
+affects Rotate outDM
+affects Scale outDM
+affects UniformScale outDM
+affects TranslateWeight outDM
+affects TranslateWeightAttribute outDM
+affects RotateWeight outDM
+affects RotateWeightAttribute outDM
+affects ScaleWeight outDM
+affects ScaleWeightAttribute outDM
+affects Weight outDM
+affects WeightAttribute outDM
+DMMakePiece
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+string default piece.*
+create PieceGroupName picgrpnm string default
+PieceGroupName connectable 0
+add PieceGroupName
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects PieceGroupName outDM
+DMMerge
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create targetDM tdm geometry null
+targetDM readable 0
+targetDM storable 0
+add targetDM
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects targetDM outDM
+DMDelete
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create DeleteType delty enum 3
+DeleteType field Primitive 3
+DeleteType field Face 2
+DeleteType keyable 1
+add DeleteType
+string default 
+create DeleteGroups delgrp string default
+DeleteGroups connectable 0
+add DeleteGroups
+string default 
+create Pattern patt string default
+Pattern connectable 0
+add Pattern
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects DeleteType outDM
+affects DeleteGroups outDM
+affects Pattern outDM

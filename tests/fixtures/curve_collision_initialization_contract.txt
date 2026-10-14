@@ -1,0 +1,183 @@
+DCCutObject
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create InObject ino generic
+InObject accepts mesh
+InObject storable 0
+InObject writable 1
+InObject readable 0
+add InObject
+create Sampling smp int 0
+Sampling default 10
+Sampling min 4
+Sampling softMax 50
+Sampling keyable 1
+add Sampling
+create FitCutPoint fcp bool 0
+FitCutPoint default 0
+FitCutPoint keyable 1
+add FitCutPoint
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects InObject outDC
+affects Sampling outDC
+affects FitCutPoint outDC
+DCReflect
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create InObject ino generic
+InObject accepts mesh
+InObject storable 0
+InObject writable 1
+InObject readable 0
+add InObject
+create Sampling smp int 0
+Sampling default 10
+Sampling min 4
+Sampling softMax 50
+Sampling keyable 1
+add Sampling
+create Bias ba double 0
+Bias default 0
+Bias softMin 0
+Bias softMax 1
+Bias keyable 1
+add Bias
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects InObject outDC
+affects Sampling outDC
+affects Bias outDC
+DCOffset
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create DirectionType dirt enum 0
+DirectionType field Curve Normal 0
+DirectionType field Use Offset Vector 1
+DirectionType field From Attribute 2
+DirectionType keyable 1
+add DirectionType
+create OffsetVector ovec 3double 0
+OffsetVector default 1 0 0
+OffsetVector keyable 1
+add OffsetVector
+string default N
+create OffsetVectorAttribute ovecattrn string default
+OffsetVectorAttribute connectable 0
+add OffsetVectorAttribute
+create UseAimVector uavec bool 0
+UseAimVector default 1
+UseAimVector keyable 1
+add UseAimVector
+create AimVector avec 3double 0
+AimVector default 0 1 0
+AimVector keyable 1
+add AimVector
+create UpVector uvec 3double 0
+UpVector default 1 0 0
+UpVector keyable 1
+add UpVector
+create Dsitance dist double 0
+Dsitance default 5
+Dsitance softMin -10
+Dsitance softMax 10
+Dsitance keyable 1
+add Dsitance
+create Subdivide sbd int 0
+Subdivide default 5
+Subdivide min 0
+Subdivide softMax 10
+Subdivide keyable 1
+add Subdivide
+create CheckOverlap chkovl bool 0
+CheckOverlap default 0
+CheckOverlap keyable 1
+add CheckOverlap
+create Tolerance tol double 0
+Tolerance default 0.10000000000000001
+Tolerance min 0.001
+Tolerance softMin 0.001
+Tolerance softMax 1
+Tolerance keyable 1
+add Tolerance
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects DirectionType outDC
+affects OffsetVector outDC
+affects OffsetVectorAttribute outDC
+affects UseAimVector outDC
+affects AimVector outDC
+affects UpVector outDC
+affects Dsitance outDC
+affects Subdivide outDC
+affects CheckOverlap outDC
+affects Tolerance outDC
+DCNormal
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+string default N
+create NormalAttributeName nrmattrn string default
+NormalAttributeName connectable 0
+add NormalAttributeName
+create GenerateType genty enum 0
+GenerateType field Base Vector 0
+GenerateType field From Curve Normal 1
+GenerateType field From Curve Tangent 2
+GenerateType field From Curve(use start normal calc) 3
+GenerateType field Random(from curve normal) 4
+GenerateType field Full Random 5
+GenerateType keyable 1
+add GenerateType
+create BaseVector bvec 3double 0
+BaseVector default 0 1 0
+BaseVector keyable 1
+add BaseVector
+create TwistRamp twr ramp
+add TwistRamp
+create TwistScale twscl double 0
+TwistScale default 360
+TwistScale keyable 1
+add TwistScale
+create Seed se int 0
+Seed default 1
+Seed min 1
+Seed keyable 1
+add Seed
+create RandomMin rmin 3double 0
+RandomMin default -180 -180 -180
+RandomMin keyable 1
+add RandomMin
+create RandomMax rmax 3double 0
+RandomMax default 180 180 180
+RandomMax keyable 1
+add RandomMax
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects NormalAttributeName outDC
+affects GenerateType outDC
+affects BaseVector outDC
+affects TwistRamp outDC
+affects TwistScale outDC
+affects Seed outDC
+affects RandomMin outDC
+affects RandomMax outDC

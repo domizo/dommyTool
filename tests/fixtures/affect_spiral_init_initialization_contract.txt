@@ -1,0 +1,239 @@
+DPAffect
+create inDD idd generic
+inDD accepts id 1
+inDD accepts id 2
+inDD accepts id 3
+inDD readable 0
+inDD storable 0
+add inDD
+create AttributeClass attrcls enum 0
+AttributeClass field Point 0
+AttributeClass field Primitive 1
+AttributeClass keyable 1
+add AttributeClass
+create AffectType aft enum 0
+AffectType field Point 0
+AffectType field Axis Line 1
+AffectType field Object 2
+AffectType field DPoint 3
+AffectType keyable 1
+AffectType storable 1
+add AffectType
+create Distance dist 2float 0
+Distance softMin 0
+Distance min 0
+Distance softMax 10
+Distance default 0 5
+add Distance
+create SlideDistance sdist float 0
+SlideDistance softMin 0
+SlideDistance softMax 50
+SlideDistance default 0
+add SlideDistance
+create SourcePoint spt 3float 0
+SourcePoint default 0 0 0
+add SourcePoint
+create AxisSource axsrc 3float 0
+AxisSource default 0 0 0
+add AxisSource
+create AxisTarget axtar 3float 0
+AxisTarget default 1 0 0
+add AxisTarget
+create AxisSourceMatrix asrcmat matrix float
+AxisSourceMatrix writable 1
+AxisSourceMatrix readable 0
+add AxisSourceMatrix
+create AxisTargetMatrix atarmat matrix float
+AxisTargetMatrix writable 1
+AxisTargetMatrix readable 0
+add AxisTargetMatrix
+create UseAxisDistance uaxd bool 0
+UseAxisDistance default 0
+add UseAxisDistance
+create InObject ino generic
+InObject accepts mesh
+InObject accepts curve
+InObject accepts surface
+InObject storable 0
+InObject writable 1
+InObject readable 0
+add InObject
+create Tolerance tol double 0
+Tolerance min 9.9999999999999995e-07
+Tolerance softMin 0.01
+Tolerance softMax 5
+Tolerance default 0.10000000000000001
+add Tolerance
+create IsCheckInner ici bool 0
+IsCheckInner default 0
+add IsCheckInner
+create InnerCheckAngle icang 3float 0
+InnerCheckAngle default 1 0 0
+add InnerCheckAngle
+create MeshResolution meres int 0
+MeshResolution min 100
+MeshResolution softMin 100
+MeshResolution softMax 3000
+MeshResolution default 1500
+add MeshResolution
+create InnerValue inval float 0
+InnerValue softMin 0
+InnerValue softMax 1
+InnerValue default 1
+add InnerValue
+create TargetDP tardp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+string.create
+create DistanceAttribute disattr string 
+DistanceAttribute connectable 0
+add DistanceAttribute
+create SlideAttribute sldattr string 
+SlideAttribute connectable 0
+add SlideAttribute
+create ScaleAttribute sclattr string 
+ScaleAttribute connectable 0
+add ScaleAttribute
+create AffectRamp afr ramp
+add AffectRamp
+create ValueRange valr 2float 0
+ValueRange default 0 1
+add ValueRange
+create Scale sc float 0
+Scale default 1
+add Scale
+string.create
+create OutAttribute outattr string aval
+OutAttribute connectable 0
+add OutAttribute
+create outDD odd generic
+outDD accepts id 1
+outDD accepts id 2
+outDD accepts id 3
+outDD writable 0
+outDD storable 0
+add outDD
+affects inDD outDD
+affects AttributeClass outDD
+affects AffectType outDD
+affects Distance outDD
+affects SlideDistance outDD
+affects SourcePoint outDD
+affects AxisSource outDD
+affects AxisTarget outDD
+affects AxisSourceMatrix outDD
+affects AxisTargetMatrix outDD
+affects UseAxisDistance outDD
+affects InObject outDD
+affects Tolerance outDD
+affects IsCheckInner outDD
+affects InnerCheckAngle outDD
+affects MeshResolution outDD
+affects InnerValue outDD
+affects TargetDP outDD
+affects DistanceAttribute outDD
+affects SlideAttribute outDD
+affects ScaleAttribute outDD
+affects AffectRamp outDD
+affects ValueRange outDD
+affects Scale outDD
+affects OutAttribute outDD
+DPSpiralField
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create inObject ino generic
+inObject accepts curve
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create RadiusRamp radrmp ramp
+add RadiusRamp
+create RadiusRange radrng 2float 0
+RadiusRange default 0 10
+RadiusRange keyable 1
+RadiusRange storable 1
+add RadiusRange
+create IsMaxDistance ismxd bool 0
+IsMaxDistance default 0
+add IsMaxDistance
+create MaxDistance mxdist float 0
+MaxDistance softMin 0
+MaxDistance softMax 20
+MaxDistance default 5
+MaxDistance keyable 1
+MaxDistance storable 1
+add MaxDistance
+create CenterStreamRamp cstmrmp ramp
+add CenterStreamRamp
+create CenterStreamRange cstmrng 2float 0
+CenterStreamRange default 0 1
+CenterStreamRange keyable 1
+CenterStreamRange storable 1
+add CenterStreamRange
+create CenterDistanceRamp cdistrmp ramp
+add CenterDistanceRamp
+create CenterDistanceRange cdistrng 2float 0
+CenterDistanceRange default 0 5
+CenterDistanceRange keyable 1
+CenterDistanceRange storable 1
+add CenterDistanceRange
+create UpStraemRamp upstmrmp ramp
+add UpStraemRamp
+create UpStraemRange upstmrng 2float 0
+UpStraemRange default 0 1
+UpStraemRange keyable 1
+UpStraemRange storable 1
+add UpStraemRange
+create UpDistanceRamp updistrmp ramp
+add UpDistanceRamp
+create UpDistanceRange updistrng 2float 0
+UpDistanceRange default 0 5
+UpDistanceRange keyable 1
+UpDistanceRange storable 1
+add UpDistanceRange
+string.create
+create AttributeName attrn string spiral
+AttributeName connectable 0
+add AttributeName
+create Invert inv bool 0
+Invert default 0
+Invert keyable 1
+Invert storable 1
+add Invert
+create Normalize norm bool 0
+Normalize default 0
+Normalize keyable 1
+Normalize storable 1
+add Normalize
+create Magnitude mag float 0
+Magnitude default 1
+Magnitude softMin -50
+Magnitude softMax 50
+Magnitude keyable 1
+add Magnitude
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects inObject outDP
+affects RadiusRamp outDP
+affects RadiusRange outDP
+affects IsMaxDistance outDP
+affects MaxDistance outDP
+affects CenterStreamRamp outDP
+affects CenterStreamRange outDP
+affects CenterDistanceRamp outDP
+affects CenterDistanceRange outDP
+affects UpStraemRamp outDP
+affects UpStraemRange outDP
+affects UpDistanceRamp outDP
+affects UpDistanceRange outDP
+affects AttributeName outDP
+affects Invert outDP
+affects Normalize outDP
+affects Magnitude outDP

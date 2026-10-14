@@ -1,0 +1,128 @@
+DPTimeShift
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create inObject ino generic
+inObject accepts mesh
+inObject accepts curve
+inObject accepts surface
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create PointOrderType ptordty enum 0
+PointOrderType field Same Point Index 0
+PointOrderType field Same Time 1
+PointOrderType keyable 1
+PointOrderType storable 1
+add PointOrderType
+create CurrentTime ctm time 0
+add CurrentTime
+create TimeOffset to float 0
+TimeOffset default 0
+add TimeOffset
+create TimeLength tl float 0
+TimeLength min 0
+TimeLength default 5
+add TimeLength
+create TimeSampling ts int 0
+TimeSampling min 1
+TimeSampling default 5
+add TimeSampling
+create TimeLengthType tlt enum 0
+TimeLengthType field Time Length 0
+TimeLengthType field From Attribute 1
+TimeLengthType field Input Data 2
+TimeLengthType field Ramp Map Bias 3
+TimeLengthType field Frame Sample 4
+TimeLengthType keyable 1
+TimeLengthType storable 1
+add TimeLengthType
+create Seed se int 0
+Seed default 0
+Seed min 0
+Seed keyable 1
+Seed storable 1
+add Seed
+create TimeLengthRandom tlr float 0
+TimeLengthRandom keyable 1
+TimeLengthRandom storable 1
+TimeLengthRandom default 0
+TimeLengthRandom min 0
+add TimeLengthRandom
+string default 
+create TimeOffsetAttrName toattr string default
+TimeOffsetAttrName connectable 0
+add TimeOffsetAttrName
+string default 
+create TimeLengthAttrName tlattr string default
+TimeLengthAttrName connectable 0
+add TimeLengthAttrName
+create inTimeOffsetData itod generic
+inTimeOffsetData accepts intArray
+inTimeOffsetData accepts floatArray
+inTimeOffsetData accepts doubleArray
+inTimeOffsetData storable 0
+inTimeOffsetData writable 1
+inTimeOffsetData readable 0
+add inTimeOffsetData
+create inTimeLengthData itld generic
+inTimeLengthData accepts intArray
+inTimeLengthData accepts floatArray
+inTimeLengthData accepts doubleArray
+inTimeLengthData storable 0
+inTimeLengthData writable 1
+inTimeLengthData readable 0
+add inTimeLengthData
+create TimeRamp tramp ramp
+add TimeRamp
+create IsAddTimeAttr isat bool 0
+IsAddTimeAttr keyable 1
+IsAddTimeAttr storable 1
+IsAddTimeAttr default 0
+add IsAddTimeAttr
+create TimeAttrValueType tavt enum 0
+TimeAttrValueType field Normalize 0
+TimeAttrValueType field Ignore Offset 1
+TimeAttrValueType field Raw 2
+TimeAttrValueType keyable 1
+TimeAttrValueType storable 1
+add TimeAttrValueType
+string default time
+create TimeAttrName tattr string default
+TimeAttrName connectable 0
+add TimeAttrName
+create IsAddParentIdAttr isap bool 0
+IsAddParentIdAttr keyable 1
+IsAddParentIdAttr storable 1
+IsAddParentIdAttr default 0
+add IsAddParentIdAttr
+string default pid
+create ParentIdAttrName pattr string default
+ParentIdAttrName connectable 0
+add ParentIdAttrName
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects inObject outDP
+affects PointOrderType outDP
+affects CurrentTime outDP
+affects TimeOffset outDP
+affects TimeLength outDP
+affects TimeSampling outDP
+affects TimeLengthType outDP
+affects Seed outDP
+affects TimeLengthRandom outDP
+affects TimeOffsetAttrName outDP
+affects TimeLengthAttrName outDP
+affects inTimeOffsetData outDP
+affects inTimeLengthData outDP
+affects TimeRamp outDP
+affects IsAddTimeAttr outDP
+affects TimeAttrValueType outDP
+affects TimeAttrName outDP
+affects IsAddParentIdAttr outDP
+affects ParentIdAttrName outDP

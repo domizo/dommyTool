@@ -1,0 +1,164 @@
+DPFillSpace
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create samplingType smt enum 0
+samplingType field Count 0
+samplingType field Space 1
+samplingType keyable 1
+samplingType storable 1
+add samplingType
+create samplingCount smc int 0
+samplingCount default 1
+samplingCount min 1
+samplingCount keyable 1
+samplingCount storable 1
+add samplingCount
+create samplingSpace sms double 0
+samplingSpace default 1
+samplingSpace min 0
+samplingSpace keyable 1
+samplingSpace storable 1
+add samplingSpace
+create isIDStepFill iid bool 0
+isIDStepFill default 1
+isIDStepFill keyable 1
+isIDStepFill storable 1
+add isIDStepFill
+create nextStepSize nss int 0
+nextStepSize default 1
+nextStepSize min 0
+nextStepSize keyable 1
+nextStepSize storable 1
+add nextStepSize
+create isDistanceFill idf bool 0
+isDistanceFill default 0
+isDistanceFill keyable 1
+isDistanceFill storable 1
+add isDistanceFill
+create distance dis double 0
+distance default 1
+distance min 0
+distance keyable 1
+distance storable 1
+add distance
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects samplingType outDP
+affects samplingCount outDP
+affects samplingSpace outDP
+affects isIDStepFill outDP
+affects nextStepSize outDP
+affects isDistanceFill outDP
+affects distance outDP
+DPMerge
+create inDPs idps geometry null
+inDPs storable 0
+inDPs writable 1
+inDPs readable 0
+inDPs array 1
+inDPs arrayBuilder 1
+add inDPs
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDPs outDP
+DPParticleAttribute
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create IsVelocity isvel bool 0
+IsVelocity default 0
+IsVelocity keyable 1
+add IsVelocity
+string.create
+create VelocityAttribute vattr string vel
+VelocityAttribute connectable 0
+add VelocityAttribute
+create VelocityType velty enum 0
+VelocityType field Vector 0
+VelocityType field From Attribute 1
+VelocityType keyable 1
+add VelocityType
+create VelocityVector velvec 3float 0
+VelocityVector default 0 1 0
+VelocityVector keyable 1
+add VelocityVector
+string.create
+create VelocityTargetAttribute vtattr string 
+VelocityTargetAttribute connectable 0
+add VelocityTargetAttribute
+create IsRadius israd bool 0
+IsRadius default 0
+IsRadius keyable 1
+add IsRadius
+create RadiusType radty enum 0
+RadiusType field Radius 0
+RadiusType field From Attribute 1
+RadiusType keyable 1
+add RadiusType
+string.create
+create RadiusAttribute rattr string pscale
+RadiusAttribute connectable 0
+add RadiusAttribute
+create Radius rad float 0
+Radius default 0.10000000149011612
+Radius min 0
+Radius softMin 0
+Radius softMax 5
+Radius keyable 1
+add Radius
+string.create
+create RadiusTargetAttribute rtattr string 
+RadiusTargetAttribute connectable 0
+add RadiusTargetAttribute
+create IsMass isma bool 0
+IsMass default 0
+IsMass keyable 1
+add IsMass
+create MassType maty enum 0
+MassType field Mass 0
+MassType field From Attribute 1
+MassType keyable 1
+add MassType
+string.create
+create MassAttribute mattr string mass
+MassAttribute connectable 0
+add MassAttribute
+create Mass ma float 0
+Mass default 1
+Mass min 0
+Mass softMin 0
+Mass softMax 10
+Mass keyable 1
+add Mass
+string.create
+create MassTargetAttribute mtattr string 
+MassTargetAttribute connectable 0
+add MassTargetAttribute
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects IsVelocity outDP
+affects VelocityType outDP
+affects VelocityAttribute outDP
+affects VelocityVector outDP
+affects VelocityTargetAttribute outDP
+affects IsRadius outDP
+affects RadiusType outDP
+affects RadiusAttribute outDP
+affects Radius outDP
+affects RadiusTargetAttribute outDP
+affects IsMass outDP
+affects MassType outDP
+affects MassAttribute outDP
+affects Mass outDP
+affects MassTargetAttribute outDP

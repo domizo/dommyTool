@@ -1,0 +1,3 @@
+# Default-registered sources must publish Maya-owned MObject values.
+# This manifest intentionally has no debt entries. Any new raw MPxData pointer
+# publication fails tests/check_default_maya_data_ownership.py.

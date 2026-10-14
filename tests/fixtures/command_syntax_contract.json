@@ -1,0 +1,66 @@
+[
+  {
+    "name": "getCurveLengthPosCmd",
+    "path": "src/commands/getCurveLengthPosCmd.cpp",
+    "operations": [
+      "addFlag:-lp:-lengthPos:kDouble:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-c:-curve:kString:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg"
+    ]
+  },
+  {
+    "name": "setParticleRGBCmd",
+    "path": "src/commands/setParticleRGBCmd.cpp",
+    "operations": [
+      "addFlag:-os:-onShadow:kBoolean:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-orm:-onReuseMap:kBoolean:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-cam:-camera:kString:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg"
+    ]
+  },
+  {
+    "name": "shapeFillCmd",
+    "path": "src/commands/shapeFillCmd.cpp",
+    "operations": [
+      "addFlag:-d:-density:kLong:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-t:-thickness:kDouble:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-n:-noise:kDouble:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-c:-camera:kString:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-sn:-sgName:kString:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-oc:-onColor:kBoolean:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-os:-onShadow:kBoolean:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-orm:-onReuseMap:kBoolean:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg"
+    ]
+  },
+  {
+    "name": "DPointDataExportCmd",
+    "path": "src/core/DDataUtility/IO/DPointDataExportCmd.cpp",
+    "operations": [
+      "addFlag:-f:-filePath:kString:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-sn:-savedNode:kString:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "makeFlagMultiUse:-sn"
+    ]
+  },
+  {
+    "name": "DExportAbcCmd",
+    "path": "src/modules/curve/DCurve/Cmd/DExportAbcCmd.cpp",
+    "operations": [
+      "addFlag:-v:-verbose:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-h:-help:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-prs:-preRollStartFrame:kDouble:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-duf:-dontSkipUnwrittenFrames:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-j:-jobArg:kString:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "makeFlagMultiUse:-j",
+      "enableQuery:true",
+      "enableEdit:false"
+    ]
+  },
+  {
+    "name": "DClusterWeightCmd",
+    "path": "src/modules/mesh/mesh/Cmd/DClusterWeightCmd.cpp",
+    "operations": [
+      "addFlag:-sm:-sourceMesh:kString:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-tc:-targetCluster:kString:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg",
+      "addFlag:-c:-center:kDouble:kDouble:kDouble:kNoArg:kNoArg:kNoArg",
+      "addFlag:-d:-distance:kDouble:kNoArg:kNoArg:kNoArg:kNoArg:kNoArg"
+    ]
+  }
+]

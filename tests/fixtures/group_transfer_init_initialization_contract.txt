@@ -1,0 +1,588 @@
+DPGroup
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+string.create
+create GroupName grpn string group
+GroupName connectable 0
+add GroupName
+create ExistActionType eat enum 0
+ExistActionType field Replace 0
+ExistActionType field Union 1
+ExistActionType field Substcut 2
+ExistActionType field Intersect 3
+add ExistActionType
+create IsNumberAction isnumact bool 0
+IsNumberAction keyable 1
+IsNumberAction storable 1
+add IsNumberAction
+create NumberType numty enum 0
+NumberType field Pattern 0
+NumberType field Range 1
+NumberType field Expression 2
+add NumberType
+string.create
+create Pattern patt string 
+Pattern connectable 0
+add Pattern
+create StartEnd sten 2int 0
+StartEnd min 0
+StartEnd default 0 1
+StartEnd keyable 1
+StartEnd storable 1
+add StartEnd
+create SelectOf selo 2int 0
+SelectOf min 0
+SelectOf default 1 2
+SelectOf keyable 1
+SelectOf storable 1
+add SelectOf
+string.create
+create Expression expn string 
+Expression connectable 0
+add Expression
+create IsBoundingAction isbndact bool 0
+IsBoundingAction keyable 0
+IsBoundingAction storable 1
+add IsBoundingAction
+create BoundingType bndty enum 0
+BoundingType field Box 0
+BoundingType field Sphere 1
+BoundingType field Input Object 2
+add BoundingType
+create BoundingSize bnds 3double 0
+BoundingSize default 1 1 1
+BoundingSize keyable 1
+BoundingSize storable 1
+add BoundingSize
+create BoundingCenter bndc 3double 0
+BoundingCenter default 0 0 0
+BoundingCenter keyable 1
+BoundingCenter storable 1
+add BoundingCenter
+create InObject ino mesh null
+InObject storable 0
+InObject readable 0
+add InObject
+create Invert inv bool 0
+Invert keyable 0
+Invert storable 1
+add Invert
+create IsNormalAction isnormact bool 0
+IsNormalAction keyable 0
+IsNormalAction storable 1
+add IsNormalAction
+create NormalDirection normd 3double 0
+NormalDirection default 0 1 0
+NormalDirection keyable 1
+NormalDirection storable 1
+add NormalDirection
+create SpreadAngle spagl double 0
+SpreadAngle default 90
+SpreadAngle min 0
+SpreadAngle max 180
+SpreadAngle keyable 1
+SpreadAngle storable 1
+add SpreadAngle
+string.create
+create NormalAttributeName nattrn string N
+NormalAttributeName connectable 0
+add NormalAttributeName
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects GroupName outDP
+affects ExistActionType outDP
+affects IsNumberAction outDP
+affects NumberType outDP
+affects Pattern outDP
+affects StartEnd outDP
+affects SelectOf outDP
+affects Expression outDP
+affects IsBoundingAction outDP
+affects BoundingType outDP
+affects BoundingSize outDP
+affects BoundingCenter outDP
+affects InObject outDP
+affects Invert outDP
+affects IsNormalAction outDP
+affects NormalDirection outDP
+affects SpreadAngle outDP
+affects NormalAttributeName outDP
+manip.connect
+DCGroup
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+string.create
+create GroupName grpn string group
+GroupName connectable 0
+add GroupName
+create GroupType grpty enum 3
+GroupType field Primitive 3
+GroupType field point 0
+add GroupType
+create ExistActionType eat enum 0
+ExistActionType field Replace 0
+ExistActionType field Union 1
+ExistActionType field Substcut 2
+ExistActionType field Intersect 3
+add ExistActionType
+create IsNumberAction isnumact bool 0
+IsNumberAction keyable 1
+IsNumberAction storable 1
+add IsNumberAction
+create NumberType numty enum 0
+NumberType field Pattern 0
+NumberType field Range 1
+NumberType field Expression 2
+add NumberType
+string.create
+create Pattern patt string 
+Pattern connectable 0
+add Pattern
+create StartEnd sten 2int 0
+StartEnd min 0
+StartEnd default 0 1
+StartEnd keyable 1
+StartEnd storable 1
+add StartEnd
+create SelectOf selo 2int 0
+SelectOf min 0
+SelectOf default 1 2
+SelectOf keyable 1
+SelectOf storable 1
+add SelectOf
+string.create
+create Expression expn string 
+Expression connectable 0
+add Expression
+create IsBoundingAction isbndact bool 0
+IsBoundingAction keyable 0
+IsBoundingAction storable 1
+add IsBoundingAction
+create BoundingType bndty enum 0
+BoundingType field Box 0
+BoundingType field Sphere 1
+BoundingType field Input Object 2
+add BoundingType
+create BoundingSize bnds 3double 0
+BoundingSize default 1 1 1
+BoundingSize keyable 1
+BoundingSize storable 1
+add BoundingSize
+create BoundingCenter bndc 3double 0
+BoundingCenter default 0 0 0
+BoundingCenter keyable 1
+BoundingCenter storable 1
+add BoundingCenter
+create InObject ino mesh null
+InObject storable 0
+InObject readable 0
+add InObject
+create IsNormalAction isnormact bool 0
+IsNormalAction keyable 0
+IsNormalAction storable 1
+add IsNormalAction
+create NormalType normty enum 0
+NormalType field Curve Tangent 0
+NormalType field Curve Normal 1
+NormalType field From Attribute 3
+add NormalType
+create NormalDirection normd 3double 0
+NormalDirection default 0 1 0
+NormalDirection keyable 1
+NormalDirection storable 1
+add NormalDirection
+create SpreadAngle spagl double 0
+SpreadAngle default 90
+SpreadAngle min 0
+SpreadAngle max 180
+SpreadAngle keyable 1
+SpreadAngle storable 1
+add SpreadAngle
+string.create
+create NormalAttributeName nattrn string N
+NormalAttributeName connectable 0
+add NormalAttributeName
+create IsCurveLength icrvlen bool 0
+IsCurveLength keyable 0
+IsCurveLength storable 1
+add IsCurveLength
+create CurveLength crvlen double 0
+CurveLength default 5
+CurveLength min 0
+CurveLength softMax 10
+CurveLength keyable 1
+CurveLength storable 1
+add CurveLength
+create IsArea icrvarea bool 0
+IsArea keyable 0
+IsArea storable 1
+add IsArea
+create CurveArea crvarea double 0
+CurveArea default 5
+CurveArea min 0
+CurveArea softMax 10
+CurveArea keyable 1
+CurveArea storable 1
+add CurveArea
+create IsPlanar ipln bool 0
+IsPlanar keyable 0
+IsPlanar storable 1
+add IsPlanar
+create Invert inv bool 0
+Invert keyable 0
+Invert storable 1
+add Invert
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects GroupName outDC
+affects GroupType outDC
+affects ExistActionType outDC
+affects IsNumberAction outDC
+affects NumberType outDC
+affects Pattern outDC
+affects StartEnd outDC
+affects SelectOf outDC
+affects Expression outDC
+affects IsBoundingAction outDC
+affects BoundingType outDC
+affects BoundingSize outDC
+affects BoundingCenter outDC
+affects InObject outDC
+affects Invert outDC
+affects IsNormalAction outDC
+affects NormalType outDC
+affects NormalDirection outDC
+affects SpreadAngle outDC
+affects NormalAttributeName outDC
+affects IsCurveLength outDC
+affects CurveLength outDC
+affects IsArea outDC
+affects CurveArea outDC
+affects IsPlanar outDC
+manip.connect
+DMGroup
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+string.create
+create GroupName grpn string 
+GroupName connectable 0
+add GroupName
+create GroupType grpty enum 3
+GroupType field Primitive 3
+GroupType field point 0
+GroupType field face 2
+GroupType field edge 1
+add GroupType
+create ExistActionType eat enum 0
+ExistActionType field Replace 0
+ExistActionType field Union 1
+ExistActionType field Substcut 2
+ExistActionType field Intersect 3
+add ExistActionType
+create IsNumberAction isnumact bool 0
+IsNumberAction keyable 1
+IsNumberAction storable 1
+add IsNumberAction
+create NumberType numty enum 0
+NumberType field Pattern 0
+NumberType field Range 1
+NumberType field Expression 2
+add NumberType
+string.create
+create Pattern patt string 
+Pattern connectable 0
+add Pattern
+create StartEnd sten 2int 0
+StartEnd min 0
+StartEnd default 0 1
+StartEnd keyable 1
+StartEnd storable 1
+add StartEnd
+create SelectOf selo 2int 0
+SelectOf min 0
+SelectOf default 1 2
+SelectOf keyable 1
+SelectOf storable 1
+add SelectOf
+string.create
+create Expression expn string 
+Expression connectable 0
+add Expression
+create IsBoundingAction isbndact bool 0
+IsBoundingAction keyable 0
+IsBoundingAction storable 1
+add IsBoundingAction
+create BoundingType bndty enum 0
+BoundingType field Box 0
+BoundingType field Sphere 1
+BoundingType field Input Object 2
+add BoundingType
+create BoundingSize bnds 3double 0
+BoundingSize default 1 1 1
+BoundingSize keyable 1
+BoundingSize storable 1
+add BoundingSize
+create BoundingCenter bndc 3double 0
+BoundingCenter default 0 0 0
+BoundingCenter keyable 1
+BoundingCenter storable 1
+add BoundingCenter
+create InObject ino mesh null
+InObject storable 0
+InObject readable 0
+add InObject
+create IsNormalAction isnormact bool 0
+IsNormalAction keyable 0
+IsNormalAction storable 1
+add IsNormalAction
+create NormalDirection normd 3double 0
+NormalDirection default 0 1 0
+NormalDirection keyable 1
+NormalDirection storable 1
+add NormalDirection
+create SpreadAngle spagl double 0
+SpreadAngle default 90
+SpreadAngle min 0
+SpreadAngle max 180
+SpreadAngle keyable 1
+SpreadAngle storable 1
+add SpreadAngle
+string.create
+create NormalAttributeName nattrn string N
+NormalAttributeName connectable 0
+add NormalAttributeName
+create IsFaceArea ifaar bool 0
+IsFaceArea keyable 0
+IsFaceArea storable 1
+add IsFaceArea
+create FaceAreaRange faarrg 2double 0
+FaceAreaRange default 0 5
+FaceAreaRange min 0
+FaceAreaRange keyable 1
+FaceAreaRange storable 1
+add FaceAreaRange
+create IsVertexCount ivcnt bool 0
+IsVertexCount keyable 0
+IsVertexCount storable 1
+add IsVertexCount
+create VertexCountRange vtxcntrg 2int 0
+VertexCountRange default 0 3
+VertexCountRange min 0
+VertexCountRange keyable 1
+VertexCountRange storable 1
+add VertexCountRange
+create IsConvex iconv bool 0
+IsConvex keyable 0
+IsConvex storable 1
+add IsConvex
+create IsPlanar ipln bool 0
+IsPlanar keyable 0
+IsPlanar storable 1
+add IsPlanar
+create IsBoundry ibnd bool 0
+IsBoundry keyable 0
+IsBoundry storable 1
+add IsBoundry
+create IsEdgeAngle ieagl bool 0
+IsEdgeAngle keyable 0
+IsEdgeAngle storable 1
+add IsEdgeAngle
+create EdgeAngleRange eaglrng 2double 0
+EdgeAngleRange default 80 100
+EdgeAngleRange min 0
+EdgeAngleRange keyable 1
+EdgeAngleRange storable 1
+add EdgeAngleRange
+create IsEdgeLength ielen bool 0
+IsEdgeLength keyable 0
+IsEdgeLength storable 1
+add IsEdgeLength
+create EdgeLengthRange elenrng 2double 0
+EdgeLengthRange default 0 1
+EdgeLengthRange min 0
+EdgeLengthRange keyable 1
+EdgeLengthRange storable 1
+add EdgeLengthRange
+create IsEdgeBoundry iebnd bool 0
+IsEdgeBoundry keyable 0
+IsEdgeBoundry storable 1
+add IsEdgeBoundry
+create Invert inv bool 0
+Invert keyable 0
+Invert storable 1
+add Invert
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects GroupName outDM
+affects GroupType outDM
+affects ExistActionType outDM
+affects IsNumberAction outDM
+affects NumberType outDM
+affects Pattern outDM
+affects StartEnd outDM
+affects SelectOf outDM
+affects Expression outDM
+affects IsBoundingAction outDM
+affects BoundingType outDM
+affects BoundingSize outDM
+affects BoundingCenter outDM
+affects InObject outDM
+affects Invert outDM
+affects IsNormalAction outDM
+affects NormalDirection outDM
+affects SpreadAngle outDM
+affects NormalAttributeName outDM
+affects IsFaceArea outDM
+affects FaceAreaRange outDM
+affects IsVertexCount outDM
+affects VertexCountRange outDM
+affects IsConvex outDM
+affects IsPlanar outDM
+affects IsBoundry outDM
+affects IsEdgeAngle outDM
+affects EdgeAngleRange outDM
+affects IsEdgeLength outDM
+affects EdgeLengthRange outDM
+affects IsEdgeBoundry outDM
+manip.connect
+DPAttributeTransfer
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create TargetDP tardp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+string.create
+create AttributeNames attrnms string 
+AttributeNames connectable 0
+add AttributeNames
+create Distance dst double 0
+Distance default 2
+Distance min 2.2204460492503131e-16
+Distance softMax 10
+Distance keyable 1
+Distance storable 1
+add Distance
+create MaxSampleing maxsmp int 0
+MaxSampleing default -1
+MaxSampleing min -1
+MaxSampleing max 1000000
+MaxSampleing softMax 10
+MaxSampleing keyable 1
+MaxSampleing storable 1
+add MaxSampleing
+create TransferRamp trr ramp
+add TransferRamp
+create ValueRange valr 2double 0
+ValueRange default 0 1
+add ValueRange
+create Scale sc double 0
+Scale default 1
+add Scale
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects TargetDP outDP
+affects AttributeNames outDP
+affects Distance outDP
+affects MaxSampleing outDP
+affects TransferRamp outDP
+affects ValueRange outDP
+affects Scale outDP
+DCAttributeTransfer
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+string.create
+create AttributeNames attrnms string 
+AttributeNames connectable 0
+add AttributeNames
+create Distance dst double 0
+Distance default 2
+Distance min 2.2204460492503131e-16
+Distance softMax 10
+Distance keyable 1
+Distance storable 1
+add Distance
+create TransferRamp trr ramp
+add TransferRamp
+create ValueRange valr 2double 0
+ValueRange default 0 1
+add ValueRange
+create Scale sc double 0
+Scale default 1
+add Scale
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects TargetDP outDC
+affects AttributeNames outDC
+affects Distance outDC
+affects TransferRamp outDC
+affects ValueRange outDC
+affects Scale outDC
+DMAttributeTransfer
+create inDM idm geometry null
+inDM readable 0
+inDM storable 0
+add inDM
+create TargetDP tdp geometry null
+TargetDP readable 0
+TargetDP storable 0
+add TargetDP
+string.create
+create AttributeNames attrnms string 
+AttributeNames connectable 0
+add AttributeNames
+create Distance dst double 0
+Distance default 2
+Distance min 2.2204460492503131e-16
+Distance softMax 10
+Distance keyable 1
+Distance storable 1
+add Distance
+create TransferRamp trr ramp
+add TransferRamp
+create ValueRange valr 2double 0
+ValueRange default 0 1
+add ValueRange
+create Scale sc double 0
+Scale default 1
+add Scale
+create outDM odm geometry null
+outDM writable 0
+outDM storable 0
+add outDM
+affects inDM outDM
+affects TargetDP outDM
+affects AttributeNames outDM
+affects Distance outDM
+affects TransferRamp outDM
+affects ValueRange outDM
+affects Scale outDM

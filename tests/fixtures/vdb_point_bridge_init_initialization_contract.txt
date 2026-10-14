@@ -1,0 +1,58 @@
+DPAttributeVDB
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create inVdb ivdb geometry null
+inVdb connectable 1
+add inVdb
+string.create
+create SourceGridName srcgrd string *
+SourceGridName connectable 0
+add SourceGridName
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects inVdb outDP
+affects SourceGridName outDP
+DPClosestPointVDB
+create inDP idp geometry null
+inDP readable 0
+inDP storable 0
+add inDP
+create inVdb ivdb geometry null
+inVdb connectable 1
+add inVdb
+create IsoOffset isooff float 0
+IsoOffset softMin -5
+IsoOffset softMax 5
+IsoOffset default 0
+IsoOffset keyable 1
+IsoOffset storable 1
+add IsoOffset
+create IsDeform isdef bool 0
+IsDeform default 1
+IsDeform keyable 1
+IsDeform storable 1
+add IsDeform
+create AddAttribute addattr bool 0
+AddAttribute default 0
+AddAttribute keyable 1
+AddAttribute storable 1
+add AddAttribute
+string.create
+create AttributeName attrn string clp
+AttributeName connectable 0
+add AttributeName
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDP outDP
+affects inVdb outDP
+affects IsoOffset outDP
+affects IsDeform outDP
+affects AddAttribute outDP
+affects AttributeName outDP

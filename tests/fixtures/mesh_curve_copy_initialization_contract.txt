@@ -1,0 +1,158 @@
+DCMeshCopy
+create inCopyObject ico generic
+inCopyObject accepts curve
+inCopyObject storable 0
+inCopyObject writable 1
+inCopyObject readable 0
+add inCopyObject
+create inMesh im generic
+inMesh accepts mesh
+inMesh storable 0
+inMesh writable 1
+inMesh readable 0
+add inMesh
+create referenceObject refo generic
+referenceObject accepts curve
+referenceObject accepts surface
+referenceObject storable 0
+referenceObject writable 1
+referenceObject readable 0
+add referenceObject
+create Count cnt int 0
+Count default 1
+Count min 0
+Count softMin 0
+Count softMax 8
+Count keyable 1
+add Count
+create HeightScale hscl float 0
+HeightScale default 1
+HeightScale softMin 0
+HeightScale softMax 10
+HeightScale keyable 1
+add HeightScale
+create RandomHeight rndht float 0
+RandomHeight default 0
+RandomHeight keyable 1
+add RandomHeight
+create DirectionMode dirm enum 0
+DirectionMode field Simple 0
+DirectionMode field UV Up Direction 1
+DirectionMode keyable 1
+add DirectionMode
+create Padding pad 2float 0
+Padding default 0 0
+Padding min 0
+Padding softMax 1
+Padding keyable 1
+add Padding
+create RandomPadding rndpad 2float 0
+RandomPadding default 0 0
+RandomPadding keyable 1
+add RandomPadding
+create Seed se int 0
+Seed default 1
+Seed min 1
+Seed keyable 1
+add Seed
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inCopyObject outDC
+affects inMesh outDC
+affects referenceObject outDC
+affects Count outDC
+affects Padding outDC
+affects RandomPadding outDC
+affects HeightScale outDC
+affects RandomHeight outDC
+affects DirectionMode outDC
+affects Seed outDC
+DCReplicator
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create Count cnt int 0
+Count default 4
+Count min 0
+Count max 1000000
+Count softMin 0
+Count softMax 100
+Count keyable 1
+add Count
+create Radius rad float 0
+Radius default 0.5
+Radius min 0
+Radius softMin 0
+Radius softMax 5
+add Radius
+create GenerateType genty enum 0
+GenerateType field Curve 0
+GenerateType field Point 1
+GenerateType keyable 1
+GenerateType storable 1
+add GenerateType
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects Count outDC
+affects Radius outDC
+affects GenerateType outDC
+DCNormal
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+string default N
+create NormalAttributeName nrmattrn string default
+NormalAttributeName connectable 0
+add NormalAttributeName
+create GenerateType genty enum 0
+GenerateType field Base Vector 0
+GenerateType field From Curve Normal 1
+GenerateType field From Curve Tangent 2
+GenerateType field From Curve(use start normal calc) 3
+GenerateType field Random(from curve normal) 4
+GenerateType field Full Random 5
+GenerateType keyable 1
+add GenerateType
+create BaseVector bvec 3double 0
+BaseVector default 0 1 0
+BaseVector keyable 1
+add BaseVector
+create TwistRamp twr ramp
+add TwistRamp
+create TwistScale twscl double 0
+TwistScale default 360
+TwistScale keyable 1
+add TwistScale
+create Seed se int 0
+Seed default 1
+Seed min 1
+Seed keyable 1
+add Seed
+create RandomMin rmin 3double 0
+RandomMin default -180 -180 -180
+RandomMin keyable 1
+add RandomMin
+create RandomMax rmax 3double 0
+RandomMax default 180 180 180
+RandomMax keyable 1
+add RandomMax
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects NormalAttributeName outDC
+affects GenerateType outDC
+affects BaseVector outDC
+affects TwistRamp outDC
+affects TwistScale outDC
+affects Seed outDC
+affects RandomMin outDC
+affects RandomMax outDC

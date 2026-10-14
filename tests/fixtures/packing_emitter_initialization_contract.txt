@@ -1,0 +1,571 @@
+DPointPlaneEmit
+create emitType emt enum 0
+emitType field Grid 0
+emitType field Tile 1
+emitType field Random 2
+emitType field Blue Noise 3
+emitType field Sphere Packing 4
+emitType field Phyllotaxis 5
+emitType keyable 1
+emitType storable 1
+add emitType
+create sizeX six float 10
+sizeX min 1
+add sizeX
+create sizeY sizeY float 10
+sizeY min 1
+add sizeY
+create gridX grx int 5
+gridX min 0
+add gridX
+create gridY gry int 5
+gridY min 0
+add gridY
+create count c int 20
+count min 0
+add count
+create TileStep tlstp 2float 0
+TileStep default 1 1
+add TileStep
+create Center cntr 3float 0
+Center default 0 0 0
+add Center
+create RandomType rndty enum 0
+RandomType field Uniform 0
+RandomType field Poisson 1
+RandomType field Lloyd's relaxation 2
+RandomType keyable 1
+RandomType storable 1
+add RandomType
+create seed se int 1
+seed min 1
+add seed
+create PoissonMinDistance pmindist float 0
+PoissonMinDistance default -1
+PoissonMinDistance softMin -1
+PoissonMinDistance softMax 5
+PoissonMinDistance min -1
+add PoissonMinDistance
+create RelaxIteration rlxiter int 0
+RelaxIteration default 1
+RelaxIteration softMin 0
+RelaxIteration softMax 5
+RelaxIteration min 0
+add RelaxIteration
+create RadiusRange radrng 2double 0
+RadiusRange default 0.10000000000000001 1
+RadiusRange min 0.0001 0.0001
+add RadiusRange
+create PackingGradientBiasRamp pkgrdrmp ramp
+add PackingGradientBiasRamp
+create PackingType pkty enum 0
+PackingType field Random 0
+PackingType field Gradation 1
+PackingType field From Map 2
+PackingType keyable 1
+PackingType storable 1
+add PackingType
+create PackingSampling pksmp int 0
+PackingSampling default 64
+PackingSampling softMin 1
+PackingSampling softMax 512
+PackingSampling min 1
+add PackingSampling
+create UseRadiusBias usradbs bool 0
+UseRadiusBias default 0
+add UseRadiusBias
+create RadiusBiasRamp radbsrmp ramp
+add RadiusBiasRamp
+create BiasRange bsrng double 0
+BiasRange default 0.5
+BiasRange softMin 0
+BiasRange softMax 1
+BiasRange min 0
+BiasRange max 1
+add BiasRange
+create inObject ino generic
+inObject accepts surface
+inObject accepts mesh
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create Map map color
+Map default 1 1 1 1
+add Map
+create PrePackingDP ppdp geometry null
+PrePackingDP readable 0
+PrePackingDP storable 0
+add PrePackingDP
+string default pscale
+create RadiusAttribute radattr string default
+RadiusAttribute connectable 0
+add RadiusAttribute
+create BaseRadius brad double 0
+BaseRadius default 1
+BaseRadius softMin 0
+BaseRadius softMax 10
+BaseRadius min 0
+add BaseRadius
+string default pre_pack_grp
+create PreDPGroupName pdpgrp string default
+PreDPGroupName connectable 0
+add PreDPGroupName
+create Spread spd float 0
+Spread default 2
+Spread softMin 0
+Spread softMax 10
+Spread min 0
+add Spread
+create AngleType aglty enum 0
+AngleType field A 137.3 0
+AngleType field B 137.5 1
+AngleType field C 137.6 2
+AngleType field Custom 3
+AngleType keyable 1
+AngleType storable 1
+add AngleType
+create CustomAngle ctmagl float 0
+CustomAngle default 137.5
+CustomAngle softMin 0
+CustomAngle softMax 360
+CustomAngle min 0
+add CustomAngle
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects emitType outDP
+affects sizeX outDP
+affects sizeY outDP
+affects gridX outDP
+affects gridY outDP
+affects count outDP
+affects TileStep outDP
+affects Center outDP
+affects RandomType outDP
+affects seed outDP
+affects PoissonMinDistance outDP
+affects RelaxIteration outDP
+affects RadiusRange outDP
+affects PackingType outDP
+affects PackingSampling outDP
+affects PackingGradientBiasRamp outDP
+affects UseRadiusBias outDP
+affects RadiusBiasRamp outDP
+affects BiasRange outDP
+affects inObject outDP
+affects Map outDP
+affects PrePackingDP outDP
+affects RadiusAttribute outDP
+affects BaseRadius outDP
+affects PreDPGroupName outDP
+affects Spread outDP
+affects AngleType outDP
+affects CustomAngle outDP
+DPScatter
+create inObject ino generic
+inObject accepts mesh
+inObject cached 0
+inObject storable 0
+inObject writable 1
+inObject readable 0
+add inObject
+create totalCount tc int 1
+totalCount default 1000
+totalCount min 0
+totalCount keyable 1
+add totalCount
+create EmitType emty enum 0
+EmitType field Normal 0
+EmitType field Sphere Packing 1
+EmitType keyable 1
+EmitType storable 1
+add EmitType
+create Seed se int 0
+Seed default 1
+Seed min 1
+Seed keyable 1
+add Seed
+create Radius ra float 1.5
+Radius min 0
+Radius keyable 1
+add Radius
+create MaxEffectiveRadius mer float 0.5
+MaxEffectiveRadius min 0.001
+MaxEffectiveRadius keyable 1
+add MaxEffectiveRadius
+create IsRelax ir bool 1
+IsRelax keyable 1
+add IsRelax
+create RelaxIterations rit int 4
+RelaxIterations min 0
+RelaxIterations keyable 1
+add RelaxIterations
+create RelaxTolerance rtol float 0.10000000000000001
+RelaxTolerance min 0.001
+RelaxTolerance keyable 1
+add RelaxTolerance
+create RadiusRange radrng 2double 0
+RadiusRange default 0.10000000000000001 1
+RadiusRange min 0.0001 0.0001
+add RadiusRange
+create PackingGradientBiasRamp pkgrdrmp ramp
+add PackingGradientBiasRamp
+create PackingType pkty enum 0
+PackingType field Random 0
+PackingType field Gradation 1
+PackingType field From Map 2
+PackingType keyable 1
+PackingType storable 1
+add PackingType
+create PackingSampling pksmp int 0
+PackingSampling default 64
+PackingSampling softMin 1
+PackingSampling softMax 512
+PackingSampling min 1
+add PackingSampling
+create UseRadiusBias usradbs bool 0
+UseRadiusBias default 0
+add UseRadiusBias
+create RadiusBiasRamp radbsrmp ramp
+add RadiusBiasRamp
+create BiasRange bsrng double 0
+BiasRange default 0.5
+BiasRange softMin 0
+BiasRange softMax 1
+BiasRange min 0
+BiasRange max 1
+add BiasRange
+create Map map color
+Map default 1 1 1 1
+add Map
+create PrePackingDP ppdp geometry null
+PrePackingDP readable 0
+PrePackingDP storable 0
+add PrePackingDP
+string default pscale
+create RadiusAttribute radattr string default
+RadiusAttribute connectable 0
+add RadiusAttribute
+create BaseRadius brad double 0
+BaseRadius default 1
+BaseRadius softMin 0
+BaseRadius softMax 10
+BaseRadius min 0
+add BaseRadius
+string default pre_pack_grp
+create PreDPGroupName pdpgrp string default
+PreDPGroupName connectable 0
+add PreDPGroupName
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inObject outDP
+affects totalCount outDP
+affects EmitType outDP
+affects Seed outDP
+affects Radius outDP
+affects MaxEffectiveRadius outDP
+affects IsRelax outDP
+affects RelaxIterations outDP
+affects RelaxTolerance outDP
+affects RadiusRange outDP
+affects PackingType outDP
+affects PackingSampling outDP
+affects PackingGradientBiasRamp outDP
+affects UseRadiusBias outDP
+affects RadiusBiasRamp outDP
+affects BiasRange outDP
+affects Map outDP
+affects PrePackingDP outDP
+affects RadiusAttribute outDP
+affects BaseRadius outDP
+affects PreDPGroupName outDP
+DPointVolumeEmit
+create inputGeometry igo mesh null
+inputGeometry storable 0
+add inputGeometry
+create emitType emt enum 0
+emitType field Sphere 0
+emitType field Sphere Fill 1
+emitType field Box 2
+emitType field Box Fill 3
+emitType field In Mesh 4
+emitType field Sphere Packing 5
+emitType keyable 1
+emitType storable 1
+add emitType
+create Count cnt int64 0
+Count min 0
+Count softMin 0
+Count softMax 10000
+Count default 100
+add Count
+create radius ra float 0
+radius min 0
+radius default 5
+radius keyable 1
+radius storable 1
+add radius
+create volumeSize vs 3float 0
+volumeSize default 5 5 5
+volumeSize keyable 1
+volumeSize storable 1
+add volumeSize
+create BoxGrid bgrd 3int 0
+BoxGrid default 8 8 8
+BoxGrid keyable 1
+BoxGrid storable 1
+add BoxGrid
+create nSeed nse int 1
+nSeed min 1
+nSeed keyable 1
+nSeed storable 1
+add nSeed
+create Spread spr float 0
+Spread min 0
+Spread max 1
+Spread softMin 0
+Spread softMax 1
+Spread default 1
+add Spread
+create Mode mo enum 0
+Mode field count 0
+Mode field density 1
+Mode field points per voxel 2
+Mode connectable 0
+add Mode
+create Density dens float 0
+Density min 0
+Density softMin 0
+Density softMax 10
+Density default 1
+add Density
+create IsLocal isl bool 0
+IsLocal default 0
+add IsLocal
+create PerVoxel pvx float 0
+PerVoxel min 0.050000000000000003
+PerVoxel softMin 0
+PerVoxel softMax 5
+PerVoxel default 0.050000000000000003
+add PerVoxel
+create Interior intr bool 0
+Interior default 0
+add Interior
+create VoxelType vxlty enum 0
+VoxelType field Level Set 0
+VoxelType field Fog 1
+VoxelType connectable 0
+add VoxelType
+create VoxelSize voxelsize float 0
+VoxelSize default 1
+VoxelSize min 0.001
+VoxelSize softMin 0.01
+VoxelSize softMax 10
+add VoxelSize
+create ExteriorBandWidth exteriorbandwidth float 0
+ExteriorBandWidth default 3
+ExteriorBandWidth min 1
+ExteriorBandWidth softMin 1
+ExteriorBandWidth softMax 10
+add ExteriorBandWidth
+create InteriorBandWidth interiorbandwidth float 0
+InteriorBandWidth default 3
+InteriorBandWidth min 1
+InteriorBandWidth softMin 1
+InteriorBandWidth softMax 10
+add InteriorBandWidth
+create FillInterior fillinterior bool 0
+FillInterior default 0
+FillInterior connectable 0
+add FillInterior
+create UnsignedDistanceField udf bool 0
+UnsignedDistanceField default 0
+UnsignedDistanceField connectable 0
+add UnsignedDistanceField
+create RadiusRange radrng 2float 0
+RadiusRange default 0.10000000000000001 1
+RadiusRange min 0.001 0.001
+add RadiusRange
+create PackingGradientBiasRamp pkgrdrmp ramp
+add PackingGradientBiasRamp
+create PackingType pkty enum 0
+PackingType field Random 0
+PackingType field Gradation 1
+PackingType field From Map 2
+PackingType field Expression 3
+PackingType keyable 1
+PackingType storable 1
+add PackingType
+create PackingAxisType pkaxty enum 0
+PackingAxisType field X Axis 0
+PackingAxisType field Y Axis 1
+PackingAxisType field Z Axis 2
+PackingAxisType keyable 1
+PackingAxisType storable 1
+add PackingAxisType
+create PackingSampling pksmp int 0
+PackingSampling default 64
+PackingSampling softMin 1
+PackingSampling softMax 512
+PackingSampling min 1
+add PackingSampling
+create UseRadiusBias usradbs bool 0
+UseRadiusBias default 0
+add UseRadiusBias
+create RadiusBiasRamp radbsrmp ramp
+add RadiusBiasRamp
+create BiasRange bsrng float 0
+BiasRange default 0.5
+BiasRange softMin 0
+BiasRange softMax 1
+BiasRange min 0
+BiasRange max 1
+add BiasRange
+create inPackingUVObject inopuv generic
+inPackingUVObject accepts surface
+inPackingUVObject accepts mesh
+inPackingUVObject storable 0
+inPackingUVObject writable 1
+inPackingUVObject readable 0
+add inPackingUVObject
+create Map map color
+Map default 1 1 1 1
+add Map
+create Is3DMap is3d bool 0
+Is3DMap default 0
+add Is3DMap
+string default 
+create Expression expn string default
+Expression connectable 0
+add Expression
+create PrePackingDP ppdp geometry null
+PrePackingDP readable 0
+PrePackingDP storable 0
+add PrePackingDP
+string default pscale
+create RadiusAttribute radattr string default
+RadiusAttribute connectable 0
+add RadiusAttribute
+create BaseRadius brad float 0
+BaseRadius default 1
+BaseRadius softMin 0
+BaseRadius softMax 10
+BaseRadius min 0
+add BaseRadius
+string default pre_pack_grp
+create PreDPGroupName pdpgrp string default
+PreDPGroupName connectable 0
+add PreDPGroupName
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inputGeometry outDP
+affects emitType outDP
+affects Count outDP
+affects radius outDP
+affects volumeSize outDP
+affects BoxGrid outDP
+affects nSeed outDP
+affects Spread outDP
+affects Mode outDP
+affects Density outDP
+affects IsLocal outDP
+affects PerVoxel outDP
+affects Interior outDP
+affects VoxelType outDP
+affects VoxelSize outDP
+affects ExteriorBandWidth outDP
+affects InteriorBandWidth outDP
+affects FillInterior outDP
+affects UnsignedDistanceField outDP
+affects RadiusRange outDP
+affects PackingType outDP
+affects PackingAxisType outDP
+affects PackingSampling outDP
+affects PackingGradientBiasRamp outDP
+affects UseRadiusBias outDP
+affects RadiusBiasRamp outDP
+affects BiasRange outDP
+affects inPackingUVObject outDP
+affects Map outDP
+affects Is3DMap outDP
+affects Expression outDP
+affects PrePackingDP outDP
+affects RadiusAttribute outDP
+affects BaseRadius outDP
+affects PreDPGroupName outDP
+DPAnimationEmit
+create inputGeometry igo geometry null
+inputGeometry storable 0
+inputGeometry hidden 1
+create transformMatrix tm matrix double
+transformMatrix storable 1
+transformMatrix keyable 0
+transformMatrix readable 1
+transformMatrix writable 1
+transformMatrix cached 0
+create emitType emt enum 0
+emitType field Transform Matrix 0
+emitType field Mesh Point 1
+emitType field Mesh Point Random 2
+emitType keyable 1
+emitType storable 1
+create seed se int 1
+seed keyable 1
+seed storable 1
+create randomCount rac int 5
+randomCount min 0
+randomCount keyable 1
+randomCount storable 1
+create timeOffset tof double 0
+timeOffset keyable 1
+timeOffset storable 1
+create timeLength tle double 30
+timeLength keyable 1
+timeLength storable 1
+create timeSampling tis int 30
+timeSampling min 1
+timeSampling keyable 1
+timeSampling storable 1
+create timeLengthRandom tlra double 0
+timeLengthRandom keyable 1
+timeLengthRandom storable 1
+pointArray default 0
+create outputPointArray opa pointArray pointArray
+outputPointArray readable 1
+outputPointArray writable 0
+outputPointArray storable 0
+add inputGeometry
+add transformMatrix
+add emitType
+add seed
+add randomCount
+add timeOffset
+add timeLength
+add timeSampling
+add timeLengthRandom
+add outputPointArray
+affects inputGeometry outputPointArray
+affects transformMatrix outputPointArray
+affects emitType outputPointArray
+affects seed outputPointArray
+affects randomCount outputPointArray
+affects timeOffset outputPointArray
+affects timeLength outputPointArray
+affects timeSampling outputPointArray
+affects timeLengthRandom outputPointArray
+DPAddPoint
+create Point pt 3float 0
+Point default 0 0 0
+Point array 1
+add Point
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects Point outDP

@@ -1,0 +1,58 @@
+DPolyThickness
+create inBaseMesh inbm generic
+inBaseMesh accepts mesh
+inBaseMesh storable 0
+inBaseMesh writable 1
+inBaseMesh readable 0
+add inBaseMesh
+create outMesh om mesh null
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects inBaseMesh outMesh
+DStretchData
+create inMesh im mesh null
+inMesh storable 0
+inMesh readable 0
+inMesh writable 1
+add inMesh
+create relaxMesh rem mesh null
+relaxMesh storable 0
+relaxMesh readable 0
+relaxMesh writable 1
+add relaxMesh
+create IsStretch iss bool 1
+add IsStretch
+create CalcType caty enum 0
+CalcType field Edge Length 0
+CalcType field Grid Sampling 1
+CalcType connectable 0
+add CalcType
+create StretchMap stm colorRamp
+add StretchMap
+create CompressMap cmm colorRamp
+add CompressMap
+create SampleRadius srad double 1
+SampleRadius min 0
+SampleRadius softMax 10
+add SampleRadius
+create IsVector isv bool 0
+add IsVector
+create smIterate sit int 0
+smIterate min 0
+smIterate softMax 5
+add smIterate
+create outMesh om mesh null
+outMesh readable 1
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects inMesh outMesh
+affects relaxMesh outMesh
+affects IsStretch outMesh
+affects CalcType outMesh
+affects StretchMap outMesh
+affects CompressMap outMesh
+affects SampleRadius outMesh
+affects IsVector outMesh
+affects smIterate outMesh

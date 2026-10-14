@@ -1,0 +1,47 @@
+# Local credentials
+.env
+.env.*
+!.env.example
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+
+# C/C++ and Xcode build output
+build/
+build-*/
+DerivedData/
+CMakeFiles/
+CMakeCache.txt
+CTestTestfile.cmake
+Testing/
+cmake_install.cmake
+compile_commands.json
+*.o
+*.dylib
+*.bundle
+*.mll
+*.so
+*.xcresult
+# Clang's default per-translation-unit analysis reports at the repository root.
+/*.plist
+
+# Local legacy build environment
+config/legacy-build.env
+
+# Per-user IDE state
+.idea/
+.vscode/
+xcuserdata/
+*.xcuserstate
+*.pbxuser
+*.mode1v3
+*.perspectivev3
+*.xcodeproj/project.xcworkspace/
+
+# macOS
+.DS_Store

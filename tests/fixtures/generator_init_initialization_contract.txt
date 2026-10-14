@@ -1,0 +1,158 @@
+DHEyelashGen
+create inMesh im generic
+inMesh accepts mesh
+inMesh storable 0
+inMesh writable 1
+inMesh readable 0
+add inMesh
+create inCurve inc generic
+inCurve accepts curve
+inCurve storable 0
+inCurve writable 1
+inCurve readable 0
+add inCurve
+string.create
+create EdgeList elst string default
+EdgeList connectable 0
+add EdgeList
+create Center ctr 3double 0
+Center default 0 0 0
+Center keyable 1
+Center storable 1
+add Center
+create Count cnt int 0
+Count default 20
+Count min 2
+Count softMin 2
+Count softMax 3000
+Count keyable 1
+add Count
+create Length len double 0
+Length default 1
+Length softMin 0
+Length softMax 10
+Length keyable 1
+add Length
+create LengthRamp lenrmp ramp
+add LengthRamp
+create Segment sgm int 0
+Segment default 8
+Segment min 2
+Segment softMin 2
+Segment softMax 50
+Segment keyable 1
+add Segment
+create SurfaceOffset srfoft double 0
+SurfaceOffset default 0
+SurfaceOffset softMin -10
+SurfaceOffset softMax 10
+SurfaceOffset keyable 1
+add SurfaceOffset
+create SurfaceOffsetRamp srfoftrmp ramp
+add SurfaceOffsetRamp
+create RootRotate rtrot 3double 0
+RootRotate default 0 0 0
+RootRotate keyable 1
+add RootRotate
+create RootRotateXRamp rtrotrmpx ramp
+add RootRotateXRamp
+create RootRotateYRamp rtrotrmpy ramp
+add RootRotateYRamp
+create RootRotateZRamp rtrotrmpz ramp
+add RootRotateZRamp
+create GlobalBend gbnd double 0
+GlobalBend default 0
+GlobalBend softMin -180
+GlobalBend softMax 180
+GlobalBend keyable 1
+add GlobalBend
+create GlobalBendRamp gbndrmp ramp
+add GlobalBendRamp
+create RootBend rtbnd double 0
+RootBend default 0
+RootBend softMin -180
+RootBend softMax 180
+RootBend keyable 1
+add RootBend
+create TipBend tpbnd double 0
+TipBend default 0
+TipBend softMin -180
+TipBend softMax 180
+TipBend keyable 1
+add TipBend
+create RootBendRamp rtbndrmp ramp
+add RootBendRamp
+create TipBendRamp tpbndrmp ramp
+add TipBendRamp
+create RootBendPerRamp rtbndprmp ramp
+add RootBendPerRamp
+create TipBendPerRamp tpbndprmp ramp
+add TipBendPerRamp
+create Seed sde int 0
+Seed default 1
+Seed min 1
+Seed softMin 1
+Seed softMax 100
+Seed keyable 1
+add Seed
+create RootNoise rtns double 0
+RootNoise default 0
+RootNoise softMin -5
+RootNoise softMax 5
+RootNoise keyable 1
+add RootNoise
+create LengthRandom lenrand 2double 0
+LengthRandom default 0 0
+LengthRandom keyable 1
+add LengthRandom
+create RandTranslateMin rndtrmin 3double 0
+RandTranslateMin default 0 0 0
+RandTranslateMin keyable 1
+add RandTranslateMin
+create RandTranslateMax rndtrmax 3double 0
+RandTranslateMax default 0 0 0
+RandTranslateMax keyable 1
+add RandTranslateMax
+create RandRotateMin rndrotmin 3double 0
+RandRotateMin default 0 0 0
+RandRotateMin keyable 1
+add RandRotateMin
+create RandRotateMax rndrotmax 3double 0
+RandRotateMax default 0 0 0
+RandRotateMax keyable 1
+add RandRotateMax
+create outCurves ocs curve null
+outCurves array 1
+outCurves readable 1
+outCurves writable 0
+outCurves arrayBuilder 1
+add outCurves
+affects inMesh outCurves
+affects inCurve outCurves
+affects EdgeList outCurves
+affects Center outCurves
+affects Count outCurves
+affects Length outCurves
+affects LengthRamp outCurves
+affects Segment outCurves
+affects SurfaceOffset outCurves
+affects SurfaceOffsetRamp outCurves
+affects RootRotate outCurves
+affects RootRotateXRamp outCurves
+affects RootRotateYRamp outCurves
+affects RootRotateZRamp outCurves
+affects GlobalBend outCurves
+affects GlobalBendRamp outCurves
+affects RootBend outCurves
+affects TipBend outCurves
+affects RootBendRamp outCurves
+affects TipBendRamp outCurves
+affects RootBendPerRamp outCurves
+affects TipBendPerRamp outCurves
+affects Seed outCurves
+affects RootNoise outCurves
+affects LengthRandom outCurves
+affects RandTranslateMin outCurves
+affects RandTranslateMax outCurves
+affects RandRotateMin outCurves
+affects RandRotateMax outCurves

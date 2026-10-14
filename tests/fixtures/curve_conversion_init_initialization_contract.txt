@@ -1,0 +1,124 @@
+DCConvertFromCurves
+create ConvertType cnvty enum 0
+ConvertType field Input Curve 0
+ConvertType field Input Hierarchy 1
+ConvertType keyable 1
+add ConvertType
+create inCurves incs generic
+inCurves accepts curve
+inCurves storable 0
+inCurves writable 1
+inCurves readable 0
+inCurves array 1
+add inCurves
+create InHierarchy inhrchy message
+InHierarchy readable 0
+InHierarchy storable 0
+add InHierarchy
+create CurrentTime time time 0
+add CurrentTime
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inCurves outDC
+affects ConvertType outDC
+affects InHierarchy outDC
+affects CurrentTime outDC
+DSpiralCurve
+create inputCurve inc generic
+inputCurve accepts curve
+inputCurve storable 0
+inputCurve writable 1
+inputCurve readable 0
+add inputCurve
+create inputTangentCurve intc generic
+inputTangentCurve accepts curve
+inputTangentCurve storable 0
+inputTangentCurve writable 1
+inputTangentCurve readable 0
+add inputTangentCurve
+create curveLength cl double 0
+curveLength default 1
+curveLength min 0
+curveLength softMax 1
+curveLength keyable 1
+add curveLength
+create sampling sa int 0
+sampling default 50
+sampling min 2
+sampling max 9999998
+sampling keyable 1
+add sampling
+create offset off double 0
+offset default 0
+offset keyable 1
+add offset
+create spiralOffset spo double 0
+spiralOffset default 0
+spiralOffset keyable 1
+add spiralOffset
+create radius rad double 1
+radius min 0
+add radius
+create arcStep ars double 0
+arcStep default 45
+add arcStep
+create outputCurve oc curve null
+outputCurve writable 0
+outputCurve storable 0
+add outputCurve
+affects inputCurve outputCurve
+affects inputTangentCurve outputCurve
+affects curveLength outputCurve
+affects sampling outputCurve
+affects offset outputCurve
+affects spiralOffset outputCurve
+affects radius outputCurve
+affects arcStep outputCurve
+woolCurve
+create startRadius sr float 1
+startRadius min 0
+startRadius storable 1
+startRadius keyable 1
+create endRadius er float 50
+endRadius min 0
+endRadius storable 1
+endRadius keyable 1
+create round ro int 50
+round min 1
+round max 1000000
+round storable 1
+round keyable 1
+create sections se int 8
+sections min 3
+sections max 1000000
+sections storable 1
+sections keyable 1
+create rotNoise rn float 10
+rotNoise storable 1
+rotNoise keyable 1
+create axisNoise an float 20
+axisNoise storable 1
+axisNoise keyable 1
+create zTrans zt float 0
+zTrans storable 1
+zTrans keyable 1
+create outputCurve out curve null
+outputCurve storable 0
+outputCurve writable 0
+add startRadius
+add endRadius
+add round
+add sections
+add rotNoise
+add axisNoise
+add zTrans
+add outputCurve
+affects startRadius outputCurve
+affects endRadius outputCurve
+affects round outputCurve
+affects sections outputCurve
+affects rotNoise outputCurve
+affects axisNoise outputCurve
+affects zTrans outputCurve

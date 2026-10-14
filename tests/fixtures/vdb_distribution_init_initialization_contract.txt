@@ -1,0 +1,164 @@
+DOpenVDBScatter
+create VdbInput vdbinput geometry null
+VdbInput connectable 1
+add VdbInput
+string.create
+create SelectedGridNames grids string *
+SelectedGridNames connectable 0
+add SelectedGridNames
+create Seed se int 0
+Seed min 0
+Seed default 1
+add Seed
+create Spread spr double 0
+Spread min 0
+Spread max 1
+Spread softMin 0
+Spread softMax 1
+Spread default 1
+add Spread
+create Mode mo enum 0
+Mode field count 0
+Mode field density 1
+Mode field points per voxel 2
+Mode connectable 0
+add Mode
+create Count cnt int64 0
+Count min 0
+Count softMin 0
+Count softMax 10000
+Count default 5000
+add Count
+create Density dens float 0
+Density min 0
+Density softMin 0
+Density softMax 10
+Density default 1
+add Density
+create IsLocal isl bool 0
+IsLocal default 0
+add IsLocal
+create PerVoxel pvx float 0
+PerVoxel min 0
+PerVoxel softMin 0
+PerVoxel softMax 10
+PerVoxel default 8
+add PerVoxel
+create Interior intr bool 0
+Interior default 0
+add Interior
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects VdbInput outDP
+affects SelectedGridNames outDP
+affects Seed outDP
+affects Spread outDP
+affects Mode outDP
+affects Count outDP
+affects Density outDP
+affects IsLocal outDP
+affects PerVoxel outDP
+affects Interior outDP
+DOpenVDBToSpheres
+create vdbInput input geometry null
+vdbInput readable 0
+add vdbInput
+string.create
+create vdbSelectedGridNames selectedgrids string *
+vdbSelectedGridNames connectable 0
+vdbSelectedGridNames writable 0
+vdbSelectedGridNames readable 0
+vdbSelectedGridNames hidden 1
+add vdbSelectedGridNames
+create isovalue iso float 0
+isovalue default 0
+isovalue softMin -1
+isovalue softMax 1
+isovalue connectable 0
+add isovalue
+create UseWorldSpaceUnits uwsu bool 0
+UseWorldSpaceUnits default 0
+add UseWorldSpaceUnits
+create MinRadiusInVoxels minriv float 0
+MinRadiusInVoxels default 1
+MinRadiusInVoxels softMin 0
+MinRadiusInVoxels softMax 2
+MinRadiusInVoxels min 0
+MinRadiusInVoxels max 3.4028234663852886e+38
+add MinRadiusInVoxels
+create MaxRadiusInVoxels maxriv float 0
+MaxRadiusInVoxels default 3.4028234663852886e+38
+MaxRadiusInVoxels softMin 0
+MaxRadiusInVoxels softMax 100
+MaxRadiusInVoxels max 3.4028234663852886e+38
+MaxRadiusInVoxels min 0
+add MaxRadiusInVoxels
+create MinRadiusInWorld minriw float 0
+MinRadiusInWorld default 1
+MinRadiusInWorld softMin 0
+MinRadiusInWorld softMax 2
+MinRadiusInWorld min 0
+MinRadiusInWorld max 3.4028234663852886e+38
+add MinRadiusInWorld
+create MaxRadiusInWorld maxriw float 0
+MaxRadiusInWorld default 3.4028234663852886e+38
+MaxRadiusInWorld softMin 0
+MaxRadiusInWorld softMax 100
+MaxRadiusInWorld max 3.4028234663852886e+38
+MaxRadiusInWorld min 0
+add MaxRadiusInWorld
+create MaxSpheres maxsph int 0
+MaxSpheres default 50
+MaxSpheres softMin 1
+MaxSpheres softMax 100
+MaxSpheres min 1
+MaxSpheres max 1000000
+add MaxSpheres
+create ScatterPoints scpt int 0
+ScatterPoints default 10000
+ScatterPoints softMin 1000
+ScatterPoints softMax 50000
+ScatterPoints min 1000
+ScatterPoints max 10000000
+add ScatterPoints
+create Overlapping ovl bool 0
+Overlapping default 1
+add Overlapping
+create PreserveAttributesAndGroups patangrp bool 0
+PreserveAttributesAndGroups default 1
+PreserveAttributesAndGroups hidden 1
+add PreserveAttributesAndGroups
+create AddIDAttribute aidattr bool 0
+AddIDAttribute default 0
+AddIDAttribute hidden 1
+add AddIDAttribute
+create AddPScaleAttribute apsattr bool 0
+AddPScaleAttribute default 0
+AddPScaleAttribute hidden 1
+add AddPScaleAttribute
+create MeshDetail mdtl int 0
+MeshDetail default 1
+MeshDetail softMin 1
+MeshDetail softMax 5
+MeshDetail min 1
+MeshDetail max 5
+add MeshDetail
+create outMesh om mesh null
+outMesh readable 1
+outMesh writable 0
+outMesh storable 0
+add outMesh
+affects vdbInput outMesh
+affects vdbSelectedGridNames outMesh
+affects isovalue outMesh
+affects UseWorldSpaceUnits outMesh
+affects MinRadiusInVoxels outMesh
+affects MaxRadiusInVoxels outMesh
+affects MinRadiusInWorld outMesh
+affects MaxRadiusInWorld outMesh
+affects MaxSpheres outMesh
+affects ScatterPoints outMesh
+affects Overlapping outMesh
+affects MeshDetail outMesh

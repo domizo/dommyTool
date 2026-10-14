@@ -1,0 +1,156 @@
+DCMotionPath
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create Type ty enum 0
+Type field Position Parameter 0
+Type field From Attribute 1
+Type keyable 1
+Type storable 1
+add Type
+create PathPosition ptprm double 0
+PathPosition default 0
+PathPosition softMin 0
+PathPosition softMax 1
+PathPosition keyable 1
+PathPosition storable 1
+add PathPosition
+string default param
+create PositionAttribute pattr string default
+PositionAttribute connectable 0
+add PositionAttribute
+create Offset off double 0
+Offset default 0
+Offset softMin 0
+Offset softMax 5
+Offset keyable 1
+Offset storable 1
+add Offset
+string default offset
+create OffsetAttribute offattr string default
+OffsetAttribute connectable 0
+add OffsetAttribute
+create Speed spd double 0
+Speed default 1
+Speed softMin 0
+Speed softMax 5
+Speed keyable 1
+Speed storable 1
+add Speed
+string default speed
+create SpeedAttribute spdattr string default
+SpeedAttribute connectable 0
+add SpeedAttribute
+create WrapMode wmd enum 0
+WrapMode field None 0
+WrapMode field Clamp 1
+WrapMode field Loop 2
+WrapMode keyable 1
+WrapMode storable 1
+add WrapMode
+create TangentMode tanmd enum 0
+TangentMode field From Curve 0
+TangentMode field Tangent Vector 1
+TangentMode keyable 1
+TangentMode storable 1
+add TangentMode
+create TangentVector tanvec 3float 0
+TangentVector keyable 1
+TangentVector storable 1
+TangentVector default 0 1 0
+add TangentVector
+create IsExportNormal isexn bool 0
+IsExportNormal default 0
+IsExportNormal keyable 1
+IsExportNormal storable 1
+add IsExportNormal
+string default N
+create NormalAttribute nattr string default
+NormalAttribute connectable 0
+add NormalAttribute
+create IsExportTangent isext bool 0
+IsExportTangent default 0
+IsExportTangent keyable 1
+IsExportTangent storable 1
+add IsExportTangent
+string default T
+create TangentAttribute tattr string default
+TangentAttribute connectable 0
+add TangentAttribute
+create IsExportParam isexp bool 0
+IsExportParam default 0
+IsExportParam keyable 1
+IsExportParam storable 1
+add IsExportParam
+string default param
+create ParamAttribute paraattr string default
+ParamAttribute connectable 0
+add ParamAttribute
+create outDP odp geometry null
+outDP writable 0
+outDP storable 0
+add outDP
+affects inDC outDP
+affects Type outDP
+affects PathPosition outDP
+affects PositionAttribute outDP
+affects Offset outDP
+affects Speed outDP
+affects OffsetAttribute outDP
+affects SpeedAttribute outDP
+affects WrapMode outDP
+affects TangentMode outDP
+affects TangentVector outDP
+affects IsExportNormal outDP
+affects NormalAttribute outDP
+affects IsExportTangent outDP
+affects TangentAttribute outDP
+affects IsExportParam outDP
+affects ParamAttribute outDP
+DCDivide
+create inDC idc geometry null
+inDC readable 0
+inDC storable 0
+add inDC
+create DivideType divty enum 0
+DivideType field Divide 0
+DivideType field Step 1
+DivideType keyable 1
+add DivideType
+create Count cnt int 4
+Count min 1
+Count keyable 1
+add Count
+create Sampling smp int 4
+Sampling min 2
+Sampling keyable 1
+add Sampling
+create Offset off double 0
+Offset keyable 1
+add Offset
+create SpaceLength splen double 1
+SpaceLength min 0
+SpaceLength softMax 1
+SpaceLength keyable 1
+add SpaceLength
+create IsEdgeSpace isesp bool 0
+IsEdgeSpace keyable 1
+add IsEdgeSpace
+create StepLength stplen double 0.10000000000000001
+StepLength min 1.0000000000000001e-09
+StepLength softMax 1
+StepLength keyable 1
+add StepLength
+create outDC odc geometry null
+outDC writable 0
+outDC storable 0
+add outDC
+affects inDC outDC
+affects DivideType outDC
+affects Count outDC
+affects Sampling outDC
+affects Offset outDC
+affects SpaceLength outDC
+affects IsEdgeSpace outDC
+affects StepLength outDC
