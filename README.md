@@ -4,6 +4,10 @@
 
 dommyTool is a collection of Autodesk Maya plug-ins and related tools developed primarily between 2015 and 2019. It brings together custom nodes, commands, viewport extensions, and Python utilities for procedural geometry, volume processing, and simulation.
 
+## Video
+
+[Watch on YouTube](https://youtu.be/WwmTf652SwI)
+
 ## Why I built it
 
 The project began before Maya offered Bifrost Graph as a general-purpose procedural environment. At the time, I wanted to explore whether Maya could support a workflow closer to Houdini: instead of creating each asset through a fixed sequence of manual operations, reusable components could be connected to construct geometry and effects procedurally.
