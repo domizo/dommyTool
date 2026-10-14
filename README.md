@@ -6,6 +6,8 @@ dommyTool is a collection of Autodesk Maya plug-ins and related tools developed 
 
 ## Video
 
+[![Watch dommyTool on YouTube](https://img.youtube.com/vi/WwmTf652SwI/hqdefault.jpg)](https://youtu.be/WwmTf652SwI)
+
 [Watch on YouTube](https://youtu.be/WwmTf652SwI)
 
 ## Why I built it
